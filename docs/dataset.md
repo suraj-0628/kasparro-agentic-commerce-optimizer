@@ -16,7 +16,7 @@ The goal is to test how AI systems interpret imperfect product data.
 
 ---
 
-## Categories Covered
+## Daily Essential Categories Covered
 
 * Clothing
 * Shoes
