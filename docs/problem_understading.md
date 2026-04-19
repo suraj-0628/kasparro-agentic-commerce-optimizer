@@ -49,13 +49,32 @@ There is currently no system that:
 
 ## 4. Our Solution
 
-We propose an **AI Representation Optimizer** that:
+We propose an **AI Representation Optimizer** that improves how products are understood and recommended by AI systems.
 
-1. Analyzes product data from a Shopify store
-2. Evaluates how an AI agent interprets that data
-3. Identifies gaps, inconsistencies, and weaknesses
-4. Generates actionable recommendations
-5. Prioritizes improvements based on impact
+The system is designed not just to detect issues, but to evaluate and enhance a product’s **AI readiness**.
+
+It works through the following capabilities:
+
+1. **Product Data Analysis**
+   Extracts and analyzes product data from a Shopify store, including titles, descriptions, metadata, and variants.
+
+2. **AI Interpretation Simulation**
+   Evaluates how an AI agent currently understands the product, identifying ambiguity, missing context, and low-confidence areas.
+
+3. **Representation Gap Detection**
+   Identifies gaps between the current AI interpretation and an ideal, well-structured product representation.
+
+4. **Current vs Ideal Representation Comparison**
+   Clearly shows how the product is currently perceived by AI versus how it should be represented for accurate recommendations.
+
+5. **Actionable Recommendation Engine**
+   Generates specific, context-aware improvements, including rewritten descriptions, missing attributes, and structural enhancements.
+
+6. **Prioritized Action Plan**
+   Ranks issues based on their impact on AI understanding and recommendation quality, enabling merchants to focus on high-value improvements first.
+
+7. **Conversion-Oriented Insights**
+   Connects data quality issues to business impact, explaining how gaps in product data can reduce trust, accuracy, and conversion rates.
 
 ---
 
