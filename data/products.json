@@ -1,0 +1,805 @@
+{
+  "store": "together-stack",
+  "productCount": 30,
+  "products": [
+    {
+      "id": "gid://shopify/Product/9480666939640",
+      "handle": "cotton-kurta-shirt-blue",
+      "title": "Cotton Kurta Shirt - Blue",
+      "descriptionPlain": "A premium 100% pure cotton kurta shirt crafted for everyday comfort. Features a classic straight cut, breathable fabric, and subtle embroidery at the collar. Ideal for casual outings, festive occasions, and office wear. Available in sizes S to XXL. Machine washable.",
+      "descriptionWordCount": 41,
+      "productType": "Kurta, Ethnic",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "casual",
+        "cotton",
+        "ethnic",
+        "festive",
+        "kurta",
+        "men"
+      ],
+      "price": 799.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480666972408",
+      "handle": "ayurvedic-face-cream-neem",
+      "title": "Ayurvedic Neem Face Cream",
+      "descriptionPlain": "Formulated with natural neem extract, turmeric, and aloe vera, this Ayurvedic face cream deeply moisturises and heals skin. Free from parabens and harsh chemicals. Suitable for all skin types. Dermatologist tested. 50g jar. Apply twice daily for best results.",
+      "descriptionWordCount": 39,
+      "productType": "Face Cream, Skincare",
+      "vendor": "HerbalRoots",
+      "status": "ACTIVE",
+      "tags": [
+        "ayurvedic",
+        "herbal",
+        "moisturiser",
+        "natural",
+        "neem",
+        "skincare"
+      ],
+      "price": 349.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667005176",
+      "handle": "wireless-bluetooth-headphones-pro",
+      "title": "Wireless Bluetooth Headphones Pro",
+      "descriptionPlain": "Experience rich, immersive sound with 40mm dynamic drivers and active noise cancellation. The ProSound X1 offers 30-hour battery life, foldable design, and soft memory-foam ear cushions. Compatible with all Bluetooth 5.0 devices. Includes 3.5mm aux cable and carrying pouch.",
+      "descriptionWordCount": 39,
+      "productType": "Headphones, Wireless",
+      "vendor": "SoundWave",
+      "status": "ACTIVE",
+      "tags": [
+        "audio",
+        "bluetooth",
+        "headphones",
+        "noise-cancelling",
+        "wireless"
+      ],
+      "price": 2499.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667037944",
+      "handle": "leather-handbag-women-tan",
+      "title": "Premium Leather Handbag - Tan",
+      "descriptionPlain": "Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. Adjustable shoulder strap. Dimensions: 35cm x 25cm x 12cm. Perfect for daily office use or weekend outings.",
+      "descriptionWordCount": 40,
+      "productType": "Handbag, Leather, Women",
+      "vendor": "LeatherLux",
+      "status": "ACTIVE",
+      "tags": [
+        "genuine leather",
+        "handbag",
+        "leather",
+        "premium",
+        "tan",
+        "women"
+      ],
+      "price": 1899.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667070712",
+      "handle": "smart-fitness-watch-black",
+      "title": "SmartFit Pro Fitness Watch - Black",
+      "descriptionPlain": "Track your health with precision using the SmartFit Pro. Features heart rate monitoring, SpO2 sensor, GPS tracking, sleep analysis, and 7-day battery life. IP68 waterproof rated. Compatible with Android 6.0+ and iOS 12+. Comes with a silicone band and magnetic charger.",
+      "descriptionWordCount": 41,
+      "productType": "Smartwatch, Fitness, GPS",
+      "vendor": "TechNova",
+      "status": "ACTIVE",
+      "tags": [
+        "fitness",
+        "gps",
+        "heart-rate",
+        "smartwatch",
+        "waterproof"
+      ],
+      "price": 4999.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667103480",
+      "handle": "canvas-sneakers-white",
+      "title": "Canvas Sneakers - White",
+      "descriptionPlain": "Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper. Ideal for casual daily wear. Available in sizes 6-11 (UK). Lightweight at just 280g per pair.",
+      "descriptionWordCount": 38,
+      "productType": "Sneakers, Canvas, Unisex",
+      "vendor": "StepUp",
+      "status": "ACTIVE",
+      "tags": [
+        "canvas",
+        "casual",
+        "shoes",
+        "sneakers",
+        "unisex",
+        "white"
+      ],
+      "price": 1299.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667136248",
+      "handle": "bluetooth-portable-speaker-mini",
+      "title": "Budget Bluetooth Mini Speaker",
+      "descriptionPlain": "Compact and powerful, this portable Bluetooth speaker delivers 360-degree sound with 10W output. Features IPX5 water resistance, 8-hour playtime, built-in microphone for hands-free calls, and micro-USB charging. Compatible with all Bluetooth-enabled devices. Weight: 250g.",
+      "descriptionWordCount": 34,
+      "productType": "Speaker, Bluetooth, Portable",
+      "vendor": "SoundWave",
+      "status": "ACTIVE",
+      "tags": [
+        "bluetooth",
+        "budget",
+        "portable",
+        "speaker",
+        "waterproof"
+      ],
+      "price": 1199.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667169016",
+      "handle": "mens-leather-belt-brown",
+      "title": "Men's Genuine Leather Belt - Brown",
+      "descriptionPlain": "A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. Width: 35mm. Available in sizes 28-44 inches. Perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability.",
+      "descriptionWordCount": 38,
+      "productType": "Belt, Leather, Men",
+      "vendor": "BeltCraft",
+      "status": "ACTIVE",
+      "tags": [
+        "belt",
+        "brown",
+        "formal",
+        "genuine leather",
+        "leather",
+        "men"
+      ],
+      "price": 699.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667201784",
+      "handle": "cotton-tshirt-pack-3",
+      "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
+      "descriptionPlain": "Upgrade your daily wardrobe with this pack of three premium 100% combed cotton t-shirts, designed specifically for the humid Indian summer. These lightweight, breathable tees feature a classic round neck and a regular fit that ensures maximum comfort during long commutes or casual outings. Ideal for college students and working professionals, these versatile basics pair perfectly with jeans or chinos. Each pack includes three distinct colors to keep your style fresh throughout the week. To maintain the fabric's soft texture and prevent shrinkage, machine wash cold with similar colors and dry in the shade.",
+      "descriptionWordCount": 94,
+      "productType": "T-Shirt",
+      "vendor": "BrandLess",
+      "status": "ACTIVE",
+      "tags": [
+        "100% cotton",
+        "casual wear",
+        "indian fashion",
+        "men's t-shirt",
+        "pack of 3",
+        "round neck",
+        "summer essentials"
+      ],
+      "price": 499.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/cotton-tshirt.webp?v=1777132927",
+          "altText": "Cotton T-Shirt Pack of 3"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/t-shirt2.jpeg?v=1777133043",
+          "altText": "Cotton T-Shirt Pack of 3"
+        }
+      ],
+      "imageCount": 2,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": "Buy Men's 100% Cotton T-Shirt Pack of 3 - Breathable Tees",
+        "description": "Shop our pack of 3 premium cotton t-shirts for men. Breathable, sweat-absorbent, and perfect for the Indian summer. Durable everyday wear at an affordable price."
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667234552",
+      "handle": "face-wash-charcoal",
+      "title": "Charcoal Face Wash",
+      "descriptionPlain": "Best face wash. Removes dirt. Good for skin. Use daily.",
+      "descriptionWordCount": 10,
+      "productType": "Face Wash",
+      "vendor": "GlowUp",
+      "status": "ACTIVE",
+      "tags": [],
+      "price": 199.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667267320",
+      "handle": "laptop-budget-15inch",
+      "title": "Budget Laptop 15 Inch",
+      "descriptionPlain": "This laptop is very good for students and office use. Has good battery. Fast performance. Latest model.",
+      "descriptionWordCount": 17,
+      "productType": "Laptop, Budget",
+      "vendor": "TechZone",
+      "status": "ACTIVE",
+      "tags": [
+        "laptop",
+        "office",
+        "student"
+      ],
+      "price": 32999.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667300088",
+      "handle": "winter-jacket-heavy-mens",
+      "title": "Men's Heavy Winter Jacket",
+      "descriptionPlain": "Stay cool this summer with our lightweight winter jacket. Great for beach outings and poolside lounging. Thin fabric ensures breathability in hot weather conditions.",
+      "descriptionWordCount": 24,
+      "productType": "Jacket",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "jacket",
+        "men",
+        "winter"
+      ],
+      "price": 1599.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667332856",
+      "handle": "sunglasses-uv400-unisex",
+      "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
+      "descriptionPlain": "These UV400 Protection Wayfarer Sunglasses are designed for the modern Indian lifestyle, offering complete defense against harmful UVA and UVB rays. Crafted from lightweight yet durable polycarbonate, the matte black frames ensure comfort during long commutes or outdoor weddings. The scratch-resistant lenses provide crystal-clear vision whether you are driving in bright sunlight or lounging at a beach in Goa. Ideal for both men and women, these versatile shades complement ethnic and western outfits alike. To maintain clarity, wipe the lenses with the provided microfiber cloth and store them in the protective hard case when not in use. Avoid using harsh chemicals for cleaning.",
+      "descriptionWordCount": 103,
+      "productType": "Sunglasses",
+      "vendor": "ShadeOn",
+      "status": "ACTIVE",
+      "tags": [
+        "casual wear",
+        "driving",
+        "matte black",
+        "polycarbonate",
+        "summer essentials",
+        "sunglasses",
+        "unisex",
+        "uv protection"
+      ],
+      "price": 599.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/ray-ban-bill-aviator-sunglasses-black6.jpg?v=1777132230",
+          "altText": "UV400 Sunglasses Unisex"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/ray-ban-bill-aviator-sunglasses-black6_43e7b199-adca-489a-a8d7-952801f94efb.jpg?v=1777132257",
+          "altText": "UV400 Sunglasses Unisex"
+        }
+      ],
+      "imageCount": 2,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": "UV400 Protection Wayfarer Sunglasses for Men & Women",
+        "description": "Protect your eyes with our UV400 Wayfarer Sunglasses. Lightweight matte black frames perfect for Indian summers, driving, and outdoor events. Shop ShadeOn today."
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667365624",
+      "handle": "moisturiser-aloe-vera",
+      "title": "Aloe Vera Moisturiser 100ml",
+      "descriptionPlain": "aloe vera moisturiser good for dry skin apply morning and night best product no side effects natural ingredients dermatologist approved works for all skin types available in 100ml and 200ml",
+      "descriptionWordCount": 30,
+      "productType": "Moisturiser",
+      "vendor": "HerbalRoots",
+      "status": "ACTIVE",
+      "tags": [
+        "aloe",
+        "moisturiser",
+        "skincare"
+      ],
+      "price": 299.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667398392",
+      "handle": "running-shoes-mens-red",
+      "title": "Men's Running Shoes - Red",
+      "descriptionPlain": "Shoes for running. Red color. Good grip.",
+      "descriptionWordCount": 7,
+      "productType": "Running Shoes",
+      "vendor": "StepUp",
+      "status": "ACTIVE",
+      "tags": [],
+      "price": 2199.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/red-shoe.jpg?v=1777132820",
+          "altText": "Men's Running Shoes - Red"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667431160",
+      "handle": "formal-shirt-white-cotton",
+      "title": "WhiteCotton Formal Shirt",
+      "descriptionPlain": "formal shirt for office use cotton material good for daily use iron easily available in all sizes",
+      "descriptionWordCount": 17,
+      "productType": "Formal Shirt",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "formal",
+        "shirt",
+        "white"
+      ],
+      "price": 899.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667463928",
+      "handle": "earphones-wired-budget",
+      "title": "Wired Earphones Budget",
+      "descriptionPlain": "Works good. Sound is clear. Has mic. Budget product.",
+      "descriptionWordCount": 9,
+      "productType": "Earphones",
+      "vendor": "SoundWave",
+      "status": "ACTIVE",
+      "tags": [
+        "earphones",
+        "wired"
+      ],
+      "price": 299.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667496696",
+      "handle": "smartwatch-round-dial",
+      "title": "Smart Watch Round Dial",
+      "descriptionPlain": "Smartwatch with round dial. Looks good on wrist. Has notifications. Battery lasts long. Many features available.",
+      "descriptionWordCount": 16,
+      "productType": "Smartwatch",
+      "vendor": "TechNova",
+      "status": "ACTIVE",
+      "tags": [
+        "round",
+        "smartwatch"
+      ],
+      "price": 1999.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667529464",
+      "handle": "cotton-kurta-shirt-white",
+      "title": "Cotton Kurta Shirt - White",
+      "descriptionPlain": "Same as blue kurta but white color. Good cotton material.",
+      "descriptionWordCount": 10,
+      "productType": "Kurta, Ethnic",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "cotton",
+        "kurta",
+        "white"
+      ],
+      "price": 799.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667562232",
+      "handle": "tote-bag-canvas",
+      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
+      "descriptionPlain": "Crafted from 100% heavy-duty cotton canvas, this spacious off-white tote bag is built for the versatile Indian lifestyle. From carrying groceries at the local mandi to packing textbooks for college or essentials for the office, its reinforced stitching handles heavy loads with ease. The minimalist design complements ethnic kurtis and western wear alike, making it a stylish choice for urban commuters. Featuring long, ergonomic shoulder straps, it ensures comfort during long commutes or shopping trips. To preserve the fabric, hand wash in cold water and air dry. This sustainable accessory is the perfect plastic-free companion for daily errands and travel.",
+      "descriptionWordCount": 100,
+      "productType": "Tote Bag",
+      "vendor": "BagStore",
+      "status": "ACTIVE",
+      "tags": [
+        "college bag",
+        "cotton canvas",
+        "grocery shopping",
+        "off-white",
+        "office wear",
+        "sustainable",
+        "tote bag",
+        "unisex"
+      ],
+      "price": 499.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/totebag.webp?v=1777129956",
+          "altText": "Canvas Tote Bag"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": "Cotton Canvas Tote Bag - Eco-Friendly Off-White Handbag",
+        "description": "Durable 100% cotton canvas tote bag for daily Indian use. Perfect for college, office, or grocery shopping. Sustainable, spacious, and stylish off-white design."
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667595000",
+      "handle": "sunscreen-spf50",
+      "title": "Sunscreen SPF 50",
+      "descriptionPlain": "SPF 50 sunscreen lotion. Apply before going out in sun. Good protection. Non greasy.",
+      "descriptionWordCount": 14,
+      "productType": "Sunscreen",
+      "vendor": "GlowUp",
+      "status": "ACTIVE",
+      "tags": [
+        "spf50",
+        "sunscreen"
+      ],
+      "price": 349.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667627768",
+      "handle": "laptop-gaming-pro",
+      "title": "Gaming Laptop Pro",
+      "descriptionPlain": "BEST GAMING LAPTOP IN MARKET!!! i9 processor 32GB RAM 1TB SSD RTX 4060 graphics very fast runs all games smoothly must buy dont miss this offer limited stock hurry up buy now best price guaranteed.",
+      "descriptionWordCount": 35,
+      "productType": "Gaming, Laptop",
+      "vendor": "TechZone",
+      "status": "ACTIVE",
+      "tags": [
+        "gaming",
+        "i9",
+        "laptop"
+      ],
+      "price": 79999.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667660536",
+      "handle": "flip-flops-rubber",
+      "title": "Rubber Flip Flops",
+      "descriptionPlain": "Basic flip flops. Waterproof. Good for bathroom and beach use.",
+      "descriptionWordCount": 10,
+      "productType": "Flip Flops",
+      "vendor": "StepUp",
+      "status": "ACTIVE",
+      "tags": [],
+      "price": 199.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667693304",
+      "handle": "hooded-sweatshirt-grey",
+      "title": "Hooded Sweatshirt Grey",
+      "descriptionPlain": "grey hoodie good fabric winter wear comfortable casual look available sizes s m l xl machine wash inside out cold tumble dry low",
+      "descriptionWordCount": 23,
+      "productType": "Hoodie",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "casual",
+        "grey",
+        "hoodie"
+      ],
+      "price": 1099.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667726072",
+      "handle": "wireless-mouse-ergonomic",
+      "title": "Wireless Ergonomic Mouse",
+      "descriptionPlain": "Wireless mouse. Works on USB dongle. Good for office. Long battery life. No lag.",
+      "descriptionWordCount": 14,
+      "productType": "Accessories",
+      "vendor": "TechNova",
+      "status": "ACTIVE",
+      "tags": [
+        "mouse",
+        "wireless"
+      ],
+      "price": 799.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667758840",
+      "handle": "vitamin-c-serum",
+      "title": "Vitamin C Face Serum",
+      "descriptionPlain": "Vitamin c serum for bright skin. Apply 2-3 drops. Morning use. See results in 4 weeks.",
+      "descriptionWordCount": 16,
+      "productType": "Serum",
+      "vendor": "GlowUp",
+      "status": "ACTIVE",
+      "tags": [
+        "serum",
+        "skincare",
+        "vitamin c"
+      ],
+      "price": 449.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667791608",
+      "handle": "mens-wallet-black",
+      "title": "Men's Slim Wallet - Black",
+      "descriptionPlain": "Slim wallet. Holds cards and cash. Black color leather look material.",
+      "descriptionWordCount": 11,
+      "productType": "Wallet",
+      "vendor": "BagStore",
+      "status": "ACTIVE",
+      "tags": [
+        "men",
+        "slim",
+        "wallet"
+      ],
+      "price": 399.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667824376",
+      "handle": "party-wear-shirt-men",
+      "title": "Men's Party Wear Shirt",
+      "descriptionPlain": "Shiny party shirt. Great for diwali and weddings. Multiple color options.",
+      "descriptionWordCount": 11,
+      "productType": "Shirt, Party",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "festive",
+        "party",
+        "shirt"
+      ],
+      "price": 1199.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667857144",
+      "handle": "bluetooth-headphones-budget",
+      "title": "Budget Bluetooth Headphones",
+      "descriptionPlain": "Wireless headphones. Connects via bluetooth. Good sound. Affordable price. Comfortable fit.",
+      "descriptionWordCount": 11,
+      "productType": "Headphones, Wireless",
+      "vendor": "SoundWave",
+      "status": "ACTIVE",
+      "tags": [
+        "bluetooth",
+        "budget",
+        "headphones"
+      ],
+      "price": 999.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9480667889912",
+      "handle": "polarised-sunglasses-black",
+      "title": "Polarised Sunglasses - Black",
+      "descriptionPlain": "Style meets function with our polarised black sunglasses. Reduces glare from reflective surfaces. UV400 protection. Lightweight TR90 frame. Includes hard case and cleaning cloth. Suitable for driving, fishing, and outdoor sports.",
+      "descriptionWordCount": 31,
+      "productType": "Sunglasses, Polarised",
+      "vendor": "ShadeOn",
+      "status": "ACTIVE",
+      "tags": [
+        "black",
+        "outdoor",
+        "polarised",
+        "sunglasses",
+        "uv400"
+      ],
+      "price": 849.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "seo": {
+        "title": null,
+        "description": null
+      }
+    }
+  ]
+}

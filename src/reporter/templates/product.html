@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ product.title }} — AI Optimizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f; --bg2: #111118; --bg3: #1a1a24;
+    --border: #2a2a3a; --border2: #3a3a50;
+    --text: #e8e8f0; --muted: #7a7a9a;
+    --accent: #7c6dfa; --accent2: #a78bfa;
+    --green: #34d399; --amber: #fbbf24; --red: #f87171; --teal: #2dd4bf;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px; height: 56px;
+    display: flex; align-items: center; gap: 16px;
+    position: sticky; top: 0; background: var(--bg); z-index: 100;
+  }
+  .back-link { color: var(--muted); text-decoration: none; font-size: 13px; }
+  .back-link:hover { color: var(--accent2); }
+  .page-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px; }
+
+  /* Product hero */
+  .product-hero {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .hero-main {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .product-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .product-handle-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .meta-row {
+    display: flex; gap: 24px; margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .meta-item { }
+  .meta-label { font-size: 10px; font-family: 'DM Mono', monospace; color: var(--muted); text-transform: uppercase; margin-bottom: 3px; }
+  .meta-value { font-size: 13px; font-weight: 500; }
+
+  .desc-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-top: 16px;
+    font-style: italic;
+  }
+  .desc-box.empty { color: var(--red); opacity: 0.7; }
+
+  /* Score sidebar */
+  .score-sidebar { display: flex; flex-direction: column; gap: 12px; }
+  .score-big-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+  }
+  .big-score {
+    font-family: 'Syne', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .grade-big {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 6px;
+  }
+  .signal-grid {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .signal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .signal-row:last-child { border-bottom: none; }
+  .signal-name { color: var(--muted); font-family: 'DM Mono', monospace; }
+  .sig-strong { color: var(--green); font-size: 11px; }
+  .sig-moderate { color: var(--amber); font-size: 11px; }
+  .sig-weak { color: var(--red); font-size: 11px; }
+  .sig-absent { color: var(--red); font-size: 11px; font-weight: 600; }
+  .sig-present { color: var(--teal); font-size: 11px; }
+
+  /* Two-col body */
+  .body-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+
+  /* Issues */
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .issue-item {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border2);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+  .issue-item.CRITICAL { border-left-color: var(--red); }
+  .issue-item.HIGH     { border-left-color: var(--amber); }
+  .issue-item.MEDIUM   { border-left-color: var(--accent); }
+  .issue-item.LOW      { border-left-color: var(--teal); }
+  .issue-top { display: flex; gap: 8px; align-items: center; margin-bottom: 5px; }
+  .sev { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 10px; font-family: 'DM Mono', monospace; }
+  .sev-CRITICAL { background: rgba(248,113,113,0.15); color: var(--red); }
+  .sev-HIGH     { background: rgba(251,191,36,0.15);  color: var(--amber); }
+  .sev-MEDIUM   { background: rgba(124,109,250,0.15); color: var(--accent2); }
+  .sev-LOW      { background: rgba(45,212,191,0.15);  color: var(--teal); }
+  .issue-code { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); }
+  .issue-msg { font-size: 12px; line-height: 1.5; color: var(--text); }
+
+  /* AI Perception */
+  .perception-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .ai-type-big {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--accent2);
+  }
+  .confidence-bar-wrap { margin: 12px 0; }
+  .confidence-label { font-size: 11px; color: var(--muted); margin-bottom: 5px; font-family: 'DM Mono', monospace; }
+  .conf-bar { height: 6px; background: var(--bg3); border-radius: 3px; }
+  .conf-fill { height: 6px; border-radius: 3px; background: var(--accent); }
+  .interpretation { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 12px 0; }
+  .ambiguity-flag {
+    background: rgba(248,113,113,0.08);
+    border: 1px solid rgba(248,113,113,0.2);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .flag-type { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--red); margin-bottom: 4px; }
+
+  /* One-click actions */
+  .actions-bar {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .actions-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .actions-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+  .action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--border2);
+    background: var(--bg3);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .action-btn:hover { border-color: var(--accent); color: var(--accent2); }
+  .action-btn.primary { background: var(--accent); border-color: var(--accent); color: white; }
+  .action-btn.primary:hover { background: var(--accent2); border-color: var(--accent2); }
+  .action-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .spinner { width: 12px; height: 12px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: none; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Preview modal */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    border-radius: 14px;
+    width: 100%;
+    max-width: 760px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 28px;
+  }
+  .modal-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-close { cursor: pointer; color: var(--muted); font-size: 20px; background: none; border: none; color: var(--muted); }
+  .diff-block { margin-bottom: 20px; }
+  .diff-label { font-size: 11px; font-family: 'DM Mono', monospace; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .diff-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .diff-before, .diff-after {
+    background: var(--bg3);
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1.6;
+    position: relative;
+  }
+  .diff-before { border-left: 3px solid var(--red); }
+  .diff-after  { border-left: 3px solid var(--green); }
+  .diff-badge {
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .diff-before .diff-badge { color: var(--red); }
+  .diff-after  .diff-badge { color: var(--green); }
+  .changes-summary {
+    background: rgba(124,109,250,0.08);
+    border: 1px solid rgba(124,109,250,0.2);
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--accent2);
+  }
+  .tags-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: var(--bg); border: 1px solid var(--border2); border-radius: 20px; padding: 3px 10px; font-size: 11px; font-family: 'DM Mono', monospace; color: var(--muted); }
+  .tag.new { border-color: var(--green); color: var(--green); }
+  .modal-actions { display: flex; gap: 10px; margin-top: 20px; justify-content: flex-end; }
+
+  /* Image upload modal */
+  .upload-zone {
+    border: 2px dashed var(--border2);
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+  }
+  .upload-zone:hover, .upload-zone.drag { border-color: var(--accent); background: rgba(124,109,250,0.05); }
+  .upload-icon { font-size: 32px; margin-bottom: 10px; }
+  .upload-text { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+  .upload-sub { font-size: 12px; color: var(--muted); }
+  .upload-rules {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .upload-rule {
+    background: var(--bg3);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .upload-rule .icon { color: var(--green); }
+  .validation-result {
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    display: none;
+  }
+  .validation-result.error   { background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.3); color: var(--red); }
+  .validation-result.warning { background: rgba(251,191,36,0.08);  border: 1px solid rgba(251,191,36,0.3);  color: var(--amber); }
+  .validation-result.success { background: rgba(52,211,153,0.08);  border: 1px solid rgba(52,211,153,0.3);  color: var(--green); }
+
+  /* Toast */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--bg3); border: 1px solid var(--border2);
+    border-radius: 8px; padding: 12px 18px;
+    font-size: 13px; z-index: 999;
+    opacity: 0; transform: translateY(10px);
+    transition: all 0.3s; max-width: 320px;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.success { border-color: var(--green); color: var(--green); }
+  .toast.error   { border-color: var(--red);   color: var(--red);   }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="back-link" href="/">← Back to store</a>
+  <div class="page-title">{{ product.title }}</div>
+</header>
+
+<div class="container">
+
+  <!-- Product hero -->
+  <div class="product-hero">
+    <div class="hero-main">
+      <div class="product-name">{{ product.title }}</div>
+      <div class="product-handle-tag">{{ product.handle }}</div>
+      <div class="meta-row">
+        <div class="meta-item">
+          <div class="meta-label">Vendor</div>
+          <div class="meta-value">{{ product.vendor or '—' }}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Type</div>
+          <div class="meta-value">{{ product.productType or '—' }}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Price</div>
+          <div class="meta-value">₹{{ product.price }}</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Tags</div>
+          <div class="meta-value">{{ product.tags|length }} tags</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Images</div>
+          <div class="meta-value" style="color:{% if product.imageCount == 0 %}var(--red){% else %}var(--green){% endif %}">
+            {{ product.imageCount }} {% if product.imageCount == 0 %}(missing){% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="meta-label">Current Description</div>
+      <div class="desc-box {% if not product.descriptionPlain %}empty{% endif %}">
+        {% if product.descriptionPlain %}
+          {{ product.descriptionPlain[:400] }}{% if product.descriptionPlain|length > 400 %}...{% endif %}
+        {% else %}
+          No description — this product is invisible to AI agents.
+        {% endif %}
+      </div>
+      {% if product.tags %}
+      <div style="margin-top:14px">
+        <div class="meta-label" style="margin-bottom:6px">Tags</div>
+        <div class="tags-list">
+          {% for tag in product.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="score-sidebar">
+      <div class="score-big-card">
+        <div class="meta-label">Quality Score</div>
+        <div class="big-score" style="color:{% if rec.currentScore >= 70 %}var(--green){% elif rec.currentScore >= 45 %}var(--amber){% else %}var(--red){% endif %}">
+          {{ rec.currentScore or 0 }}
+        </div>
+        <div class="grade-big" style="color:{% if rec.grade == 'A' %}var(--green){% elif rec.grade == 'B' %}var(--amber){% else %}var(--red){% endif %}">
+          Grade {{ rec.grade or '?' }}
+        </div>
+        <div style="font-size:12px;color:var(--muted);margin-top:6px">{{ rec.totalIssues or 0 }} issues detected</div>
+        {% if rec.projectedScore %}
+        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;color:var(--green)">
+          ↑ Projected: {{ rec.projectedScore }}/100 after fixes
+        </div>
+        {% endif %}
+      </div>
+
+      {% if perception and perception.aiPerception %}
+      <div class="signal-grid">
+        <div class="section-title">Signal Strengths</div>
+        {% for field, quality in perception.aiPerception.signalStrengths.items() %}
+        <div class="signal-row">
+          <span class="signal-name">{{ field }}</span>
+          <span class="sig-{{ quality }}">{{ quality }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- One-click actions -->
+  <div class="actions-bar">
+    <div class="actions-title">
+      ⚡ One-Click Fixes
+      <span style="font-size:12px;font-weight:400;color:var(--muted)">AI-powered improvements</span>
+    </div>
+    <div class="actions-grid">
+      <button class="action-btn primary" onclick="generateEnhancement()" id="enhance-btn">
+        <span class="spinner" id="enhance-spinner"></span>
+        ✦ Generate AI Improvements
+      </button>
+      <button class="action-btn" onclick="openImageModal()">
+        ↑ Upload Images
+      </button>
+    </div>
+  </div>
+
+  <!-- Issues + Perception -->
+  <div class="body-grid">
+    <div>
+      <div class="section-title">Detected Issues ({{ report.totalIssues or 0 }})</div>
+      {% if report.issues %}
+        {% for issue in report.issues %}
+        <div class="issue-item {{ issue.severity }}">
+          <div class="issue-top">
+            <span class="sev sev-{{ issue.severity }}">{{ issue.severity }}</span>
+            <span class="issue-code">{{ issue.code }}</span>
+          </div>
+          <div class="issue-msg">{{ issue.message }}</div>
+          {% if issue.evidence and issue.evidence is string %}
+          <div style="font-size:11px;color:var(--muted);margin-top:5px;font-family:'DM Mono',monospace">Evidence: {{ issue.evidence[:80] }}</div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% else %}
+        <div style="color:var(--green);font-size:13px">No issues detected ✓</div>
+      {% endif %}
+    </div>
+
+    <div>
+      <div class="section-title">AI Perception</div>
+      {% if perception and perception.aiPerception %}
+      <div class="perception-card">
+        <div style="font-size:11px;font-family:'DM Mono',monospace;color:var(--muted);margin-bottom:6px">AI SEES THIS AS</div>
+        <div class="ai-type-big">{{ perception.aiPerception.perceivedType }}</div>
+
+        <div class="confidence-bar-wrap">
+          <div class="confidence-label">TYPE CONFIDENCE — {{ perception.aiPerception.typeConfidence }}%</div>
+          <div class="conf-bar">
+            <div class="conf-fill" style="width:{{ perception.aiPerception.typeConfidence }}%"></div>
+          </div>
+        </div>
+
+        <div class="confidence-bar-wrap">
+          <div class="confidence-label">RETRIEVAL SCORE — {{ perception.aiPerception.retrievalScore }}/100</div>
+          <div class="conf-bar">
+            <div class="conf-fill" style="width:{{ perception.aiPerception.retrievalScore }}%;background:{% if perception.aiPerception.retrievalScore >= 70 %}var(--green){% elif perception.aiPerception.retrievalScore >= 45 %}var(--amber){% else %}var(--red){% endif %}"></div>
+          </div>
+        </div>
+
+        <div class="interpretation">{{ perception.aiPerception.interpretation }}</div>
+
+        {% if perception.aiPerception.ambiguityFlags %}
+        <div class="section-title" style="margin-bottom:8px">Ambiguity Flags</div>
+        {% for flag in perception.aiPerception.ambiguityFlags %}
+        <div class="ambiguity-flag">
+          <div class="flag-type">{{ flag.type.replace('_',' ') }}</div>
+          {{ flag.description }}
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if rec and rec.quickWins %}
+      <div style="margin-top:20px">
+        <div class="section-title">Quick Wins</div>
+        {% for qw in rec.quickWins %}
+        <div class="issue-item" style="border-left-color:var(--green)">
+          <div class="issue-top">
+            <span class="sev" style="background:rgba(52,211,153,0.15);color:var(--green)">{{ qw.effort }} EFFORT</span>
+            <span class="issue-code">{{ qw.issueCode }}</span>
+          </div>
+          <div class="issue-msg">{{ qw.fix }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Enhancement Preview Modal -->
+<div class="modal-overlay" id="enhance-modal">
+  <div class="modal">
+    <div class="modal-title">
+      AI-Generated Improvements
+      <button class="modal-close" onclick="closeModal('enhance-modal')">×</button>
+    </div>
+
+    <div class="changes-summary" id="changes-summary"></div>
+
+    <div class="diff-block">
+      <div class="diff-label">Title</div>
+      <div class="diff-row">
+        <div class="diff-before"><span class="diff-badge">BEFORE</span><span id="before-title"></span></div>
+        <div class="diff-after"><span class="diff-badge">AFTER</span><span id="after-title"></span></div>
+      </div>
+    </div>
+
+    <div class="diff-block">
+      <div class="diff-label">Description</div>
+      <div class="diff-row">
+        <div class="diff-before" style="max-height:160px;overflow-y:auto"><span class="diff-badge">BEFORE</span><span id="before-desc"></span></div>
+        <div class="diff-after"  style="max-height:160px;overflow-y:auto"><span class="diff-badge">AFTER</span><span id="after-desc"></span></div>
+      </div>
+    </div>
+
+    <div class="diff-block">
+      <div class="diff-label">Tags</div>
+      <div class="diff-row">
+        <div class="diff-before"><span class="diff-badge">BEFORE</span><div class="tags-list" id="before-tags"></div></div>
+        <div class="diff-after"><span class="diff-badge">AFTER</span><div class="tags-list" id="after-tags"></div></div>
+      </div>
+    </div>
+
+    <div class="diff-block">
+      <div class="diff-label">SEO</div>
+      <div class="diff-after" style="width:100%;max-width:100%">
+        <span class="diff-badge">NEW SEO TITLE</span>
+        <div id="seo-title" style="margin-bottom:8px"></div>
+        <span class="diff-badge">NEW SEO DESCRIPTION</span>
+        <div id="seo-desc"></div>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="action-btn" onclick="closeModal('enhance-modal')">Discard</button>
+      <button class="action-btn primary" onclick="applyChanges()" id="apply-btn">
+        <span class="spinner" id="apply-spinner"></span>
+        Apply to Shopify
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Image Upload Modal -->
+<div class="modal-overlay" id="image-modal">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-title">
+      Upload Product Image
+      <button class="modal-close" onclick="closeModal('image-modal')">×</button>
+    </div>
+
+    <div class="upload-rules">
+      <div class="upload-rule"><span class="icon">✓</span> JPG, PNG, or WEBP only</div>
+      <div class="upload-rule"><span class="icon">✓</span> Minimum 800×800px</div>
+      <div class="upload-rule"><span class="icon">✓</span> Maximum 20MB per file</div>
+      <div class="upload-rule"><span class="icon">✓</span> Square ratio recommended</div>
+    </div>
+
+    <div class="upload-zone" id="upload-zone" onclick="document.getElementById('file-input').click()"
+         ondragover="event.preventDefault();this.classList.add('drag')"
+         ondragleave="this.classList.remove('drag')"
+         ondrop="handleDrop(event)">
+      <div class="upload-icon">📷</div>
+      <div class="upload-text">Click to choose or drag & drop</div>
+      <div class="upload-sub">Product photo for {{ product.title }}</div>
+    </div>
+    <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileSelect(this)">
+
+    <div class="validation-result" id="validation-result"></div>
+
+    <div class="modal-actions">
+      <button class="action-btn" onclick="closeModal('image-modal')">Cancel</button>
+      <button class="action-btn primary" id="upload-btn" onclick="uploadImage()" disabled>
+        <span class="spinner" id="upload-spinner"></span>
+        Upload to Shopify
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+const HANDLE   = "{{ product.handle }}";
+let enhancedData = null;
+let selectedFile = null;
+
+// ── Toast ────────────────────────────────────────────────────────────────────
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast ${type} show`;
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ── Modal helpers ─────────────────────────────────────────────────────────────
+function openModal(id)  { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+// ── Generate Enhancement ──────────────────────────────────────────────────────
+async function generateEnhancement() {
+  const btn     = document.getElementById('enhance-btn');
+  const spinner = document.getElementById('enhance-spinner');
+  btn.disabled  = true;
+  spinner.style.display = 'inline-block';
+  btn.childNodes[2].nodeValue = ' Generating with Gemini AI...';
+
+  try {
+    const res  = await fetch(`/api/enhance/${HANDLE}`, { method: 'POST' });
+    const data = await res.json();
+
+    if (!data.success) throw new Error(data.error);
+
+    enhancedData = data.enhanced;
+    const e = data.enhanced;
+    const o = e.original;
+
+    document.getElementById('changes-summary').textContent = e.changesSummary;
+    document.getElementById('before-title').textContent = o.title;
+    document.getElementById('after-title').textContent  = e.title;
+    document.getElementById('before-desc').textContent  = o.description || '(empty)';
+    document.getElementById('after-desc').textContent   = e.descriptionHtml.replace(/<[^>]+>/g,' ').trim();
+
+    const beforeTags = document.getElementById('before-tags');
+    const afterTags  = document.getElementById('after-tags');
+    beforeTags.innerHTML = (o.tags||[]).map(t => `<span class="tag">${t}</span>`).join('') || '<span style="color:var(--red)">no tags</span>';
+    afterTags.innerHTML  = (e.tags||[]).map(t => `<span class="tag new">${t}</span>`).join('');
+
+    document.getElementById('seo-title').textContent = e.seo?.title || '—';
+    document.getElementById('seo-desc').textContent  = e.seo?.description || '—';
+
+    openModal('enhance-modal');
+  } catch (err) {
+    showToast('Error: ' + err.message, 'error');
+  } finally {
+    btn.disabled = false;
+    spinner.style.display = 'none';
+    btn.childNodes[2].nodeValue = ' Generate AI Improvements';
+  }
+}
+
+// ── Apply Changes ─────────────────────────────────────────────────────────────
+async function applyChanges() {
+  if (!enhancedData) return;
+  const btn     = document.getElementById('apply-btn');
+  const spinner = document.getElementById('apply-spinner');
+  btn.disabled  = true;
+  spinner.style.display = 'inline-block';
+
+  try {
+    const res  = await fetch(`/api/apply/${HANDLE}`, {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ enhanced: enhancedData }),
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      closeModal('enhance-modal');
+      showToast('✓ Applied! Updating analysis...', 'success');
+      
+      // Wait 2 seconds for Shopify API to reflect changes, then rerun and reload
+      setTimeout(async () => {
+        await fetch('/api/rerun-pipeline', { method: 'POST' });
+        location.reload();
+      }, 2000);
+    } else {
+      throw new Error(JSON.stringify(data.fieldResults));
+    }
+  } catch (err) {
+    showToast('Apply failed: ' + err.message, 'error');
+    btn.disabled = false;
+    spinner.style.display = 'none';
+  }
+}
+
+// ── Image Upload ──────────────────────────────────────────────────────────────
+function openImageModal() { openModal('image-modal'); }
+
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('upload-zone').classList.remove('drag');
+  const file = e.dataTransfer.files[0];
+  if (file) processFile(file);
+}
+
+function handleFileSelect(input) {
+  if (input.files[0]) processFile(input.files[0]);
+}
+
+function processFile(file) {
+  selectedFile = file;
+  const vr = document.getElementById('validation-result');
+
+  // Client-side pre-check
+  const allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+  if (!allowedTypes.includes(file.type)) {
+    vr.style.display = 'block';
+    vr.className = 'validation-result error';
+    vr.textContent = `❌ Invalid format: ${file.type}. Please upload a JPG, PNG, or WEBP file.`;
+    document.getElementById('upload-btn').disabled = true;
+    return;
+  }
+
+  const sizeMB = file.size / (1024 * 1024);
+  if (sizeMB > 20) {
+    vr.style.display = 'block';
+    vr.className = 'validation-result error';
+    vr.textContent = `❌ File too large: ${sizeMB.toFixed(1)}MB. Maximum is 20MB.`;
+    document.getElementById('upload-btn').disabled = true;
+    return;
+  }
+
+  vr.style.display = 'block';
+  vr.className = 'validation-result success';
+  vr.textContent = `✓ File selected: ${file.name} (${sizeMB.toFixed(2)}MB) — ready to upload`;
+  document.getElementById('upload-btn').disabled = false;
+
+  // Show image preview
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('upload-zone').innerHTML =
+      `<img src="${e.target.result}" style="max-height:160px;border-radius:6px;object-fit:contain">
+       <div class="upload-sub" style="margin-top:8px">${file.name}</div>`;
+  };
+  reader.readAsDataURL(file);
+}
+
+async function uploadImage() {
+  if (!selectedFile) return;
+  const btn     = document.getElementById('upload-btn');
+  const spinner = document.getElementById('upload-spinner');
+  btn.disabled  = true;
+  spinner.style.display = 'inline-block';
+
+  try {
+    const formData = new FormData();
+    formData.append('image', selectedFile);
+
+    const res  = await fetch(`/api/upload-image/${HANDLE}`, { method: 'POST', body: formData });
+    const data = await res.json();
+    const vr   = document.getElementById('validation-result');
+
+    if (data.success) {
+      vr.className = 'validation-result success';
+      vr.textContent = '✓ ' + data.message;
+      if (data.warnings?.length) {
+        vr.textContent += ' ⚠ ' + data.warnings.join(' ');
+      }
+      setTimeout(() => closeModal('image-modal'), 1500);
+      showToast('Image uploaded! Updating analysis...', 'success');
+      
+      // Wait 2 seconds for Shopify API to reflect changes, then rerun and reload
+      setTimeout(async () => {
+        await fetch('/api/rerun-pipeline', { method: 'POST' });
+        location.reload();
+      }, 2000);
+    } else if (data.stage === 'validation') {
+      vr.style.display = 'block';
+      vr.className = 'validation-result error';
+      vr.innerHTML = data.errors.map(e => `❌ ${e}`).join('<br>');
+      if (data.warnings?.length) {
+        vr.innerHTML += '<br>' + data.warnings.map(w => `⚠ ${w}`).join('<br>');
+      }
+      btn.disabled = false;
+      spinner.style.display = 'none';
+    } else {
+      throw new Error(data.message);
+    }
+  } catch (err) {
+    showToast('Upload failed: ' + err.message, 'error');
+    btn.disabled = false;
+    spinner.style.display = 'none';
+  }
+}
+</script>
+</body>
+</html>

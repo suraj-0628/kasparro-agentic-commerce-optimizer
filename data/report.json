@@ -1,0 +1,1304 @@
+{
+  "reportMeta": {
+    "generatedAt": "2026-04-25T16:06:40.066945",
+    "store": "together-stack",
+    "productsAnalyzed": 30,
+    "rulesApplied": 17,
+    "avgQualityScore": 63.1,
+    "storeGrade": "B"
+  },
+  "summary": {
+    "scoreDistribution": {
+      "excellent (80-100)": 3,
+      "good (60-79)": 10,
+      "poor (40-59)": 16,
+      "critical (<40)": 1
+    },
+    "severityCounts": {
+      "HIGH": 47,
+      "MEDIUM": 40,
+      "LOW": 27
+    },
+    "topIssues": [
+      {
+        "code": "SEO_TITLE_MISSING",
+        "count": 27
+      },
+      {
+        "code": "SEO_DESC_MISSING",
+        "count": 27
+      },
+      {
+        "code": "IMAGE_MISSING",
+        "count": 26
+      },
+      {
+        "code": "DESCRIPTION_TOO_SHORT",
+        "count": 14
+      },
+      {
+        "code": "DESCRIPTION_MISSING_SPECS",
+        "count": 5
+      },
+      {
+        "code": "DESCRIPTION_MISSING_MATERIAL",
+        "count": 4
+      },
+      {
+        "code": "TAGS_TOO_FEW",
+        "count": 4
+      },
+      {
+        "code": "TAGS_MISSING",
+        "count": 3
+      },
+      {
+        "code": "DESCRIPTION_VAGUE",
+        "count": 3
+      },
+      {
+        "code": "CONTRADICTION_SEASON",
+        "count": 1
+      }
+    ]
+  },
+  "products": [
+    {
+      "handle": "cotton-kurta-shirt-blue",
+      "title": "Cotton Kurta Shirt - Blue",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "ayurvedic-face-cream-neem",
+      "title": "Ayurvedic Neem Face Cream",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "wireless-bluetooth-headphones-pro",
+      "title": "Wireless Bluetooth Headphones Pro",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "leather-handbag-women-tan",
+      "title": "Premium Leather Handbag - Tan",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "smart-fitness-watch-black",
+      "title": "SmartFit Pro Fitness Watch - Black",
+      "score": 66,
+      "grade": "B",
+      "totalIssues": 4,
+      "issueSummary": {
+        "MEDIUM": 2,
+        "HIGH": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "canvas-sneakers-white",
+      "title": "Canvas Sneakers - White",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "bluetooth-portable-speaker-mini",
+      "title": "Budget Bluetooth Mini Speaker",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "mens-leather-belt-brown",
+      "title": "Men's Genuine Leather Belt - Brown",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "cotton-tshirt-pack-3",
+      "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
+      "score": 100,
+      "grade": "A",
+      "totalIssues": 0,
+      "issueSummary": {},
+      "issues": []
+    },
+    {
+      "handle": "face-wash-charcoal",
+      "title": "Charcoal Face Wash",
+      "score": 44,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 3,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Best face wash. Removes dirt. Good for skin. Use daily."
+        },
+        {
+          "code": "TAGS_MISSING",
+          "severity": "HIGH",
+          "field": "tags",
+          "message": "No tags — invisible to keyword-based AI retrieval.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "laptop-budget-15inch",
+      "title": "Budget Laptop 15 Inch",
+      "score": 36,
+      "grade": "F",
+      "totalIssues": 6,
+      "issueSummary": {
+        "HIGH": 3,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 17 words in description. Minimum 20 needed for AI context.",
+          "evidence": "This laptop is very good for students and office use. Has good battery. Fast performance. Latest mod"
+        },
+        {
+          "code": "DESCRIPTION_VAGUE",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "1 vague phrase(s) found — no signal for AI systems.",
+          "evidence": [
+            "very good"
+          ]
+        },
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "winter-jacket-heavy-mens",
+      "title": "Men's Heavy Winter Jacket",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "MEDIUM": 2,
+        "HIGH": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_MISSING_MATERIAL",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        },
+        {
+          "code": "CONTRADICTION_SEASON",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Conflicting seasonal signals — AI receives contradictory intent context.",
+          "evidence": {
+            "winter_found": [
+              "winter",
+              "heavy"
+            ],
+            "summer_found": [
+              "summer",
+              "cool",
+              "beach",
+              "lightweight",
+              "hot weather",
+              "poolside"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "handle": "sunglasses-uv400-unisex",
+      "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
+      "score": 100,
+      "grade": "A",
+      "totalIssues": 0,
+      "issueSummary": {},
+      "issues": []
+    },
+    {
+      "handle": "moisturiser-aloe-vera",
+      "title": "Aloe Vera Moisturiser 100ml",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_VAGUE",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "1 vague phrase(s) found — no signal for AI systems.",
+          "evidence": [
+            "best product"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "running-shoes-mens-red",
+      "title": "Men's Running Shoes - Red",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 7 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Shoes for running. Red color. Good grip."
+        },
+        {
+          "code": "DESCRIPTION_MISSING_MATERIAL",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
+          "evidence": null
+        },
+        {
+          "code": "TAGS_MISSING",
+          "severity": "HIGH",
+          "field": "tags",
+          "message": "No tags — invisible to keyword-based AI retrieval.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "formal-shirt-white-cotton",
+      "title": "WhiteCotton Formal Shirt",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 17 words in description. Minimum 20 needed for AI context.",
+          "evidence": "formal shirt for office use cotton material good for daily use iron easily available in all sizes"
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "earphones-wired-budget",
+      "title": "Wired Earphones Budget",
+      "score": 43,
+      "grade": "C",
+      "totalIssues": 6,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 3,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 9 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Works good. Sound is clear. Has mic. Budget product."
+        },
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
+          "evidence": null
+        },
+        {
+          "code": "TAGS_TOO_FEW",
+          "severity": "MEDIUM",
+          "field": "tags",
+          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "evidence": [
+            "earphones",
+            "wired"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "smartwatch-round-dial",
+      "title": "Smart Watch Round Dial",
+      "score": 43,
+      "grade": "C",
+      "totalIssues": 6,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 3,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 16 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Smartwatch with round dial. Looks good on wrist. Has notifications. Battery lasts long. Many feature"
+        },
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
+          "evidence": null
+        },
+        {
+          "code": "TAGS_TOO_FEW",
+          "severity": "MEDIUM",
+          "field": "tags",
+          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "evidence": [
+            "round",
+            "smartwatch"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "cotton-kurta-shirt-white",
+      "title": "Cotton Kurta Shirt - White",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Same as blue kurta but white color. Good cotton material."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "tote-bag-canvas",
+      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
+      "score": 100,
+      "grade": "A",
+      "totalIssues": 0,
+      "issueSummary": {},
+      "issues": []
+    },
+    {
+      "handle": "sunscreen-spf50",
+      "title": "Sunscreen SPF 50",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 14 words in description. Minimum 20 needed for AI context.",
+          "evidence": "SPF 50 sunscreen lotion. Apply before going out in sun. Good protection. Non greasy."
+        },
+        {
+          "code": "TAGS_TOO_FEW",
+          "severity": "MEDIUM",
+          "field": "tags",
+          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "evidence": [
+            "spf50",
+            "sunscreen"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "laptop-gaming-pro",
+      "title": "Gaming Laptop Pro",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_VAGUE",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "4 vague phrase(s) found — no signal for AI systems.",
+          "evidence": [
+            "must buy",
+            "buy now",
+            "limited stock",
+            "hurry up"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "flip-flops-rubber",
+      "title": "Rubber Flip Flops",
+      "score": 44,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 3,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Basic flip flops. Waterproof. Good for bathroom and beach use."
+        },
+        {
+          "code": "TAGS_MISSING",
+          "severity": "HIGH",
+          "field": "tags",
+          "message": "No tags — invisible to keyword-based AI retrieval.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "hooded-sweatshirt-grey",
+      "title": "Hooded Sweatshirt Grey",
+      "score": 66,
+      "grade": "B",
+      "totalIssues": 4,
+      "issueSummary": {
+        "MEDIUM": 2,
+        "HIGH": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_MISSING_MATERIAL",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "wireless-mouse-ergonomic",
+      "title": "Wireless Ergonomic Mouse",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 14 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Wireless mouse. Works on USB dongle. Good for office. Long battery life. No lag."
+        },
+        {
+          "code": "TAGS_TOO_FEW",
+          "severity": "MEDIUM",
+          "field": "tags",
+          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "evidence": [
+            "mouse",
+            "wireless"
+          ]
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "vitamin-c-serum",
+      "title": "Vitamin C Face Serum",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 16 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Vitamin c serum for bright skin. Apply 2-3 drops. Morning use. See results in 4 weeks."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "mens-wallet-black",
+      "title": "Men's Slim Wallet - Black",
+      "score": 59,
+      "grade": "C",
+      "totalIssues": 4,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Slim wallet. Holds cards and cash. Black color leather look material."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "party-wear-shirt-men",
+      "title": "Men's Party Wear Shirt",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Shiny party shirt. Great for diwali and weddings. Multiple color options."
+        },
+        {
+          "code": "DESCRIPTION_MISSING_MATERIAL",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "bluetooth-headphones-budget",
+      "title": "Budget Bluetooth Headphones",
+      "score": 51,
+      "grade": "C",
+      "totalIssues": 5,
+      "issueSummary": {
+        "HIGH": 2,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
+          "evidence": "Wireless headphones. Connects via bluetooth. Good sound. Affordable price. Comfortable fit."
+        },
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
+          "evidence": null
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    },
+    {
+      "handle": "polarised-sunglasses-black",
+      "title": "Polarised Sunglasses - Black",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No images — vision AI agents cannot verify this product.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title.",
+          "evidence": null
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
+          "evidence": null
+        }
+      ]
+    }
+  ]
+}

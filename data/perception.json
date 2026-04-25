@@ -1,0 +1,1065 @@
+{
+  "meta": {
+    "generatedAt": "2026-04-25T21:36:40.068646",
+    "productsProcessed": 30,
+    "avgRetrievalScore": 53.5,
+    "storeVisibility": "MEDIUM"
+  },
+  "summary": {
+    "ambiguousProducts": 18,
+    "highRetrieval": 3,
+    "lowRetrieval": 2
+  },
+  "perceptions": [
+    {
+      "handle": "cotton-kurta-shirt-blue",
+      "title": "Cotton Kurta Shirt - Blue",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 68,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "ayurvedic-face-cream-neem",
+      "title": "Ayurvedic Neem Face Cream",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 68,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Skincare' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "wireless-bluetooth-headphones-pro",
+      "title": "Wireless Bluetooth Headphones Pro",
+      "aiPerception": {
+        "perceivedType": "Headphones / Earphones",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 63,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI tentatively sees 'Headphones / Earphones' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "leather-handbag-women-tan",
+      "title": "Premium Leather Handbag - Tan",
+      "aiPerception": {
+        "perceivedType": "Bag / Handbag",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 68,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Bag / Handbag' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "smart-fitness-watch-black",
+      "title": "SmartFit Pro Fitness Watch - Black",
+      "aiPerception": {
+        "perceivedType": "Smartwatch / Wearable",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 58,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "canvas-sneakers-white",
+      "title": "Canvas Sneakers - White",
+      "aiPerception": {
+        "perceivedType": "Footwear",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 73,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Footwear' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "bluetooth-portable-speaker-mini",
+      "title": "Budget Bluetooth Mini Speaker",
+      "aiPerception": {
+        "perceivedType": "Speaker",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 63,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI tentatively sees 'Speaker' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "mens-leather-belt-brown",
+      "title": "Men's Genuine Leather Belt - Brown",
+      "aiPerception": {
+        "perceivedType": "Belt",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 73,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI tentatively sees 'Belt' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "cotton-tshirt-pack-3",
+      "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 70% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "strong",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "face-wash-charcoal",
+      "title": "Charcoal Face Wash",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 33,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Skincare' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "tags",
+            "impact": "HIGH",
+            "reason": "No tags = invisible to keyword-based AI retrieval."
+          },
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "absent",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "laptop-budget-15inch",
+      "title": "Budget Laptop 15 Inch",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (45%). 2 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "TYPE_AMBIGUITY",
+            "description": "AI cannot distinguish between 'T-Shirt / Top' and 'Laptop / Computer'. Both plausible from text."
+          },
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "winter-jacket-heavy-mens",
+      "title": "Men's Heavy Winter Jacket",
+      "aiPerception": {
+        "perceivedType": "Jacket / Outerwear",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Jacket / Outerwear' but confidence is low (45%). 2 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          },
+          {
+            "type": "CONTRADICTORY_CONTEXT",
+            "description": "Conflicting seasonal signals. AI may filter this out of both winter AND summer queries."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "sunglasses-uv400-unisex",
+      "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
+      "aiPerception": {
+        "perceivedType": "Sunglasses",
+        "typeConfidence": 90,
+        "isAmbiguous": false,
+        "retrievalScore": 80,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Sunglasses' with 90% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "strong",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "moisturiser-aloe-vera",
+      "title": "Aloe Vera Moisturiser 100ml",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Skincare' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "running-shoes-mens-red",
+      "title": "Men's Running Shoes - Red",
+      "aiPerception": {
+        "perceivedType": "Footwear",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 43,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Footwear' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "tags",
+            "impact": "HIGH",
+            "reason": "No tags = invisible to keyword-based AI retrieval."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "absent",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "formal-shirt-white-cotton",
+      "title": "WhiteCotton Formal Shirt",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "earphones-wired-budget",
+      "title": "Wired Earphones Budget",
+      "aiPerception": {
+        "perceivedType": "Headphones / Earphones",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Headphones / Earphones' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "smartwatch-round-dial",
+      "title": "Smart Watch Round Dial",
+      "aiPerception": {
+        "perceivedType": "Smartwatch / Wearable",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "cotton-kurta-shirt-white",
+      "title": "Cotton Kurta Shirt - White",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "tote-bag-canvas",
+      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
+      "aiPerception": {
+        "perceivedType": "Bag / Handbag",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 80,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Bag / Handbag' with 70% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "sunscreen-spf50",
+      "title": "Sunscreen SPF 50",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 70,
+        "isAmbiguous": false,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI classifies this as 'Skincare' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "laptop-gaming-pro",
+      "title": "Gaming Laptop Pro",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 51,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (45%). 2 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "TYPE_AMBIGUITY",
+            "description": "AI cannot distinguish between 'T-Shirt / Top' and 'Laptop / Computer'. Both plausible from text."
+          },
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "flip-flops-rubber",
+      "title": "Rubber Flip Flops",
+      "aiPerception": {
+        "perceivedType": "Footwear",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 33,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Footwear' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "tags",
+            "impact": "HIGH",
+            "reason": "No tags = invisible to keyword-based AI retrieval."
+          },
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "absent",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "hooded-sweatshirt-grey",
+      "title": "Hooded Sweatshirt Grey",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 70,
+        "isAmbiguous": true,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 70% confidence. 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "TYPE_AMBIGUITY",
+            "description": "AI cannot distinguish between 'T-Shirt / Top' and 'Jacket / Outerwear'. Both plausible from text."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "wireless-mouse-ergonomic",
+      "title": "Wireless Ergonomic Mouse",
+      "aiPerception": {
+        "perceivedType": "Mouse / Peripheral",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Mouse / Peripheral' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "vitamin-c-serum",
+      "title": "Vitamin C Face Serum",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Skincare' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "mens-wallet-black",
+      "title": "Men's Slim Wallet - Black",
+      "aiPerception": {
+        "perceivedType": "Wallet",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 46,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Wallet' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "party-wear-shirt-men",
+      "title": "Men's Party Wear Shirt",
+      "aiPerception": {
+        "perceivedType": "T-Shirt / Top",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "material",
+            "impact": "MEDIUM",
+            "reason": "Apparel without material misses 'cotton shirts' type queries."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "bluetooth-headphones-budget",
+      "title": "Budget Bluetooth Headphones",
+      "aiPerception": {
+        "perceivedType": "Headphones / Earphones",
+        "typeConfidence": 45,
+        "isAmbiguous": true,
+        "retrievalScore": 41,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI tentatively sees 'Headphones / Earphones' but confidence is low (45%). 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 45% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "weak",
+          "tags": "weak",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "polarised-sunglasses-black",
+      "title": "Polarised Sunglasses - Black",
+      "aiPerception": {
+        "perceivedType": "Sunglasses",
+        "typeConfidence": 90,
+        "isAmbiguous": false,
+        "retrievalScore": 63,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Sunglasses' with 90% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    }
+  ]
+}
