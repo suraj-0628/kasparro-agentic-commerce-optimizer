@@ -1,0 +1,30 @@
+{
+  "policyScore": 40,
+  "policyGrade": "C",
+  "totalIssues": 3,
+  "issues": [
+    {
+      "code": "POLICY_RETURN_MISSING",
+      "severity": "CRITICAL",
+      "field": "store_policy",
+      "message": "No return/refund policy found. AI shopping agents flag stores without return policies as high-risk — customers are actively warned away.",
+      "evidence": null
+    },
+    {
+      "code": "POLICY_SHIPPING_MISSING",
+      "severity": "HIGH",
+      "field": "store_policy",
+      "message": "No shipping policy found. AI agents answering 'when will my order arrive?' cannot answer for this store — reducing recommendation likelihood.",
+      "evidence": null
+    },
+    {
+      "code": "FAQ_MISSING",
+      "severity": "HIGH",
+      "field": "store_faq",
+      "message": "No FAQ page found. AI agents use FAQ content to answer pre-purchase questions. Without it, the store loses 'answer box' placement in AI search results.",
+      "evidence": null
+    }
+  ],
+  "details": {},
+  "pagesChecked": 2
+}

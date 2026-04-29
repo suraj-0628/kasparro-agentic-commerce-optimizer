@@ -1,0 +1,211 @@
+{
+    "_comment": "Externalized rule configuration for analyzer.py. Edit severity/thresholds here without touching Python code.",
+    "thresholds": {
+        "title_min_length": 10,
+        "description_min_words": 20,
+        "description_good_words": 50,
+        "tags_min_count": 3,
+        "tags_good_count": 5,
+        "image_min_count": 1,
+        "caps_ratio_threshold": 0.5,
+        "spam_caps_ratio": 0.25,
+        "orphan_tags_min": 2
+    },
+    "severity_weights": {
+        "CRITICAL": 30,
+        "HIGH": 15,
+        "MEDIUM": 8,
+        "LOW": 3
+    },
+    "vague_phrases": [
+        "good quality",
+        "best quality",
+        "great product",
+        "good product",
+        "very good",
+        "nice product",
+        "best product",
+        "high quality",
+        "premium quality",
+        "excellent quality",
+        "top quality",
+        "must buy",
+        "buy now",
+        "don't miss",
+        "limited stock",
+        "hurry up",
+        "great quality",
+        "amazing product",
+        "wonderful",
+        "fantastic quality",
+        "superb quality"
+    ],
+    "material_words": [
+        "cotton",
+        "leather",
+        "polyester",
+        "silk",
+        "wool",
+        "nylon",
+        "canvas",
+        "denim",
+        "linen",
+        "rubber",
+        "synthetic",
+        "genuine",
+        "stainless steel",
+        "aluminium",
+        "plastic",
+        "wood",
+        "bamboo"
+    ],
+    "apparel_hints": [
+        "clothing",
+        "shirt",
+        "kurta",
+        "jacket",
+        "shoe",
+        "sneaker",
+        "belt",
+        "bag",
+        "wallet",
+        "handbag",
+        "apparel",
+        "hoodie",
+        "trouser",
+        "dress",
+        "saree",
+        "kurti",
+        "sandal",
+        "slipper"
+    ],
+    "electronics_hints": [
+        "laptop",
+        "computer",
+        "headphone",
+        "earphone",
+        "speaker",
+        "smartwatch",
+        "electronics",
+        "audio",
+        "mouse",
+        "keyboard",
+        "monitor",
+        "tablet",
+        "phone",
+        "charger",
+        "cable"
+    ],
+    "winter_words": [
+        "winter",
+        "warm",
+        "heavy",
+        "thermal",
+        "insulated",
+        "cold weather",
+        "woollen"
+    ],
+    "summer_words": [
+        "summer",
+        "cool",
+        "beach",
+        "lightweight",
+        "hot weather",
+        "poolside",
+        "breathable"
+    ],
+    "rules": {
+        "TITLE_MISSING": {
+            "enabled": true,
+            "severity": "CRITICAL"
+        },
+        "TITLE_TOO_SHORT": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "TITLE_ALL_CAPS": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "TITLE_GENERIC": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "DESCRIPTION_MISSING": {
+            "enabled": true,
+            "severity": "CRITICAL"
+        },
+        "DESCRIPTION_TOO_SHORT": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "DESCRIPTION_VAGUE": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "DESCRIPTION_MISSING_SPECS": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "DESCRIPTION_MISSING_MATERIAL": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "DESCRIPTION_SPAM_CAPS": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "DESCRIPTION_NO_USE_CASE": {
+            "enabled": true,
+            "severity": "LOW"
+        },
+        "TAGS_MISSING": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "TAGS_TOO_FEW": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "TAGS_NOT_IN_DESCRIPTION": {
+            "enabled": true,
+            "severity": "LOW"
+        },
+        "CATEGORY_MISSING": {
+            "enabled": true,
+            "severity": "CRITICAL"
+        },
+        "PRODUCT_TYPE_MISSING": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "CONTRADICTION_SEASON": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "IMAGE_MISSING": {
+            "enabled": true,
+            "severity": "HIGH"
+        },
+        "IMAGE_ALT_MISSING": {
+            "enabled": true,
+            "severity": "LOW"
+        },
+        "SEO_TITLE_MISSING": {
+            "enabled": true,
+            "severity": "MEDIUM"
+        },
+        "SEO_DESC_MISSING": {
+            "enabled": true,
+            "severity": "LOW"
+        },
+        "VENDOR_MISSING": {
+            "enabled": true,
+            "severity": "LOW"
+        },
+        "SKU_MISSING": {
+            "enabled": true,
+            "severity": "LOW"
+        }
+    }
+}

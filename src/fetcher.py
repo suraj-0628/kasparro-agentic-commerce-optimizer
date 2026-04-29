@@ -23,8 +23,12 @@ QUERY = """
         id
         handle
         title
+        
         descriptionHtml
         productType
+        category {
+          name
+        }
         vendor
         status
         tags
@@ -100,6 +104,7 @@ def fetch_products():
             "descriptionPlain": desc_plain,
             "descriptionWordCount": len(desc_plain.split()) if desc_plain else 0,
             "productType": node.get("productType"),
+            "category": node.get("category"),
             "vendor": node.get("vendor"),
             "status": node.get("status"),
             "tags": node.get("tags", []),

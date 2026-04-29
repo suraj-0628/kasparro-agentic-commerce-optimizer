@@ -1,0 +1,58 @@
+{
+  "trustScore": 92,
+  "trustGrade": "A",
+  "totalIssues": 1,
+  "issues": [
+    {
+      "code": "TRUST_BRAND_INCONSISTENT",
+      "severity": "MEDIUM",
+      "field": "trust",
+      "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
+      "evidence": [
+        "glowup",
+        "leatherlux",
+        "soundwave",
+        "fabricindia",
+        "beltcraft"
+      ]
+    }
+  ],
+  "details": {
+    "vendorAnalysis": {
+      "uniqueVendors": [
+        "glowup",
+        "leatherlux",
+        "soundwave",
+        "fabricindia",
+        "beltcraft",
+        "shadeon",
+        "stepup",
+        "technova",
+        "bagstore",
+        "herbalroots",
+        "brandless",
+        "techzone"
+      ],
+      "vendorCount": 12,
+      "missingVendor": 0
+    },
+    "socialProof": {
+      "productsWithSocialProof": 2,
+      "coveragePercent": 7
+    },
+    "guarantees": {
+      "productsWithGuarantee": 4
+    },
+    "certifications": {
+      "productsWithCertification": 5
+    },
+    "indiaTrustSignals": {
+      "found": true
+    },
+    "imageAltText": {
+      "totalImages": 12,
+      "missingAlt": 0,
+      "coveragePercent": 100
+    }
+  }
+}

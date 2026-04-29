@@ -1,317 +1,612 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-04-25T16:06:40.066945",
+    "generatedAt": "2026-04-29T16:17:04.111932+00:00",
     "store": "together-stack",
     "productsAnalyzed": 30,
-    "rulesApplied": 17,
-    "avgQualityScore": 63.1,
+    "rulesApplied": 23,
+    "avgQualityScore": 63.6,
     "storeGrade": "B"
   },
   "summary": {
     "scoreDistribution": {
-      "excellent (80-100)": 3,
-      "good (60-79)": 10,
-      "poor (40-59)": 16,
-      "critical (<40)": 1
+      "excellent": 7,
+      "good": 10,
+      "poor": 10,
+      "critical": 3
     },
     "severityCounts": {
-      "HIGH": 47,
-      "MEDIUM": 40,
-      "LOW": 27
+      "LOW": 42,
+      "CRITICAL": 8,
+      "HIGH": 33,
+      "MEDIUM": 29
     },
     "topIssues": [
       {
+        "code": "IMAGE_MISSING",
+        "count": 21
+      },
+      {
         "code": "SEO_TITLE_MISSING",
-        "count": 27
+        "count": 20
       },
       {
         "code": "SEO_DESC_MISSING",
-        "count": 27
+        "count": 20
       },
       {
-        "code": "IMAGE_MISSING",
-        "count": 26
+        "code": "DESCRIPTION_NO_USE_CASE",
+        "count": 12
+      },
+      {
+        "code": "TAGS_NOT_IN_DESCRIPTION",
+        "count": 10
+      },
+      {
+        "code": "CATEGORY_MISSING",
+        "count": 8
       },
       {
         "code": "DESCRIPTION_TOO_SHORT",
-        "count": 14
-      },
-      {
-        "code": "DESCRIPTION_MISSING_SPECS",
-        "count": 5
+        "count": 8
       },
       {
         "code": "DESCRIPTION_MISSING_MATERIAL",
         "count": 4
       },
       {
-        "code": "TAGS_TOO_FEW",
-        "count": 4
-      },
-      {
-        "code": "TAGS_MISSING",
+        "code": "DESCRIPTION_MISSING_SPECS",
         "count": 3
       },
       {
         "code": "DESCRIPTION_VAGUE",
-        "count": 3
+        "count": 2
+      }
+    ],
+    "roiRanking": [
+      {
+        "code": "IMAGE_MISSING",
+        "severity": "HIGH",
+        "affectedProducts": 21,
+        "totalScoreLift": 315,
+        "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products.",
+        "effort": "MEDIUM"
       },
       {
-        "code": "CONTRADICTION_SEASON",
-        "count": 1
+        "code": "CATEGORY_MISSING",
+        "severity": "CRITICAL",
+        "affectedProducts": 8,
+        "totalScoreLift": 240,
+        "conversionImpact": "No category = excluded from category browse and AI routing — critical gap.",
+        "effort": "MEDIUM"
+      },
+      {
+        "code": "SEO_TITLE_MISSING",
+        "severity": "MEDIUM",
+        "affectedProducts": 20,
+        "totalScoreLift": 160,
+        "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
+        "effort": "LOW"
+      },
+      {
+        "code": "DESCRIPTION_TOO_SHORT",
+        "severity": "HIGH",
+        "affectedProducts": 8,
+        "totalScoreLift": 120,
+        "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion.",
+        "effort": "MEDIUM"
+      },
+      {
+        "code": "SEO_DESC_MISSING",
+        "severity": "LOW",
+        "affectedProducts": 20,
+        "totalScoreLift": 60,
+        "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+        "effort": "LOW"
+      },
+      {
+        "code": "DESCRIPTION_NO_USE_CASE",
+        "severity": "LOW",
+        "affectedProducts": 12,
+        "totalScoreLift": 36,
+        "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'.",
+        "effort": "LOW"
+      },
+      {
+        "code": "DESCRIPTION_MISSING_MATERIAL",
+        "severity": "MEDIUM",
+        "affectedProducts": 4,
+        "totalScoreLift": 32,
+        "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries.",
+        "effort": "LOW"
+      },
+      {
+        "code": "TAGS_NOT_IN_DESCRIPTION",
+        "severity": "LOW",
+        "affectedProducts": 10,
+        "totalScoreLift": 30,
+        "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
+        "effort": "LOW"
+      },
+      {
+        "code": "DESCRIPTION_VAGUE",
+        "severity": "HIGH",
+        "affectedProducts": 2,
+        "totalScoreLift": 30,
+        "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product.",
+        "effort": "MEDIUM"
+      },
+      {
+        "code": "DESCRIPTION_MISSING_SPECS",
+        "severity": "MEDIUM",
+        "affectedProducts": 3,
+        "totalScoreLift": 24,
+        "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed.",
+        "effort": "LOW"
       }
     ]
+  },
+  "narrative": "This store scores 63.6/100 (Grade B) on AI representation quality across 30 products. 8 critical issue(s) mean some products are completely invisible to AI shopping agents regardless of search query. AI agents are missing approximately 38% of potential search traffic due to weak metadata signals (retrieval score: 62.4/100 — MEDIUM). The single highest-ROI fix is 'IMAGE_MISSING' — affects 21/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
+  "compositeScore": 64.5,
+  "compositeGrade": "B",
+  "policyReport": {
+    "policyScore": 40,
+    "policyGrade": "C",
+    "totalIssues": 3,
+    "issues": [
+      {
+        "code": "POLICY_RETURN_MISSING",
+        "severity": "CRITICAL",
+        "field": "store_policy",
+        "message": "No return/refund policy found. AI shopping agents flag stores without return policies as high-risk — customers are actively warned away.",
+        "evidence": null
+      },
+      {
+        "code": "POLICY_SHIPPING_MISSING",
+        "severity": "HIGH",
+        "field": "store_policy",
+        "message": "No shipping policy found. AI agents answering 'when will my order arrive?' cannot answer for this store — reducing recommendation likelihood.",
+        "evidence": null
+      },
+      {
+        "code": "FAQ_MISSING",
+        "severity": "HIGH",
+        "field": "store_faq",
+        "message": "No FAQ page found. AI agents use FAQ content to answer pre-purchase questions. Without it, the store loses 'answer box' placement in AI search results.",
+        "evidence": null
+      }
+    ],
+    "details": {},
+    "pagesChecked": 2
+  },
+  "trustReport": {
+    "trustScore": 92,
+    "trustGrade": "A",
+    "totalIssues": 1,
+    "issues": [
+      {
+        "code": "TRUST_BRAND_INCONSISTENT",
+        "severity": "MEDIUM",
+        "field": "trust",
+        "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
+        "evidence": [
+          "glowup",
+          "leatherlux",
+          "soundwave",
+          "fabricindia",
+          "beltcraft"
+        ]
+      }
+    ],
+    "details": {
+      "vendorAnalysis": {
+        "uniqueVendors": [
+          "glowup",
+          "leatherlux",
+          "soundwave",
+          "fabricindia",
+          "beltcraft",
+          "shadeon",
+          "stepup",
+          "technova",
+          "bagstore",
+          "herbalroots",
+          "brandless",
+          "techzone"
+        ],
+        "vendorCount": 12,
+        "missingVendor": 0
+      },
+      "socialProof": {
+        "productsWithSocialProof": 2,
+        "coveragePercent": 7
+      },
+      "guarantees": {
+        "productsWithGuarantee": 4
+      },
+      "certifications": {
+        "productsWithCertification": 5
+      },
+      "indiaTrustSignals": {
+        "found": true
+      },
+      "imageAltText": {
+        "totalImages": 12,
+        "missingAlt": 0,
+        "coveragePercent": 100
+      }
+    }
   },
   "products": [
     {
       "handle": "cotton-kurta-shirt-blue",
-      "title": "Cotton Kurta Shirt - Blue",
-      "score": 74,
-      "grade": "B",
-      "totalIssues": 3,
+      "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 1,
-        "MEDIUM": 1,
         "LOW": 1
       },
       "issues": [
         {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
+          "code": "TAGS_NOT_IN_DESCRIPTION",
           "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "field": "tags",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "ethnic wear",
+            "men"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         }
       ]
     },
     {
       "handle": "ayurvedic-face-cream-neem",
       "title": "Ayurvedic Neem Face Cream",
-      "score": 74,
-      "grade": "B",
-      "totalIssues": 3,
+      "score": 41,
+      "grade": "C",
+      "totalIssues": 5,
       "issueSummary": {
+        "LOW": 2,
+        "CRITICAL": 1,
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 1
+        "MEDIUM": 1
       },
       "issues": [
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "herbal",
+            "moisturiser",
+            "skincare"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
+        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "wireless-bluetooth-headphones-pro",
       "title": "Wireless Bluetooth Headphones Pro",
-      "score": 74,
+      "score": 68,
       "grade": "B",
-      "totalIssues": 3,
+      "totalIssues": 5,
       "issueSummary": {
+        "LOW": 3,
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 1
+        "MEDIUM": 1
       },
       "issues": [
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "4 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "audio",
+            "headphones",
+            "noise-cancelling",
+            "wireless"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "leather-handbag-women-tan",
       "title": "Premium Leather Handbag - Tan",
-      "score": 74,
-      "grade": "B",
-      "totalIssues": 3,
+      "score": 41,
+      "grade": "C",
+      "totalIssues": 5,
       "issueSummary": {
+        "LOW": 2,
+        "CRITICAL": 1,
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 1
+        "MEDIUM": 1
       },
       "issues": [
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "premium",
+            "tan",
+            "women"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
+        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "smart-fitness-watch-black",
       "title": "SmartFit Pro Fitness Watch - Black",
-      "score": 66,
+      "score": 60,
       "grade": "B",
-      "totalIssues": 4,
+      "totalIssues": 6,
       "issueSummary": {
         "MEDIUM": 2,
-        "HIGH": 1,
-        "LOW": 1
+        "LOW": 3,
+        "HIGH": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_MISSING_SPECS",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
-          "evidence": null
+          "message": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
+          "evidence": null,
+          "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "4 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "fitness",
+            "gps",
+            "heart-rate",
+            "smartwatch"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "canvas-sneakers-white",
       "title": "Canvas Sneakers - White",
-      "score": 74,
+      "score": 71,
       "grade": "B",
-      "totalIssues": 3,
+      "totalIssues": 4,
       "issueSummary": {
+        "LOW": 2,
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 1
+        "MEDIUM": 1
       },
       "issues": [
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "shoes",
+            "white"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "bluetooth-portable-speaker-mini",
       "title": "Budget Bluetooth Mini Speaker",
-      "score": 74,
+      "score": 68,
       "grade": "B",
-      "totalIssues": 3,
+      "totalIssues": 5,
       "issueSummary": {
+        "LOW": 3,
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 1
+        "MEDIUM": 1
       },
       "issues": [
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "budget",
+            "waterproof"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
@@ -331,22 +626,25 @@
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
@@ -361,108 +659,61 @@
     },
     {
       "handle": "face-wash-charcoal",
-      "title": "Charcoal Face Wash",
-      "score": 44,
-      "grade": "C",
-      "totalIssues": 5,
+      "title": "GlowUp Activated Charcoal Face Wash for Oil Control & Pollution Defense",
+      "score": 67,
+      "grade": "B",
+      "totalIssues": 2,
       "issueSummary": {
-        "HIGH": 3,
-        "MEDIUM": 1,
-        "LOW": 1
+        "LOW": 1,
+        "CRITICAL": 1
       },
       "issues": [
         {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Best face wash. Removes dirt. Good for skin. Use daily."
-        },
-        {
-          "code": "TAGS_MISSING",
-          "severity": "HIGH",
-          "field": "tags",
-          "message": "No tags — invisible to keyword-based AI retrieval.",
-          "evidence": null
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
+          "code": "TAGS_NOT_IN_DESCRIPTION",
           "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "field": "tags",
+          "message": "4 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "men",
+            "oil control",
+            "skincare",
+            "women"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
         }
       ]
     },
     {
       "handle": "laptop-budget-15inch",
-      "title": "Budget Laptop 15 Inch",
-      "score": 36,
-      "grade": "F",
-      "totalIssues": 6,
+      "title": "TechZone 15.6-inch HD Laptop, 8GB RAM, 256GB SSD - Sleek Silver",
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 3,
-        "MEDIUM": 2,
         "LOW": 1
       },
       "issues": [
         {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 17 words in description. Minimum 20 needed for AI context.",
-          "evidence": "This laptop is very good for students and office use. Has good battery. Fast performance. Latest mod"
-        },
-        {
-          "code": "DESCRIPTION_VAGUE",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "1 vague phrase(s) found — no signal for AI systems.",
-          "evidence": [
-            "very good"
-          ]
-        },
-        {
-          "code": "DESCRIPTION_MISSING_SPECS",
-          "severity": "MEDIUM",
-          "field": "description",
-          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
-          "evidence": null
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
+          "code": "TAGS_NOT_IN_DESCRIPTION",
           "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "field": "tags",
+          "message": "5 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "computing",
+            "electronics",
+            "portable",
+            "productivity",
+            "silver"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         }
       ]
     },
@@ -482,29 +733,9 @@
           "code": "DESCRIPTION_MISSING_MATERIAL",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
-          "evidence": null
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "Apparel product has no material mentioned — misses 'cotton shirts', 'leather bags' type queries.",
+          "evidence": null,
+          "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries."
         },
         {
           "code": "CONTRADICTION_SEASON",
@@ -512,11 +743,11 @@
           "field": "description",
           "message": "Conflicting seasonal signals — AI receives contradictory intent context.",
           "evidence": {
-            "winter_found": [
+            "winter": [
               "winter",
               "heavy"
             ],
-            "summer_found": [
+            "summer": [
               "summer",
               "cool",
               "beach",
@@ -524,60 +755,121 @@
               "hot weather",
               "poolside"
             ]
-          }
+          },
+          "conversionImpact": "Contradictory context = AI filters product from both seasonal query sets."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "sunglasses-uv400-unisex",
       "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
-      "score": 100,
+      "score": 97,
       "grade": "A",
-      "totalIssues": 0,
-      "issueSummary": {},
-      "issues": []
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "casual wear",
+            "summer essentials",
+            "unisex"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        }
+      ]
     },
     {
       "handle": "moisturiser-aloe-vera",
       "title": "Aloe Vera Moisturiser 100ml",
-      "score": 59,
-      "grade": "C",
-      "totalIssues": 4,
+      "score": 26,
+      "grade": "F",
+      "totalIssues": 6,
       "issueSummary": {
         "HIGH": 2,
-        "MEDIUM": 1,
-        "LOW": 1
+        "LOW": 2,
+        "CRITICAL": 1,
+        "MEDIUM": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_VAGUE",
           "severity": "HIGH",
           "field": "description",
-          "message": "1 vague phrase(s) found — no signal for AI systems.",
+          "message": "1 vague phrase(s) detected — zero signal for AI ranking systems.",
           "evidence": [
             "best product"
-          ]
+          ],
+          "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
@@ -597,196 +889,124 @@
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 7 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Shoes for running. Red color. Good grip."
+          "message": "Only 7 words. Minimum 20 needed for AI context.",
+          "evidence": "Shoes for running. Red color. Good grip.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
         },
         {
           "code": "DESCRIPTION_MISSING_MATERIAL",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
-          "evidence": null
+          "message": "Apparel product has no material mentioned — misses 'cotton shirts', 'leather bags' type queries.",
+          "evidence": null,
+          "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries."
         },
         {
           "code": "TAGS_MISSING",
           "severity": "HIGH",
           "field": "tags",
-          "message": "No tags — invisible to keyword-based AI retrieval.",
-          "evidence": null
+          "message": "No tags — product is invisible to keyword-based AI retrieval.",
+          "evidence": null,
+          "conversionImpact": "No tags = invisible to all keyword-based AI retrieval systems."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "formal-shirt-white-cotton",
       "title": "WhiteCotton Formal Shirt",
-      "score": 59,
+      "score": 56,
       "grade": "C",
-      "totalIssues": 4,
+      "totalIssues": 5,
       "issueSummary": {
         "HIGH": 2,
-        "MEDIUM": 1,
-        "LOW": 1
+        "LOW": 2,
+        "MEDIUM": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 17 words in description. Minimum 20 needed for AI context.",
-          "evidence": "formal shirt for office use cotton material good for daily use iron easily available in all sizes"
+          "message": "Only 17 words. Minimum 20 needed for AI context.",
+          "evidence": "formal shirt for office use cotton material good for daily use iron easily available in all sizes",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "earphones-wired-budget",
-      "title": "Wired Earphones Budget",
-      "score": 43,
-      "grade": "C",
-      "totalIssues": 6,
-      "issueSummary": {
-        "HIGH": 2,
-        "MEDIUM": 3,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 9 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Works good. Sound is clear. Has mic. Budget product."
-        },
-        {
-          "code": "DESCRIPTION_MISSING_SPECS",
-          "severity": "MEDIUM",
-          "field": "description",
-          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
-          "evidence": null
-        },
-        {
-          "code": "TAGS_TOO_FEW",
-          "severity": "MEDIUM",
-          "field": "tags",
-          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
-          "evidence": [
-            "earphones",
-            "wired"
-          ]
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
-        }
-      ]
+      "title": "SoundWave Wired Earphones with Mic and 1.2m Tangle-Free Cable - Black",
+      "score": 100,
+      "grade": "A",
+      "totalIssues": 0,
+      "issueSummary": {},
+      "issues": []
     },
     {
       "handle": "smartwatch-round-dial",
-      "title": "Smart Watch Round Dial",
-      "score": 43,
-      "grade": "C",
-      "totalIssues": 6,
+      "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
+      "score": 85,
+      "grade": "A",
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 2,
-        "MEDIUM": 3,
-        "LOW": 1
+        "HIGH": 1
       },
       "issues": [
-        {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 16 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Smartwatch with round dial. Looks good on wrist. Has notifications. Battery lasts long. Many feature"
-        },
-        {
-          "code": "DESCRIPTION_MISSING_SPECS",
-          "severity": "MEDIUM",
-          "field": "description",
-          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
-          "evidence": null
-        },
-        {
-          "code": "TAGS_TOO_FEW",
-          "severity": "MEDIUM",
-          "field": "tags",
-          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
-          "evidence": [
-            "round",
-            "smartwatch"
-          ]
-        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         }
       ]
     },
@@ -806,364 +1026,425 @@
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Same as blue kurta but white color. Good cotton material."
+          "message": "Only 10 words. Minimum 20 needed for AI context.",
+          "evidence": "Same as blue kurta but white color. Good cotton material.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "tote-bag-canvas",
       "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
-      "score": 100,
-      "grade": "A",
-      "totalIssues": 0,
-      "issueSummary": {},
-      "issues": []
+      "score": 67,
+      "grade": "B",
+      "totalIssues": 2,
+      "issueSummary": {
+        "LOW": 1,
+        "CRITICAL": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
+        }
+      ]
     },
     {
       "handle": "sunscreen-spf50",
       "title": "Sunscreen SPF 50",
-      "score": 51,
-      "grade": "C",
-      "totalIssues": 5,
+      "score": 18,
+      "grade": "F",
+      "totalIssues": 7,
       "issueSummary": {
         "HIGH": 2,
+        "LOW": 2,
         "MEDIUM": 2,
-        "LOW": 1
+        "CRITICAL": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 14 words in description. Minimum 20 needed for AI context.",
-          "evidence": "SPF 50 sunscreen lotion. Apply before going out in sun. Good protection. Non greasy."
+          "message": "Only 14 words. Minimum 20 needed for AI context.",
+          "evidence": "SPF 50 sunscreen lotion. Apply before going out in sun. Good protection. Non greasy.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "TAGS_TOO_FEW",
           "severity": "MEDIUM",
           "field": "tags",
-          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "message": "Only 2 tag(s) — recommend at least 3 for retrieval coverage.",
           "evidence": [
             "spf50",
             "sunscreen"
-          ]
+          ],
+          "conversionImpact": "Sparse tags miss adjacent queries — narrow discoverability."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "laptop-gaming-pro",
       "title": "Gaming Laptop Pro",
-      "score": 59,
+      "score": 56,
       "grade": "C",
-      "totalIssues": 4,
+      "totalIssues": 5,
       "issueSummary": {
         "HIGH": 2,
-        "MEDIUM": 1,
-        "LOW": 1
+        "LOW": 2,
+        "MEDIUM": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_VAGUE",
           "severity": "HIGH",
           "field": "description",
-          "message": "4 vague phrase(s) found — no signal for AI systems.",
+          "message": "4 vague phrase(s) detected — zero signal for AI ranking systems.",
           "evidence": [
             "must buy",
             "buy now",
             "limited stock",
             "hurry up"
-          ]
+          ],
+          "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "flip-flops-rubber",
-      "title": "Rubber Flip Flops",
-      "score": 44,
-      "grade": "C",
-      "totalIssues": 5,
+      "title": "StepUp Waterproof Rubber Flip Flops for Men and Women - Blue",
+      "score": 85,
+      "grade": "A",
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 3,
-        "MEDIUM": 1,
-        "LOW": 1
+        "HIGH": 1
       },
       "issues": [
-        {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 10 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Basic flip flops. Waterproof. Good for bathroom and beach use."
-        },
-        {
-          "code": "TAGS_MISSING",
-          "severity": "HIGH",
-          "field": "tags",
-          "message": "No tags — invisible to keyword-based AI retrieval.",
-          "evidence": null
-        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         }
       ]
     },
     {
       "handle": "hooded-sweatshirt-grey",
       "title": "Hooded Sweatshirt Grey",
-      "score": 66,
+      "score": 63,
       "grade": "B",
-      "totalIssues": 4,
+      "totalIssues": 5,
       "issueSummary": {
         "MEDIUM": 2,
-        "HIGH": 1,
-        "LOW": 1
+        "LOW": 2,
+        "HIGH": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_MISSING_MATERIAL",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
-          "evidence": null
+          "message": "Apparel product has no material mentioned — misses 'cotton shirts', 'leather bags' type queries.",
+          "evidence": null,
+          "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "wireless-mouse-ergonomic",
       "title": "Wireless Ergonomic Mouse",
-      "score": 51,
+      "score": 40,
       "grade": "C",
-      "totalIssues": 5,
+      "totalIssues": 7,
       "issueSummary": {
         "HIGH": 2,
-        "MEDIUM": 2,
-        "LOW": 1
+        "MEDIUM": 3,
+        "LOW": 2
       },
       "issues": [
         {
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 14 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Wireless mouse. Works on USB dongle. Good for office. Long battery life. No lag."
+          "message": "Only 14 words. Minimum 20 needed for AI context.",
+          "evidence": "Wireless mouse. Works on USB dongle. Good for office. Long battery life. No lag.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
+        },
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
+          "evidence": null,
+          "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "TAGS_TOO_FEW",
           "severity": "MEDIUM",
           "field": "tags",
-          "message": "Only 2 tag(s). Recommend at least 3 for AI retrieval coverage.",
+          "message": "Only 2 tag(s) — recommend at least 3 for retrieval coverage.",
           "evidence": [
             "mouse",
             "wireless"
-          ]
+          ],
+          "conversionImpact": "Sparse tags miss adjacent queries — narrow discoverability."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "vitamin-c-serum",
-      "title": "Vitamin C Face Serum",
-      "score": 59,
-      "grade": "C",
-      "totalIssues": 4,
+      "title": "GlowUp Vitamin C Face Serum with Hyaluronic Acid - 30ml",
+      "score": 70,
+      "grade": "B",
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 2,
-        "MEDIUM": 1,
-        "LOW": 1
+        "CRITICAL": 1
       },
       "issues": [
         {
-          "code": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Only 16 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Vitamin c serum for bright skin. Apply 2-3 drops. Morning use. See results in 4 weeks."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
         }
       ]
     },
     {
       "handle": "mens-wallet-black",
       "title": "Men's Slim Wallet - Black",
-      "score": 59,
-      "grade": "C",
-      "totalIssues": 4,
+      "score": 26,
+      "grade": "F",
+      "totalIssues": 6,
       "issueSummary": {
         "HIGH": 2,
-        "MEDIUM": 1,
-        "LOW": 1
+        "LOW": 2,
+        "CRITICAL": 1,
+        "MEDIUM": 1
       },
       "issues": [
         {
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Slim wallet. Holds cards and cash. Black color leather look material."
+          "message": "Only 11 words. Minimum 20 needed for AI context.",
+          "evidence": "Slim wallet. Holds cards and cash. Black color leather look material.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "CATEGORY_MISSING",
+          "severity": "CRITICAL",
+          "field": "category",
+          "message": "No Shopify Standard Product Category assigned — excluded from standardized AI routing.",
+          "evidence": null,
+          "conversionImpact": "No category = excluded from category browse and AI routing — critical gap."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
@@ -1183,85 +1464,103 @@
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Shiny party shirt. Great for diwali and weddings. Multiple color options."
+          "message": "Only 11 words. Minimum 20 needed for AI context.",
+          "evidence": "Shiny party shirt. Great for diwali and weddings. Multiple color options.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
         },
         {
           "code": "DESCRIPTION_MISSING_MATERIAL",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Apparel product has no material mentioned. Material is a primary AI signal.",
-          "evidence": null
+          "message": "Apparel product has no material mentioned — misses 'cotton shirts', 'leather bags' type queries.",
+          "evidence": null,
+          "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
     {
       "handle": "bluetooth-headphones-budget",
       "title": "Budget Bluetooth Headphones",
-      "score": 51,
+      "score": 48,
       "grade": "C",
-      "totalIssues": 5,
+      "totalIssues": 6,
       "issueSummary": {
         "HIGH": 2,
         "MEDIUM": 2,
-        "LOW": 1
+        "LOW": 2
       },
       "issues": [
         {
           "code": "DESCRIPTION_TOO_SHORT",
           "severity": "HIGH",
           "field": "description",
-          "message": "Only 11 words in description. Minimum 20 needed for AI context.",
-          "evidence": "Wireless headphones. Connects via bluetooth. Good sound. Affordable price. Comfortable fit."
+          "message": "Only 11 words. Minimum 20 needed for AI context.",
+          "evidence": "Wireless headphones. Connects via bluetooth. Good sound. Affordable price. Comfortable fit.",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
         },
         {
           "code": "DESCRIPTION_MISSING_SPECS",
           "severity": "MEDIUM",
           "field": "description",
-          "message": "Electronics product has no measurable specs. AI cannot compare or rank it.",
-          "evidence": null
+          "message": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
+          "evidence": null,
+          "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
         },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     },
@@ -1281,22 +1580,25 @@
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
           "field": "images",
-          "message": "No images — vision AI agents cannot verify this product.",
-          "evidence": null
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title.",
-          "evidence": null
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
         },
         {
           "code": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
-          "message": "No SEO meta description — AI commerce agents can't generate snippets.",
-          "evidence": null
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         }
       ]
     }

@@ -52,7 +52,7 @@ def extract_signals(p):
 
 # ── Type classifier ───────────────────────────────────────────────────────────
 
-def classify_type(p):
+def classify_type(p, signals):
     corpus = " ".join([
         p.get("title", ""),
         p.get("descriptionPlain", ""),
@@ -62,7 +62,7 @@ def classify_type(p):
 
     scores = []
     for entry in TYPE_VOCABULARY:
-        matches = [kw for kw in entry["keywords"] if kw in corpus]
+        matches = [kw for kw in entry["keywords"] if re.search(rf'\b{re.escape(kw)}(?:s|es)?\b', corpus)]
         if matches:
             scores.append({"type": entry["type"], "matches": matches, "score": len(matches)})
 
@@ -74,12 +74,26 @@ def classify_type(p):
     top    = scores[0]
     runner = scores[1] if len(scores) > 1 else None
 
-    confidence = 0.9 if top["score"] >= 3 else 0.7 if top["score"] == 2 else 0.45
-    ambiguous  = bool(runner and runner["score"] >= top["score"] * 0.75)
+    # Calculate confidence based on signal density, not just keyword stuffing
+    base_conf = 0.50
+    if top["score"] > 1:
+        base_conf += 0.15
+
+    if signals["title"]["quality"] == "strong":
+        base_conf += 0.15
+    if signals["description"]["quality"] == "strong":
+        base_conf += 0.15
+    elif signals["description"]["quality"] == "moderate":
+        base_conf += 0.05
+    if signals["tags"]["quality"] == "strong":
+        base_conf += 0.10
+
+    confidence = min(0.98, base_conf)
+    ambiguous  = bool(runner and runner["score"] >= top["score"])
 
     return {
         "detected":          top["type"],
-        "confidence":        confidence,
+        "confidence":        round(confidence, 2),
         "ambiguous":         ambiguous,
         "alternatives":      [runner["type"]] if runner else [],
         "matched_keywords":  top["matches"],
@@ -158,7 +172,7 @@ def detect_missing_signals(p, signals, type_result):
 
 def generate_perception(product):
     signals       = extract_signals(product)
-    type_result   = classify_type(product)
+    type_result   = classify_type(product, signals)
     retrieval     = score_retrieval(signals)
     ambiguity     = detect_ambiguity(product, type_result, signals)
     missing       = detect_missing_signals(product, signals, type_result)
