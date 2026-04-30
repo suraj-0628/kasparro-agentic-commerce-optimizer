@@ -9,29 +9,29 @@
       "field": "trust",
       "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
       "evidence": [
-        "beltcraft",
+        "leatherlux",
+        "glowup",
         "brandless",
-        "fabricindia",
         "technova",
-        "stepup"
+        "bagstore"
       ]
     }
   ],
   "details": {
     "vendorAnalysis": {
       "uniqueVendors": [
-        "beltcraft",
-        "brandless",
-        "fabricindia",
-        "technova",
-        "stepup",
-        "herbalroots",
-        "shadeon",
         "leatherlux",
-        "techzone",
         "glowup",
+        "brandless",
+        "technova",
         "bagstore",
-        "soundwave"
+        "herbalroots",
+        "techzone",
+        "soundwave",
+        "fabricindia",
+        "shadeon",
+        "stepup",
+        "beltcraft"
       ],
       "vendorCount": 12,
       "missingVendor": 0

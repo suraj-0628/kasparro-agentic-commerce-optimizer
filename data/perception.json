@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-04-30T08:42:11.168387+00:00",
+    "generatedAt": "2026-04-30T08:51:11.076806+00:00",
     "productsProcessed": 30,
     "avgRetrievalScore": 69.0,
     "storeVisibility": "MEDIUM"
@@ -21,7 +21,7 @@
       "Wallet": 1
     },
     "ambiguousProducts": 0,
-    "highRetrieval": 13,
+    "highRetrieval": 14,
     "lowRetrieval": 0
   },
   "perceptions": [

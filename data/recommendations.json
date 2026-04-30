@@ -1,4 +1,52 @@
 {
+  "meta": {
+    "generatedAt": "2026-04-30T08:51:11.109833+00:00",
+    "store": "together-stack",
+    "avgScore": 75.7,
+    "storeGrade": "B",
+    "compositeScore": 71.8,
+    "compositeGrade": "B",
+    "avgRetrieval": 69.0,
+    "narrative": "This store scores 75.7/100 (Grade B) on AI representation quality across 30 products. AI agents are missing approximately 31% of potential search traffic due to weak metadata signals (retrieval score: 69.0/100 — MEDIUM). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes."
+  },
+  "storeInsights": [
+    {
+      "type": "SYSTEMIC_ISSUE",
+      "title": "SKU_MISSING affects 30/30 products",
+      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
+      "action": "Review and fix this issue across all products."
+    },
+    {
+      "type": "RETRIEVAL_GAP",
+      "title": "Store retrieval score is 69.0/100 — AI agents are missing 31% of potential traffic",
+      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
+      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
+    },
+    {
+      "type": "QUICK_WIN",
+      "title": "SEO titles and descriptions are missing store-wide",
+      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
+      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
+    },
+    {
+      "type": "POLICY_GAP",
+      "title": "POLICY_RETURN_MISSING: No return/refund policy found. AI shopping agents flag store...",
+      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
+      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
+    },
+    {
+      "type": "POLICY_GAP",
+      "title": "POLICY_SHIPPING_MISSING: No shipping policy found. AI agents answering 'when will my ...",
+      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
+      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
+    },
+    {
+      "type": "TRUST_GAP",
+      "title": "TRUST_BRAND_INCONSISTENT: Store has 12 different vendor names. AI agents prefer stores...",
+      "detail": "Trust signal missing — reduces AI recommendation confidence store-wide.",
+      "action": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity."
+    }
+  ],
   "roiRanking": [
     {
       "code": "IMAGE_MISSING",
@@ -79,33 +127,6 @@
       "totalScoreLift": 8,
       "conversionImpact": "Missing material = excluded from material-based filters like 'cotton shirts' — 20-40% of apparel queries.",
       "effort": "LOW"
-    }
-  ],
-  "meta": {
-    "generatedAt": "2026-04-30T14:12:42.858289",
-    "store": "together-stack",
-    "avgScore": 75.7,
-    "storeGrade": "B",
-    "avgRetrieval": 69.0
-  },
-  "storeInsights": [
-    {
-      "type": "SYSTEMIC_ISSUE",
-      "title": "SKU_MISSING affects 30/30 products",
-      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
-      "action": "Review and fix this issue across all products."
-    },
-    {
-      "type": "RETRIEVAL_GAP",
-      "title": "Store retrieval score is 69.0/100 — AI agents are missing 31% of potential traffic",
-      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
-      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
-    },
-    {
-      "type": "QUICK_WIN",
-      "title": "SEO titles and descriptions are missing store-wide",
-      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
-      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
     }
   ],
   "products": [

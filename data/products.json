@@ -1,6 +1,6 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-04-30T14:12:08.727572",
+  "fetchedAt": "2026-04-30T14:21:08.318893",
   "apiVersion": "2026-04",
   "productCount": 30,
   "categoryStats": {
@@ -1298,14 +1298,14 @@
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
-        "men",
-        "shirt",
-        "satin silk",
-        "festive wear",
         "diwali",
-        "wedding",
+        "fabricindia",
+        "festive wear",
+        "men",
+        "satin silk",
+        "shirt",
         "slim fit",
-        "fabricindia"
+        "wedding"
       ],
       "category": {
         "name": "Shirts",
@@ -1328,11 +1328,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "description": "Shop premium satin silk party wear shirts for men. Perfect for Diwali, weddings, and festive occasions. Slim fit, breathable fabric, and elegant metallic finish.",
-        "title": "Men's Satin Silk Party Wear Shirt for Diwali & Weddings"
+        "title": "Men's Satin Silk Party Wear Shirt for Diwali & Weddings",
+        "description": "Shop premium satin silk party wear shirts for men. Perfect for Diwali, weddings, and festive occasions. Slim fit, breathable fabric, and elegant metallic finish."
       },
       "createdAt": "2026-04-19T05:41:58Z",
-      "updatedAt": "2026-04-20T06:00:14Z"
+      "updatedAt": "2026-04-30T08:42:45Z"
     },
     {
       "id": "gid://shopify/Product/9480667857144",
