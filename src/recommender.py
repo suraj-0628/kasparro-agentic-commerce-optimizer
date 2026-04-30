@@ -205,20 +205,14 @@ def generate_store_insights(report, perception_data):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
-    with open("data/report.json", encoding="utf-8") as f:
-        report = json.load(f)
-
-    with open("data/perception.json", encoding="utf-8") as f:
-        perception_data = json.load(f)
-
-    # Map perceptions by handle
-    perception_map = {p["handle"]: p for p in perception_data["perceptions"]}
-
-    print(f"[recommender] Generating recommendations for {len(report['products'])} products...")
+def recommend_for_store(report: dict, perception_data: dict) -> dict:
+    """
+    Generates recommendations for the entire store using the existing report and perception data.
+    """
+    perception_map = {p["handle"]: p for p in perception_data.get("perceptions", [])}
 
     product_recs = []
-    for product_result in report["products"]:
+    for product_result in report.get("products", []):
         handle = product_result["handle"]
         perception = perception_map.get(handle, {
             "aiPerception": {
@@ -234,17 +228,30 @@ if __name__ == "__main__":
 
     store_insights = generate_store_insights(report, perception_data)
 
-    output = {
+    return {
+        "roiRanking": report.get("summary", {}).get("roiRanking", []),
         "meta": {
             "generatedAt":    datetime.now().isoformat(),
-            "store":          report["reportMeta"]["store"],
-            "avgScore":       report["reportMeta"]["avgQualityScore"],
-            "storeGrade":     report["reportMeta"]["storeGrade"],
-            "avgRetrieval":   perception_data["meta"]["avgRetrievalScore"],
+            "store":          report.get("reportMeta", {}).get("store", ""),
+            "avgScore":       report.get("reportMeta", {}).get("avgQualityScore", 0),
+            "storeGrade":     report.get("reportMeta", {}).get("storeGrade", ""),
+            "avgRetrieval":   perception_data.get("meta", {}).get("avgRetrievalScore", 0),
         },
         "storeInsights":  store_insights,
         "products":       product_recs,
     }
+
+
+if __name__ == "__main__":
+    with open("data/report.json", encoding="utf-8") as f:
+        report = json.load(f)
+
+    with open("data/perception.json", encoding="utf-8") as f:
+        perception_data = json.load(f)
+
+    print(f"[recommender] Generating recommendations for {len(report['products'])} products...")
+
+    output = recommend_for_store(report, perception_data)
 
     with open("data/recommendations.json", "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)

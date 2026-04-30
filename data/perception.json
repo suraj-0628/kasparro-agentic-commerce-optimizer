@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-04-29T16:17:04.103446+00:00",
+    "generatedAt": "2026-04-30T08:42:11.168387+00:00",
     "productsProcessed": 30,
-    "avgRetrievalScore": 62.4,
+    "avgRetrievalScore": 69.0,
     "storeVisibility": "MEDIUM"
   },
   "summary": {
@@ -15,14 +15,13 @@
       "Footwear": 3,
       "Speaker": 1,
       "Belt": 1,
-      "Laptop / Computer": 2,
+      "Laptop / Computer": 3,
       "Jacket / Outerwear": 2,
       "Sunglasses": 2,
-      "Mouse / Peripheral": 1,
       "Wallet": 1
     },
-    "ambiguousProducts": 1,
-    "highRetrieval": 10,
+    "ambiguousProducts": 0,
+    "highRetrieval": 13,
     "lowRetrieval": 0
   },
   "perceptions": [
@@ -316,41 +315,26 @@
     },
     {
       "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Heavy Winter Jacket",
+      "title": "Men's Heavy Padded Winter Jacket with Detachable Hood - Navy Blue",
       "aiPerception": {
         "perceivedType": "Jacket / Outerwear",
-        "typeConfidence": 70,
-        "isAmbiguous": true,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 70% confidence. 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
-        "ambiguityFlags": [
-          {
-            "type": "CONTRADICTORY_CONTEXT",
-            "description": "Conflicting seasonal signals. AI may filter this out of both winter AND summer queries."
-          }
-        ],
+        "typeConfidence": 98,
+        "isAmbiguous": false,
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "material",
-            "impact": "MEDIUM",
-            "reason": "Apparel without material misses 'cotton shirts' type queries."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -411,36 +395,20 @@
     },
     {
       "handle": "running-shoes-mens-red",
-      "title": "Men's Running Shoes - Red",
+      "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red",
       "aiPerception": {
         "perceivedType": "Footwear",
-        "typeConfidence": 65,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 43,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'Footwear' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Footwear' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "tags",
-            "impact": "HIGH",
-            "reason": "No tags = invisible to keyword-based AI retrieval."
-          },
-          {
-            "signal": "material",
-            "impact": "MEDIUM",
-            "reason": "Apparel without material misses 'cotton shirts' type queries."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
-          }
-        ],
+        "missingSignals": [],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "absent",
+          "description": "strong",
+          "tags": "strong",
           "images": "moderate",
           "vendor": "present"
         }
@@ -587,31 +555,26 @@
     },
     {
       "handle": "sunscreen-spf50",
-      "title": "Sunscreen SPF 50",
+      "title": "GlowUp SPF 50 PA+++ Sunscreen Lotion - Non-Greasy Daily Wear",
       "aiPerception": {
         "perceivedType": "Skincare",
-        "typeConfidence": 80,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 41,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI classifies this as 'Skincare' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 70,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -715,14 +678,14 @@
     },
     {
       "handle": "wireless-mouse-ergonomic",
-      "title": "Wireless Ergonomic Mouse",
+      "title": "TechNova Wireless Ergonomic Mouse with 2.4GHz USB Receiver - Black",
       "aiPerception": {
-        "perceivedType": "Mouse / Peripheral",
-        "typeConfidence": 65,
+        "perceivedType": "Laptop / Computer",
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 41,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'Mouse / Peripheral' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 70,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
@@ -731,15 +694,15 @@
             "reason": "No images = vision AI agents cannot verify product."
           },
           {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+            "signal": "specs",
+            "impact": "HIGH",
+            "reason": "Electronics without specs cannot rank in comparison queries."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -800,36 +763,26 @@
     },
     {
       "handle": "party-wear-shirt-men",
-      "title": "Men's Party Wear Shirt",
+      "title": "Men's Premium Satin Silk Party Wear Shirt - Slim Fit Festive Edition",
       "aiPerception": {
         "perceivedType": "T-Shirt / Top",
-        "typeConfidence": 65,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 41,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "material",
-            "impact": "MEDIUM",
-            "reason": "Apparel without material misses 'cotton shirts' type queries."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -837,31 +790,26 @@
     },
     {
       "handle": "bluetooth-headphones-budget",
-      "title": "Budget Bluetooth Headphones",
+      "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
       "aiPerception": {
         "perceivedType": "Headphones / Earphones",
-        "typeConfidence": 65,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 41,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'Headphones / Earphones' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Headphones / Earphones' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }

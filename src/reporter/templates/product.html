@@ -698,13 +698,10 @@ async function applyChanges() {
       closeModal('enhance-modal');
       showToast('✓ Applied! Updating analysis...', 'success');
       
-      // Wait 2 seconds for Shopify API to reflect changes, then rerun and reload
-      setTimeout(async () => {
-        await fetch('/api/rerun-pipeline', { method: 'POST' });
-        location.reload();
-      }, 2000);
+      // Reload instantly. The backend has already patched local JSON files and rebuilt the report.
+      location.reload();
     } else {
-      throw new Error(JSON.stringify(data.fieldResults));
+      throw new Error(data.error || JSON.stringify(data.fieldResults));
     }
   } catch (err) {
     showToast('Apply failed: ' + err.message, 'error');

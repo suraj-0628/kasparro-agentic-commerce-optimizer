@@ -56,6 +56,7 @@ STRICT RULES:
 6. No vague phrases like "good quality" or "best product"
 7. No ALL CAPS
 8. Use Indian context (mention Indian occasions, sizes, usage patterns where relevant)
+9. CRITICAL: Do NOT use literal newlines/line-breaks inside JSON string values. Keep all text on a single line or use \\n.
 
 Respond ONLY with valid JSON in this exact format, no markdown, no explanation:
 {{

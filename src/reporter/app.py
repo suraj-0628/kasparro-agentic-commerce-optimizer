@@ -191,58 +191,68 @@ def api_enhance(handle):
 def api_apply(handle):
     data     = request.get_json()
     enhanced = data.get("enhanced")
-    product  = get_product(handle)
+    
+    products_data = load("products.json")
+    product = next((p for p in products_data.get("products", []) if p["handle"] == handle), None)
+    
     if not product or not enhanced:
         return jsonify({"success": False, "error": "Missing product or enhanced data"}), 400
     try:
         from src.shopify_writer import apply_enhanced_content
         result = apply_enhanced_content(product["id"], enhanced)
+        
+        if result.get("success"):
+            import re
+            from src.analyzer import build_report
+            from src.ai_perception import generate_perception
+            
+            # 1. Update product locally
+            product["title"] = enhanced.get("title", product["title"])
+            product["descriptionHtml"] = enhanced.get("descriptionHtml", product.get("descriptionHtml", ""))
+            
+            desc_plain = re.sub(r'<[^>]+>', ' ', product["descriptionHtml"])
+            desc_plain = re.sub(r'\s+', ' ', desc_plain).strip()
+            product["descriptionPlain"] = desc_plain
+            product["descriptionWordCount"] = len(desc_plain.split()) if desc_plain else 0
+            
+            product["tags"] = enhanced.get("tags", product.get("tags", []))
+            product["seo"] = enhanced.get("seo", product.get("seo", {}))
+            
+            save("products.json", products_data)
+            
+            # 2. Re-run Gemini perception for this product
+            new_perception = generate_perception(product)
+            
+            percep_data = load("perception.json")
+            percep_data["perceptions"] = [
+                new_perception if p["handle"] == handle else p
+                for p in percep_data.get("perceptions", [])
+            ]
+            
+            # Recalculate avg retrieval score
+            n = len(percep_data["perceptions"])
+            avg_ret = sum(p["aiPerception"]["retrievalScore"] for p in percep_data["perceptions"]) / n if n else 0
+            percep_data["meta"]["avgRetrievalScore"] = round(avg_ret, 1)
+            percep_data["meta"]["storeVisibility"] = "HIGH" if avg_ret >= 75 else "MEDIUM" if avg_ret >= 50 else "LOW"
+            percep_data["summary"]["ambiguousProducts"] = sum(1 for p in percep_data["perceptions"] if p["aiPerception"]["isAmbiguous"])
+            
+            save("perception.json", percep_data)
+            
+            # 3. Rebuild full store report and recommendations
+            policy_report = load("policy_report.json")
+            trust_report  = load("trust_report.json")
+            
+            report = build_report(products_data, policy_report, trust_report, percep_data["meta"])
+            save("report.json", report)
+            
+            # build_report calls recommend_for_store inside, which returns recommendations data, but 
+            # wait, build_report in src/analyzer.py returns just the report. 
+            # we need to also rebuild recommendations.
+            from src.recommender import recommend_for_store
+            recs = recommend_for_store(report, percep_data)
+            save("recommendations.json", recs)
+            
         return jsonify(result)
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
-
-@app.route("/api/rescore/<handle>", methods=["POST"])
-def api_rescore(handle):
-    """
-    Re-runs the analyzer for a single product after changes are applied.
-    Updates report.json and recommendations.json for that product only.
-    """
-    product = get_product(handle)
-    if not product:
-        return jsonify({"success": False, "error": "Product not found"}), 404
-    try:
-        from src.analyzer      import analyze_product, CONVERSION_IMPACT
-        from src.ai_perception import generate_perception
-        from src.recommender   import recommend_for_product
-
-        new_report     = analyze_product(product)
-        new_perception = generate_perception(product)
-        new_rec        = recommend_for_product(new_report, new_perception)
-
-        # Patch report.json
-        report = load("report.json")
-        report["products"] = [
-            new_report if p["handle"] == handle else p
-            for p in report.get("products", [])
-        ]
-        save("report.json", report)
-
-        # Patch perception.json
-        percep = load("perception.json")
-        percep["perceptions"] = [
-            new_perception if p["handle"] == handle else p
-            for p in percep.get("perceptions", [])
-        ]
-        save("perception.json", percep)
-
-        return jsonify({
-            "success":    True,
-            "newScore":   new_report["score"],
-            "newGrade":   new_report["grade"],
-            "newIssues":  new_report["totalIssues"],
-            "perception": new_perception["aiPerception"],
-        })
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 
