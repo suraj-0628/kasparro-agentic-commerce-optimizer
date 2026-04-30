@@ -1,6 +1,6 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-04-30T14:27:11.236781",
+  "fetchedAt": "2026-04-30T15:14:45.580989",
   "apiVersion": "2026-04",
   "productCount": 30,
   "categoryStats": {
@@ -745,13 +745,13 @@
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
-        "formal shirt",
-        "white cotton shirt",
-        "office wear",
-        "mens fashion",
         "fabricindia",
+        "formal shirt",
+        "mens fashion",
+        "office wear",
+        "professional attire",
         "slim fit shirt",
-        "professional attire"
+        "white cotton shirt"
       ],
       "category": {
         "name": "Shirts",
@@ -774,11 +774,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "description": "Shop the FabricIndia white cotton formal shirt for men. Breathable, easy-iron fabric perfect for Indian office wear and professional meetings. Order now.",
-        "title": "White Pure Cotton Formal Shirt for Men - FabricIndia"
+        "title": "White Pure Cotton Formal Shirt for Men - FabricIndia",
+        "description": "Shop the FabricIndia white cotton formal shirt for men. Breathable, easy-iron fabric perfect for Indian office wear and professional meetings. Order now."
       },
       "createdAt": "2026-04-19T05:41:44Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-04-30T08:57:57Z"
     },
     {
       "id": "gid://shopify/Product/9480667463928",
@@ -1262,16 +1262,21 @@
     {
       "id": "gid://shopify/Product/9480667791608",
       "handle": "mens-wallet-black",
-      "title": "Men's Slim Wallet - Black",
-      "descriptionHtml": "<p>Slim wallet. Holds cards and cash. Black color leather look material.</p>",
-      "descriptionPlain": "Slim wallet. Holds cards and cash. Black color leather look material.",
-      "descriptionWordCount": 11,
+      "title": "Men's Slim Bi-fold Wallet - Premium Faux Leather Black",
+      "descriptionHtml": "<p>This minimalist slim bi-fold wallet is designed for the modern Indian professional. Crafted from high-quality black synthetic leather, it offers a sleek profile that fits perfectly in front pockets without the bulk. The interior features four card slots and a dedicated compartment for Indian currency notes. Ideal for daily office wear or formal occasions like weddings, it combines functionality with a sophisticated aesthetic. To maintain its finish, wipe clean with a damp cloth and avoid direct sunlight. This lightweight accessory is a must-have for men who prefer a clutter-free lifestyle while keeping essentials organized and accessible.</p>",
+      "descriptionPlain": "This minimalist slim bi-fold wallet is designed for the modern Indian professional. Crafted from high-quality black synthetic leather, it offers a sleek profile that fits perfectly in front pockets without the bulk. The interior features four card slots and a dedicated compartment for Indian currency notes. Ideal for daily office wear or formal occasions like weddings, it combines functionality with a sophisticated aesthetic. To maintain its finish, wipe clean with a damp cloth and avoid direct sunlight. This lightweight accessory is a must-have for men who prefer a clutter-free lifestyle while keeping essentials organized and accessible.",
+      "descriptionWordCount": 96,
       "productType": "Wallet",
       "vendor": "BagStore",
       "status": "ACTIVE",
       "tags": [
+        "accessories",
+        "black wallet",
+        "faux leather",
+        "formal",
         "men",
-        "slim",
+        "office wear",
+        "slim wallet",
         "wallet"
       ],
       "category": {
@@ -1295,11 +1300,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Slim Black Wallet for Men - Minimalist Faux Leather Bi-fold",
+        "description": "Upgrade your style with this slim black bi-fold wallet. Perfect for office wear and formal events, it fits Indian currency and cards without adding bulk."
       },
       "createdAt": "2026-04-19T05:41:57Z",
-      "updatedAt": "2026-04-19T05:42:06Z"
+      "updatedAt": "2026-04-30T09:37:26Z"
     },
     {
       "id": "gid://shopify/Product/9480667824376",

@@ -1,12 +1,28 @@
 {
   "meta": {
-    "generatedAt": "2026-04-30T08:57:13.648040+00:00",
+    "generatedAt": "2026-04-30T09:44:46.877554+00:00",
     "productsProcessed": 30,
-    "avgRetrievalScore": 71.6,
+    "avgRetrievalScore": 72.5,
     "storeVisibility": "MEDIUM"
   },
   "summary": {
-    "ambiguousProducts": 2
+    "typeDistribution": {
+      "T-Shirt / Top": 5,
+      "Skincare": 5,
+      "Headphones / Earphones": 3,
+      "Bag / Handbag": 2,
+      "Smartwatch / Wearable": 2,
+      "Footwear": 3,
+      "Speaker": 1,
+      "Belt": 1,
+      "Laptop / Computer": 3,
+      "Jacket / Outerwear": 2,
+      "Sunglasses": 2,
+      "Wallet": 1
+    },
+    "ambiguousProducts": 2,
+    "highRetrieval": 17,
+    "lowRetrieval": 0
   },
   "perceptions": [
     {
@@ -710,31 +726,26 @@
     },
     {
       "handle": "mens-wallet-black",
-      "title": "Men's Slim Wallet - Black",
+      "title": "Men's Slim Bi-fold Wallet - Premium Faux Leather Black",
       "aiPerception": {
         "perceivedType": "Wallet",
-        "typeConfidence": 65,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'Wallet' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Wallet' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
