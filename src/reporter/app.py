@@ -103,6 +103,7 @@ def index():
         "trustScore":      trust.get("trustScore", "—"),
         "trustGrade":      trust.get("trustGrade", "?"),
         "trustIssues":     len(trust.get("issues", [])),
+        "competitive":     report.get("competitiveContext", {}),
     }
 
     return render_template("index.html",

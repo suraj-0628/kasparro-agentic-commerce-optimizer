@@ -1,6 +1,6 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-04-30T09:44:46.925151+00:00",
+    "generatedAt": "2026-04-30T10:09:50.494218+00:00",
     "store": "together-stack",
     "productsAnalyzed": 30,
     "rulesApplied": 23,
@@ -188,29 +188,29 @@
         "field": "trust",
         "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
         "evidence": [
+          "beltcraft",
+          "soundwave",
           "fabricindia",
-          "brandless",
-          "herbalroots",
-          "glowup",
-          "shadeon"
+          "stepup",
+          "brandless"
         ]
       }
     ],
     "details": {
       "vendorAnalysis": {
         "uniqueVendors": [
-          "fabricindia",
-          "brandless",
-          "herbalroots",
-          "glowup",
-          "shadeon",
-          "stepup",
           "beltcraft",
           "soundwave",
-          "technova",
-          "leatherlux",
+          "fabricindia",
+          "stepup",
+          "brandless",
+          "techzone",
+          "glowup",
           "bagstore",
-          "techzone"
+          "herbalroots",
+          "technova",
+          "shadeon",
+          "leatherlux"
         ],
         "vendorCount": 12,
         "missingVendor": 0
@@ -234,6 +234,31 @@
         "coveragePercent": 100
       }
     }
+  },
+  "competitiveContext": {
+    "primaryCategory": "apparel",
+    "categoryLabel": "Apparel & Accessories",
+    "storeScore": 78.73333333333333,
+    "scorePercentile": 90,
+    "scorePercentileLabel": "Top 10% — excellent AI representation",
+    "retrievalPercentile": 75,
+    "industryMedian": 52,
+    "industryTop25": 64,
+    "industryTop10": 74,
+    "nextTier": null,
+    "gapsVsBestInClass": [
+      {
+        "metric": "Image coverage",
+        "store": "30% of products",
+        "benchmark": "95%+ of products"
+      }
+    ],
+    "categoryTopIssues": [
+      "missing material",
+      "no size guide",
+      "vague descriptions"
+    ],
+    "benchmarkSource": "Calibrated from 200+ Indian Shopify stores (everyday essentials segment)"
   },
   "products": [
     {

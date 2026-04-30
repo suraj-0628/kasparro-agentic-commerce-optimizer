@@ -17,6 +17,7 @@ import re
 import os
 from datetime import datetime, timezone
 from pathlib import Path
+from src.checks.competitor_baseline import generate_competitive_context
 
 # ── Load config ───────────────────────────────────────────────────────────────
 
@@ -429,6 +430,10 @@ def build_report(products_data, policy_report=None, trust_report=None, perceptio
 
     narrative = generate_narrative(meta, summary, perception_meta)
 
+    # Competitive context
+    avg_retrieval = (perception_meta or {}).get("avgRetrievalScore", 0)
+    competitive_context = generate_competitive_context(avg_score, avg_retrieval, products)
+
     # Composite store score (product quality 60% + policy 20% + trust 20%)
     policy_score = (policy_report or {}).get("policyScore", 100)
     trust_score  = (trust_report  or {}).get("trustScore",  100)
@@ -442,6 +447,7 @@ def build_report(products_data, policy_report=None, trust_report=None, perceptio
         "compositeGrade": "A" if composite >= 80 else "B" if composite >= 60 else "C" if composite >= 40 else "F",
         "policyReport":  policy_report,
         "trustReport":   trust_report,
+        "competitiveContext": competitive_context,
         "products":      results,
     }
 

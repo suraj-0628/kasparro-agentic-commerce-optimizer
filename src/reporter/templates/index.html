@@ -766,6 +766,33 @@
         </div>
       </div>
     </div>
+    
+    <!-- Competitive Benchmark Section -->
+    {% if stats.competitive %}
+    <div class="section-title">Industry Benchmark — {{ stats.competitive.categoryLabel }}</div>
+    <div class="hero" style="margin-bottom:28px">
+      <div class="score-card sc-teal" style="grid-column: span 2;">
+        <div class="card-label">Percentile Rank</div>
+        <div class="card-value">{{ stats.competitive.scorePercentile }}th</div>
+        <div class="card-sub">{{ stats.competitive.scorePercentileLabel }}</div>
+      </div>
+      <div class="score-card sc-purple" style="grid-column: span 2;">
+        <div class="card-label">Industry Median</div>
+        <div class="card-value">{{ stats.competitive.industryMedian }}</div>
+        <div class="card-sub">avg. score for {{ stats.competitive.categoryLabel }}</div>
+      </div>
+      <div class="score-card sc-amber" style="grid-column: span 2;">
+        <div class="card-label">Next Tier</div>
+        {% if stats.competitive.nextTier %}
+        <div class="card-value" style="font-size: 20px; margin-top: 5px;">+{{ stats.competitive.nextTier.gap }} pts</div>
+        <div class="card-sub">to reach Top {{ '10' if stats.competitive.scorePercentile < 75 else '25' if stats.competitive.scorePercentile < 90 else '5' }}%</div>
+        {% else %}
+        <div class="card-value">Top 10%</div>
+        <div class="card-sub">Keep maintaining excellence</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
 
     <!-- Product table -->
     <div class="filter-bar">
