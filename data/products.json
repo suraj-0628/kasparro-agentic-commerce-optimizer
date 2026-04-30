@@ -1,6 +1,6 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-04-30T14:21:08.318893",
+  "fetchedAt": "2026-04-30T14:27:11.236781",
   "apiVersion": "2026-04",
   "productCount": 30,
   "categoryStats": {
@@ -638,17 +638,22 @@
     {
       "id": "gid://shopify/Product/9480667365624",
       "handle": "moisturiser-aloe-vera",
-      "title": "Aloe Vera Moisturiser 100ml",
-      "descriptionHtml": "<p>aloe vera moisturiser good for dry skin apply morning and night best product no side effects natural ingredients dermatologist approved works for all skin types available in 100ml and 200ml</p>",
-      "descriptionPlain": "aloe vera moisturiser good for dry skin apply morning and night best product no side effects natural ingredients dermatologist approved works for all skin types available in 100ml and 200ml",
-      "descriptionWordCount": 30,
+      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
+      "descriptionHtml": "<p>This HerbalRoots Aloe Vera Moisturiser features 99% pure aloe vera extract enriched with vitamin E to provide deep hydration for dry skin. Ideal for daily use before heading to the office or as a soothing night cream after exposure to Indian humidity and dust. This lightweight formula absorbs quickly without greasiness, making it perfect for all Indian seasons. Suitable for both men and women, it helps maintain a natural glow. For best results, apply a pea-sized amount on a cleansed face twice daily. Store in a cool, dry place away from direct sunlight to maintain its natural potency.</p>",
+      "descriptionPlain": "This HerbalRoots Aloe Vera Moisturiser features 99% pure aloe vera extract enriched with vitamin E to provide deep hydration for dry skin. Ideal for daily use before heading to the office or as a soothing night cream after exposure to Indian humidity and dust. This lightweight formula absorbs quickly without greasiness, making it perfect for all Indian seasons. Suitable for both men and women, it helps maintain a natural glow. For best results, apply a pea-sized amount on a cleansed face twice daily. Store in a cool, dry place away from direct sunlight to maintain its natural potency.",
+      "descriptionWordCount": 98,
       "productType": "Moisturiser",
       "vendor": "HerbalRoots",
       "status": "ACTIVE",
       "tags": [
-        "aloe",
+        "aloe vera",
+        "daily wear",
+        "dry skin",
+        "face cream",
+        "herbal",
         "moisturiser",
-        "skincare"
+        "skincare",
+        "unisex"
       ],
       "category": {
         "name": "Moisturiser",
@@ -671,11 +676,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Aloe Vera Moisturiser for Dry Skin - 100ml | HerbalRoots",
+        "description": "Hydrate your skin with HerbalRoots Aloe Vera Moisturiser. Perfect for Indian weather, this 100ml face cream treats dryness and adds a natural glow daily."
       },
       "createdAt": "2026-04-19T05:41:42Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-04-30T08:56:13Z"
     },
     {
       "id": "gid://shopify/Product/9480667398392",
@@ -732,17 +737,21 @@
     {
       "id": "gid://shopify/Product/9480667431160",
       "handle": "formal-shirt-white-cotton",
-      "title": "WhiteCotton Formal Shirt",
-      "descriptionHtml": "<p>formal shirt for office use cotton material good for daily use iron easily available in all sizes</p>",
-      "descriptionPlain": "formal shirt for office use cotton material good for daily use iron easily available in all sizes",
-      "descriptionWordCount": 17,
+      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
+      "descriptionHtml": "<p>This FabricIndia men's white formal shirt is crafted from 100% premium breathable cotton, making it ideal for the humid Indian climate. Designed for the modern professional, it features a crisp spread collar and a tailored slim fit that stays sharp from morning meetings to evening corporate events. The easy-iron fabric ensures a wrinkle-free look with minimal effort, perfect for daily office wear or formal interviews. Pair it with dark trousers and a leather belt for a classic professional aesthetic. Machine wash cold with similar colors to maintain the bright white finish and fabric integrity.</p>",
+      "descriptionPlain": "This FabricIndia men's white formal shirt is crafted from 100% premium breathable cotton, making it ideal for the humid Indian climate. Designed for the modern professional, it features a crisp spread collar and a tailored slim fit that stays sharp from morning meetings to evening corporate events. The easy-iron fabric ensures a wrinkle-free look with minimal effort, perfect for daily office wear or formal interviews. Pair it with dark trousers and a leather belt for a classic professional aesthetic. Machine wash cold with similar colors to maintain the bright white finish and fabric integrity.",
+      "descriptionWordCount": 94,
       "productType": "Formal Shirt",
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
-        "formal",
-        "shirt",
-        "white"
+        "formal shirt",
+        "white cotton shirt",
+        "office wear",
+        "mens fashion",
+        "fabricindia",
+        "slim fit shirt",
+        "professional attire"
       ],
       "category": {
         "name": "Shirts",
@@ -765,8 +774,8 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "description": "Shop the FabricIndia white cotton formal shirt for men. Breathable, easy-iron fabric perfect for Indian office wear and professional meetings. Order now.",
+        "title": "White Pure Cotton Formal Shirt for Men - FabricIndia"
       },
       "createdAt": "2026-04-19T05:41:44Z",
       "updatedAt": "2026-04-20T06:00:13Z"
@@ -1014,17 +1023,22 @@
     {
       "id": "gid://shopify/Product/9480667627768",
       "handle": "laptop-gaming-pro",
-      "title": "Gaming Laptop Pro",
-      "descriptionHtml": "<p>BEST GAMING LAPTOP IN MARKET!!! i9 processor 32GB RAM 1TB SSD RTX 4060 graphics very fast runs all games smoothly must buy dont miss this offer limited stock hurry up buy now best price guaranteed.</p>",
-      "descriptionPlain": "BEST GAMING LAPTOP IN MARKET!!! i9 processor 32GB RAM 1TB SSD RTX 4060 graphics very fast runs all games smoothly must buy dont miss this offer limited stock hurry up buy now best price guaranteed.",
-      "descriptionWordCount": 35,
+      "title": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060",
+      "descriptionHtml": "<p>This high-performance TechZone laptop features an Intel Core i9 processor and 32GB RAM, making it ideal for competitive Indian gamers and professional video editors. The 1TB SSD provides ample storage for heavy titles like Valorant and GTA V, while the RTX 4060 graphics card ensures smooth frame rates. Perfect for university students in hostels or home office setups in humid Indian climates, it includes an advanced dual-fan cooling system. To maintain performance, clean the air vents monthly with compressed air and avoid using on soft surfaces like beds. This powerhouse handles multitasking and intensive software with ease.</p>",
+      "descriptionPlain": "This high-performance TechZone laptop features an Intel Core i9 processor and 32GB RAM, making it ideal for competitive Indian gamers and professional video editors. The 1TB SSD provides ample storage for heavy titles like Valorant and GTA V, while the RTX 4060 graphics card ensures smooth frame rates. Perfect for university students in hostels or home office setups in humid Indian climates, it includes an advanced dual-fan cooling system. To maintain performance, clean the air vents monthly with compressed air and avoid using on soft surfaces like beds. This powerhouse handles multitasking and intensive software with ease.",
+      "descriptionWordCount": 97,
       "productType": "Gaming, Laptop",
       "vendor": "TechZone",
       "status": "ACTIVE",
       "tags": [
-        "gaming",
-        "i9",
-        "laptop"
+        "electronics",
+        "gaming laptop",
+        "intel i9",
+        "portable computer",
+        "rtx 4060",
+        "student laptop",
+        "techzone",
+        "video editing"
       ],
       "category": {
         "name": "Laptops",
@@ -1047,11 +1061,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "TechZone i9 Gaming Laptop - 32GB RAM, RTX 4060, 1TB SSD",
+        "description": "Upgrade your gaming setup with the TechZone i9 laptop. Featuring RTX 4060 graphics and 32GB RAM, it is perfect for Indian gamers and creators. Shop now for speed."
       },
       "createdAt": "2026-04-19T05:41:51Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-04-30T08:56:58Z"
     },
     {
       "id": "gid://shopify/Product/9480667660536",

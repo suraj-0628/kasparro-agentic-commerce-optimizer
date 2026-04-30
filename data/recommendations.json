@@ -1,52 +1,4 @@
 {
-  "meta": {
-    "generatedAt": "2026-04-30T08:51:11.109833+00:00",
-    "store": "together-stack",
-    "avgScore": 75.7,
-    "storeGrade": "B",
-    "compositeScore": 71.8,
-    "compositeGrade": "B",
-    "avgRetrieval": 69.0,
-    "narrative": "This store scores 75.7/100 (Grade B) on AI representation quality across 30 products. AI agents are missing approximately 31% of potential search traffic due to weak metadata signals (retrieval score: 69.0/100 — MEDIUM). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes."
-  },
-  "storeInsights": [
-    {
-      "type": "SYSTEMIC_ISSUE",
-      "title": "SKU_MISSING affects 30/30 products",
-      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
-      "action": "Review and fix this issue across all products."
-    },
-    {
-      "type": "RETRIEVAL_GAP",
-      "title": "Store retrieval score is 69.0/100 — AI agents are missing 31% of potential traffic",
-      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
-      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
-    },
-    {
-      "type": "QUICK_WIN",
-      "title": "SEO titles and descriptions are missing store-wide",
-      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
-      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
-    },
-    {
-      "type": "POLICY_GAP",
-      "title": "POLICY_RETURN_MISSING: No return/refund policy found. AI shopping agents flag store...",
-      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
-      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
-    },
-    {
-      "type": "POLICY_GAP",
-      "title": "POLICY_SHIPPING_MISSING: No shipping policy found. AI agents answering 'when will my ...",
-      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
-      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
-    },
-    {
-      "type": "TRUST_GAP",
-      "title": "TRUST_BRAND_INCONSISTENT: Store has 12 different vendor names. AI agents prefer stores...",
-      "detail": "Trust signal missing — reduces AI recommendation confidence store-wide.",
-      "action": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity."
-    }
-  ],
   "roiRanking": [
     {
       "code": "IMAGE_MISSING",
@@ -57,14 +9,6 @@
       "effort": "MEDIUM"
     },
     {
-      "code": "SEO_TITLE_MISSING",
-      "severity": "MEDIUM",
-      "affectedProducts": 14,
-      "totalScoreLift": 112,
-      "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
-      "effort": "LOW"
-    },
-    {
       "code": "SKU_MISSING",
       "severity": "LOW",
       "affectedProducts": 30,
@@ -73,42 +17,42 @@
       "effort": "LOW"
     },
     {
+      "code": "SEO_TITLE_MISSING",
+      "severity": "MEDIUM",
+      "affectedProducts": 11,
+      "totalScoreLift": 88,
+      "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
+      "effort": "LOW"
+    },
+    {
       "code": "TAGS_NOT_IN_DESCRIPTION",
       "severity": "LOW",
-      "affectedProducts": 15,
-      "totalScoreLift": 45,
+      "affectedProducts": 17,
+      "totalScoreLift": 51,
       "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
+      "effort": "LOW"
+    },
+    {
+      "code": "SEO_DESC_MISSING",
+      "severity": "LOW",
+      "affectedProducts": 11,
+      "totalScoreLift": 33,
+      "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
       "effort": "LOW"
     },
     {
       "code": "DESCRIPTION_TOO_SHORT",
       "severity": "HIGH",
-      "affectedProducts": 3,
-      "totalScoreLift": 45,
-      "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion.",
-      "effort": "MEDIUM"
-    },
-    {
-      "code": "SEO_DESC_MISSING",
-      "severity": "LOW",
-      "affectedProducts": 14,
-      "totalScoreLift": 42,
-      "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
-      "effort": "LOW"
-    },
-    {
-      "code": "DESCRIPTION_VAGUE",
-      "severity": "HIGH",
       "affectedProducts": 2,
       "totalScoreLift": 30,
-      "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product.",
+      "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion.",
       "effort": "MEDIUM"
     },
     {
       "code": "DESCRIPTION_NO_USE_CASE",
       "severity": "LOW",
-      "affectedProducts": 9,
-      "totalScoreLift": 27,
+      "affectedProducts": 6,
+      "totalScoreLift": 18,
       "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'.",
       "effort": "LOW"
     },
@@ -121,6 +65,14 @@
       "effort": "LOW"
     },
     {
+      "code": "CONTRADICTION_SEASON",
+      "severity": "HIGH",
+      "affectedProducts": 1,
+      "totalScoreLift": 15,
+      "conversionImpact": "Contradictory context = AI filters product from both seasonal query sets.",
+      "effort": "MEDIUM"
+    },
+    {
       "code": "DESCRIPTION_MISSING_MATERIAL",
       "severity": "MEDIUM",
       "affectedProducts": 1,
@@ -129,232 +81,34 @@
       "effort": "LOW"
     }
   ],
+  "meta": {
+    "generatedAt": "2026-04-30T14:27:54.577174",
+    "store": "together-stack",
+    "avgScore": 77.9,
+    "storeGrade": "B",
+    "avgRetrieval": 71.6
+  },
+  "storeInsights": [
+    {
+      "type": "SYSTEMIC_ISSUE",
+      "title": "SKU_MISSING affects 30/30 products",
+      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
+      "action": "Review and fix this issue across all products."
+    },
+    {
+      "type": "RETRIEVAL_GAP",
+      "title": "Store retrieval score is 71.6/100 — AI agents are missing 28% of potential traffic",
+      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
+      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
+    },
+    {
+      "type": "QUICK_WIN",
+      "title": "SEO titles and descriptions are missing store-wide",
+      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
+      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
+    }
+  ],
   "products": [
-    {
-      "handle": "moisturiser-aloe-vera",
-      "title": "Aloe Vera Moisturiser 100ml",
-      "currentScore": 53,
-      "grade": "C",
-      "retrievalScore": 46,
-      "perceivedType": "Skincare",
-      "interpretation": "AI classifies this as 'Skincare' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 6,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_VAGUE",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "1 vague phrase(s) detected — zero signal for AI ranking systems.",
-          "fix": "Replace phrases like 'good quality' and 'best product' with specific attributes: materials, measurements, certifications, test results.",
-          "impact": "Vague phrases are filtered as noise by AI ranking models. They add word count but zero signal.",
-          "effort": "LOW",
-          "priority": 2
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_VAGUE",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "1 vague phrase(s) detected — zero signal for AI ranking systems.",
-          "fix": "Replace phrases like 'good quality' and 'best product' with specific attributes: materials, measurements, certifications, test results.",
-          "impact": "Vague phrases are filtered as noise by AI ranking models. They add word count but zero signal.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
-    {
-      "handle": "formal-shirt-white-cotton",
-      "title": "WhiteCotton Formal Shirt",
-      "currentScore": 53,
-      "grade": "C",
-      "retrievalScore": 46,
-      "perceivedType": "T-Shirt / Top",
-      "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 6,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "Only 17 words. Minimum 20 needed for AI context.",
-          "fix": "Expand description to at least 50 words. Include: material, dimensions, use-case, target user, key feature.",
-          "impact": "Short descriptions lack the signal density AI needs for intent matching and feature extraction.",
-          "effort": "LOW",
-          "priority": 2
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_TOO_SHORT",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "Only 17 words. Minimum 20 needed for AI context.",
-          "fix": "Expand description to at least 50 words. Include: material, dimensions, use-case, target user, key feature.",
-          "impact": "Short descriptions lack the signal density AI needs for intent matching and feature extraction.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
-    {
-      "handle": "laptop-gaming-pro",
-      "title": "Gaming Laptop Pro",
-      "currentScore": 53,
-      "grade": "C",
-      "retrievalScore": 51,
-      "perceivedType": "Laptop / Computer",
-      "interpretation": "AI classifies this as 'Laptop / Computer' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 6,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_VAGUE",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "4 vague phrase(s) detected — zero signal for AI ranking systems.",
-          "fix": "Replace phrases like 'good quality' and 'best product' with specific attributes: materials, measurements, certifications, test results.",
-          "impact": "Vague phrases are filtered as noise by AI ranking models. They add word count but zero signal.",
-          "effort": "LOW",
-          "priority": 2
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "DESCRIPTION_VAGUE",
-          "severity": "HIGH",
-          "field": "description",
-          "problem": "4 vague phrase(s) detected — zero signal for AI ranking systems.",
-          "fix": "Replace phrases like 'good quality' and 'best product' with specific attributes: materials, measurements, certifications, test results.",
-          "impact": "Vague phrases are filtered as noise by AI ranking models. They add word count but zero signal.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
     {
       "handle": "mens-wallet-black",
       "title": "Men's Slim Wallet - Black",
@@ -634,6 +388,61 @@
         }
       ],
       "projectedScore": 75
+    },
+    {
+      "handle": "laptop-gaming-pro",
+      "title": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060",
+      "currentScore": 64,
+      "grade": "B",
+      "retrievalScore": 75,
+      "perceivedType": "Laptop / Computer",
+      "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "totalIssues": 4,
+      "quickWins": [
+        {
+          "issueCode": "CONTRADICTION_SEASON",
+          "severity": "HIGH",
+          "field": "description",
+          "problem": "Conflicting seasonal signals — AI receives contradictory intent context.",
+          "fix": "Align title and description to the same season/context. If it's a winter jacket, remove all summer/beach/cool references from the description.",
+          "impact": "Contradictory signals cause AI to filter the product from BOTH seasonal query sets.",
+          "effort": "LOW",
+          "priority": 1
+        },
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "CONTRADICTION_SEASON",
+          "severity": "HIGH",
+          "field": "description",
+          "problem": "Conflicting seasonal signals — AI receives contradictory intent context.",
+          "fix": "Align title and description to the same season/context. If it's a winter jacket, remove all summer/beach/cool references from the description.",
+          "impact": "Contradictory signals cause AI to filter the product from BOTH seasonal query sets.",
+          "effort": "LOW",
+          "priority": 1
+        },
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "projectedScore": 94
     },
     {
       "handle": "wireless-bluetooth-headphones-pro",
@@ -1101,6 +910,41 @@
       "projectedScore": 94
     },
     {
+      "handle": "moisturiser-aloe-vera",
+      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
+      "currentScore": 79,
+      "grade": "B",
+      "retrievalScore": 70,
+      "perceivedType": "Skincare",
+      "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "totalIssues": 3,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "projectedScore": 94
+    },
+    {
       "handle": "sunscreen-spf50",
       "title": "GlowUp SPF 50 PA+++ Sunscreen Lotion - Non-Greasy Daily Wear",
       "currentScore": 79,
@@ -1169,6 +1013,41 @@
         }
       ],
       "projectedScore": 94
+    },
+    {
+      "handle": "formal-shirt-white-cotton",
+      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
+      "currentScore": 82,
+      "grade": "A",
+      "retrievalScore": 75,
+      "perceivedType": "T-Shirt / Top",
+      "interpretation": "AI classifies this as 'T-Shirt / Top' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "totalIssues": 2,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "projectedScore": 97
     },
     {
       "handle": "smartwatch-round-dial",

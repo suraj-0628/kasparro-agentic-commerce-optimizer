@@ -1,28 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-04-30T08:51:11.076806+00:00",
+    "generatedAt": "2026-04-30T08:57:13.648040+00:00",
     "productsProcessed": 30,
-    "avgRetrievalScore": 69.0,
+    "avgRetrievalScore": 71.6,
     "storeVisibility": "MEDIUM"
   },
   "summary": {
-    "typeDistribution": {
-      "T-Shirt / Top": 5,
-      "Skincare": 5,
-      "Headphones / Earphones": 3,
-      "Bag / Handbag": 2,
-      "Smartwatch / Wearable": 2,
-      "Footwear": 3,
-      "Speaker": 1,
-      "Belt": 1,
-      "Laptop / Computer": 3,
-      "Jacket / Outerwear": 2,
-      "Sunglasses": 2,
-      "Wallet": 1
-    },
-    "ambiguousProducts": 0,
-    "highRetrieval": 14,
-    "lowRetrieval": 0
+    "ambiguousProducts": 2
   },
   "perceptions": [
     {
@@ -363,31 +347,26 @@
     },
     {
       "handle": "moisturiser-aloe-vera",
-      "title": "Aloe Vera Moisturiser 100ml",
+      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
       "aiPerception": {
         "perceivedType": "Skincare",
-        "typeConfidence": 70,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI classifies this as 'Skincare' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 70,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -416,31 +395,31 @@
     },
     {
       "handle": "formal-shirt-white-cotton",
-      "title": "WhiteCotton Formal Shirt",
+      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
       "aiPerception": {
         "perceivedType": "T-Shirt / Top",
-        "typeConfidence": 65,
-        "isAmbiguous": false,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI tentatively sees 'T-Shirt / Top' but confidence is low (65%). No conflicting signals. Description present but too thin for attribute extraction.",
-        "ambiguityFlags": [],
+        "typeConfidence": 90,
+        "isAmbiguous": true,
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+        "ambiguityFlags": [
+          {
+            "type": "TYPE_AMBIGUITY",
+            "description": "AI cannot distinguish between 'T-Shirt / Top' and 'Belt'. Both plausible from text."
+          }
+        ],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -582,31 +561,31 @@
     },
     {
       "handle": "laptop-gaming-pro",
-      "title": "Gaming Laptop Pro",
+      "title": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060",
       "aiPerception": {
         "perceivedType": "Laptop / Computer",
-        "typeConfidence": 70,
-        "isAmbiguous": false,
-        "retrievalScore": 51,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Laptop / Computer' with 70% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-        "ambiguityFlags": [],
+        "typeConfidence": 98,
+        "isAmbiguous": true,
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+        "ambiguityFlags": [
+          {
+            "type": "CONTRADICTORY_CONTEXT",
+            "description": "Conflicting seasonal signals. AI may filter this out of both winter AND summer queries."
+          }
+        ],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
