@@ -1,4 +1,33 @@
 {
+  "meta": {
+    "generatedAt": "2026-05-01T17:38:01.681651+00:00",
+    "store": "together-stack",
+    "avgScore": 84.3,
+    "storeGrade": "A",
+    "compositeScore": 77.0,
+    "avgRetrieval": 77.4,
+    "narrative": "This store scores 84.3/100 (Grade A) on AI representation quality across 32 products. AI agents are missing approximately 23% of potential search traffic due to weak metadata signals (retrieval score: 77.4/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 32/32 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes."
+  },
+  "storeInsights": [
+    {
+      "type": "SYSTEMIC_ISSUE",
+      "title": "SKU_MISSING affects 32/30 products",
+      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
+      "action": "Assign a unique SKU to every variant."
+    },
+    {
+      "type": "RETRIEVAL_GAP",
+      "title": "Store retrieval score is 77.4/100 — AI agents are missing 23% of potential traffic",
+      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
+      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
+    },
+    {
+      "type": "QUICK_WIN",
+      "title": "SEO titles and descriptions are missing store-wide",
+      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
+      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
+    }
+  ],
   "roiRanking": [
     {
       "code": "IMAGE_MISSING",
@@ -11,33 +40,33 @@
     {
       "code": "SKU_MISSING",
       "severity": "LOW",
-      "affectedProducts": 30,
-      "totalScoreLift": 90,
+      "affectedProducts": 32,
+      "totalScoreLift": 96,
       "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant.",
       "effort": "LOW"
     },
     {
       "code": "TAGS_NOT_IN_DESCRIPTION",
       "severity": "LOW",
-      "affectedProducts": 16,
-      "totalScoreLift": 48,
+      "affectedProducts": 14,
+      "totalScoreLift": 42,
       "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
       "effort": "LOW"
     },
     {
       "code": "SEO_TITLE_MISSING",
       "severity": "MEDIUM",
-      "affectedProducts": 5,
-      "totalScoreLift": 40,
+      "affectedProducts": 2,
+      "totalScoreLift": 16,
       "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
       "effort": "LOW"
     },
     {
-      "code": "SEO_DESC_MISSING",
-      "severity": "LOW",
-      "affectedProducts": 5,
-      "totalScoreLift": 15,
-      "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+      "code": "PRODUCT_TYPE_MISSING",
+      "severity": "MEDIUM",
+      "affectedProducts": 2,
+      "totalScoreLift": 16,
+      "conversionImpact": "Missing product type weakens secondary classification signals.",
       "effort": "LOW"
     },
     {
@@ -57,6 +86,14 @@
       "effort": "LOW"
     },
     {
+      "code": "SEO_DESC_MISSING",
+      "severity": "LOW",
+      "affectedProducts": 2,
+      "totalScoreLift": 6,
+      "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+      "effort": "LOW"
+    },
+    {
       "code": "DESCRIPTION_NO_USE_CASE",
       "severity": "LOW",
       "affectedProducts": 1,
@@ -65,199 +102,7 @@
       "effort": "LOW"
     }
   ],
-  "meta": {
-    "generatedAt": "2026-05-01T21:31:00.733851",
-    "store": "together-stack",
-    "avgScore": 82.7,
-    "storeGrade": "A",
-    "avgRetrieval": 76.2
-  },
-  "storeInsights": [
-    {
-      "type": "SYSTEMIC_ISSUE",
-      "title": "SKU_MISSING affects 30/30 products",
-      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
-      "action": "Review and fix this issue across all products."
-    },
-    {
-      "type": "RETRIEVAL_GAP",
-      "title": "Store retrieval score is 76.2/100 — AI agents are missing 24% of potential traffic",
-      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
-      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
-    },
-    {
-      "type": "QUICK_WIN",
-      "title": "SEO titles and descriptions are missing store-wide",
-      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
-      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
-    }
-  ],
   "products": [
-    {
-      "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Neem Face Cream",
-      "currentScore": 68,
-      "grade": "B",
-      "retrievalScore": 68,
-      "perceivedType": "Skincare",
-      "interpretation": "AI classifies this as 'Skincare' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 5,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
-    {
-      "handle": "leather-handbag-women-tan",
-      "title": "Premium Leather Handbag - Tan",
-      "currentScore": 68,
-      "grade": "B",
-      "retrievalScore": 68,
-      "perceivedType": "Bag / Handbag",
-      "interpretation": "AI classifies this as 'Bag / Handbag' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 5,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
-    {
-      "handle": "canvas-sneakers-white",
-      "title": "Canvas Sneakers - White",
-      "currentScore": 68,
-      "grade": "B",
-      "retrievalScore": 73,
-      "perceivedType": "Footwear",
-      "interpretation": "AI classifies this as 'Footwear' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 5,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 83
-    },
     {
       "handle": "mens-leather-belt-brown",
       "title": "Men's Genuine Leather Belt - Brown",
@@ -266,6 +111,7 @@
       "retrievalScore": 73,
       "perceivedType": "Belt",
       "interpretation": "AI classifies this as 'Belt' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+      "isAmbiguous": false,
       "totalIssues": 4,
       "quickWins": [
         {
@@ -276,7 +122,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -288,27 +142,57 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         },
         {
           "issueCode": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
           "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
+          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'.",
+          "impact": "AI search agents use SEO title for snippet generation. Missing = raw title used.",
           "effort": "LOW",
-          "priority": 2
+          "priority": 2,
+          "canFixWithAI": true,
+          "manualSteps": []
         },
         {
           "issueCode": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
           "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
+          "fix": "Write a 150-160 character SEO description summarising benefits.",
+          "impact": "AI commerce agents use meta description for product summaries.",
           "effort": "LOW",
-          "priority": 3
+          "priority": 3,
+          "canFixWithAI": true,
+          "manualSteps": []
         }
       ],
       "projectedScore": 86
@@ -321,6 +205,7 @@
       "retrievalScore": 70,
       "perceivedType": "Laptop / Computer",
       "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 4,
       "quickWins": [
         {
@@ -331,7 +216,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -343,17 +236,45 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         },
         {
           "issueCode": "DESCRIPTION_MISSING_SPECS",
           "severity": "MEDIUM",
           "field": "description",
           "problem": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
-          "fix": "Add measurable specs: battery (mAh/hours), storage (GB), weight (g/kg), dimensions (mm/cm), wattage (W).",
-          "impact": "Electronics without specs cannot surface in 'best laptop under X' or comparison queries.",
+          "fix": "Add measurable specs (mAh, GB, W, kg).",
+          "impact": "Electronics without specs cannot surface in comparison queries.",
           "effort": "MEDIUM",
-          "priority": 2
+          "priority": 2,
+          "canFixWithAI": true,
+          "manualSteps": []
         }
       ],
       "projectedScore": 86
@@ -366,6 +287,7 @@
       "retrievalScore": 63,
       "perceivedType": "Sunglasses",
       "interpretation": "AI classifies this as 'Sunglasses' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+      "isAmbiguous": false,
       "totalIssues": 4,
       "quickWins": [
         {
@@ -376,7 +298,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -388,39 +318,70 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         },
         {
           "issueCode": "SEO_TITLE_MISSING",
           "severity": "MEDIUM",
           "field": "seo",
           "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
+          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'.",
+          "impact": "AI search agents use SEO title for snippet generation. Missing = raw title used.",
           "effort": "LOW",
-          "priority": 2
+          "priority": 2,
+          "canFixWithAI": true,
+          "manualSteps": []
         },
         {
           "issueCode": "SEO_DESC_MISSING",
           "severity": "LOW",
           "field": "seo",
           "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
+          "fix": "Write a 150-160 character SEO description summarising benefits.",
+          "impact": "AI commerce agents use meta description for product summaries.",
           "effort": "LOW",
-          "priority": 3
+          "priority": 3,
+          "canFixWithAI": true,
+          "manualSteps": []
         }
       ],
       "projectedScore": 86
     },
     {
-      "handle": "wireless-bluetooth-headphones-pro",
-      "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
-      "currentScore": 79,
+      "handle": "shorts-blue-men-boxers",
+      "title": "Men's Blue Short Trousers - Comfortable Boxers",
+      "currentScore": 74,
       "grade": "B",
       "retrievalScore": 75,
-      "perceivedType": "Headphones / Earphones",
-      "interpretation": "AI classifies this as 'Headphones / Earphones' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "perceivedType": "Unknown",
+      "interpretation": "AI cannot determine product type from available signals. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "isAmbiguous": true,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -431,7 +392,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -443,7 +412,173 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
+      "projectedScore": 89
+    },
+    {
+      "handle": "ayurvedic-face-cream-neem",
+      "title": "Ayurvedic Face Cream with Neem & Turmeric",
+      "currentScore": 79,
+      "grade": "B",
+      "retrievalScore": 75,
+      "perceivedType": "Skincare",
+      "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
+      "totalIssues": 3,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
+      "projectedScore": 94
+    },
+    {
+      "handle": "wireless-bluetooth-headphones-pro",
+      "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
+      "currentScore": 79,
+      "grade": "B",
+      "retrievalScore": 75,
+      "perceivedType": "Headphones / Earphones",
+      "interpretation": "AI classifies this as 'Headphones / Earphones' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "isAmbiguous": true,
+      "totalIssues": 3,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
@@ -456,6 +591,7 @@
       "retrievalScore": 75,
       "perceivedType": "Smartwatch / Wearable",
       "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -466,7 +602,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -478,19 +622,46 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
     },
     {
       "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Heavy Padded Winter Jacket with Detachable Hood - Navy Blue",
+      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
       "currentScore": 79,
       "grade": "B",
-      "retrievalScore": 75,
+      "retrievalScore": 80,
       "perceivedType": "Jacket / Outerwear",
       "interpretation": "AI classifies this as 'Jacket / Outerwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -501,7 +672,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -513,7 +692,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
@@ -526,6 +731,7 @@
       "retrievalScore": 70,
       "perceivedType": "Skincare",
       "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -536,7 +742,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -548,7 +762,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
@@ -561,6 +801,7 @@
       "retrievalScore": 75,
       "perceivedType": "T-Shirt / Top",
       "interpretation": "AI classifies this as 'T-Shirt / Top' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -571,7 +812,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -583,7 +832,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
@@ -596,6 +871,7 @@
       "retrievalScore": 70,
       "perceivedType": "Skincare",
       "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -606,7 +882,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -618,7 +902,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
@@ -631,6 +941,7 @@
       "retrievalScore": 75,
       "perceivedType": "Headphones / Earphones",
       "interpretation": "AI classifies this as 'Headphones / Earphones' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 3,
       "quickWins": [
         {
@@ -641,7 +952,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -653,19 +972,46 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 94
     },
     {
-      "handle": "bluetooth-portable-speaker-mini",
-      "title": "Portable Bluetooth Speaker 10W",
+      "handle": "canvas-sneakers-white",
+      "title": "Unisex White Canvas Sneakers",
       "currentScore": 82,
       "grade": "A",
-      "retrievalScore": 75,
-      "perceivedType": "Speaker",
-      "interpretation": "AI classifies this as 'Speaker' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "retrievalScore": 80,
+      "perceivedType": "Footwear",
+      "interpretation": "AI classifies this as 'Footwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -676,7 +1022,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -688,7 +1042,103 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
+      "projectedScore": 97
+    },
+    {
+      "handle": "bluetooth-portable-speaker-mini",
+      "title": "Portable Bluetooth Speaker 10W",
+      "currentScore": 82,
+      "grade": "A",
+      "retrievalScore": 75,
+      "perceivedType": "Speaker",
+      "interpretation": "AI classifies this as 'Speaker' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
+      "totalIssues": 2,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -701,6 +1151,7 @@
       "retrievalScore": 75,
       "perceivedType": "T-Shirt / Top",
       "interpretation": "AI classifies this as 'T-Shirt / Top' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "isAmbiguous": true,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -711,7 +1162,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -723,7 +1182,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -736,6 +1221,7 @@
       "retrievalScore": 75,
       "perceivedType": "Smartwatch / Wearable",
       "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -746,7 +1232,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -758,7 +1252,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -771,6 +1291,7 @@
       "retrievalScore": 85,
       "perceivedType": "Laptop / Computer",
       "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "isAmbiguous": true,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -778,10 +1299,12 @@
           "severity": "HIGH",
           "field": "description",
           "problem": "Conflicting seasonal signals — AI receives contradictory intent context.",
-          "fix": "Align title and description to the same season/context. If it's a winter jacket, remove all summer/beach/cool references from the description.",
-          "impact": "Contradictory signals cause AI to filter the product from BOTH seasonal query sets.",
+          "fix": "Align title and description to the same season.",
+          "impact": "Contradictory signals cause AI to filter product from both seasons.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": true,
+          "manualSteps": []
         }
       ],
       "allRecommendations": [
@@ -790,10 +1313,30 @@
           "severity": "HIGH",
           "field": "description",
           "problem": "Conflicting seasonal signals — AI receives contradictory intent context.",
-          "fix": "Align title and description to the same season/context. If it's a winter jacket, remove all summer/beach/cool references from the description.",
-          "impact": "Contradictory signals cause AI to filter the product from BOTH seasonal query sets.",
+          "fix": "Align title and description to the same season.",
+          "impact": "Contradictory signals cause AI to filter product from both seasons.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": true,
+          "manualSteps": []
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -806,6 +1349,7 @@
       "retrievalScore": 75,
       "perceivedType": "Footwear",
       "interpretation": "AI classifies this as 'Footwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -816,7 +1360,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -828,7 +1380,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -841,6 +1419,7 @@
       "retrievalScore": 75,
       "perceivedType": "Jacket / Outerwear",
       "interpretation": "AI classifies this as 'Jacket / Outerwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -851,7 +1430,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -863,7 +1450,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -876,6 +1489,7 @@
       "retrievalScore": 75,
       "perceivedType": "Wallet",
       "interpretation": "AI classifies this as 'Wallet' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -886,7 +1500,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -898,7 +1520,33 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
@@ -911,6 +1559,7 @@
       "retrievalScore": 75,
       "perceivedType": "T-Shirt / Top",
       "interpretation": "AI classifies this as 'T-Shirt / Top' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [
         {
@@ -921,7 +1570,15 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
         }
       ],
       "allRecommendations": [
@@ -933,10 +1590,69 @@
           "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
           "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
           "effort": "LOW",
-          "priority": 1
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll to the Media section.",
+            "Click 'Add' to upload high-quality images.",
+            "Ensure images are at least 800x800px for AI zoom verification."
+          ]
+        },
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
         }
       ],
       "projectedScore": 97
+    },
+    {
+      "handle": "earrings-stainless-steel",
+      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
+      "currentScore": 89,
+      "grade": "A",
+      "retrievalScore": 80,
+      "perceivedType": "Unknown",
+      "interpretation": "AI cannot determine product type from available signals. 1 ambiguity issue(s) detected. Description provides strong context.",
+      "isAmbiguous": true,
+      "totalIssues": 2,
+      "quickWins": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
+      "projectedScore": 89
     },
     {
       "handle": "cotton-kurta-shirt-blue",
@@ -946,9 +1662,29 @@
       "retrievalScore": 85,
       "perceivedType": "T-Shirt / Top",
       "interpretation": "AI classifies this as 'T-Shirt / Top' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
     },
     {
@@ -959,9 +1695,29 @@
       "retrievalScore": 80,
       "perceivedType": "Skincare",
       "interpretation": "AI classifies this as 'Skincare' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
     },
     {
@@ -972,9 +1728,29 @@
       "retrievalScore": 85,
       "perceivedType": "Laptop / Computer",
       "interpretation": "AI classifies this as 'Laptop / Computer' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
     },
     {
@@ -985,9 +1761,29 @@
       "retrievalScore": 80,
       "perceivedType": "Sunglasses",
       "interpretation": "AI classifies this as 'Sunglasses' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
     },
     {
@@ -998,9 +1794,29 @@
       "retrievalScore": 85,
       "perceivedType": "Footwear",
       "interpretation": "AI classifies this as 'Footwear' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
     },
     {
@@ -1011,10 +1827,63 @@
       "retrievalScore": 80,
       "perceivedType": "Bag / Handbag",
       "interpretation": "AI classifies this as 'Bag / Handbag' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 2,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 94
+    },
+    {
+      "handle": "leather-handbag-women-tan",
+      "title": "Women's Tan Leather Handbag",
+      "currentScore": 97,
+      "grade": "A",
+      "retrievalScore": 85,
+      "perceivedType": "Bag / Handbag",
+      "interpretation": "AI classifies this as 'Bag / Handbag' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
+      "totalIssues": 1,
+      "quickWins": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
+      "projectedScore": 97
     },
     {
       "handle": "cotton-tshirt-pack-3",
@@ -1024,9 +1893,29 @@
       "retrievalScore": 85,
       "perceivedType": "T-Shirt / Top",
       "interpretation": "AI classifies this as 'T-Shirt / Top' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 1,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 97
     },
     {
@@ -1037,9 +1926,29 @@
       "retrievalScore": 85,
       "perceivedType": "Headphones / Earphones",
       "interpretation": "AI classifies this as 'Headphones / Earphones' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 1,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 97
     },
     {
@@ -1050,9 +1959,29 @@
       "retrievalScore": 80,
       "perceivedType": "Skincare",
       "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
+      "isAmbiguous": false,
       "totalIssues": 1,
       "quickWins": [],
-      "allRecommendations": [],
+      "allRecommendations": [
+        {
+          "issueCode": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "problem": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "fix": "Assign a unique SKU to every variant.",
+          "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
+          "effort": "LOW",
+          "priority": 1,
+          "canFixWithAI": false,
+          "manualSteps": [
+            "Log in to Shopify Admin.",
+            "Go to Products and select this product.",
+            "Scroll down to the Variants section.",
+            "Enter a unique code in the 'SKU' field for each variant.",
+            "Save the changes."
+          ]
+        }
+      ],
       "projectedScore": 97
     }
   ]

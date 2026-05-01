@@ -1,10 +1,10 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-05-01T21:30:31.506636",
+  "fetchedAt": "2026-05-01T23:07:59.846475",
   "apiVersion": "2026-04",
-  "productCount": 30,
+  "productCount": 32,
   "categoryStats": {
-    "usingTaxonomy": 22,
+    "usingTaxonomy": 24,
     "usingProductType": 8,
     "noCategory": 0
   },
@@ -64,20 +64,23 @@
     {
       "id": "gid://shopify/Product/9480666972408",
       "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Neem Face Cream",
-      "descriptionHtml": "<p>Formulated with natural neem extract, turmeric, and aloe vera, this Ayurvedic face cream deeply moisturises and heals skin. Free from parabens and harsh chemicals. Suitable for all skin types. Dermatologist tested. 50g jar. Apply twice daily for best results.</p>",
-      "descriptionPlain": "Formulated with natural neem extract, turmeric, and aloe vera, this Ayurvedic face cream deeply moisturises and heals skin. Free from parabens and harsh chemicals. Suitable for all skin types. Dermatologist tested. 50g jar. Apply twice daily for best results.",
-      "descriptionWordCount": 39,
+      "title": "Ayurvedic Face Cream with Neem & Turmeric",
+      "descriptionHtml": "<p>This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. Free from parabens and harsh chemicals, it's suitable for all skin types. Dermatologist tested, this 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions.</p>",
+      "descriptionPlain": "This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. Free from parabens and harsh chemicals, it's suitable for all skin types. Dermatologist tested, this 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions.",
+      "descriptionWordCount": 61,
       "productType": "Face Cream, Skincare",
       "vendor": "HerbalRoots",
       "status": "ACTIVE",
       "tags": [
+        "aloe vera",
         "ayurvedic",
         "herbal",
         "moisturiser",
         "natural",
         "neem",
-        "skincare"
+        "paraben-free",
+        "skincare",
+        "turmeric"
       ],
       "category": {
         "name": "Face Cream, Skincare",
@@ -100,11 +103,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Natural Ayurvedic Face Cream with Neem & Turmeric",
+        "description": "Discover our dermatologist-tested, paraben-free Ayurvedic face cream with neem, turmeric, and aloe vera for natural skincare"
       },
       "createdAt": "2026-04-19T05:41:28Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-05-01T16:24:01Z"
     },
     {
       "id": "gid://shopify/Product/9480667005176",
@@ -156,20 +159,23 @@
     {
       "id": "gid://shopify/Product/9480667037944",
       "handle": "leather-handbag-women-tan",
-      "title": "Premium Leather Handbag - Tan",
-      "descriptionHtml": "<p>Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. Adjustable shoulder strap. Dimensions: 35cm x 25cm x 12cm. Perfect for daily office use or weekend outings.</p>",
-      "descriptionPlain": "Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. Adjustable shoulder strap. Dimensions: 35cm x 25cm x 12cm. Perfect for daily office use or weekend outings.",
-      "descriptionWordCount": 40,
+      "title": "Women's Tan Leather Handbag",
+      "descriptionHtml": "<p>Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. Adjustable shoulder strap and dimensions of 35cm x 25cm x 12cm make it perfect for daily office use or weekend outings. The premium leather ensures durability and style, while the classic design suits various occasions.</p>",
+      "descriptionPlain": "Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. Adjustable shoulder strap and dimensions of 35cm x 25cm x 12cm make it perfect for daily office use or weekend outings. The premium leather ensures durability and style, while the classic design suits various occasions.",
+      "descriptionWordCount": 58,
       "productType": "Handbag, Leather, Women",
       "vendor": "LeatherLux",
       "status": "ACTIVE",
       "tags": [
+        "adjustable shoulder strap",
+        "full-grain leather",
         "genuine leather",
-        "handbag",
-        "leather",
-        "premium",
-        "tan",
-        "women"
+        "leather handbag",
+        "magnetic snap closure",
+        "office handbag",
+        "premium leather",
+        "weekend handbag",
+        "women's tan handbag"
       ],
       "category": {
         "name": "Handbag, Leather, Women",
@@ -178,9 +184,14 @@
       },
       "price": 1899.0,
       "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/vitamin-c-face-serum-1_7812a784-12ec-40a7-b5a2-9f9927146937.jpg?v=1777652819",
+          "altText": "Premium Leather Handbag - Tan"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
       "imagesMissingAlt": 0,
       "variants": [
         {
@@ -192,11 +203,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Women's Tan Leather Handbag - Premium Full-Grain Leather",
+        "description": "Discover our premium women's tan leather handbag, crafted from genuine full-grain leather with a spacious main compartment and adjustable shoulder strap. Perfect for office and weekend use."
       },
       "createdAt": "2026-04-19T05:41:30Z",
-      "updatedAt": "2026-04-20T06:00:12Z"
+      "updatedAt": "2026-05-01T16:26:59Z"
     },
     {
       "id": "gid://shopify/Product/9480667070712",
@@ -248,20 +259,23 @@
     {
       "id": "gid://shopify/Product/9480667103480",
       "handle": "canvas-sneakers-white",
-      "title": "Canvas Sneakers - White",
-      "descriptionHtml": "<p>Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper. Ideal for casual daily wear. Available in sizes 6-11 (UK). Lightweight at just 280g per pair.</p>",
-      "descriptionPlain": "Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper. Ideal for casual daily wear. Available in sizes 6-11 (UK). Lightweight at just 280g per pair.",
-      "descriptionWordCount": 38,
+      "title": "Unisex White Canvas Sneakers",
+      "descriptionHtml": "<p>Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper made from high-quality canvas material. Ideal for casual daily wear, walking, or running errands. Available in sizes 6-11 (UK) and weighs just 280g per pair, making them a great choice for everyday activities.</p>",
+      "descriptionPlain": "Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper made from high-quality canvas material. Ideal for casual daily wear, walking, or running errands. Available in sizes 6-11 (UK) and weighs just 280g per pair, making them a great choice for everyday activities.",
+      "descriptionWordCount": 55,
       "productType": "Sneakers, Canvas, Unisex",
       "vendor": "StepUp",
       "status": "ACTIVE",
       "tags": [
-        "canvas",
-        "casual",
-        "shoes",
-        "sneakers",
-        "unisex",
-        "white"
+        "canvas sneakers",
+        "casual footwear",
+        "cushioned insole",
+        "daily wear",
+        "hand-washable",
+        "lightweight shoes",
+        "unisex shoes",
+        "vulcanised rubber sole",
+        "white sneakers"
       ],
       "category": {
         "name": "Sneakers",
@@ -284,11 +298,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Unisex White Canvas Sneakers - Comfortable & Durable",
+        "description": "Discover our classic unisex white canvas sneakers with vulcanised rubber sole and cushioned insole for all-day comfort. Hand-washable and lightweight, perfect for casual daily wear."
       },
       "createdAt": "2026-04-19T05:41:32Z",
-      "updatedAt": "2026-04-20T06:00:12Z"
+      "updatedAt": "2026-05-01T16:25:38Z"
     },
     {
       "id": "gid://shopify/Product/9480667136248",
@@ -301,15 +315,15 @@
       "vendor": "SoundWave",
       "status": "ACTIVE",
       "tags": [
-        "portable speaker",
         "bluetooth speaker",
-        "waterproof speaker",
-        "outdoor speaker",
-        "compact speaker",
         "budget speaker",
-        "wireless speaker",
+        "compact speaker",
+        "gym speaker",
+        "outdoor speaker",
+        "portable speaker",
         "travel speaker",
-        "gym speaker"
+        "waterproof speaker",
+        "wireless speaker"
       ],
       "category": {
         "name": "Speakers",
@@ -332,11 +346,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "description": "Discover our portable Bluetooth speaker, featuring 10W output, IPX5 water resistance, and 8-hour playtime. Perfect for outdoor use, office, or gym.",
-        "title": "Portable Bluetooth Speaker | Waterproof 10W Compact Speaker"
+        "title": "Portable Bluetooth Speaker | Waterproof 10W Compact Speaker",
+        "description": "Discover our portable Bluetooth speaker, featuring 10W output, IPX5 water resistance, and 8-hour playtime. Perfect for outdoor use, office, or gym."
       },
       "createdAt": "2026-04-19T05:41:34Z",
-      "updatedAt": "2026-04-20T06:00:14Z"
+      "updatedAt": "2026-05-01T16:01:02Z"
     },
     {
       "id": "gid://shopify/Product/9480667169016",
@@ -545,22 +559,23 @@
     {
       "id": "gid://shopify/Product/9480667300088",
       "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Heavy Padded Winter Jacket with Detachable Hood - Navy Blue",
-      "descriptionHtml": "<p>Stay warm during North Indian winters with this heavy-duty padded jacket from FabricIndia. Crafted from premium water-resistant polyester with a thick thermal lining, it is designed for temperatures down to 5 degrees Celsius. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. This jacket features a high-neck collar, two zippered side pockets, and a detachable hood for versatile styling. Ideal for layering over sweaters or sweatshirts. To maintain the insulation, dry clean only or gentle hand wash. A must-have essential for the modern Indian man seeking style and functionality in extreme cold.</p>",
-      "descriptionPlain": "Stay warm during North Indian winters with this heavy-duty padded jacket from FabricIndia. Crafted from premium water-resistant polyester with a thick thermal lining, it is designed for temperatures down to 5 degrees Celsius. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. This jacket features a high-neck collar, two zippered side pockets, and a detachable hood for versatile styling. Ideal for layering over sweaters or sweatshirts. To maintain the insulation, dry clean only or gentle hand wash. A must-have essential for the modern Indian man seeking style and functionality in extreme cold.",
-      "descriptionWordCount": 95,
+      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
+      "descriptionHtml": "<p>Stay warm with this heavy-duty padded jacket from FabricIndia, crafted from premium water-resistant polyester with a thick thermal lining. Designed for temperatures down to 5 degrees Celsius, it features a high-neck collar, two zippered side pockets, and a detachable hood. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. Made from 100% polyester, it has a fill power of 600 and weighs 1.2 kg. Ideal for layering over sweaters or sweatshirts, this jacket is a must-have essential for the modern Indian man seeking style and functionality in extreme cold. Dry clean only or gentle hand wash to maintain insulation.</p>",
+      "descriptionPlain": "Stay warm with this heavy-duty padded jacket from FabricIndia, crafted from premium water-resistant polyester with a thick thermal lining. Designed for temperatures down to 5 degrees Celsius, it features a high-neck collar, two zippered side pockets, and a detachable hood. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. Made from 100% polyester, it has a fill power of 600 and weighs 1.2 kg. Ideal for layering over sweaters or sweatshirts, this jacket is a must-have essential for the modern Indian man seeking style and functionality in extreme cold. Dry clean only or gentle hand wash to maintain insulation.",
+      "descriptionWordCount": 102,
       "productType": "Jacket",
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
-        "fabricindia",
-        "men",
+        "detachable hood",
+        "men's outerwear",
         "navy blue",
-        "outerwear",
         "padded jacket",
         "polyester",
-        "travel wear",
-        "winter jacket"
+        "thermal lining",
+        "travel jacket",
+        "water-resistant",
+        "winter wear"
       ],
       "category": {
         "name": "Outerwear",
@@ -583,11 +598,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Men's Heavy Padded Winter Jacket - Warm & Water Resistant",
-        "description": "Shop our heavy-duty men's winter jacket. Water-resistant polyester with thermal lining, perfect for Indian winters and travel. Stay warm in style. Order now!"
+        "title": "Men's Navy Blue Padded Winter Jacket - Water-Resistant Outerwear",
+        "description": "Stay warm and stylish with our men's navy blue padded winter jacket, featuring a detachable hood and water-resistant polyester construction. Perfect for extreme cold weather."
       },
       "createdAt": "2026-04-19T05:41:39Z",
-      "updatedAt": "2026-04-30T20:03:34Z"
+      "updatedAt": "2026-05-01T17:23:13Z"
     },
     {
       "id": "gid://shopify/Product/9480667332856",
@@ -1465,6 +1480,107 @@
       },
       "createdAt": "2026-04-19T05:42:00Z",
       "updatedAt": "2026-04-20T06:00:13Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488641425656",
+      "handle": "earrings-stainless-steel",
+      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
+      "descriptionHtml": "<p>These high-quality stainless steel earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic materials, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.</p>",
+      "descriptionPlain": "These high-quality stainless steel earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic materials, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.",
+      "descriptionWordCount": 72,
+      "productType": "",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "Corrosion Resistant Earrings",
+        "Everyday Wear Earrings",
+        "Formal Earrings",
+        "Gift Ideas for Her",
+        "Gift Ideas for Him",
+        "Hypoallergenic Jewelry",
+        "Sensitive Skin Friendly",
+        "Stainless Steel Earrings",
+        "Tarnish Free Earrings"
+      ],
+      "category": {
+        "name": "Earrings",
+        "fullName": "Apparel & Accessories > Jewelry > Earrings",
+        "source": "taxonomy"
+      },
+      "price": 30.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/earr1.webp?v=1777653410",
+          "altText": "earrings - stainless steel"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48306076713208",
+          "sku": "",
+          "price": 30.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Stainless Steel Earrings - Hypoallergenic & Durable Jewelry",
+        "description": "Discover high-quality stainless steel earrings for women and men, designed for everyday wear and formal events. Hypoallergenic and durable, these earrings are perfect for sensitive skin."
+      },
+      "createdAt": "2026-05-01T16:31:20Z",
+      "updatedAt": "2026-05-01T16:41:44Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488644702456",
+      "handle": "shorts-blue-men-boxers",
+      "title": "Men's Blue Short Trousers - Comfortable Boxers",
+      "descriptionHtml": "<p>These men's blue short trousers are designed for comfort and style. Made from a blend of 80% cotton and 20% polyester, they feature an elastic waistband and a relaxed fit. Perfect for lounging around or as a base layer, these shorts are versatile and durable. With a length of 17 inches and a waist size range of 30-36 inches, they are suitable for a variety of body types. The breathable fabric and soft texture ensure a comfortable wear experience, making them ideal for daily use.</p>",
+      "descriptionPlain": "These men's blue short trousers are designed for comfort and style. Made from a blend of 80% cotton and 20% polyester, they feature an elastic waistband and a relaxed fit. Perfect for lounging around or as a base layer, these shorts are versatile and durable. With a length of 17 inches and a waist size range of 30-36 inches, they are suitable for a variety of body types. The breathable fabric and soft texture ensure a comfortable wear experience, making them ideal for daily use.",
+      "descriptionWordCount": 85,
+      "productType": "",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "base layer",
+        "blue boxers",
+        "comfortable clothing",
+        "cotton blend",
+        "elastic waistband",
+        "loungewear",
+        "men's shorts",
+        "relaxed fit",
+        "short trousers"
+      ],
+      "category": {
+        "name": "Short Trousers",
+        "fullName": "Apparel & Accessories > Clothing > Shorts > Short Trousers",
+        "source": "taxonomy"
+      },
+      "price": 245.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48306091000056",
+          "sku": "",
+          "price": 245.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Men's Blue Short Trousers - Comfortable Boxers for Daily Wear",
+        "description": "Discover our men's blue short trousers, designed for comfort and style. Made from a cotton blend, they feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer."
+      },
+      "createdAt": "2026-05-01T16:47:16Z",
+      "updatedAt": "2026-05-01T16:48:43Z"
     }
   ]
 }
