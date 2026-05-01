@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-04-30T10:09:50.473503+00:00",
+    "generatedAt": "2026-05-01T14:45:25.454730+00:00",
     "productsProcessed": 30,
-    "avgRetrievalScore": 72.5,
-    "storeVisibility": "MEDIUM"
+    "avgRetrievalScore": 75.8,
+    "storeVisibility": "HIGH"
   },
   "summary": {
     "typeDistribution": {
@@ -20,8 +20,8 @@
       "Sunglasses": 2,
       "Wallet": 1
     },
-    "ambiguousProducts": 2,
-    "highRetrieval": 17,
+    "ambiguousProducts": 3,
+    "highRetrieval": 21,
     "lowRetrieval": 0
   },
   "perceptions": [
@@ -75,30 +75,30 @@
     },
     {
       "handle": "wireless-bluetooth-headphones-pro",
-      "title": "Wireless Bluetooth Headphones Pro",
+      "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
       "aiPerception": {
         "perceivedType": "Headphones / Earphones",
-        "typeConfidence": 80,
-        "isAmbiguous": false,
-        "retrievalScore": 63,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Headphones / Earphones' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-        "ambiguityFlags": [],
+        "typeConfidence": 90,
+        "isAmbiguous": true,
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Headphones / Earphones' with 90% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
+        "ambiguityFlags": [
+          {
+            "type": "TYPE_AMBIGUITY",
+            "description": "AI cannot distinguish between 'Headphones / Earphones' and 'Laptop / Computer'. Both plausible from text."
+          }
+        ],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"
@@ -134,30 +134,25 @@
     },
     {
       "handle": "smart-fitness-watch-black",
-      "title": "SmartFit Pro Fitness Watch - Black",
+      "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
       "aiPerception": {
         "perceivedType": "Smartwatch / Wearable",
-        "typeConfidence": 95,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 58,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"
@@ -491,31 +486,26 @@
     },
     {
       "handle": "cotton-kurta-shirt-white",
-      "title": "Cotton Kurta Shirt - White",
+      "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
       "aiPerception": {
         "perceivedType": "T-Shirt / Top",
-        "typeConfidence": 80,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI classifies this as 'T-Shirt / Top' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'T-Shirt / Top' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "weak",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -577,12 +567,12 @@
     },
     {
       "handle": "laptop-gaming-pro",
-      "title": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060",
+      "title": "TechZone Pro Gaming Laptop - Intel i9, RTX 4060, 32GB RAM, 1TB SSD",
       "aiPerception": {
         "perceivedType": "Laptop / Computer",
         "typeConfidence": 98,
         "isAmbiguous": true,
-        "retrievalScore": 75,
+        "retrievalScore": 85,
         "retrievalGrade": "HIGH — Will appear in relevant AI searches",
         "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. 1 ambiguity issue(s) detected. Description provides strong context.",
         "ambiguityFlags": [
@@ -591,18 +581,12 @@
             "description": "Conflicting seasonal signals. AI may filter this out of both winter AND summer queries."
           }
         ],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
+        "missingSignals": [],
         "signalStrengths": {
           "title": "strong",
           "description": "strong",
           "tags": "strong",
-          "images": "absent",
+          "images": "moderate",
           "vendor": "present"
         }
       }
@@ -636,36 +620,26 @@
     },
     {
       "handle": "hooded-sweatshirt-grey",
-      "title": "Hooded Sweatshirt Grey",
+      "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey",
       "aiPerception": {
         "perceivedType": "Jacket / Outerwear",
-        "typeConfidence": 85,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 46,
-        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
-        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 85% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "material",
-            "impact": "MEDIUM",
-            "reason": "Apparel without material misses 'cotton shirts' type queries."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
-          "tags": "weak",
+          "description": "strong",
+          "tags": "strong",
           "images": "absent",
           "vendor": "present"
         }
@@ -726,7 +700,7 @@
     },
     {
       "handle": "mens-wallet-black",
-      "title": "Men's Slim Bi-fold Wallet - Premium Faux Leather Black",
+      "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
       "aiPerception": {
         "perceivedType": "Wallet",
         "typeConfidence": 90,

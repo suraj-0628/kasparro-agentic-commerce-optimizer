@@ -1,6 +1,6 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-04-30T15:39:49.352799",
+  "fetchedAt": "2026-05-01T20:15:23.666222",
   "apiVersion": "2026-04",
   "productCount": 30,
   "categoryStats": {
@@ -109,19 +109,22 @@
     {
       "id": "gid://shopify/Product/9480667005176",
       "handle": "wireless-bluetooth-headphones-pro",
-      "title": "Wireless Bluetooth Headphones Pro",
-      "descriptionHtml": "<p>Experience rich, immersive sound with 40mm dynamic drivers and active noise cancellation. The ProSound X1 offers 30-hour battery life, foldable design, and soft memory-foam ear cushions. Compatible with all Bluetooth 5.0 devices. Includes 3.5mm aux cable and carrying pouch.</p>",
-      "descriptionPlain": "Experience rich, immersive sound with 40mm dynamic drivers and active noise cancellation. The ProSound X1 offers 30-hour battery life, foldable design, and soft memory-foam ear cushions. Compatible with all Bluetooth 5.0 devices. Includes 3.5mm aux cable and carrying pouch.",
-      "descriptionWordCount": 39,
+      "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
+      "descriptionHtml": "<p>The SoundWave ProSound X1 features 40mm dynamic drivers and active noise cancellation for an immersive audio experience. Designed with soft memory-foam ear cushions and a foldable frame, these headphones are perfect for long office hours or daily commutes on the Delhi Metro. The Bluetooth 5.0 connectivity ensures a stable link for students attending online classes or professionals in noisy environments. With a 30-hour battery life, it lasts through long travel days across India. To maintain, wipe the cushions with a dry microfiber cloth after use. Includes a 3.5mm aux cable and a protective carrying pouch for easy storage in your laptop bag.</p>",
+      "descriptionPlain": "The SoundWave ProSound X1 features 40mm dynamic drivers and active noise cancellation for an immersive audio experience. Designed with soft memory-foam ear cushions and a foldable frame, these headphones are perfect for long office hours or daily commutes on the Delhi Metro. The Bluetooth 5.0 connectivity ensures a stable link for students attending online classes or professionals in noisy environments. With a 30-hour battery life, it lasts through long travel days across India. To maintain, wipe the cushions with a dry microfiber cloth after use. Includes a 3.5mm aux cable and a protective carrying pouch for easy storage in your laptop bag.",
+      "descriptionWordCount": 102,
       "productType": "Headphones, Wireless",
       "vendor": "SoundWave",
       "status": "ACTIVE",
       "tags": [
-        "audio",
         "bluetooth",
+        "electronics",
         "headphones",
+        "memory foam",
         "noise-cancelling",
-        "wireless"
+        "office wear",
+        "travel",
+        "unisex"
       ],
       "category": {
         "name": "Headphones & Headsets",
@@ -144,11 +147,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "SoundWave ProSound X1 ANC Wireless Headphones - 30hr Battery",
+        "description": "Experience immersive sound with SoundWave ProSound X1 ANC headphones. Features 30-hour battery, memory foam cushions, and foldable design. Perfect for office use."
       },
       "createdAt": "2026-04-19T05:41:29Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-05-01T13:14:44Z"
     },
     {
       "id": "gid://shopify/Product/9480667037944",
@@ -198,18 +201,21 @@
     {
       "id": "gid://shopify/Product/9480667070712",
       "handle": "smart-fitness-watch-black",
-      "title": "SmartFit Pro Fitness Watch - Black",
-      "descriptionHtml": "<p>Track your health with precision using the SmartFit Pro. Features heart rate monitoring, SpO2 sensor, GPS tracking, sleep analysis, and 7-day battery life. IP68 waterproof rated. Compatible with Android 6.0+ and iOS 12+. Comes with a silicone band and magnetic charger.</p>",
-      "descriptionPlain": "Track your health with precision using the SmartFit Pro. Features heart rate monitoring, SpO2 sensor, GPS tracking, sleep analysis, and 7-day battery life. IP68 waterproof rated. Compatible with Android 6.0+ and iOS 12+. Comes with a silicone band and magnetic charger.",
-      "descriptionWordCount": 41,
+      "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
+      "descriptionHtml": "<p>The SmartFit Pro is a high-performance smartwatch designed for the active Indian lifestyle. It features a 1.69-inch HD display, 300mAh battery providing 7-day backup, and IP68 water resistance, making it perfect for intense gym sessions or monsoon commutes. Track your health with precision using the SpO2 sensor and 24/7 heart rate monitor. Ideal for office professionals and fitness enthusiasts, it pairs seamlessly with Android and iOS. The skin-friendly silicone band ensures comfort during long cricket matches or daily jogs. To maintain, wipe the sensors with a dry cloth after workouts. Includes a magnetic charger for quick power-ups.</p>",
+      "descriptionPlain": "The SmartFit Pro is a high-performance smartwatch designed for the active Indian lifestyle. It features a 1.69-inch HD display, 300mAh battery providing 7-day backup, and IP68 water resistance, making it perfect for intense gym sessions or monsoon commutes. Track your health with precision using the SpO2 sensor and 24/7 heart rate monitor. Ideal for office professionals and fitness enthusiasts, it pairs seamlessly with Android and iOS. The skin-friendly silicone band ensures comfort during long cricket matches or daily jogs. To maintain, wipe the sensors with a dry cloth after workouts. Includes a magnetic charger for quick power-ups.",
+      "descriptionWordCount": 97,
       "productType": "Smartwatch, Fitness, GPS",
       "vendor": "TechNova",
       "status": "ACTIVE",
       "tags": [
-        "fitness",
         "gps",
-        "heart-rate",
+        "gym",
+        "office",
+        "silicone",
         "smartwatch",
+        "tech-gadget",
+        "unisex",
         "waterproof"
       ],
       "category": {
@@ -233,11 +239,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "SmartFit Pro GPS Smartwatch - 7-Day Battery & SpO2",
+        "description": "Track your health with the SmartFit Pro Fitness Watch. Features GPS, SpO2, and 7-day battery. Perfect for gym and office wear. Shop now for the best tech in India."
       },
       "createdAt": "2026-04-19T05:41:31Z",
-      "updatedAt": "2026-04-20T06:00:14Z"
+      "updatedAt": "2026-05-01T13:25:39Z"
     },
     {
       "id": "gid://shopify/Product/9480667103480",
@@ -577,7 +583,7 @@
         "description": "Shop our heavy-duty men's winter jacket. Water-resistant polyester with thermal lining, perfect for Indian winters and travel. Stay warm in style. Order now!"
       },
       "createdAt": "2026-04-19T05:41:39Z",
-      "updatedAt": "2026-04-30T08:03:31Z"
+      "updatedAt": "2026-04-30T20:03:34Z"
     },
     {
       "id": "gid://shopify/Product/9480667332856",
@@ -680,7 +686,7 @@
         "description": "Hydrate your skin with HerbalRoots Aloe Vera Moisturiser. Perfect for Indian weather, this 100ml face cream treats dryness and adds a natural glow daily."
       },
       "createdAt": "2026-04-19T05:41:42Z",
-      "updatedAt": "2026-04-30T08:56:13Z"
+      "updatedAt": "2026-04-30T20:58:44Z"
     },
     {
       "id": "gid://shopify/Product/9480667398392",
@@ -732,7 +738,7 @@
         "description": "Shop StepUp men's crimson red running shoes with breathable mesh and high-grip rubber soles. Perfect for daily jogs and gym workouts in India. Order now!"
       },
       "createdAt": "2026-04-19T05:41:43Z",
-      "updatedAt": "2026-04-30T08:38:45Z"
+      "updatedAt": "2026-04-30T20:40:13Z"
     },
     {
       "id": "gid://shopify/Product/9480667431160",
@@ -778,7 +784,7 @@
         "description": "Shop the FabricIndia white cotton formal shirt for men. Breathable, easy-iron fabric perfect for Indian office wear and professional meetings. Order now."
       },
       "createdAt": "2026-04-19T05:41:44Z",
-      "updatedAt": "2026-04-30T08:57:57Z"
+      "updatedAt": "2026-04-30T20:58:45Z"
     },
     {
       "id": "gid://shopify/Product/9480667463928",
@@ -882,16 +888,21 @@
     {
       "id": "gid://shopify/Product/9480667529464",
       "handle": "cotton-kurta-shirt-white",
-      "title": "Cotton Kurta Shirt - White",
-      "descriptionHtml": "<p>Same as blue kurta but white color. Good cotton material.</p>",
-      "descriptionPlain": "Same as blue kurta but white color. Good cotton material.",
-      "descriptionWordCount": 10,
+      "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
+      "descriptionHtml": "<p>This premium men's short kurta shirt is crafted from 100% breathable cotton, making it an ideal choice for the Indian climate. Featuring a classic mandarin collar and a half-button placket, it offers a versatile look that transitions seamlessly from casual office wear to festive family gatherings. The crisp white fabric provides a clean, sophisticated aesthetic for everyday comfort. Designed for a regular fit, it pairs perfectly with denim or chinos. To maintain the fabric's integrity, hand wash or machine wash cold with similar colors and iron while slightly damp for a sharp finish.</p>",
+      "descriptionPlain": "This premium men's short kurta shirt is crafted from 100% breathable cotton, making it an ideal choice for the Indian climate. Featuring a classic mandarin collar and a half-button placket, it offers a versatile look that transitions seamlessly from casual office wear to festive family gatherings. The crisp white fabric provides a clean, sophisticated aesthetic for everyday comfort. Designed for a regular fit, it pairs perfectly with denim or chinos. To maintain the fabric's integrity, hand wash or machine wash cold with similar colors and iron while slightly damp for a sharp finish.",
+      "descriptionWordCount": 93,
       "productType": "Kurta, Ethnic",
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
+        "casual",
         "cotton",
+        "ethnic",
+        "festive",
         "kurta",
+        "men",
+        "summer",
         "white"
       ],
       "category": {
@@ -915,11 +926,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Men's White Cotton Kurta Shirt - Casual Ethnic Wear",
+        "description": "Shop our breathable white cotton kurta shirt for men. Perfect for daily wear or festive occasions, this ethnic shirt offers comfort and style in the Indian heat."
       },
       "createdAt": "2026-04-19T05:41:48Z",
-      "updatedAt": "2026-04-20T06:00:14Z"
+      "updatedAt": "2026-05-01T13:00:53Z"
     },
     {
       "id": "gid://shopify/Product/9480667562232",
@@ -1018,15 +1029,15 @@
         "description": "Protect your skin from the Indian sun with GlowUp SPF 50 Sunscreen. Non-greasy, no white cast, and sweat-resistant formula perfect for daily office or outdoor use."
       },
       "createdAt": "2026-04-19T05:41:50Z",
-      "updatedAt": "2026-04-30T08:01:26Z"
+      "updatedAt": "2026-04-30T20:01:27Z"
     },
     {
       "id": "gid://shopify/Product/9480667627768",
       "handle": "laptop-gaming-pro",
-      "title": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060",
-      "descriptionHtml": "<p>This high-performance TechZone laptop features an Intel Core i9 processor and 32GB RAM, making it ideal for competitive Indian gamers and professional video editors. The 1TB SSD provides ample storage for heavy titles like Valorant and GTA V, while the RTX 4060 graphics card ensures smooth frame rates. Perfect for university students in hostels or home office setups in humid Indian climates, it includes an advanced dual-fan cooling system. To maintain performance, clean the air vents monthly with compressed air and avoid using on soft surfaces like beds. This powerhouse handles multitasking and intensive software with ease.</p>",
-      "descriptionPlain": "This high-performance TechZone laptop features an Intel Core i9 processor and 32GB RAM, making it ideal for competitive Indian gamers and professional video editors. The 1TB SSD provides ample storage for heavy titles like Valorant and GTA V, while the RTX 4060 graphics card ensures smooth frame rates. Perfect for university students in hostels or home office setups in humid Indian climates, it includes an advanced dual-fan cooling system. To maintain performance, clean the air vents monthly with compressed air and avoid using on soft surfaces like beds. This powerhouse handles multitasking and intensive software with ease.",
-      "descriptionWordCount": 97,
+      "title": "TechZone Pro Gaming Laptop - Intel i9, RTX 4060, 32GB RAM, 1TB SSD",
+      "descriptionHtml": "<p>This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor and 32GB RAM, engineered for Indian gamers and creative professionals. The 1TB SSD stores heavy titles like Valorant, while the RTX 4060 graphics card delivers high frame rates for seamless gameplay. Designed for university students in hostels and home offices, it includes a dual-fan cooling system built for tropical Indian summers. This portable computer handles intensive video editing and multitasking during long monsoon gaming sessions. To maintain peak performance, clean the vents monthly with compressed air and avoid using on soft surfaces like beds or cushions.</p>",
+      "descriptionPlain": "This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor and 32GB RAM, engineered for Indian gamers and creative professionals. The 1TB SSD stores heavy titles like Valorant, while the RTX 4060 graphics card delivers high frame rates for seamless gameplay. Designed for university students in hostels and home offices, it includes a dual-fan cooling system built for tropical Indian summers. This portable computer handles intensive video editing and multitasking during long monsoon gaming sessions. To maintain peak performance, clean the vents monthly with compressed air and avoid using on soft surfaces like beds or cushions.",
+      "descriptionWordCount": 98,
       "productType": "Gaming, Laptop",
       "vendor": "TechZone",
       "status": "ACTIVE",
@@ -1047,9 +1058,14 @@
       },
       "price": 79999.0,
       "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/vitamin-c-face-serum-1_7442cbc2-7dc9-400b-8329-8d91fe00f351.jpg?v=1777644129",
+          "altText": "TechZone Pro Gaming Laptop - Intel i9, 32GB RAM, 1TB SSD, RTX 4060"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
       "imagesMissingAlt": 0,
       "variants": [
         {
@@ -1061,11 +1077,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "TechZone i9 Gaming Laptop - 32GB RAM, RTX 4060, 1TB SSD",
-        "description": "Upgrade your gaming setup with the TechZone i9 laptop. Featuring RTX 4060 graphics and 32GB RAM, it is perfect for Indian gamers and creators. Shop now for speed."
+        "title": "TechZone i9 Gaming Laptop - RTX 4060, 32GB RAM, 1TB SSD",
+        "description": "Upgrade your gaming with the TechZone i9 laptop. Featuring RTX 4060 graphics and 32GB RAM, it is perfect for Indian students and editors. Shop now for high performance."
       },
       "createdAt": "2026-04-19T05:41:51Z",
-      "updatedAt": "2026-04-30T08:56:58Z"
+      "updatedAt": "2026-05-01T14:02:09Z"
     },
     {
       "id": "gid://shopify/Product/9480667660536",
@@ -1117,17 +1133,21 @@
     {
       "id": "gid://shopify/Product/9480667693304",
       "handle": "hooded-sweatshirt-grey",
-      "title": "Hooded Sweatshirt Grey",
-      "descriptionHtml": "<p>grey hoodie good fabric winter wear comfortable casual look available sizes s m l xl machine wash inside out cold tumble dry low</p>",
-      "descriptionPlain": "grey hoodie good fabric winter wear comfortable casual look available sizes s m l xl machine wash inside out cold tumble dry low",
-      "descriptionWordCount": 23,
+      "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey",
+      "descriptionHtml": "<p>This premium charcoal grey hooded sweatshirt is crafted from 100% heavy-duty cotton fleece, providing exceptional warmth for Indian winters. Designed for a relaxed fit, it features a kangaroo pocket and adjustable drawstrings, making it ideal for college students or casual office Fridays. Whether you are heading for a morning walk in Delhi or a movie night with friends, this hoodie offers a stylish casual look. Available in sizes S to XL. To maintain the fabric integrity, machine wash inside out in cold water and tumble dry on low heat. Avoid bleaching to preserve the deep grey tone.</p>",
+      "descriptionPlain": "This premium charcoal grey hooded sweatshirt is crafted from 100% heavy-duty cotton fleece, providing exceptional warmth for Indian winters. Designed for a relaxed fit, it features a kangaroo pocket and adjustable drawstrings, making it ideal for college students or casual office Fridays. Whether you are heading for a morning walk in Delhi or a movie night with friends, this hoodie offers a stylish casual look. Available in sizes S to XL. To maintain the fabric integrity, machine wash inside out in cold water and tumble dry on low heat. Avoid bleaching to preserve the deep grey tone.",
+      "descriptionWordCount": 97,
       "productType": "Hoodie",
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
         "casual",
-        "grey",
-        "hoodie"
+        "charcoal grey",
+        "college wear",
+        "cotton fleece",
+        "hoodie",
+        "men",
+        "winter wear"
       ],
       "category": {
         "name": "Outerwear",
@@ -1150,11 +1170,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Men's Cotton Fleece Hoodie - Grey Winter Sweatshirt",
+        "description": "Stay warm with our premium cotton fleece grey hoodie for men. Perfect for Indian winters, college, or casual outings. Shop durable winter essentials now."
       },
       "createdAt": "2026-04-19T05:41:54Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-05-01T13:01:53Z"
     },
     {
       "id": "gid://shopify/Product/9480667726072",
@@ -1201,7 +1221,7 @@
         "description": "Boost productivity with the TechNova Wireless Ergonomic Mouse. Features 1600 DPI, 12-month battery life, and 2.4GHz lag-free connection. Perfect for Indian pros."
       },
       "createdAt": "2026-04-19T05:41:55Z",
-      "updatedAt": "2026-04-30T08:04:49Z"
+      "updatedAt": "2026-04-30T19:46:48Z"
     },
     {
       "id": "gid://shopify/Product/9480667758840",
@@ -1262,21 +1282,19 @@
     {
       "id": "gid://shopify/Product/9480667791608",
       "handle": "mens-wallet-black",
-      "title": "Men's Slim Bi-fold Wallet - Premium Faux Leather Black",
-      "descriptionHtml": "<p>This minimalist slim bi-fold wallet is designed for the modern Indian professional. Crafted from high-quality black synthetic leather, it offers a sleek profile that fits perfectly in front pockets without the bulk. The interior features four card slots and a dedicated compartment for Indian currency notes. Ideal for daily office wear or formal occasions like weddings, it combines functionality with a sophisticated aesthetic. To maintain its finish, wipe clean with a damp cloth and avoid direct sunlight. This lightweight accessory is a must-have for men who prefer a clutter-free lifestyle while keeping essentials organized and accessible.</p>",
-      "descriptionPlain": "This minimalist slim bi-fold wallet is designed for the modern Indian professional. Crafted from high-quality black synthetic leather, it offers a sleek profile that fits perfectly in front pockets without the bulk. The interior features four card slots and a dedicated compartment for Indian currency notes. Ideal for daily office wear or formal occasions like weddings, it combines functionality with a sophisticated aesthetic. To maintain its finish, wipe clean with a damp cloth and avoid direct sunlight. This lightweight accessory is a must-have for men who prefer a clutter-free lifestyle while keeping essentials organized and accessible.",
-      "descriptionWordCount": 96,
+      "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
+      "descriptionHtml": "<p>This slim bi-fold wallet is designed for the modern Indian professional. Crafted from durable black vegan leather, it features a sleek profile that fits comfortably in front pockets. The interior includes four card slots and a dedicated compartment sized specifically for Indian currency notes. Perfect for daily office wear or formal events like weddings, this lightweight accessory keeps essentials organized without adding bulk. To maintain the finish, wipe with a soft damp cloth and store away from direct heat. Ideal for men seeking a minimalist yet functional design for their daily commute or formal gatherings.</p>",
+      "descriptionPlain": "This slim bi-fold wallet is designed for the modern Indian professional. Crafted from durable black vegan leather, it features a sleek profile that fits comfortably in front pockets. The interior includes four card slots and a dedicated compartment sized specifically for Indian currency notes. Perfect for daily office wear or formal events like weddings, this lightweight accessory keeps essentials organized without adding bulk. To maintain the finish, wipe with a soft damp cloth and store away from direct heat. Ideal for men seeking a minimalist yet functional design for their daily commute or formal gatherings.",
+      "descriptionWordCount": 95,
       "productType": "Wallet",
       "vendor": "BagStore",
       "status": "ACTIVE",
       "tags": [
-        "accessories",
-        "black wallet",
-        "faux leather",
         "formal",
         "men",
         "office wear",
         "slim wallet",
+        "vegan leather",
         "wallet"
       ],
       "category": {
@@ -1300,11 +1318,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Slim Black Wallet for Men - Minimalist Faux Leather Bi-fold",
-        "description": "Upgrade your style with this slim black bi-fold wallet. Perfect for office wear and formal events, it fits Indian currency and cards without adding bulk."
+        "title": "Slim Black Vegan Leather Wallet for Men | Indian Currency Size",
+        "description": "Upgrade your style with this slim black vegan leather bi-fold wallet. Designed for Indian currency, it features 4 card slots and a sleek profile for daily use."
       },
       "createdAt": "2026-04-19T05:41:57Z",
-      "updatedAt": "2026-04-30T09:37:26Z"
+      "updatedAt": "2026-05-01T13:31:37Z"
     },
     {
       "id": "gid://shopify/Product/9480667824376",
@@ -1351,7 +1369,7 @@
         "description": "Shop premium satin silk party wear shirts for men. Perfect for Diwali, weddings, and festive occasions. Slim fit, breathable fabric, and elegant metallic finish."
       },
       "createdAt": "2026-04-19T05:41:58Z",
-      "updatedAt": "2026-04-30T08:42:45Z"
+      "updatedAt": "2026-04-30T20:43:42Z"
     },
     {
       "id": "gid://shopify/Product/9480667857144",
@@ -1398,7 +1416,7 @@
         "description": "Upgrade your audio with SoundWave wireless headphones. Enjoy 20 hours of battery, deep bass, and a comfortable fit for daily Indian commutes and office calls."
       },
       "createdAt": "2026-04-19T05:41:59Z",
-      "updatedAt": "2026-04-30T08:32:27Z"
+      "updatedAt": "2026-04-30T20:32:28Z"
     },
     {
       "id": "gid://shopify/Product/9480667889912",

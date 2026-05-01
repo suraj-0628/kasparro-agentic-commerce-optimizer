@@ -1,73 +1,58 @@
 """
-llm_enhancer.py
-Uses Google Gemini API or OpenAI API to generate improved product content.
-Takes current product data + issues → returns improved title, description, tags.
+src/llm_enhancer.py
+REPLACE EXISTING FILE
+
+Multi-provider LLM support for AI Representation Optimizer.
+Supports: Gemini (default), OpenAI, Groq, Ollama.
 """
 
 import os
 import json
 import re
-import requests
 import time
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-OPENAI_API_KEY = None # os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GROQ_API_KEY   = os.getenv("GROQ_API_KEY")
+OLLAMA_URL     = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
+LLM_PROVIDER   = os.getenv("LLM_PROVIDER", "gemini").split('#')[0].strip()
 
-GEMINI_ENDPOINT = (
-    "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-flash-latest:generateContent"
-)
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent"
 
-
-# ── Prompt builder ────────────────────────────────────────────────────────────
+# ── Prompts ───────────────────────────────────────────────────────────────────
 
 def build_prompt(product: dict, issues: list) -> str:
-    issue_lines = "\n".join(
-        f"  - [{i['severity']}] {i['field']}: {i['message']}"
-        for i in issues
-    )
+    issues_str = "\n".join([f"- {i['code']}: {i['message']}" for i in issues])
+    
+    return f"""
+You are an expert e-commerce catalog optimizer for AI Shopping Agents.
+Your goal is to rewrite the product data to maximize discoverability and trust for LLMs.
 
-    return f"""You are an expert Shopify product content optimizer for an Indian e-commerce store.
+PRODUCT DATA:
+Title: {product['title']}
+Current Description: {product.get('descriptionPlain', 'Missing')}
+Category: {product.get('category', 'General')}
+Tags: {', '.join(product.get('tags', []))}
 
-CURRENT PRODUCT DATA:
-- Title: {product.get('title', 'N/A')}
-- Description: {product.get('descriptionPlain', 'None')}
-- Tags: {', '.join(product.get('tags', [])) or 'None'}
-- Product Type: {product.get('productType', 'N/A')}
-- Vendor: {product.get('vendor', 'N/A')}
-- Price: ₹{product.get('price', 0)}
-
-DETECTED ISSUES:
-{issue_lines}
+IDENTIFIED ISSUES:
+{issues_str}
 
 TASK:
-Generate improved product content that fixes all the issues above.
-The store sells everyday essentials to Indian customers.
+1. Rewrite the Title to be descriptive (50-70 chars), including category and key attribute.
+2. Expand the Description to 100-150 words. Include technical specs, materials, and use-cases.
+3. Suggest 8-10 high-intent Tags.
+4. Provide an SEO Title and Meta Description.
+5. Provide a 1-sentence summary of what you improved.
 
-STRICT RULES:
-1. Title: 40-70 characters, clear product noun + key attribute + variant
-2. Description: 80-120 words, include material/specs, use-case, target user, care instructions
-3. Tags: exactly 6-8 tags, lowercase, comma separated, cover: type, material, use-case, gender, occasion
-4. SEO Title: 50-60 chars, keyword-rich
-5. SEO Description: 150-160 chars, benefit-focused
-6. No vague phrases like "good quality" or "best product"
-7. No ALL CAPS
-8. Use Indian context (mention Indian occasions, sizes, usage patterns where relevant)
-9. CRITICAL: Do NOT use literal newlines/line-breaks inside JSON string values. Keep all text on a single line or use \\n.
-
-Respond ONLY with valid JSON in this exact format, no markdown, no explanation:
-{{
-  "title": "improved title here",
-  "description": "improved description here as plain text no HTML",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"],
-  "seo_title": "seo title here",
-  "seo_description": "seo description here",
-  "changes_summary": "2-3 sentence plain English explanation of what was changed and why"
-}}"""
-
+OUTPUT FORMAT:
+Return ONLY a valid JSON object with these keys: 
+"title", "description", "tags" (array), "seo_title", "seo_description", "changes_summary".
+Do NOT include markdown formatting or extra text.
+"""
 
 # ── Gemini API caller ─────────────────────────────────────────────────────────
 
@@ -76,12 +61,15 @@ def call_gemini(prompt: str, max_retries: int = 3) -> dict:
         raise ValueError("GEMINI_API_KEY not set in .env")
 
     payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
+        "contents": [{
+            "parts": [{"text": prompt}]
+        }],
         "generationConfig": {
             "temperature": 0.4,
-            "maxOutputTokens": 2048,
-            "responseMimeType": "application/json",
-        },
+            "topK": 40,
+            "topP": 0.95,
+            "maxOutputTokens": 1024,
+        }
     }
 
     for attempt in range(max_retries):
@@ -89,30 +77,30 @@ def call_gemini(prompt: str, max_retries: int = 3) -> dict:
             f"{GEMINI_ENDPOINT}?key={GEMINI_API_KEY}",
             headers={"Content-Type": "application/json"},
             json=payload,
-            timeout=30,
+            timeout=30
         )
+        
+        if response.status_code == 429:
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+            return {"error": "RATE_LIMIT_HIT"}
 
-        if response.status_code == 200:
-            break
-            
-        # If it's a 503 (Unavailable) or 429 (Too Many Requests), wait and retry
-        if response.status_code in (503, 429) and attempt < max_retries - 1:
-            time.sleep(2 ** attempt)  # Exponential backoff: 1s, 2s
-            continue
+        if response.status_code != 200:
+            raise RuntimeError(f"Gemini API error {response.status_code}: {response.text}")
 
-        raise RuntimeError(f"Gemini API error {response.status_code}: {response.text}")
+        data = response.json()
+        try:
+            raw_text = data["candidates"][0]["content"]["parts"][0]["text"]
+            # Clean JSON if model wrapped it in ```json
+            clean_text = re.sub(r"```json|```", "", raw_text).strip()
+            return json.loads(clean_text)
+        except (KeyError, IndexError, json.JSONDecodeError) as e:
+            if attempt < max_retries - 1:
+                continue
+            raise RuntimeError(f"Failed to parse Gemini response: {e}\nRaw: {data}")
 
-    data = response.json()
-    raw_text = data["candidates"][0]["content"]["parts"][0]["text"]
-
-    # Strip markdown fences if present
-    raw_text = re.sub(r"```json|```", "", raw_text).strip()
-
-    try:
-        return json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        raise RuntimeError(f"Gemini returned invalid JSON: {e}\nRaw: {raw_text[:300]}")
-
+    return {}
 
 # ── OpenAI API caller ─────────────────────────────────────────────────────────
 
@@ -120,28 +108,26 @@ def call_openai(prompt: str, max_retries: int = 3) -> dict:
     if not OPENAI_API_KEY:
         raise ValueError("OPENAI_API_KEY not set in .env")
 
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}"
+    }
     payload = {
         "model": "gpt-4o-mini",
-        "response_format": {"type": "json_object"},
         "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.4,
+        "response_format": {"type": "json_object"}
     }
 
     for attempt in range(max_retries):
         response = requests.post(
             "https://api.openai.com/v1/chat/completions",
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {OPENAI_API_KEY}"
-            },
+            headers=headers,
             json=payload,
-            timeout=30,
+            timeout=30
         )
-
         if response.status_code == 200:
             break
-            
-        if response.status_code in (503, 429) and attempt < max_retries - 1:
+        if response.status_code == 429:
             time.sleep(2 ** attempt)
             continue
 
@@ -149,104 +135,115 @@ def call_openai(prompt: str, max_retries: int = 3) -> dict:
 
     data = response.json()
     raw_text = data["choices"][0]["message"]["content"]
+    return json.loads(raw_text)
 
-    # Strip markdown fences if present
-    raw_text = re.sub(r"```json|```", "", raw_text).strip()
+# ── Groq API caller ───────────────────────────────────────────────────────────
 
+def call_groq(prompt: str) -> dict:
+    if not GROQ_API_KEY:
+        raise ValueError("GROQ_API_KEY not set in .env")
+    
     try:
-        return json.loads(raw_text)
-    except json.JSONDecodeError as e:
-        raise RuntimeError(f"OpenAI returned invalid JSON: {e}\nRaw: {raw_text[:300]}")
+        from groq import Groq
+        client = Groq(api_key=GROQ_API_KEY)
+        completion = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.4,
+            response_format={"type": "json_object"},
+        )
+        return json.loads(completion.choices[0].message.content)
+    except Exception as e:
+        raise RuntimeError(f"Groq error: {e}")
 
+# ── Ollama API caller ─────────────────────────────────────────────────────────
 
-# ── Main enhancer function ────────────────────────────────────────────────────
+def call_ollama(prompt: str) -> dict:
+    payload = {
+        "model": "llama3",
+        "prompt": prompt,
+        "stream": False,
+        "format": "json"
+    }
+    try:
+        response = requests.post(OLLAMA_URL, json=payload, timeout=60)
+        if response.status_code != 200:
+            raise RuntimeError(f"Ollama error {response.status_code}: {response.text}")
+        return json.loads(response.json()["response"])
+    except Exception as e:
+        raise RuntimeError(f"Ollama connection failed: {e}")
+
+# ── Selector ──────────────────────────────────────────────────────────────────
+
+def call_llm(prompt: str) -> dict:
+    provider = LLM_PROVIDER.lower()
+    if provider == "openai": return call_openai(prompt)
+    if provider == "groq":   return call_groq(prompt)
+    if provider == "ollama": return call_ollama(prompt)
+    return call_gemini(prompt)
+
+# ── Main ──────────────────────────────────────────────────────────────────────
 
 def enhance_product(product: dict, issues: list) -> dict:
-    """
-    Takes a normalized product dict and its issue list.
-    Returns dict with improved fields + changes summary.
-    """
     prompt = build_prompt(product, issues)
-    
-    # Use OpenAI if key is present, otherwise fallback to Gemini
-    if OPENAI_API_KEY:
-        improved = call_openai(prompt)
-    else:
-        improved = call_gemini(prompt)
+    try:
+        improved = call_llm(prompt)
+        
+        if "error" in improved and improved["error"] == "RATE_LIMIT_HIT":
+            return {
+                "handle": product["handle"], "title": product["title"], 
+                "descriptionHtml": product.get("descriptionHtml"),
+                "tags": product.get("tags"), "seo": product.get("seo"),
+                "warning": "Rate Limit Hit - No changes applied."
+            }
 
-    # Wrap description in basic HTML for Shopify
-    desc_html = "<p>" + improved.get("description", "").replace("\n\n", "</p><p>") + "</p>"
-
-    return {
-        "handle":          product["handle"],
-        "title":           improved.get("title", product["title"]),
-        "descriptionHtml": desc_html,
-        "tags":            improved.get("tags", product.get("tags", [])),
-        "seo": {
-            "title":       improved.get("seo_title", ""),
-            "description": improved.get("seo_description", ""),
-        },
-        "changesSummary":  improved.get("changes_summary", ""),
-        "original": {
-            "title":       product["title"],
-            "description": product.get("descriptionPlain", ""),
-            "tags":        product.get("tags", []),
-        },
-    }
-
-
-# ── Batch enhancer ────────────────────────────────────────────────────────────
-
-def enhance_all_products(report_path="data/report.json",
-                         products_path="data/products.json",
-                         output_path="data/enhanced.json"):
-    with open(products_path, encoding="utf-8") as f:
-        products_data = json.load(f)
-
-    with open(report_path, encoding="utf-8") as f:
-        report = json.load(f)
-
-    products_map = {p["handle"]: p for p in products_data["products"]}
-    issues_map   = {p["handle"]: p["issues"] for p in report["products"]}
-
-    enhanced = []
-    failed   = []
-
-    for handle, product in products_map.items():
-        issues = issues_map.get(handle, [])
-        # Only enhance products with issues worth fixing
-        high_issues = [i for i in issues if i["severity"] in ("CRITICAL", "HIGH")]
-        if not high_issues:
-            print(f"[enhancer] Skipping {handle} — no critical/high issues")
-            continue
-
-        print(f"[enhancer] Enhancing: {product['title']}...")
-        try:
-            result = enhance_product(product, issues)
-            enhanced.append(result)
-            print(f"  ✓ Done")
-        except Exception as e:
-            print(f"  ✗ Failed: {e}")
-            failed.append({"handle": handle, "error": str(e)})
-
-    output = {
-        "enhanced": enhanced,
-        "failed":   failed,
-        "stats": {
-            "total":    len(products_map),
-            "enhanced": len(enhanced),
-            "skipped":  len(products_map) - len(enhanced) - len(failed),
-            "failed":   len(failed),
+        desc_html = "<p>" + improved.get("description", "").replace("\n\n", "</p><p>") + "</p>"
+        
+        return {
+            "handle":          product["handle"],
+            "title":           improved.get("title", product["title"]),
+            "descriptionHtml": desc_html,
+            "tags":            improved.get("tags", product.get("tags", [])),
+            "seo": {
+                "title":       improved.get("seo_title", ""),
+                "description": improved.get("seo_description", ""),
+            },
+            "changesSummary":  improved.get("changes_summary", ""),
+            "original": {
+                "title":       product["title"],
+                "description": product.get("descriptionPlain", ""),
+                "tags":        product.get("tags", []),
+            },
         }
-    }
+    except Exception as e:
+        return {"handle": product["handle"], "error": str(e)}
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
-
-    print(f"\n[enhancer] Done. {len(enhanced)} enhanced, {len(failed)} failed.")
-    print(f"[enhancer] Saved to {output_path}")
-    return output
-
-
-if __name__ == "__main__":
-    enhance_all_products()
+def enhance_all_products():
+    from pathlib import Path
+    data_path = Path("data/products.json")
+    if not data_path.exists(): return {"stats": {"enhanced": 0, "failed": 0}}
+    
+    with open(data_path, encoding="utf-8") as f:
+        products = json.load(f)["products"]
+        
+    with open("data/report.json", encoding="utf-8") as f:
+        report = json.load(f)
+        issues_map = {p["handle"]: p["issues"] for p in report["products"]}
+        
+    results = []
+    stats = {"enhanced": 0, "skipped": 0, "failed": 0}
+    
+    # Process only first 5 to avoid long wait
+    for p in products[:5]:
+        print(f"  → Enhancing: {p['title']}...")
+        res = enhance_product(p, issues_map.get(p["handle"], []))
+        if "error" in res:
+            stats["failed"] += 1
+        else:
+            stats["enhanced"] += 1
+        results.append(res)
+        
+    with open("data/enhanced.json", "w", encoding="utf-8") as f:
+        json.dump({"enhancedProducts": results}, f, indent=2, ensure_ascii=False)
+        
+    return {"stats": stats}

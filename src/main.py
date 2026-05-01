@@ -318,7 +318,7 @@ def run_server(port):
     section(f"STEP FINAL — Dashboard at http://localhost:{port}")
     print("\n  Press Ctrl+C to stop.\n")
     os.environ["FLASK_PORT"] = str(port)
-    os.system(f"python src/reporter/app.py --port {port}")
+    os.system(f"{sys.executable} src/reporter/app.py --port {port}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────

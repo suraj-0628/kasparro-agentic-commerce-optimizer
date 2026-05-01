@@ -1,0 +1,108 @@
+{
+  "enhancedProducts": [
+    {
+      "handle": "cotton-kurta-shirt-blue",
+      "title": "Men's Cotton Kurta Shirt - Indigo Blue Straight Cut",
+      "descriptionHtml": "<p>Elevate your daily wardrobe with this Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue, crafted from 100% premium breathable cotton. It features a classic straight silhouette, subtle tonal embroidery on the mandarin collar, and a refined look. Designed for the modern Indian man, it offers exceptional comfort for long office hours, casual weekend outings, or traditional festive gatherings. The lightweight fabric ensures you stay cool in the Indian heat. Made from 100% cotton, this kurta shirt is machine washable and can be paired with denim or chinos for a contemporary fusion style.</p>",
+      "tags": [
+        "cotton kurta shirt",
+        "indigo blue",
+        "men's ethnic wear",
+        "festive clothing",
+        "indian fashion",
+        "casual shirts",
+        "breathable cotton",
+        "mandarin collar",
+        "straight cut kurta"
+      ],
+      "seo": {
+        "title": "Men's Cotton Kurta Shirt - Indigo Blue | Ethnic Wear for Men",
+        "description": "Discover the perfect blend of comfort and style with our Men's Cotton Kurta Shirt in Indigo Blue. Made from 100% premium cotton, this straight cut kurta is ideal for office, casual, or festive wear."
+      },
+      "changesSummary": "Improved product data by rewriting title, expanding description, adding high-intent tags, and creating SEO title and meta description to enhance discoverability and trust for LLMs."
+    },
+    {
+      "handle": "ayurvedic-face-cream-neem",
+      "title": "Ayurvedic Neem Face Cream Moisturiser 50g",
+      "descriptionHtml": "<p>This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturise and heal skin. Free from parabens and harsh chemicals, it's suitable for all skin types and dermatologist tested. The 50g jar is made from recyclable materials and is designed for daily use. Apply twice daily for best results, morning and night, to achieve healthy and glowing skin. With its natural ingredients and gentle formula, it's perfect for dry, sensitive, or normal skin.</p>",
+      "tags": [
+        "ayurvedic",
+        "neem",
+        "natural",
+        "moisturiser",
+        "skincare",
+        "herbal",
+        "paraben-free",
+        "dermatologist-tested",
+        "recyclable"
+      ],
+      "seo": {
+        "title": "Ayurvedic Neem Face Cream | Natural Moisturiser for All Skin Types",
+        "description": "Discover the power of Ayurvedic skincare with our natural neem face cream, formulated with turmeric and aloe vera to moisturise and heal skin."
+      },
+      "changesSummary": "Improved product data by rewriting title, expanding description, adding high-intent tags, and creating SEO title and meta description to enhance discoverability and trust for LLMs."
+    },
+    {
+      "handle": "wireless-bluetooth-headphones-pro",
+      "title": "Wireless Noise-Cancelling Headphones with 30hr Battery",
+      "descriptionHtml": "<p>The SoundWave ProSound X1 features 40mm dynamic drivers, active noise cancellation, and soft memory-foam ear cushions for an immersive audio experience. With Bluetooth 5.0 connectivity, these headphones are perfect for long office hours, daily commutes, or online classes. The foldable frame and protective carrying pouch make them easy to store. Technical specs include a 30-hour battery life, 3.5mm aux cable, and durable materials. Ideal for travel, work, or study, these unisex headphones provide high-quality sound and comfort.</p>",
+      "tags": [
+        "bluetooth headphones",
+        "noise-cancelling headphones",
+        "wireless headphones",
+        "memory foam headphones",
+        "office headphones",
+        "travel headphones",
+        "unisex headphones",
+        "electronics",
+        "audio accessories"
+      ],
+      "seo": {
+        "title": "Best Wireless Noise-Cancelling Headphones for Travel and Work",
+        "description": "Discover the SoundWave ProSound X1, wireless noise-cancelling headphones with 30-hour battery life, perfect for travel, work, and study."
+      },
+      "changesSummary": "Improved product data by rewriting title and description, adding high-intent tags, and providing SEO title and meta description to enhance discoverability and trust for LLMs."
+    },
+    {
+      "handle": "leather-handbag-women-tan",
+      "title": "Women's Tan Leather Handbag",
+      "descriptionHtml": "<p>Handcrafted from genuine full-grain leather, this elegant tan handbag features a spacious main compartment, two inner zip pockets, and a magnetic snap closure. The adjustable shoulder strap provides comfort and versatility. With dimensions of 35cm x 25cm x 12cm, it's perfect for daily office use or weekend outings. Made from high-quality leather, this handbag is durable and stylish, suitable for various occasions.</p>",
+      "tags": [
+        "genuine leather handbag",
+        "tan leather bag",
+        "women's leather handbag",
+        "premium leather goods",
+        "office handbag",
+        "weekend bag",
+        "leather shoulder bag",
+        "full-grain leather"
+      ],
+      "seo": {
+        "title": "Tan Leather Handbag for Women - Premium Quality",
+        "description": "Discover our elegant tan leather handbag, handcrafted from genuine full-grain leather. Perfect for office or weekend use, with adjustable shoulder strap and spacious compartment."
+      },
+      "changesSummary": "Improved product data with descriptive title, expanded description, high-intent tags, and optimized SEO title and meta description for better discoverability and trust."
+    },
+    {
+      "handle": "smart-fitness-watch-black",
+      "title": "SmartFit Pro GPS Smartwatch",
+      "descriptionHtml": "<p>The SmartFit Pro is a high-performance smartwatch designed for the active Indian lifestyle, featuring a 1.69-inch HD display, 300mAh battery, and IP68 water resistance. Made from skin-friendly silicone, it tracks health with precision using the SpO2 sensor and 24/7 heart rate monitor. Ideal for office professionals and fitness enthusiasts, it pairs seamlessly with Android and iOS. Perfect for intense gym sessions, monsoon commutes, or daily jogs, with a magnetic charger for quick power-ups.</p>",
+      "tags": [
+        "gps smartwatch",
+        "fitness tracker",
+        "waterproof smartwatch",
+        "silicone band",
+        "smartwatch for men",
+        "smartwatch for women",
+        "android compatible",
+        "ios compatible",
+        "heart rate monitor"
+      ],
+      "seo": {
+        "title": "SmartFit Pro GPS Smartwatch - Waterproof Fitness Tracker",
+        "description": "Get the SmartFit Pro GPS smartwatch, a high-performance fitness tracker with SpO2 sensor, 24/7 heart rate monitor, and IP68 water resistance. Compatible with Android and iOS."
+      },
+      "changesSummary": "Improved product data by rewriting title and description, adding high-intent tags, and creating SEO title and meta description to enhance discoverability and trust for LLMs."
+    }
+  ]
+}
