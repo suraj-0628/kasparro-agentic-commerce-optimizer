@@ -56,6 +56,8 @@ Provides:
 - Product-level insights
 
 ---
+<img width="1876" height="868" alt="image" src="https://github.com/user-attachments/assets/fd1bf747-776c-4e74-8083-57665c37156e" />
+
 
 ## 🛠️ Setup Instructions
 
