@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-05-01T14:45:25.454730+00:00",
+    "generatedAt": "2026-05-01T16:00:33.201623+00:00",
     "productsProcessed": 30,
-    "avgRetrievalScore": 75.8,
+    "avgRetrievalScore": 76.2,
     "storeVisibility": "HIGH"
   },
   "summary": {
@@ -188,30 +188,25 @@
     },
     {
       "handle": "bluetooth-portable-speaker-mini",
-      "title": "Budget Bluetooth Mini Speaker",
+      "title": "Portable Bluetooth Speaker 10W",
       "aiPerception": {
         "perceivedType": "Speaker",
-        "typeConfidence": 80,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 63,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Speaker' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Speaker' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
             "signal": "images",
             "impact": "HIGH",
             "reason": "No images = vision AI agents cannot verify product."
-          },
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
           }
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"

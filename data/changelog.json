@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-05-01T16:00:56.765376+00:00",
+    "handle": "bluetooth-portable-speaker-mini",
+    "productId": "gid://shopify/Product/9480667136248",
+    "before": {
+      "description": "Compact and powerful, this portable Bluetooth speaker delivers 360-degree sound with 10W output. Features IPX5 water resistance, 8-hour playtime, built-in microphone for hands-free calls, and micro-USB charging. Compatible with all Bluetooth-enabled devices. Weight: 250g.",
+      "tags": [
+        "bluetooth",
+        "budget",
+        "portable",
+        "speaker",
+        "waterproof"
+      ],
+      "title": "Budget Bluetooth Mini Speaker"
+    },
+    "after": {
+      "title": "Portable Bluetooth Speaker 10W",
+      "description": "",
+      "tags": [
+        "portable speaker",
+        "bluetooth speaker",
+        "waterproof speaker",
+        "outdoor speaker",
+        "compact speaker",
+        "budget speaker",
+        "wireless speaker",
+        "travel speaker",
+        "gym speaker"
+      ],
+      "seo": {
+        "description": "Discover our portable Bluetooth speaker, featuring 10W output, IPX5 water resistance, and 8-hour playtime. Perfect for outdoor use, office, or gym.",
+        "title": "Portable Bluetooth Speaker | Waterproof 10W Compact Speaker"
+      }
+    }
+  }
+]

@@ -1,52 +1,4 @@
 {
-  "meta": {
-    "generatedAt": "2026-05-01T14:45:25.468739+00:00",
-    "store": "together-stack",
-    "avgScore": 82.1,
-    "storeGrade": "A",
-    "compositeScore": 75.7,
-    "compositeGrade": "B",
-    "avgRetrieval": 75.8,
-    "narrative": "This store scores 82.1/100 (Grade A) on AI representation quality across 30 products. AI agents are missing approximately 24% of potential search traffic due to weak metadata signals (retrieval score: 75.8/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes."
-  },
-  "storeInsights": [
-    {
-      "type": "SYSTEMIC_ISSUE",
-      "title": "SKU_MISSING affects 30/30 products",
-      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
-      "action": "Review and fix this issue across all products."
-    },
-    {
-      "type": "RETRIEVAL_GAP",
-      "title": "Store retrieval score is 75.8/100 — AI agents are missing 24% of potential traffic",
-      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
-      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
-    },
-    {
-      "type": "QUICK_WIN",
-      "title": "SEO titles and descriptions are missing store-wide",
-      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
-      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
-    },
-    {
-      "type": "POLICY_GAP",
-      "title": "POLICY_RETURN_MISSING: No return/refund policy found. AI shopping agents flag store...",
-      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
-      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
-    },
-    {
-      "type": "POLICY_GAP",
-      "title": "POLICY_SHIPPING_MISSING: No shipping policy found. AI agents answering 'when will my ...",
-      "detail": "Store-level policy gap — affects all products' AI trustworthiness.",
-      "action": "Add or expand this policy in Shopify Admin → Settings → Policies"
-    },
-    {
-      "type": "TRUST_GAP",
-      "title": "TRUST_BRAND_INCONSISTENT: Store has 12 different vendor names. AI agents prefer stores...",
-      "detail": "Trust signal missing — reduces AI recommendation confidence store-wide.",
-      "action": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity."
-    }
-  ],
   "roiRanking": [
     {
       "code": "IMAGE_MISSING",
@@ -67,24 +19,24 @@
     {
       "code": "TAGS_NOT_IN_DESCRIPTION",
       "severity": "LOW",
-      "affectedProducts": 17,
-      "totalScoreLift": 51,
+      "affectedProducts": 16,
+      "totalScoreLift": 48,
       "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
       "effort": "LOW"
     },
     {
       "code": "SEO_TITLE_MISSING",
       "severity": "MEDIUM",
-      "affectedProducts": 6,
-      "totalScoreLift": 48,
+      "affectedProducts": 5,
+      "totalScoreLift": 40,
       "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
       "effort": "LOW"
     },
     {
       "code": "SEO_DESC_MISSING",
       "severity": "LOW",
-      "affectedProducts": 6,
-      "totalScoreLift": 18,
+      "affectedProducts": 5,
+      "totalScoreLift": 15,
       "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
       "effort": "LOW"
     },
@@ -107,68 +59,40 @@
     {
       "code": "DESCRIPTION_NO_USE_CASE",
       "severity": "LOW",
-      "affectedProducts": 2,
-      "totalScoreLift": 6,
+      "affectedProducts": 1,
+      "totalScoreLift": 3,
       "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'.",
       "effort": "LOW"
     }
   ],
-  "products": [
+  "meta": {
+    "generatedAt": "2026-05-01T21:31:00.733851",
+    "store": "together-stack",
+    "avgScore": 82.7,
+    "storeGrade": "A",
+    "avgRetrieval": 76.2
+  },
+  "storeInsights": [
     {
-      "handle": "bluetooth-portable-speaker-mini",
-      "title": "Budget Bluetooth Mini Speaker",
-      "currentScore": 65,
-      "grade": "B",
-      "retrievalScore": 63,
-      "perceivedType": "Speaker",
-      "interpretation": "AI classifies this as 'Speaker' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
-      "totalIssues": 6,
-      "quickWins": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        }
-      ],
-      "allRecommendations": [
-        {
-          "issueCode": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "problem": "No product images — vision AI agents cannot verify this product.",
-          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
-          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
-          "effort": "LOW",
-          "priority": 1
-        },
-        {
-          "issueCode": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "problem": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "fix": "Set a custom SEO title: '[Product Name] - [Key Attribute] | [Brand]'. Example: 'Cotton Kurta Shirt - Breathable Ethnic Wear | FabricIndia'",
-          "impact": "AI search agents (Google Shopping, Bing) use SEO title for snippet generation. Missing = raw title used, often poorly formatted.",
-          "effort": "LOW",
-          "priority": 2
-        },
-        {
-          "issueCode": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "problem": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "fix": "Write a 150-160 character SEO description summarising: what it is, who it's for, key benefit.",
-          "impact": "AI commerce agents use meta description for product summaries in search results.",
-          "effort": "LOW",
-          "priority": 3
-        }
-      ],
-      "projectedScore": 80
+      "type": "SYSTEMIC_ISSUE",
+      "title": "SKU_MISSING affects 30/30 products",
+      "detail": "This single issue is the biggest drag on your store's AI visibility. Fixing it store-wide would have the highest ROI.",
+      "action": "Review and fix this issue across all products."
     },
+    {
+      "type": "RETRIEVAL_GAP",
+      "title": "Store retrieval score is 76.2/100 — AI agents are missing 24% of potential traffic",
+      "detail": "Even when customers search for products you carry, AI shopping agents may not surface them due to weak metadata.",
+      "action": "Prioritize: tags → descriptions → SEO titles. In that order."
+    },
+    {
+      "type": "QUICK_WIN",
+      "title": "SEO titles and descriptions are missing store-wide",
+      "detail": "30/30 products are missing SEO metadata. This is a 30-minute fix with outsized AI search impact.",
+      "action": "Use Shopify bulk editor: Products → Export → edit SEO columns → reimport."
+    }
+  ],
+  "products": [
     {
       "handle": "ayurvedic-face-cream-neem",
       "title": "Ayurvedic Neem Face Cream",
@@ -733,6 +657,41 @@
         }
       ],
       "projectedScore": 94
+    },
+    {
+      "handle": "bluetooth-portable-speaker-mini",
+      "title": "Portable Bluetooth Speaker 10W",
+      "currentScore": 82,
+      "grade": "A",
+      "retrievalScore": 75,
+      "perceivedType": "Speaker",
+      "interpretation": "AI classifies this as 'Speaker' with 90% confidence. No conflicting signals. Description provides strong context.",
+      "totalIssues": 2,
+      "quickWins": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "allRecommendations": [
+        {
+          "issueCode": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "problem": "No product images — vision AI agents cannot verify this product.",
+          "fix": "Add at least 3 product images — front view, back view, and in-use/lifestyle shot.",
+          "impact": "Images are the #1 trust signal for AI shopping agents. Without them, the product is invisible to vision-capable AI systems.",
+          "effort": "LOW",
+          "priority": 1
+        }
+      ],
+      "projectedScore": 97
     },
     {
       "handle": "formal-shirt-white-cotton",

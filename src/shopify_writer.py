@@ -1,78 +1,115 @@
 """
-shopify_writer.py
-Pushes approved text changes back to Shopify via Admin REST API.
-Requires write_products scope on the access token.
+src/shopify_writer.py
+REPLACE EXISTING
+
+Fixes:
+  - SEO metafield: checks if metafield exists first → uses PUT, not POST (was silently failing on re-runs)
+  - Saves changelog to data/changelog.json before every write (enables undo)
+  - API version from .env
+  - Better error messages with field-level detail
 """
 
 import os
 import json
 import requests
+from datetime import datetime, timezone
+from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
 
 STORE       = os.getenv("SHOPIFY_STORE")
 TOKEN       = os.getenv("SHOPIFY_TOKEN")
-API_VERSION = "2026-04"
-
-BASE_URL = f"https://{STORE}.myshopify.com/admin/api/{API_VERSION}"
-HEADERS  = {
+API_VERSION = os.getenv("SHOPIFY_API_VERSION", "2026-04")
+BASE_URL    = f"https://{STORE}.myshopify.com/admin/api/{API_VERSION}"
+HEADERS     = {
     "Content-Type":           "application/json",
     "X-Shopify-Access-Token": TOKEN,
 }
 
 
-# ── Core updater ──────────────────────────────────────────────────────────────
+# ── Changelog ─────────────────────────────────────────────────────────────────
+
+def record_changelog(handle: str, product_id: str, before: dict, after: dict):
+    """
+    Saves a before/after record to data/changelog.json.
+    This is the undo history — allows merchants to revert changes.
+    """
+    changelog_path = Path("data/changelog.json")
+    try:
+        if changelog_path.exists():
+            with open(changelog_path, encoding="utf-8") as f:
+                changelog = json.load(f)
+        else:
+            changelog = []
+
+        changelog.append({
+            "timestamp":  datetime.now(timezone.utc).isoformat(),
+            "handle":     handle,
+            "productId":  product_id,
+            "before":     before,
+            "after":      after,
+        })
+
+        with open(changelog_path, "w", encoding="utf-8") as f:
+            json.dump(changelog, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"  [writer] Warning: could not save changelog: {e}")
+
+
+# ── Product updater ───────────────────────────────────────────────────────────
 
 def update_product(product_id: str, updates: dict) -> dict:
-    """
-    Updates a Shopify product with the given fields.
-    product_id: numeric ID or gid://shopify/Product/XXXXX
-    updates: dict of fields to update — title, body_html, tags, etc.
-
-    Returns { success, data/error }
-    """
     numeric_id = product_id.split("/")[-1] if "/" in product_id else product_id
-    endpoint   = f"{BASE_URL}/products/{numeric_id}.json"
-
-    payload = {"product": updates}
-
-    response = requests.put(
-        endpoint,
+    response   = requests.put(
+        f"{BASE_URL}/products/{numeric_id}.json",
         headers=HEADERS,
-        json=payload,
+        json={"product": updates},
         timeout=30,
     )
-
     if response.status_code == 200:
-        return {
-            "success":   True,
-            "productId": numeric_id,
-            "updated":   list(updates.keys()),
-            "data":      response.json().get("product", {}),
-        }
-    else:
-        return {
-            "success":   False,
-            "productId": numeric_id,
-            "error":     f"HTTP {response.status_code}: {response.text[:300]}",
-        }
+        return {"success": True, "productId": numeric_id, "updated": list(updates.keys())}
+    return {
+        "success":   False,
+        "productId": numeric_id,
+        "error":     f"HTTP {response.status_code}: {response.text[:200]}",
+    }
 
 
-# ── SEO updater (uses metafields endpoint) ────────────────────────────────────
+# ── SEO metafield updater (POST or PUT correctly) ─────────────────────────────
+
+def get_existing_metafields(product_id: str) -> dict:
+    """Returns {key: metafield_id} for existing global metafields on this product."""
+    numeric_id = product_id.split("/")[-1] if "/" in product_id else product_id
+    try:
+        r = requests.get(
+            f"{BASE_URL}/products/{numeric_id}/metafields.json?namespace=global",
+            headers=HEADERS, timeout=15,
+        )
+        if r.status_code == 200:
+            return {
+                mf["key"]: mf["id"]
+                for mf in r.json().get("metafields", [])
+                if mf.get("namespace") == "global"
+            }
+    except Exception:
+        pass
+    return {}
+
 
 def update_seo(product_id: str, seo_title: str, seo_description: str) -> dict:
     """
-    Updates SEO title and description via metafields.
-    Shopify stores SEO data as global.title_tag and global.description_tag metafields.
+    Correctly handles POST (create) vs PUT (update) for SEO metafields.
+    Previous version always POSTed — caused silent failures on re-runs.
     """
-    numeric_id = product_id.split("/")[-1] if "/" in product_id else product_id
-    endpoint   = f"{BASE_URL}/products/{numeric_id}/metafields.json"
+    numeric_id       = product_id.split("/")[-1] if "/" in product_id else product_id
+    existing         = get_existing_metafields(product_id)
+    results          = []
 
-    results = []
     for key, value in [("title_tag", seo_title), ("description_tag", seo_description)]:
         if not value:
             continue
+
         payload = {
             "metafield": {
                 "namespace": "global",
@@ -81,32 +118,58 @@ def update_seo(product_id: str, seo_title: str, seo_description: str) -> dict:
                 "type":      "single_line_text_field",
             }
         }
-        resp = requests.post(endpoint, headers=HEADERS, json=payload, timeout=30)
+
+        existing_id = existing.get(key)
+
+        if existing_id:
+            # UPDATE — use PUT
+            resp = requests.put(
+                f"{BASE_URL}/metafields/{existing_id}.json",
+                headers=HEADERS,
+                json=payload,
+                timeout=15,
+            )
+        else:
+            # CREATE — use POST
+            resp = requests.post(
+                f"{BASE_URL}/products/{numeric_id}/metafields.json",
+                headers=HEADERS,
+                json=payload,
+                timeout=15,
+            )
+
         results.append({
-            "key":     key,
-            "success": resp.status_code in (200, 201),
-            "status":  resp.status_code,
+            "key":      key,
+            "action":   "update" if existing_id else "create",
+            "success":  resp.status_code in (200, 201),
+            "status":   resp.status_code,
         })
 
-    all_ok = all(r["success"] for r in results)
     return {
-        "success": all_ok,
+        "success": all(r["success"] for r in results) if results else True,
         "results": results,
     }
 
 
-# ── High-level apply function ─────────────────────────────────────────────────
+# ── Apply enhanced content ────────────────────────────────────────────────────
 
 def apply_enhanced_content(product_id: str, enhanced: dict) -> dict:
-    """
-    Takes the output from llm_enhancer.enhance_product() and applies it.
-    Handles: title, description, tags, SEO.
-
-    Returns structured result with per-field status.
-    """
     field_results = {}
 
-    # Build core product update payload
+    # Save changelog BEFORE writing
+    record_changelog(
+        handle=enhanced.get("handle", ""),
+        product_id=product_id,
+        before=enhanced.get("original", {}),
+        after={
+            "title":       enhanced.get("title"),
+            "description": enhanced.get("descriptionPlain", ""),
+            "tags":        enhanced.get("tags", []),
+            "seo":         enhanced.get("seo", {}),
+        },
+    )
+
+    # Core product fields
     core_updates = {}
     if enhanced.get("title"):
         core_updates["title"] = enhanced["title"]
@@ -116,7 +179,6 @@ def apply_enhanced_content(product_id: str, enhanced: dict) -> dict:
         tags = enhanced["tags"]
         core_updates["tags"] = ", ".join(tags) if isinstance(tags, list) else tags
 
-    # Apply core fields
     if core_updates:
         result = update_product(product_id, core_updates)
         field_results["core"] = {
@@ -125,43 +187,86 @@ def apply_enhanced_content(product_id: str, enhanced: dict) -> dict:
             "error":   result.get("error"),
         }
     else:
-        field_results["core"] = {"success": True, "fields": [], "note": "No core fields to update"}
+        field_results["core"] = {"success": True, "fields": [], "note": "Nothing to update"}
 
-    # Apply SEO
+    # SEO fields
     seo = enhanced.get("seo", {})
     if seo.get("title") or seo.get("description"):
-        seo_result = update_seo(product_id, seo.get("title", ""), seo.get("description", ""))
-        field_results["seo"] = seo_result
+        field_results["seo"] = update_seo(
+            product_id,
+            seo.get("title", ""),
+            seo.get("description", ""),
+        )
     else:
-        field_results["seo"] = {"success": True, "note": "No SEO fields provided"}
-
-    all_ok = all(v.get("success", False) for v in field_results.values())
+        field_results["seo"] = {"success": True, "note": "No SEO data provided"}
 
     return {
-        "success":       all_ok,
-        "productId":     product_id,
-        "handle":        enhanced.get("handle", ""),
-        "fieldResults":  field_results,
+        "success":        all(v.get("success", False) for v in field_results.values()),
+        "productId":      product_id,
+        "handle":         enhanced.get("handle", ""),
+        "fieldResults":   field_results,
         "changesSummary": enhanced.get("changesSummary", ""),
+        "appliedAt":      datetime.now(timezone.utc).isoformat(),
+    }
+
+
+# ── Undo last change ──────────────────────────────────────────────────────────
+
+def undo_last_change(handle: str, products_path: str = "data/products.json") -> dict:
+    """
+    Reverts the most recent change for a product handle using changelog.json.
+    """
+    changelog_path = Path("data/changelog.json")
+    if not changelog_path.exists():
+        return {"success": False, "error": "No changelog found"}
+
+    with open(changelog_path, encoding="utf-8") as f:
+        changelog = json.load(f)
+
+    # Find most recent entry for this handle
+    entries = [e for e in changelog if e["handle"] == handle]
+    if not entries:
+        return {"success": False, "error": f"No changelog entry for {handle}"}
+
+    last = entries[-1]
+    before = last["before"]
+
+    # Load product ID
+    with open(products_path, encoding="utf-8") as f:
+        products_data = json.load(f)
+    product = next((p for p in products_data["products"] if p["handle"] == handle), None)
+    if not product:
+        return {"success": False, "error": "Product not found in products.json"}
+
+    # Revert
+    revert_payload = {}
+    if before.get("title"):       revert_payload["title"]    = before["title"]
+    if before.get("description"): revert_payload["body_html"] = f"<p>{before['description']}</p>"
+    if before.get("tags"):
+        tags = before["tags"]
+        revert_payload["tags"] = ", ".join(tags) if isinstance(tags, list) else tags
+
+    result = update_product(product["id"], revert_payload)
+    return {
+        "success":   result["success"],
+        "handle":    handle,
+        "revertedTo": before,
+        "error":     result.get("error"),
     }
 
 
 # ── Batch apply ───────────────────────────────────────────────────────────────
 
-def apply_all_enhanced(enhanced_path="data/enhanced.json",
-                       products_path="data/products.json") -> dict:
-    """
-    Reads enhanced.json and applies all changes to Shopify.
-    Maps handles back to product IDs using products.json.
-    """
+def apply_all_enhanced(
+    enhanced_path = "data/enhanced.json",
+    products_path = "data/products.json",
+) -> dict:
     with open(enhanced_path, encoding="utf-8") as f:
         enhanced_data = json.load(f)
-
     with open(products_path, encoding="utf-8") as f:
         products_data = json.load(f)
 
-    id_map = {p["handle"]: p["id"] for p in products_data["products"]}
-
+    id_map     = {p["handle"]: p["id"] for p in products_data["products"]}
     results    = []
     successful = 0
     failed     = 0
@@ -169,25 +274,23 @@ def apply_all_enhanced(enhanced_path="data/enhanced.json",
     for item in enhanced_data.get("enhanced", []):
         handle     = item["handle"]
         product_id = id_map.get(handle)
-
         if not product_id:
-            print(f"[writer] ✗ Cannot find ID for handle: {handle}")
+            print(f"  [writer] ✗ ID not found for: {handle}")
             failed += 1
             continue
 
-        print(f"[writer] Applying changes to: {item.get('title', handle)}...")
+        print(f"  [writer] Applying: {item.get('title', handle)[:50]}...")
         result = apply_enhanced_content(product_id, item)
-
         if result["success"]:
-            print(f"  ✓ Applied successfully")
+            print(f"    ✓ Applied")
             successful += 1
         else:
-            print(f"  ✗ Failed: {result['fieldResults']}")
+            print(f"    ✗ Failed: {result['fieldResults']}")
             failed += 1
-
         results.append(result)
 
     summary = {
+        "appliedAt":  datetime.now(timezone.utc).isoformat(),
         "total":      len(enhanced_data.get("enhanced", [])),
         "successful": successful,
         "failed":     failed,
@@ -197,8 +300,7 @@ def apply_all_enhanced(enhanced_path="data/enhanced.json",
     with open("data/write_results.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
-    print(f"\n[writer] Done. {successful} applied, {failed} failed.")
-    print(f"[writer] Results saved to data/write_results.json")
+    print(f"\n[writer] Done. applied={successful} failed={failed}")
     return summary
 
 

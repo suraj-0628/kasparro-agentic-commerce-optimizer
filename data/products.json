@@ -1,6 +1,6 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-05-01T20:15:23.666222",
+  "fetchedAt": "2026-05-01T21:30:31.506636",
   "apiVersion": "2026-04",
   "productCount": 30,
   "categoryStats": {
@@ -293,19 +293,23 @@
     {
       "id": "gid://shopify/Product/9480667136248",
       "handle": "bluetooth-portable-speaker-mini",
-      "title": "Budget Bluetooth Mini Speaker",
-      "descriptionHtml": "<p>Compact and powerful, this portable Bluetooth speaker delivers 360-degree sound with 10W output. Features IPX5 water resistance, 8-hour playtime, built-in microphone for hands-free calls, and micro-USB charging. Compatible with all Bluetooth-enabled devices. Weight: 250g.</p>",
-      "descriptionPlain": "Compact and powerful, this portable Bluetooth speaker delivers 360-degree sound with 10W output. Features IPX5 water resistance, 8-hour playtime, built-in microphone for hands-free calls, and micro-USB charging. Compatible with all Bluetooth-enabled devices. Weight: 250g.",
-      "descriptionWordCount": 34,
+      "title": "Portable Bluetooth Speaker 10W",
+      "descriptionHtml": "<p>This compact and powerful portable Bluetooth speaker delivers 360-degree sound with 10W output, featuring IPX5 water resistance and 8-hour playtime. Made from durable materials, it's perfect for outdoor activities, office use, or as a gym companion. With a built-in microphone for hands-free calls and micro-USB charging, it's compatible with all Bluetooth-enabled devices. Weighing only 250g, it's easy to take anywhere.</p>",
+      "descriptionPlain": "This compact and powerful portable Bluetooth speaker delivers 360-degree sound with 10W output, featuring IPX5 water resistance and 8-hour playtime. Made from durable materials, it's perfect for outdoor activities, office use, or as a gym companion. With a built-in microphone for hands-free calls and micro-USB charging, it's compatible with all Bluetooth-enabled devices. Weighing only 250g, it's easy to take anywhere.",
+      "descriptionWordCount": 60,
       "productType": "Speaker, Bluetooth, Portable",
       "vendor": "SoundWave",
       "status": "ACTIVE",
       "tags": [
-        "bluetooth",
-        "budget",
-        "portable",
-        "speaker",
-        "waterproof"
+        "portable speaker",
+        "bluetooth speaker",
+        "waterproof speaker",
+        "outdoor speaker",
+        "compact speaker",
+        "budget speaker",
+        "wireless speaker",
+        "travel speaker",
+        "gym speaker"
       ],
       "category": {
         "name": "Speakers",
@@ -328,8 +332,8 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "description": "Discover our portable Bluetooth speaker, featuring 10W output, IPX5 water resistance, and 8-hour playtime. Perfect for outdoor use, office, or gym.",
+        "title": "Portable Bluetooth Speaker | Waterproof 10W Compact Speaker"
       },
       "createdAt": "2026-04-19T05:41:34Z",
       "updatedAt": "2026-04-20T06:00:14Z"
