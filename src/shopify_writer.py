@@ -27,6 +27,17 @@ HEADERS     = {
     "X-Shopify-Access-Token": TOKEN,
 }
 
+# ── GraphQL Helper ────────────────────────────────────────────────────────────
+
+def run_graphql(query: str, variables: dict = None) -> dict:
+    url = f"https://{STORE}.myshopify.com/admin/api/{API_VERSION}/graphql.json"
+    payload = {"query": query, "variables": variables or {}}
+    try:
+        r = requests.post(url, headers=HEADERS, json=payload, timeout=30)
+        return r.json()
+    except Exception as e:
+        return {"errors": [{"message": str(e)}]}
+
 
 # ── Changelog ─────────────────────────────────────────────────────────────────
 
@@ -178,6 +189,8 @@ def apply_enhanced_content(product_id: str, enhanced: dict) -> dict:
     if enhanced.get("tags"):
         tags = enhanced["tags"]
         core_updates["tags"] = ", ".join(tags) if isinstance(tags, list) else tags
+    if enhanced.get("product_type"):
+        core_updates["product_type"] = enhanced["product_type"]
 
     if core_updates:
         result = update_product(product_id, core_updates)
@@ -199,6 +212,11 @@ def apply_enhanced_content(product_id: str, enhanced: dict) -> dict:
         )
     else:
         field_results["seo"] = {"success": True, "note": "No SEO data provided"}
+    
+    # Variants / SKUs
+    for v in enhanced.get("variants", []):
+        if v.get("id") and v.get("sku"):
+            update_variant_sku(v["id"], v["sku"])
 
     return {
         "success":        all(v.get("success", False) for v in field_results.values()),
@@ -302,6 +320,89 @@ def apply_all_enhanced(
 
     print(f"\n[writer] Done. applied={successful} failed={failed}")
     return summary
+
+
+# ── Advanced Global Fixers ────────────────────────────────────────────────────
+
+def update_variant_sku(variant_id: str, sku: str) -> dict:
+    """Updates a product variant SKU via GraphQL."""
+    query = """
+    mutation variantUpdate($input: ProductVariantInput!) {
+      productVariantUpdate(input: $input) {
+        productVariant { id sku }
+        userErrors { field message }
+      }
+    }
+    """
+    # Sanitize GID: ensure it's not double-prefixed or malformed
+    v_id = variant_id
+    if not v_id.startswith("gid://"):
+        v_id = f"gid://shopify/ProductVariant/{v_id}"
+    elif v_id.count("gid://") > 1:
+        # Handle cases where we accidentally double-prefixed
+        v_id = "gid://" + v_id.split("gid://")[-1]
+    
+    variables = {"input": {"id": v_id, "sku": sku}}
+    res = run_graphql(query, variables)
+    
+    if "errors" in res:
+        return {"success": False, "error": res["errors"][0]["message"]}
+    
+    data = res.get("data", {}).get("productVariantUpdate", {})
+    if data.get("userErrors"):
+        return {"success": False, "error": data["userErrors"][0]["message"]}
+    
+    return {"success": True, "variantId": v_id, "newSku": sku}
+
+
+def update_shop_policy(policy_type: str, body: str) -> dict:
+    """
+    Updates a legal policy (e.g. REFUND_POLICY, PRIVACY_POLICY, SHIPPING_POLICY).
+    Requires 'write_legal_policies' scope.
+    """
+    query = """
+    mutation shopPolicyUpdate($shopPolicy: ShopPolicyInput!) {
+      shopPolicyUpdate(shopPolicy: $shopPolicy) {
+        shopPolicy { body title }
+        userErrors { field message }
+      }
+    }
+    """
+    # Policy types in GQL: REFUND_POLICY, PRIVACY_POLICY, SHIPPING_POLICY, TERMS_OF_SERVICE
+    variables = {"shopPolicy": {"type": policy_type, "body": body}}
+    res = run_graphql(query, variables)
+    
+    if "errors" in res:
+        return {"success": False, "error": res["errors"][0]["message"]}
+    
+    data = res.get("data", {}).get("shopPolicyUpdate", {})
+    if data.get("userErrors"):
+        return {"success": False, "error": data["userErrors"][0]["message"]}
+    
+    return {"success": True, "policyType": policy_type}
+
+
+def create_page(title: str, body_html: str) -> dict:
+    """Creates a new Online Store page (e.g. 'About Us')."""
+    query = """
+    mutation pageCreate($page: PageCreateInput!) {
+      pageCreate(page: $page) {
+        page { id title handle }
+        userErrors { field message }
+      }
+    }
+    """
+    variables = {"page": {"title": title, "body": body_html}}
+    res = run_graphql(query, variables)
+    
+    if "errors" in res:
+        return {"success": False, "error": res["errors"][0]["message"]}
+    
+    data = res.get("data", {}).get("pageCreate", {})
+    if data.get("userErrors"):
+        return {"success": False, "error": data["userErrors"][0]["message"]}
+    
+    return {"success": True, "pageId": data["page"]["id"], "handle": data["page"]["handle"]}
 
 
 if __name__ == "__main__":

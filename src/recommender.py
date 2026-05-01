@@ -123,15 +123,8 @@ RULE_RECOMMENDATIONS = {
     },
     "SKU_MISSING": {
         "priority": 1,
-        "canFixWithAI": False,
+        "canFixWithAI": True,
         "fix": "Assign a unique SKU to every variant.",
-        "manualSteps": [
-            "Log in to Shopify Admin.",
-            "Go to Products and select this product.",
-            "Scroll down to the Variants section.",
-            "Enter a unique code in the 'SKU' field for each variant.",
-            "Save the changes."
-        ],
         "impact": "Missing SKUs break inventory tracking for fulfillment AI agents.",
         "effort": "LOW",
     }
@@ -184,6 +177,8 @@ def recommend_for_product(product_result, perception):
         "interpretation":  perception["aiPerception"]["interpretation"],
         "isAmbiguous":     perception["aiPerception"]["isAmbiguous"],
         "totalIssues":     product_result["totalIssues"],
+        "topIssues":       [{"code": r["issueCode"], "severity": r["severity"]} for r in recommendations[:4]],
+        "tags":            product_result.get("tags", []),
         "quickWins":       quick_wins[:3],
         "allRecommendations": recommendations,
         "projectedScore":  min(100, score + sum(

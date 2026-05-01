@@ -1,59 +1,43 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-05-01T17:38:01.671799+00:00",
+    "generatedAt": "2026-05-01T20:32:39.632560+00:00",
     "store": "together-stack",
-    "productsAnalyzed": 32,
+    "productsAnalyzed": 33,
     "rulesApplied": 23,
-    "avgQualityScore": 84.3,
+    "avgQualityScore": 87.0,
     "storeGrade": "A"
   },
   "summary": {
     "scoreDistribution": {
-      "excellent": 20,
-      "good": 12,
+      "excellent": 26,
+      "good": 7,
       "poor": 0,
       "critical": 0
     },
     "severityCounts": {
-      "LOW": 49,
-      "HIGH": 21,
-      "MEDIUM": 5
+      "LOW": 48,
+      "HIGH": 18,
+      "MEDIUM": 2
     },
     "topIssues": [
       {
         "code": "SKU_MISSING",
-        "count": 32
+        "count": 33
       },
       {
         "code": "IMAGE_MISSING",
-        "count": 20
+        "count": 18
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
         "count": 14
       },
       {
-        "code": "SEO_TITLE_MISSING",
-        "count": 2
-      },
-      {
-        "code": "SEO_DESC_MISSING",
-        "count": 2
-      },
-      {
-        "code": "PRODUCT_TYPE_MISSING",
+        "code": "DESCRIPTION_MISSING_SPECS",
         "count": 2
       },
       {
         "code": "DESCRIPTION_NO_USE_CASE",
-        "count": 1
-      },
-      {
-        "code": "CONTRADICTION_SEASON",
-        "count": 1
-      },
-      {
-        "code": "DESCRIPTION_MISSING_SPECS",
         "count": 1
       }
     ],
@@ -61,16 +45,16 @@
       {
         "code": "IMAGE_MISSING",
         "severity": "HIGH",
-        "affectedProducts": 20,
-        "totalScoreLift": 300,
+        "affectedProducts": 18,
+        "totalScoreLift": 270,
         "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products.",
         "effort": "MEDIUM"
       },
       {
         "code": "SKU_MISSING",
         "severity": "LOW",
-        "affectedProducts": 32,
-        "totalScoreLift": 96,
+        "affectedProducts": 33,
+        "totalScoreLift": 99,
         "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant.",
         "effort": "LOW"
       },
@@ -83,43 +67,11 @@
         "effort": "LOW"
       },
       {
-        "code": "SEO_TITLE_MISSING",
-        "severity": "MEDIUM",
-        "affectedProducts": 2,
-        "totalScoreLift": 16,
-        "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
-        "effort": "LOW"
-      },
-      {
-        "code": "PRODUCT_TYPE_MISSING",
-        "severity": "MEDIUM",
-        "affectedProducts": 2,
-        "totalScoreLift": 16,
-        "conversionImpact": "Missing product type weakens secondary classification signals.",
-        "effort": "LOW"
-      },
-      {
-        "code": "CONTRADICTION_SEASON",
-        "severity": "HIGH",
-        "affectedProducts": 1,
-        "totalScoreLift": 15,
-        "conversionImpact": "Contradictory context = AI filters product from both seasonal query sets.",
-        "effort": "MEDIUM"
-      },
-      {
         "code": "DESCRIPTION_MISSING_SPECS",
         "severity": "MEDIUM",
-        "affectedProducts": 1,
-        "totalScoreLift": 8,
-        "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed.",
-        "effort": "LOW"
-      },
-      {
-        "code": "SEO_DESC_MISSING",
-        "severity": "LOW",
         "affectedProducts": 2,
-        "totalScoreLift": 6,
-        "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+        "totalScoreLift": 16,
+        "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed.",
         "effort": "LOW"
       },
       {
@@ -132,74 +84,67 @@
       }
     ]
   },
-  "narrative": "This store scores 84.3/100 (Grade A) on AI representation quality across 32 products. AI agents are missing approximately 23% of potential search traffic due to weak metadata signals (retrieval score: 77.4/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 32/32 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
-  "compositeScore": 77.0,
-  "compositeGrade": "B",
+  "narrative": "This store scores 87.0/100 (Grade A) on AI representation quality across 33 products. AI agents are missing approximately 21% of potential search traffic due to weak metadata signals (retrieval score: 78.5/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 33/33 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
+  "compositeScore": 91.6,
+  "compositeGrade": "A",
   "policyReport": {
-    "policyScore": 40,
-    "policyGrade": "C",
-    "totalIssues": 3,
-    "issues": [
-      {
-        "code": "POLICY_RETURN_MISSING",
-        "severity": "CRITICAL",
-        "field": "store_policy",
-        "message": "No return/refund policy found. AI shopping agents flag stores without return policies as high-risk — customers are actively warned away.",
-        "evidence": null
+    "policyScore": 100,
+    "policyGrade": "A",
+    "totalIssues": 0,
+    "issues": [],
+    "details": {
+      "returnPolicy": {
+        "wordCount": 210,
+        "found": true
       },
-      {
-        "code": "POLICY_SHIPPING_MISSING",
-        "severity": "HIGH",
-        "field": "store_policy",
-        "message": "No shipping policy found. AI agents answering 'when will my order arrive?' cannot answer for this store — reducing recommendation likelihood.",
-        "evidence": null
+      "shippingPolicy": {
+        "wordCount": 226,
+        "hasTimeframe": true,
+        "found": true
       },
-      {
-        "code": "FAQ_MISSING",
-        "severity": "HIGH",
-        "field": "store_faq",
-        "message": "No FAQ page found. AI agents use FAQ content to answer pre-purchase questions. Without it, the store loses 'answer box' placement in AI search results.",
-        "evidence": null
+      "faq": {
+        "wordCount": 575,
+        "found": true,
+        "pageCount": 3
       }
-    ],
-    "details": {},
-    "pagesChecked": 2
+    },
+    "pagesChecked": 8
   },
   "trustReport": {
-    "trustScore": 92,
+    "trustScore": 97,
     "trustGrade": "A",
     "totalIssues": 1,
     "issues": [
       {
-        "code": "TRUST_BRAND_INCONSISTENT",
-        "severity": "MEDIUM",
+        "code": "TRUST_MARKETPLACE_SELECTION",
+        "severity": "LOW",
         "field": "trust",
-        "message": "Store has 13 different vendor names. AI agents prefer stores with consistent brand identity.",
+        "message": "Store features a diverse selection from 13 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
         "evidence": [
-          "herbalroots",
-          "shadeon",
+          "brandless",
+          "fabricindia",
           "techzone",
-          "bagstore",
-          "soundwave"
+          "shadeon",
+          "beltcraft"
         ]
       }
     ],
     "details": {
       "vendorAnalysis": {
         "uniqueVendors": [
-          "herbalroots",
-          "shadeon",
-          "techzone",
-          "bagstore",
-          "soundwave",
-          "stepup",
-          "together_stack",
-          "beltcraft",
-          "technova",
           "brandless",
-          "leatherlux",
+          "fabricindia",
+          "techzone",
+          "shadeon",
+          "beltcraft",
+          "together_stack",
+          "soundwave",
+          "herbalroots",
+          "bagstore",
           "glowup",
-          "fabricindia"
+          "leatherlux",
+          "technova",
+          "stepup"
         ],
         "vendorCount": 13,
         "missingVendor": 0
@@ -218,7 +163,7 @@
         "found": true
       },
       "imageAltText": {
-        "totalImages": 15,
+        "totalImages": 19,
         "missingAlt": 0,
         "coveragePercent": 100
       }
@@ -227,10 +172,10 @@
   "competitiveContext": {
     "primaryCategory": "apparel",
     "categoryLabel": "Apparel & Accessories",
-    "storeScore": 84.3125,
-    "scorePercentile": 90,
-    "scorePercentileLabel": "Top 10% — excellent AI representation",
-    "retrievalPercentile": 75,
+    "storeScore": 86.96969696969697,
+    "scorePercentile": 94,
+    "scorePercentileLabel": "Top 10% — Excellent AI Representation",
+    "retrievalPercentile": 85,
     "industryMedian": 52,
     "industryTop25": 64,
     "industryTop10": 74,
@@ -238,7 +183,7 @@
     "gapsVsBestInClass": [
       {
         "metric": "Image coverage",
-        "store": "38% of products",
+        "store": "45% of products",
         "benchmark": "95%+ of products"
       }
     ],
@@ -253,6 +198,16 @@
     {
       "handle": "cotton-kurta-shirt-blue",
       "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
+      "tags": [
+        "casual",
+        "cotton",
+        "ethnic wear",
+        "festive",
+        "indian fashion",
+        "indigo blue",
+        "kurta shirt",
+        "men"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -283,7 +238,18 @@
     },
     {
       "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Face Cream with Neem & Turmeric",
+      "title": "Natural Face Cream with Neem & Turmeric",
+      "tags": [
+        "aloe vera",
+        "ayurvedic",
+        "herbal",
+        "moisturiser",
+        "natural",
+        "neem",
+        "paraben-free",
+        "skincare",
+        "turmeric"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -324,12 +290,21 @@
     {
       "handle": "wireless-bluetooth-headphones-pro",
       "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
+      "tags": [
+        "bluetooth",
+        "electronics",
+        "headphones",
+        "memory foam",
+        "noise-cancelling",
+        "office wear",
+        "travel",
+        "unisex"
+      ],
+      "score": 94,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
+        "LOW": 2
       },
       "issues": [
         {
@@ -345,14 +320,6 @@
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
         {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
           "code": "SKU_MISSING",
           "severity": "LOW",
           "field": "variants",
@@ -365,6 +332,17 @@
     {
       "handle": "leather-handbag-women-tan",
       "title": "Women's Tan Leather Handbag",
+      "tags": [
+        "adjustable shoulder strap",
+        "full-grain leather",
+        "genuine leather",
+        "leather handbag",
+        "magnetic snap closure",
+        "office handbag",
+        "premium leather",
+        "weekend handbag",
+        "women's tan handbag"
+      ],
       "score": 97,
       "grade": "A",
       "totalIssues": 1,
@@ -385,6 +363,16 @@
     {
       "handle": "smart-fitness-watch-black",
       "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
+      "tags": [
+        "gps",
+        "gym",
+        "office",
+        "silicone",
+        "smartwatch",
+        "tech-gadget",
+        "unisex",
+        "waterproof"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -428,6 +416,17 @@
     {
       "handle": "canvas-sneakers-white",
       "title": "Unisex White Canvas Sneakers",
+      "tags": [
+        "canvas sneakers",
+        "casual footwear",
+        "cushioned insole",
+        "daily wear",
+        "hand-washable",
+        "lightweight shoes",
+        "unisex shoes",
+        "vulcanised rubber sole",
+        "white sneakers"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -457,6 +456,17 @@
     {
       "handle": "bluetooth-portable-speaker-mini",
       "title": "Portable Bluetooth Speaker 10W",
+      "tags": [
+        "bluetooth speaker",
+        "budget speaker",
+        "compact speaker",
+        "gym speaker",
+        "outdoor speaker",
+        "portable speaker",
+        "travel speaker",
+        "waterproof speaker",
+        "wireless speaker"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -485,14 +495,24 @@
     },
     {
       "handle": "mens-leather-belt-brown",
-      "title": "Men's Genuine Leather Belt - Brown",
-      "score": 71,
-      "grade": "B",
-      "totalIssues": 4,
+      "title": "Men's Brown Leather Belt",
+      "tags": [
+        "brown leather",
+        "cowhide leather",
+        "durable belt",
+        "formal accessory",
+        "full-grain leather",
+        "genuine leather",
+        "leather belt",
+        "men's belt",
+        "stainless steel buckle"
+      ],
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 2
+        "LOW": 1
       },
       "issues": [
         {
@@ -502,22 +522,6 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",
@@ -532,6 +536,15 @@
     {
       "handle": "cotton-tshirt-pack-3",
       "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
+      "tags": [
+        "100% cotton",
+        "casual wear",
+        "indian fashion",
+        "men's t-shirt",
+        "pack of 3",
+        "round neck",
+        "summer essentials"
+      ],
       "score": 97,
       "grade": "A",
       "totalIssues": 1,
@@ -552,6 +565,16 @@
     {
       "handle": "face-wash-charcoal",
       "title": "GlowUp Activated Charcoal Face Wash for Oil Control & Pollution Defense",
+      "tags": [
+        "charcoal",
+        "daily use",
+        "face wash",
+        "men",
+        "oil control",
+        "pollution defense",
+        "skincare",
+        "women"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -585,6 +608,16 @@
     {
       "handle": "laptop-budget-15inch",
       "title": "TechZone 15.6-inch HD Laptop, 8GB RAM, 256GB SSD - Sleek Silver",
+      "tags": [
+        "computing",
+        "electronics",
+        "laptop",
+        "office",
+        "portable",
+        "productivity",
+        "silver",
+        "student"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -619,6 +652,17 @@
     {
       "handle": "winter-jacket-heavy-mens",
       "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
+      "tags": [
+        "detachable hood",
+        "men's outerwear",
+        "navy blue",
+        "padded jacket",
+        "polyester",
+        "thermal lining",
+        "travel jacket",
+        "water-resistant",
+        "winter wear"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -660,6 +704,16 @@
     {
       "handle": "sunglasses-uv400-unisex",
       "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
+      "tags": [
+        "casual wear",
+        "driving",
+        "matte black",
+        "polycarbonate",
+        "summer essentials",
+        "sunglasses",
+        "unisex",
+        "uv protection"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -692,6 +746,16 @@
     {
       "handle": "moisturiser-aloe-vera",
       "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
+      "tags": [
+        "aloe vera",
+        "daily wear",
+        "dry skin",
+        "face cream",
+        "herbal",
+        "moisturiser",
+        "skincare",
+        "unisex"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -732,6 +796,16 @@
     {
       "handle": "running-shoes-mens-red",
       "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red",
+      "tags": [
+        "breathable shoes",
+        "gym wear",
+        "men's footwear",
+        "mesh sneakers",
+        "outdoor jogging",
+        "red sports shoes",
+        "running shoes",
+        "stepup brand"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -763,6 +837,15 @@
     {
       "handle": "formal-shirt-white-cotton",
       "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
+      "tags": [
+        "fabricindia",
+        "formal shirt",
+        "mens fashion",
+        "office wear",
+        "professional attire",
+        "slim fit shirt",
+        "white cotton shirt"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -792,6 +875,16 @@
     {
       "handle": "earphones-wired-budget",
       "title": "SoundWave Wired Earphones with Mic and 1.2m Tangle-Free Cable - Black",
+      "tags": [
+        "3.5mm jack",
+        "budget audio",
+        "commute essential",
+        "daily use",
+        "earphones",
+        "pvc cable",
+        "unisex",
+        "wired headphones"
+      ],
       "score": 97,
       "grade": "A",
       "totalIssues": 1,
@@ -812,6 +905,16 @@
     {
       "handle": "smartwatch-round-dial",
       "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
+      "tags": [
+        "bluetooth calling",
+        "daily wear",
+        "fitness tracker",
+        "round dial",
+        "smartwatch",
+        "tech accessories",
+        "unisex",
+        "water resistant"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -841,6 +944,16 @@
     {
       "handle": "cotton-kurta-shirt-white",
       "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
+      "tags": [
+        "casual",
+        "cotton",
+        "ethnic",
+        "festive",
+        "kurta",
+        "men",
+        "summer",
+        "white"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -882,6 +995,16 @@
     {
       "handle": "tote-bag-canvas",
       "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
+      "tags": [
+        "college bag",
+        "cotton canvas",
+        "grocery shopping",
+        "off-white",
+        "office wear",
+        "sustainable",
+        "tote bag",
+        "unisex"
+      ],
       "score": 94,
       "grade": "A",
       "totalIssues": 2,
@@ -910,6 +1033,16 @@
     {
       "handle": "sunscreen-spf50",
       "title": "GlowUp SPF 50 PA+++ Sunscreen Lotion - Non-Greasy Daily Wear",
+      "tags": [
+        "dailywear",
+        "glowup",
+        "nongreasy",
+        "skincare",
+        "spf50",
+        "summeressential",
+        "sunscreen",
+        "unisex"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -953,31 +1086,25 @@
     },
     {
       "handle": "laptop-gaming-pro",
-      "title": "TechZone Pro Gaming Laptop - Intel i9, RTX 4060, 32GB RAM, 1TB SSD",
-      "score": 82,
+      "title": "Gaming Laptop - Intel i9, RTX 4060",
+      "tags": [
+        "gaming laptop",
+        "gaming pc",
+        "high performance laptop",
+        "intel i9",
+        "portable computer",
+        "rtx 4060",
+        "student laptop",
+        "techzone",
+        "video editing"
+      ],
+      "score": 97,
       "grade": "A",
-      "totalIssues": 2,
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 1,
         "LOW": 1
       },
       "issues": [
-        {
-          "code": "CONTRADICTION_SEASON",
-          "severity": "HIGH",
-          "field": "description",
-          "message": "Conflicting seasonal signals — AI receives contradictory intent context.",
-          "evidence": {
-            "winter": [
-              "heavy"
-            ],
-            "summer": [
-              "summer",
-              "cool"
-            ]
-          },
-          "conversionImpact": "Contradictory context = AI filters product from both seasonal query sets."
-        },
         {
           "code": "SKU_MISSING",
           "severity": "LOW",
@@ -991,6 +1118,16 @@
     {
       "handle": "flip-flops-rubber",
       "title": "StepUp Waterproof Rubber Flip Flops for Men and Women - Blue",
+      "tags": [
+        "bathroom footwear",
+        "beach shoes",
+        "daily wear",
+        "monsoon essentials",
+        "rubber slippers",
+        "stepup",
+        "unisex sliders",
+        "waterproof flip flops"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -1020,6 +1157,15 @@
     {
       "handle": "hooded-sweatshirt-grey",
       "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey",
+      "tags": [
+        "casual",
+        "charcoal grey",
+        "college wear",
+        "cotton fleece",
+        "hoodie",
+        "men",
+        "winter wear"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -1048,14 +1194,24 @@
     },
     {
       "handle": "wireless-mouse-ergonomic",
-      "title": "TechNova Wireless Ergonomic Mouse with 2.4GHz USB Receiver - Black",
-      "score": 71,
-      "grade": "B",
-      "totalIssues": 4,
+      "title": "Ergonomic Wireless Computer Mouse 2.4GHz",
+      "tags": [
+        "computer hardware",
+        "ergonomic accessories",
+        "gaming mouse",
+        "laptop peripherals",
+        "office electronics",
+        "tech gadgets",
+        "unisex",
+        "wireless mouse",
+        "work from home essentials"
+      ],
+      "score": 86,
+      "grade": "A",
+      "totalIssues": 3,
       "issueSummary": {
         "MEDIUM": 1,
-        "LOW": 2,
-        "HIGH": 1
+        "LOW": 2
       },
       "issues": [
         {
@@ -1078,14 +1234,6 @@
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
         {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
           "code": "SKU_MISSING",
           "severity": "LOW",
           "field": "variants",
@@ -1098,6 +1246,16 @@
     {
       "handle": "vitamin-c-serum",
       "title": "GlowUp Vitamin C Face Serum with Hyaluronic Acid - 30ml",
+      "tags": [
+        "brightening",
+        "daily wear",
+        "festive",
+        "glow",
+        "serum",
+        "skincare",
+        "unisex",
+        "vitamin c"
+      ],
       "score": 97,
       "grade": "A",
       "totalIssues": 1,
@@ -1118,6 +1276,14 @@
     {
       "handle": "mens-wallet-black",
       "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
+      "tags": [
+        "formal",
+        "men",
+        "office wear",
+        "slim wallet",
+        "vegan leather",
+        "wallet"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -1147,6 +1313,16 @@
     {
       "handle": "party-wear-shirt-men",
       "title": "Men's Premium Satin Silk Party Wear Shirt - Slim Fit Festive Edition",
+      "tags": [
+        "diwali",
+        "fabricindia",
+        "festive wear",
+        "men",
+        "satin silk",
+        "shirt",
+        "slim fit",
+        "wedding"
+      ],
       "score": 82,
       "grade": "A",
       "totalIssues": 2,
@@ -1176,6 +1352,16 @@
     {
       "handle": "bluetooth-headphones-budget",
       "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
+      "tags": [
+        "bluetooth",
+        "commuting",
+        "electronics",
+        "headphones",
+        "office",
+        "students",
+        "unisex",
+        "wireless"
+      ],
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -1216,14 +1402,25 @@
     },
     {
       "handle": "polarised-sunglasses-black",
-      "title": "Polarised Sunglasses - Black",
-      "score": 71,
-      "grade": "B",
-      "totalIssues": 4,
+      "title": "Polarised Black Sunglasses",
+      "tags": [
+        "black sunglasses",
+        "driving sunglasses",
+        "fishing sunglasses",
+        "lightweight sunglasses",
+        "mens sunglasses",
+        "outdoor accessories",
+        "polarised sunglasses",
+        "sports sunglasses",
+        "uv400 protection",
+        "womens sunglasses"
+      ],
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
         "HIGH": 1,
-        "MEDIUM": 1,
-        "LOW": 2
+        "LOW": 1
       },
       "issues": [
         {
@@ -1233,22 +1430,6 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",
@@ -1262,23 +1443,25 @@
     },
     {
       "handle": "earrings-stainless-steel",
-      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
-      "score": 89,
+      "title": "Stainless Steel Hypoallergenic Earrings",
+      "tags": [
+        "Corrosion Resistant",
+        "Everyday Wear",
+        "Formal Earrings",
+        "Gift Ideas",
+        "Hypoallergenic Jewelry",
+        "Jewelry for Sensitive Ears",
+        "Sensitive Skin Friendly",
+        "Stainless Steel Earrings",
+        "Tarnish Free"
+      ],
+      "score": 97,
       "grade": "A",
-      "totalIssues": 2,
+      "totalIssues": 1,
       "issueSummary": {
-        "MEDIUM": 1,
         "LOW": 1
       },
       "issues": [
-        {
-          "code": "PRODUCT_TYPE_MISSING",
-          "severity": "MEDIUM",
-          "field": "productType",
-          "message": "Product Type field is empty — weakens secondary classification signal.",
-          "evidence": null,
-          "conversionImpact": "Missing product type weakens secondary classification signals."
-        },
         {
           "code": "SKU_MISSING",
           "severity": "LOW",
@@ -1291,24 +1474,26 @@
     },
     {
       "handle": "shorts-blue-men-boxers",
-      "title": "Men's Blue Short Trousers - Comfortable Boxers",
-      "score": 74,
-      "grade": "B",
-      "totalIssues": 3,
+      "title": "Men's Cotton Short Trousers",
+      "tags": [
+        "athletic wear shorts",
+        "breathable clothing",
+        "comfortable loungewear",
+        "cotton blend shorts",
+        "daily wear shorts",
+        "elastic waistband shorts",
+        "men's short trousers",
+        "relaxed fit trousers",
+        "soft texture shorts"
+      ],
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
-        "MEDIUM": 1,
         "HIGH": 1,
         "LOW": 1
       },
       "issues": [
-        {
-          "code": "PRODUCT_TYPE_MISSING",
-          "severity": "MEDIUM",
-          "field": "productType",
-          "message": "Product Type field is empty — weakens secondary classification signal.",
-          "evidence": null,
-          "conversionImpact": "Missing product type weakens secondary classification signals."
-        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
@@ -1316,6 +1501,46 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "nothing-phone-1-case-black-silicone",
+      "title": "Nothing Phone 1 Black Silicone Case",
+      "tags": [
+        "Black Phone Case",
+        "Black Silicone Case",
+        "Mobile Phone Case",
+        "Nothing Phone 1 Case",
+        "Nothing Phone Accessory",
+        "Phone Accessories",
+        "Phone Protection",
+        "Silicone Accessory",
+        "Silicone Phone Case"
+      ],
+      "score": 89,
+      "grade": "A",
+      "totalIssues": 2,
+      "issueSummary": {
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_MISSING_SPECS",
+          "severity": "MEDIUM",
+          "field": "description",
+          "message": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
+          "evidence": null,
+          "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed."
         },
         {
           "code": "SKU_MISSING",

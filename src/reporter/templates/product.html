@@ -866,10 +866,9 @@
       </div>
       <div class="actions-grid">
         <button class="action-btn primary" onclick="generateEnhancement()" id="enhance-btn">
-          <span class="spinner" id="esp"></span>✦ Generate AI Improvements
+          <span class="spinner" id="esp"></span>✦ One-Click Full AI Repair
         </button>
         <button class="action-btn" onclick="openImageModal()">↑ Upload Image</button>
-        <button class="action-btn danger" onclick="undoLastChange()" id="undo-btn">↩ Undo Last Change</button>
       </div>
     </div>
 
@@ -889,10 +888,12 @@
           <div class="conv-impact">💰 {{ issue.conversionImpact }}</div>
           {% endif %}
           
-          {# Manual instructions if not AI fixable #}
+          {# Fix buttons #}
           {% set rec_item = none %}
           {% for r in rec.allRecommendations if r.issueCode == issue.code %}
-            {% if not r.canFixWithAI %}
+            {% if r.canFixWithAI %}
+              <!-- Master button handles this now -->
+            {% else %}
               <div style="background:rgba(255,255,255,0.03); border:1px solid var(--bd); border-radius:6px; padding:10px; margin-top:10px">
                 <div style="font-size:10px; font-family:'DM Mono',monospace; color:var(--am); margin-bottom:5px">MANUAL FIX STEPS</div>
                 <ul style="font-size:11px; color:var(--mu); padding-left:15px; line-height:1.5">
@@ -972,6 +973,11 @@
               <span class="issue-code">{{ qw.issueCode }}</span>
             </div>
             <div class="issue-msg">{{ qw.fix }}</div>
+            {% if qw.issueCode == 'SKU_MISSING' %}
+              <button class="btn-sm" style="margin-top:10px; background:var(--gr); border:none" onclick="fixSku('{{ product.handle }}', this)">✦ Fix SKU with AI</button>
+            {% elif qw.canFixWithAI %}
+              <button class="btn-sm" style="margin-top:10px; background:var(--gr); border:none" onclick="applySingleFix('{{ product.handle }}', '{{ qw.issueCode }}', this)">✦ Apply Fix</button>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
@@ -1003,10 +1009,15 @@
       <div class="diff-block">
         <div class="diff-label">Description</div>
         <div class="diff-row">
-          <div class="diff-before" style="max-height:140px;overflow-y:auto"><span class="diff-badge">BEFORE</span><span
-              id="before-desc"></span></div>
-          <div class="diff-after" style="max-height:140px;overflow-y:auto"><span class="diff-badge">AFTER</span><span
-              id="after-desc"></span></div>
+          <div class="diff-before" style="max-height:140px;overflow-y:auto"><span class="diff-badge">BEFORE</span><span id="before-desc"></span></div>
+          <div class="diff-after" style="max-height:140px;overflow-y:auto"><span class="diff-badge">AFTER</span><span id="after-desc"></span></div>
+        </div>
+      </div>
+      <div class="diff-block">
+        <div class="diff-label">Product Type</div>
+        <div class="diff-row">
+          <div class="diff-before"><span class="diff-badge">BEFORE</span><span id="before-type"></span></div>
+          <div class="diff-after"><span class="diff-badge">AFTER</span><span id="after-type"></span></div>
         </div>
       </div>
       <div class="diff-block">
@@ -1102,6 +1113,8 @@
         document.getElementById('after-desc').textContent = (e.descriptionHtml || '').replace(/<[^>]+>/g, ' ').trim();
         document.getElementById('before-tags').innerHTML = (o.tags || []).map(t => `<span class="tag">${t}</span>`).join('') || '<span style="color:var(--rd)">none</span>';
         document.getElementById('after-tags').innerHTML = (e.tags || []).map(t => `<span class="tag new">${t}</span>`).join('');
+        document.getElementById('before-type').textContent = o.product_type || 'none';
+        document.getElementById('after-type').textContent = e.product_type || 'none';
         document.getElementById('seo-title').textContent = e.seo?.title || '—';
         document.getElementById('seo-desc').textContent = e.seo?.description || '—';
         openModal('enhance-modal');
@@ -1135,23 +1148,6 @@
       finally { btn.disabled = false; sp.style.display = 'none'; }
     }
 
-    // ── Undo ──────────────────────────────────────────────────────────────────────
-    async function undoLastChange() {
-      if (!confirm('Revert the last applied change for this product? This cannot be undone.')) return;
-      const btn = document.getElementById('undo-btn');
-      btn.disabled = true;
-      try {
-        const res = await fetch(`/api/undo/${HANDLE}`, { method: 'POST' });
-        const data = await res.json();
-        if (data.success) {
-          showToast('✓ Change reverted', 'success');
-          setTimeout(() => location.reload(), 1500);
-        } else {
-          showToast('Undo failed: ' + data.error, 'error');
-        }
-      } catch (err) { showToast('Error: ' + err.message, 'error'); }
-      finally { btn.disabled = false; }
-    }
 
     // ── Image upload ──────────────────────────────────────────────────────────────
     function openImageModal() { openModal('image-modal') }
@@ -1199,14 +1195,61 @@
         if (data.success) {
           vr.className = 'val-result success'; vr.textContent = '✓ ' + data.message;
           if (data.warnings?.length) vr.textContent += ' ⚠ ' + data.warnings.join(' ');
-          setTimeout(() => closeModal('image-modal'), 1400);
-          showToast('Image uploaded!', 'success');
+          showToast('Image uploaded! Rescoring...', 'success');
+          // Trigger instant rescore
+          await fetch(`/api/rescore/${HANDLE}`, { method: 'POST' });
+          setTimeout(() => location.reload(), 1200);
         } else {
           vr.style.display = 'block'; vr.className = 'val-result error';
           vr.innerHTML = (data.errors || [data.message]).map(e => `❌ ${e}`).join('<br>');
         }
       } catch (err) { showToast('Upload error: ' + err.message, 'error'); }
       finally { btn.disabled = false; sp.style.display = 'none'; }
+    }
+    async function applySingleFix(handle, code, btn) {
+      const originalText = btn.innerText;
+      btn.innerText = 'Fixing...';
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/fix-single', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ handle, code })
+        });
+        const d = await r.json();
+        if (d.success) {
+          showToast('Improvement applied to Shopify!', 'success');
+          setTimeout(() => location.reload(), 1500);
+        } else {
+          showToast('Error: ' + d.error, 'error');
+        }
+      } catch (e) {
+        showToast('Network error', 'error');
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    async function fixSku(handle, btn) {
+      const originalText = btn.innerText;
+      btn.innerText = 'Generating SKU...';
+      btn.disabled = true;
+      try {
+        const r = await fetch(`/api/fix-sku/${handle}`, { method: 'POST' });
+        const d = await r.json();
+        if (d.success) {
+          showToast('SKUs updated in Shopify!', 'success');
+          setTimeout(() => location.reload(), 1500);
+        } else {
+          showToast('Error: ' + d.error, 'error');
+        }
+      } catch (e) {
+        showToast('Network error', 'error');
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
     }
   </script>
 </body>

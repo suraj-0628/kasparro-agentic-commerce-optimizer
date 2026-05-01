@@ -309,6 +309,7 @@ def analyze_product(product):
     return {
         "handle":       product["handle"],
         "title":        product["title"],
+        "tags":         product.get("tags", []),
         "score":        score,
         "grade":        grade,
         "totalIssues":  len(issues),

@@ -142,6 +142,7 @@ def check_faq_and_policies() -> dict:
     if not has_refund_policy and not has_refund_page:
         issues.append({
             "code":     "POLICY_RETURN_MISSING",
+            "type":     "RETURN_POLICY",
             "severity": "CRITICAL",
             "field":    "store_policy",
             "message":  "No return/refund policy found. AI shopping agents flag stores without return policies as high-risk — customers are actively warned away.",
@@ -173,6 +174,7 @@ def check_faq_and_policies() -> dict:
     if not has_shipping_policy and not has_shipping_page:
         issues.append({
             "code":     "POLICY_SHIPPING_MISSING",
+            "type":     "SHIPPING_POLICY",
             "severity": "HIGH",
             "field":    "store_policy",
             "message":  "No shipping policy found. AI agents answering 'when will my order arrive?' cannot answer for this store — reducing recommendation likelihood.",
@@ -206,6 +208,7 @@ def check_faq_and_policies() -> dict:
         if not has_privacy_page:
             issues.append({
                 "code":     "POLICY_PRIVACY_MISSING",
+                "type":     "PRIVACY_POLICY",
                 "severity": "MEDIUM",
                 "field":    "store_policy",
                 "message":  "No privacy policy found. Required for trust signals and reduces AI agent recommendation confidence.",
@@ -222,6 +225,7 @@ def check_faq_and_policies() -> dict:
     if not faq_pages:
         issues.append({
             "code":     "FAQ_MISSING",
+            "type":     "FAQ",
             "severity": "HIGH",
             "field":    "store_faq",
             "message":  "No FAQ page found. AI agents use FAQ content to answer pre-purchase questions. Without it, the store loses 'answer box' placement in AI search results.",

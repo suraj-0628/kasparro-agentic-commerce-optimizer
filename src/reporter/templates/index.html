@@ -573,6 +573,24 @@
       text-overflow: ellipsis
     }
 
+    .p-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px
+    }
+    .issue-badge {
+      font-size: 9px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .ib-CRITICAL, .ib-HIGH { background: rgba(248, 113, 113, 0.15); color: var(--rd); border: 1px solid rgba(248, 113, 113, 0.3); }
+    .ib-MEDIUM { background: rgba(251, 191, 36, 0.15); color: var(--am); border: 1px solid rgba(251, 191, 36, 0.3); }
+    .ib-LOW { background: rgba(34, 211, 238, 0.15); color: var(--tl); border: 1px solid rgba(34, 211, 238, 0.3); }
+
     .ret-bar {
       height: 3px;
       background: var(--bg3);
@@ -767,6 +785,7 @@
             <div style="font-size:12px; margin-top:4px">{{ issue.message }}</div>
           </div>
           {% endfor %}
+          <button class="btn-sm" style="width:100%; margin-top:10px; background:var(--rd); border:none" onclick="fixPolicies(this)">✦ Fix Policies with AI</button>
           {% else %}
           <div style="color:var(--gr);font-size:12px">All policies present ✓</div>
           {% endif %}
@@ -783,6 +802,7 @@
             <div style="font-size:12px; margin-top:4px">{{ issue.message }}</div>
           </div>
           {% endfor %}
+          <button class="btn-sm" style="width:100%; margin-top:10px; background:var(--tl); border:none" onclick="fixTrust(this)">✦ Fix Trust Gaps with AI</button>
           {% else %}
           <div style="color:var(--gr);font-size:12px">Trust signals look good ✓</div>
           {% endif %}
@@ -820,6 +840,11 @@
             {% endif %}
           </div>
           <div class="p-handle">{{ p.handle }}</div>
+          <div class="p-tags">
+            {% for issue in p.topIssues %}
+            <span class="issue-badge ib-{{ issue.severity }}">{{ issue.code }}</span>
+            {% endfor %}
+          </div>
         </div>
         <div class="score-pill {% if p.currentScore >= 70 %}sh{% elif p.currentScore >= 45 %}sm{% else %}sl{% endif %}">
           <span class="score-dot"></span>{{ p.currentScore }}
@@ -864,13 +889,67 @@
       setTimeout(() => t.classList.remove('show'), 3500);
     }
     async function rerun() {
-      showToast('Re-running full analysis…', '');
+      const btn = document.querySelector('.hdr-right .btn-sm');
+      const originalText = btn.innerText;
+      btn.innerText = 'Analyzing...';
+      btn.disabled = true;
       try {
-        const res = await fetch('/api/rerun-pipeline', { method: 'POST' });
-        const d = await res.json();
-        if (d.success) { showToast('Analysis complete — refreshing…', 'success'); setTimeout(() => location.reload(), 1200); }
-        else showToast('Error: ' + d.error, 'error');
-      } catch (e) { showToast('Network error', 'error'); }
+        const r = await fetch('/api/rerun-pipeline', { method: 'POST' });
+        const d = await r.json();
+        if (d.success) {
+          showToast('Store re-analysed successfully!', 'success');
+          setTimeout(() => location.reload(), 1000);
+        } else {
+          showToast('Re-analysis failed: ' + d.error, 'error');
+        }
+      } catch (e) {
+        showToast('Network error during re-analysis', 'error');
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    async function fixPolicies(btn) {
+      const originalText = btn.innerText;
+      btn.innerText = 'Publishing...';
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/fix-policy-health', { method: 'POST' });
+        const d = await r.json();
+        if (d.success) {
+          showToast('Store policies & content updated!', 'success');
+          setTimeout(() => rerun(), 1500);
+        } else {
+          showToast('Policy fix failed: ' + d.error, 'error');
+        }
+      } catch (e) {
+        showToast('Network error', 'error');
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
+    }
+
+    async function fixTrust(btn) {
+      const originalText = btn.innerText;
+      btn.innerText = 'Creating Pages...';
+      btn.disabled = true;
+      try {
+        const r = await fetch('/api/fix-trust-gaps', { method: 'POST' });
+        const d = await r.json();
+        if (d.success) {
+          showToast('Trust pages created successfully!', 'success');
+          setTimeout(() => rerun(), 1500);
+        } else {
+          showToast('Trust fix failed: ' + d.error, 'error');
+        }
+      } catch (e) {
+        showToast('Network error', 'error');
+      } finally {
+        btn.innerText = originalText;
+        btn.disabled = false;
+      }
     }
   </script>
 </body>
