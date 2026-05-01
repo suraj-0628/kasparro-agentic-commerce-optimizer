@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-05-01T16:00:33.201623+00:00",
-    "productsProcessed": 30,
-    "avgRetrievalScore": 76.2,
+    "generatedAt": "2026-05-01T17:38:01.662890+00:00",
+    "productsProcessed": 32,
+    "avgRetrievalScore": 77.4,
     "storeVisibility": "HIGH"
   },
   "summary": {
@@ -18,10 +18,11 @@
       "Laptop / Computer": 3,
       "Jacket / Outerwear": 2,
       "Sunglasses": 2,
-      "Wallet": 1
+      "Wallet": 1,
+      "Unknown": 2
     },
-    "ambiguousProducts": 3,
-    "highRetrieval": 21,
+    "ambiguousProducts": 5,
+    "highRetrieval": 27,
     "lowRetrieval": 0
   },
   "perceptions": [
@@ -48,14 +49,14 @@
     },
     {
       "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Neem Face Cream",
+      "title": "Ayurvedic Face Cream with Neem & Turmeric",
       "aiPerception": {
         "perceivedType": "Skincare",
-        "typeConfidence": 95,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 68,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Skincare' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Skincare' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
@@ -66,7 +67,7 @@
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"
@@ -107,27 +108,21 @@
     },
     {
       "handle": "leather-handbag-women-tan",
-      "title": "Premium Leather Handbag - Tan",
+      "title": "Women's Tan Leather Handbag",
       "aiPerception": {
         "perceivedType": "Bag / Handbag",
-        "typeConfidence": 80,
+        "typeConfidence": 90,
         "isAmbiguous": false,
-        "retrievalScore": 68,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Bag / Handbag' with 80% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Bag / Handbag' with 90% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
+        "missingSignals": [],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
-          "images": "absent",
+          "images": "moderate",
           "vendor": "present"
         }
       }
@@ -161,14 +156,14 @@
     },
     {
       "handle": "canvas-sneakers-white",
-      "title": "Canvas Sneakers - White",
+      "title": "Unisex White Canvas Sneakers",
       "aiPerception": {
         "perceivedType": "Footwear",
-        "typeConfidence": 95,
+        "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 73,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Footwear' with 95% confidence. No conflicting signals. Description present but too thin for attribute extraction.",
+        "retrievalScore": 80,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Footwear' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
@@ -179,7 +174,7 @@
         ],
         "signalStrengths": {
           "title": "strong",
-          "description": "moderate",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"
@@ -305,12 +300,12 @@
     },
     {
       "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Heavy Padded Winter Jacket with Detachable Hood - Navy Blue",
+      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
       "aiPerception": {
         "perceivedType": "Jacket / Outerwear",
         "typeConfidence": 98,
         "isAmbiguous": false,
-        "retrievalScore": 75,
+        "retrievalScore": 80,
         "retrievalGrade": "HIGH — Will appear in relevant AI searches",
         "interpretation": "AI classifies this as 'Jacket / Outerwear' with 98% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
@@ -795,6 +790,64 @@
         "signalStrengths": {
           "title": "strong",
           "description": "moderate",
+          "tags": "strong",
+          "images": "absent",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "earrings-stainless-steel",
+      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
+      "aiPerception": {
+        "perceivedType": "Unknown",
+        "typeConfidence": 0,
+        "isAmbiguous": true,
+        "retrievalScore": 80,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI cannot determine product type from available signals. 1 ambiguity issue(s) detected. Description provides strong context.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 0% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "shorts-blue-men-boxers",
+      "title": "Men's Blue Short Trousers - Comfortable Boxers",
+      "aiPerception": {
+        "perceivedType": "Unknown",
+        "typeConfidence": 0,
+        "isAmbiguous": true,
+        "retrievalScore": 75,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI cannot determine product type from available signals. 1 ambiguity issue(s) detected. Description provides strong context.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 0% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          }
+        ],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
           "tags": "strong",
           "images": "absent",
           "vendor": "present"

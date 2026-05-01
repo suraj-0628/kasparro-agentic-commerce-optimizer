@@ -1,31 +1,28 @@
 """
-src/reporter/app.py
-REPLACE EXISTING FILE
+src/reporter/app.py — REPLACE EXISTING
 
-Changes:
-  - Removed fragile sys.path.insert hack — run app from project root: python src/reporter/app.py
-  - Store name read from .env (dynamic)
-  - /api/rescore/<handle> — re-runs analyzer for single product after apply
-  - /api/store-health — returns composite score including policy + trust
-  - /api/roi — returns ranked ROI fix list
-  - Port configurable via --port arg or FLASK_PORT env var
-  - Proper __init__.py package structure (src/checks/)
+Fixes:
+  - In-memory cache for JSON files (not reading from disk on every request)
+  - /api/undo/<handle> — revert last applied change
+  - /api/query-simulation — return query coverage data
+  - /api/competitive — return benchmarking data
+  - Safe startup: creates placeholder data if pipeline hasn't run yet
+  - Port from --port arg or FLASK_PORT env
 """
 
 import os
 import sys
 import json
+import time
 import argparse
 from pathlib import Path
+from functools import lru_cache
 from flask import Flask, render_template, jsonify, request
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# ── Path setup — run from project root ───────────────────────────────────────
-# Usage: python src/reporter/app.py  (from project root)
-# or:    python main.py --serve
-ROOT = Path(__file__).parent.parent.parent
+ROOT     = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
 STORE    = os.getenv("SHOPIFY_STORE", "your-store")
@@ -37,25 +34,62 @@ app = Flask(
     static_folder=str(Path(__file__).parent / "static"),
 )
 
-# ── Data helpers ──────────────────────────────────────────────────────────────
+# ── Simple in-memory cache ────────────────────────────────────────────────────
+_cache     = {}
+_cache_ttl = {}
+CACHE_SECS = 30  # refresh every 30s or on demand
 
-def load(filename):
+
+def load(filename: str, max_age: int = CACHE_SECS) -> dict:
+    now  = time.time()
     path = DATA_DIR / filename
+    if filename in _cache and (now - _cache_ttl.get(filename, 0)) < max_age:
+        return _cache[filename]
     if not path.exists():
         return {}
     with open(path, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    _cache[filename]     = data
+    _cache_ttl[filename] = now
+    return data
 
-def save(filename, data):
+
+def invalidate_cache():
+    _cache.clear()
+    _cache_ttl.clear()
+
+
+def save_data(filename: str, data: dict):
     with open(DATA_DIR / filename, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+    _cache.pop(filename, None)
 
-def by_handle(collection_key, filename):
-    data = load(filename)
-    items = data.get(collection_key, []) if collection_key else data
-    if isinstance(items, list):
-        return {item.get("handle", item.get("key", i)): item for i, item in enumerate(items)}
-    return items
+
+# ── Safe startup — create placeholder files if missing ───────────────────────
+
+def ensure_data_files():
+    """Prevents FileNotFoundError when dashboard is opened before pipeline runs."""
+    DATA_DIR.mkdir(exist_ok=True)
+    placeholders = {
+        "products.json":          {"store": STORE, "productCount": 0, "products": []},
+        "report.json":            {"reportMeta": {"store": STORE, "avgQualityScore": 0, "storeGrade": "?", "productsAnalyzed": 0}, "summary": {"topIssues": [], "severityCounts": {}, "roiRanking": []}, "products": []},
+        "perception.json":        {"meta": {"avgRetrievalScore": 0, "storeVisibility": "UNKNOWN"}, "summary": {"ambiguousProducts": 0}, "perceptions": []},
+        "recommendations.json":   {"meta": {}, "storeInsights": [], "roiRanking": [], "products": []},
+        "policy_report.json":     {"policyScore": 0, "policyGrade": "?", "totalIssues": 0, "issues": []},
+        "trust_report.json":      {"trustScore": 0, "trustGrade": "?", "totalIssues": 0, "issues": []},
+        "query_simulation.json":  {"totalQueries": 0, "coverageRate": 0, "zeroMatchQueries": [], "queryResults": []},
+        "competitive_context.json": {"scorePercentile": 0, "industryMedian": 52},
+    }
+    for fname, default in placeholders.items():
+        fpath = DATA_DIR / fname
+        if not fpath.exists():
+            with open(fpath, "w", encoding="utf-8") as f:
+                json.dump(default, f, indent=2)
+
+
+ensure_data_files()
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
 
 def get_product(handle):
     return next((p for p in load("products.json").get("products", []) if p["handle"] == handle), None)
@@ -69,6 +103,7 @@ def get_perception(handle):
 def get_rec(handle):
     return next((p for p in load("recommendations.json").get("products", []) if p["handle"] == handle), None)
 
+
 # ── Page routes ───────────────────────────────────────────────────────────────
 
 @app.route("/")
@@ -78,32 +113,41 @@ def index():
     recs        = load("recommendations.json")
     policy      = load("policy_report.json")
     trust       = load("trust_report.json")
+    qsim        = load("query_simulation.json")
+    competitive = load("competitive_context.json")
 
     meta  = report.get("reportMeta", {})
     pmeta = perception.get("meta", {})
 
+    pipeline_run = meta.get("productsAnalyzed", 0) > 0
+
     stats = {
-        "store":           STORE,
-        "avgScore":        meta.get("avgQualityScore", 0),
-        "storeGrade":      meta.get("storeGrade", "?"),
-        "compositeScore":  report.get("compositeScore", meta.get("avgQualityScore", 0)),
-        "compositeGrade":  report.get("compositeGrade", meta.get("storeGrade", "?")),
-        "avgRetrieval":    pmeta.get("avgRetrievalScore", 0),
-        "visibility":      pmeta.get("storeVisibility", "?"),
-        "ambiguous":       perception.get("summary", {}).get("ambiguousProducts", 0),
-        "productsCount":   meta.get("productsAnalyzed", 0),
-        "topIssues":       report.get("summary", {}).get("topIssues", [])[:5],
-        "roiRanking":      recs.get("roiRanking", report.get("summary", {}).get("roiRanking", []))[:5],
-        "severityCounts":  report.get("summary", {}).get("severityCounts", {}),
+        "store":            STORE,
+        "pipelineRun":      pipeline_run,
+        "avgScore":         meta.get("avgQualityScore", 0),
+        "storeGrade":       meta.get("storeGrade", "?"),
+        "compositeScore":   report.get("compositeScore", 0),
+        "compositeGrade":   report.get("compositeGrade", "?"),
+        "avgRetrieval":     pmeta.get("avgRetrievalScore", 0),
+        "visibility":       pmeta.get("storeVisibility", "?"),
+        "ambiguous":        perception.get("summary", {}).get("ambiguousProducts", 0),
+        "productsCount":    meta.get("productsAnalyzed", 0),
+        "topIssues":        report.get("summary", {}).get("topIssues", [])[:5],
+        "roiRanking":       recs.get("roiRanking", report.get("summary", {}).get("roiRanking", []))[:6],
+        "severityCounts":   report.get("summary", {}).get("severityCounts", {}),
         "scoreDistribution": report.get("summary", {}).get("scoreDistribution", {}),
-        "narrative":       report.get("narrative", ""),
-        "policyScore":     policy.get("policyScore", "—"),
-        "policyGrade":     policy.get("policyGrade", "?"),
-        "policyIssues":    len(policy.get("issues", [])),
-        "trustScore":      trust.get("trustScore", "—"),
-        "trustGrade":      trust.get("trustGrade", "?"),
-        "trustIssues":     len(trust.get("issues", [])),
-        "competitive":     report.get("competitiveContext", {}),
+        "narrative":        report.get("narrative", ""),
+        "policyScore":      policy.get("policyScore", 0),
+        "policyGrade":      policy.get("policyGrade", "?"),
+        "policyIssues":     len(policy.get("issues", [])),
+        "trustScore":       trust.get("trustScore", 0),
+        "trustGrade":       trust.get("trustGrade", "?"),
+        "trustIssues":      len(trust.get("issues", [])),
+        "queryCoverage":    qsim.get("coverageRate", 0),
+        "queryCovered":     qsim.get("coveredQueries", 0),
+        "queryTotal":       qsim.get("totalQueries", 0),
+        "zeroMatchCount":   len(qsim.get("zeroMatchQueries", [])),
+        "competitive":      competitive
     }
 
     return render_template("index.html",
@@ -112,6 +156,7 @@ def index():
         insights=recs.get("storeInsights", []),
         policy_issues=policy.get("issues", []),
         trust_issues=trust.get("issues", []),
+        zero_match_queries=qsim.get("zeroMatchQueries", [])[:5],
     )
 
 
@@ -121,55 +166,59 @@ def product_detail(handle):
     report     = get_report(handle)
     perception = get_perception(handle)
     rec        = get_rec(handle)
+    qsim       = load("query_simulation.json")
+    prod_cov   = qsim.get("productCoverage", {}).get(handle, {})
+
     if not product:
-        return f"Product '{handle}' not found", 404
+        return f"Product '{handle}' not found — run python main.py first", 404
+
     return render_template("product.html",
-        product=product, report=report or {}, perception=perception or {}, rec=rec or {})
+        product=product,
+        report=report or {},
+        perception=perception or {},
+        rec=rec or {},
+        query_coverage=prod_cov,
+    )
 
 
-# ── API — read ────────────────────────────────────────────────────────────────
+# ── API — data ────────────────────────────────────────────────────────────────
 
 @app.route("/api/stats")
 def api_stats():
-    report     = load("report.json")
-    perception = load("perception.json")
-    policy     = load("policy_report.json")
-    trust      = load("trust_report.json")
     return jsonify({
-        "report":     report.get("reportMeta", {}),
-        "perception": perception.get("meta", {}),
-        "summary":    report.get("summary", {}),
-        "composite":  {"score": report.get("compositeScore"), "grade": report.get("compositeGrade")},
-        "policy":     {"score": policy.get("policyScore"), "grade": policy.get("policyGrade")},
-        "trust":      {"score": trust.get("trustScore"),  "grade": trust.get("trustGrade")},
+        "report":      load("report.json").get("reportMeta", {}),
+        "perception":  load("perception.json").get("meta", {}),
+        "summary":     load("report.json").get("summary", {}),
+        "policy":      {"score": load("policy_report.json").get("policyScore"), "grade": load("policy_report.json").get("policyGrade")},
+        "trust":       {"score": load("trust_report.json").get("trustScore"),   "grade": load("trust_report.json").get("trustGrade")},
+        "competitive": load("competitive_context.json"),
+        "querySim":    {k: load("query_simulation.json").get(k) for k in ["coverageRate", "coveredQueries", "totalQueries", "zeroMatchQueries"]},
     })
+
+
+@app.route("/api/query-simulation")
+def api_query_sim():
+    return jsonify(load("query_simulation.json"))
+
+
+@app.route("/api/competitive")
+def api_competitive():
+    return jsonify(load("competitive_context.json"))
 
 
 @app.route("/api/roi")
 def api_roi():
-    recs = load("recommendations.json")
-    return jsonify(recs.get("roiRanking", []))
-
-
-@app.route("/api/store-health")
-def api_store_health():
-    report  = load("report.json")
-    policy  = load("policy_report.json")
-    trust   = load("trust_report.json")
-    percep  = load("perception.json")
-    return jsonify({
-        "productScore":  report.get("reportMeta", {}).get("avgQualityScore"),
-        "compositeScore": report.get("compositeScore"),
-        "policyScore":   policy.get("policyScore"),
-        "trustScore":    trust.get("trustScore"),
-        "retrievalScore": percep.get("meta", {}).get("avgRetrievalScore"),
-        "narrative":     report.get("narrative"),
-    })
+    return jsonify(load("recommendations.json").get("roiRanking", []))
 
 
 @app.route("/api/products")
 def api_products():
     return jsonify(load("recommendations.json").get("products", []))
+
+
+@app.route("/api/changelog")
+def api_changelog():
+    return jsonify(load("changelog.json") if (DATA_DIR / "changelog.json").exists() else [])
 
 
 # ── API — actions ─────────────────────────────────────────────────────────────
@@ -179,7 +228,7 @@ def api_enhance(handle):
     product = get_product(handle)
     report  = get_report(handle)
     if not product:
-        return jsonify({"success": False, "error": f"Product '{handle}' not found"}), 404
+        return jsonify({"success": False, "error": "Product not found — run pipeline first"}), 404
     try:
         from src.llm_enhancer import enhance_product
         enhanced = enhance_product(product, report.get("issues", []) if report else [])
@@ -192,10 +241,7 @@ def api_enhance(handle):
 def api_apply(handle):
     data     = request.get_json()
     enhanced = data.get("enhanced")
-    
-    products_data = load("products.json")
-    product = next((p for p in products_data.get("products", []) if p["handle"] == handle), None)
-    
+    product  = get_product(handle)
     if not product or not enhanced:
         return jsonify({"success": False, "error": "Missing product or enhanced data"}), 400
     try:
@@ -204,56 +250,105 @@ def api_apply(handle):
         
         if result.get("success"):
             import re
-            from src.analyzer import build_report
-            from src.ai_perception import generate_perception
+            # Update local products.json so rescore works on new data
+            products_data = load("products.json")
+            for p in products_data["products"]:
+                if p["handle"] == handle:
+                    p["title"] = enhanced.get("title", p["title"])
+                    if "descriptionHtml" in enhanced:
+                        p["descriptionHtml"] = enhanced["descriptionHtml"]
+                        clean = re.sub(r'<[^>]+>', ' ', p["descriptionHtml"])
+                        p["descriptionPlain"] = re.sub(r'\s+', ' ', clean).strip()
+                        p["descriptionWordCount"] = len(p["descriptionPlain"].split())
+                    p["tags"] = enhanced.get("tags", p["tags"])
+                    if "seo" in enhanced:
+                        p["seo"] = enhanced["seo"]
+                    break
+            save_data("products.json", products_data)
             
-            # 1. Update product locally
-            product["title"] = enhanced.get("title", product["title"])
-            product["descriptionHtml"] = enhanced.get("descriptionHtml", product.get("descriptionHtml", ""))
-            
-            desc_plain = re.sub(r'<[^>]+>', ' ', product["descriptionHtml"])
-            desc_plain = re.sub(r'\s+', ' ', desc_plain).strip()
-            product["descriptionPlain"] = desc_plain
-            product["descriptionWordCount"] = len(desc_plain.split()) if desc_plain else 0
-            
-            product["tags"] = enhanced.get("tags", product.get("tags", []))
-            product["seo"] = enhanced.get("seo", product.get("seo", {}))
-            
-            save("products.json", products_data)
-            
-            # 2. Re-run Gemini perception for this product
-            new_perception = generate_perception(product)
-            
-            percep_data = load("perception.json")
-            percep_data["perceptions"] = [
-                new_perception if p["handle"] == handle else p
-                for p in percep_data.get("perceptions", [])
-            ]
-            
-            # Recalculate avg retrieval score
-            n = len(percep_data["perceptions"])
-            avg_ret = sum(p["aiPerception"]["retrievalScore"] for p in percep_data["perceptions"]) / n if n else 0
-            percep_data["meta"]["avgRetrievalScore"] = round(avg_ret, 1)
-            percep_data["meta"]["storeVisibility"] = "HIGH" if avg_ret >= 75 else "MEDIUM" if avg_ret >= 50 else "LOW"
-            percep_data["summary"]["ambiguousProducts"] = sum(1 for p in percep_data["perceptions"] if p["aiPerception"]["isAmbiguous"])
-            
-            save("perception.json", percep_data)
-            
-            # 3. Rebuild full store report and recommendations
-            policy_report = load("policy_report.json")
-            trust_report  = load("trust_report.json")
-            
-            report = build_report(products_data, policy_report, trust_report, percep_data["meta"])
-            save("report.json", report)
-            
-            # build_report calls recommend_for_store inside, which returns recommendations data, but 
-            # wait, build_report in src/analyzer.py returns just the report. 
-            # we need to also rebuild recommendations.
-            from src.recommender import recommend_for_store
-            recs = recommend_for_store(report, percep_data)
-            save("recommendations.json", recs)
-            
+        invalidate_cache()
         return jsonify(result)
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/undo/<handle>", methods=["POST"])
+def api_undo(handle):
+    """Revert the last applied change for this product."""
+    try:
+        from src.shopify_writer import undo_last_change
+        result = undo_last_change(handle)
+        
+        if result.get("success"):
+            # Update local products.json
+            products_data = load("products.json")
+            reverted = result["revertedTo"]
+            for p in products_data["products"]:
+                if p["handle"] == handle:
+                    p["title"] = reverted.get("title", p["title"])
+                    if "description" in reverted:
+                        p["descriptionPlain"] = reverted["description"]
+                        p["descriptionHtml"] = f"<p>{reverted['description']}</p>"
+                        p["descriptionWordCount"] = len(reverted["description"].split())
+                    p["tags"] = reverted.get("tags", p["tags"])
+                    break
+            save_data("products.json", products_data)
+
+        invalidate_cache()
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/rescore/<handle>", methods=["POST"])
+def api_rescore(handle):
+    """Re-run analyzer for a single product after changes are applied."""
+    product = get_product(handle)
+    if not product:
+        return jsonify({"success": False, "error": "Product not found"}), 404
+    try:
+        from src.analyzer      import analyze_product
+        from src.ai_perception import generate_perception
+        from src.recommender   import recommend_for_product, recommend_for_store
+
+        # 1. Analyze single product
+        new_report     = analyze_product(product)
+        new_perception = generate_perception(product)
+
+        # 2. Update report.json and recalculate averages
+        report = load("report.json")
+        report["products"] = [new_report if p["handle"] == handle else p for p in report.get("products", [])]
+        
+        scores = [p["score"] for p in report["products"]]
+        avg    = round(sum(scores) / len(scores), 1) if scores else 0
+        report["reportMeta"]["avgQualityScore"] = avg
+        report["reportMeta"]["storeGrade"]      = "A" if avg >= 80 else "B" if avg >= 60 else "C" if avg >= 40 else "F"
+        
+        # 3. Update perception.json and recalculate averages
+        percep = load("perception.json")
+        percep["perceptions"] = [new_perception if p["handle"] == handle else p for p in percep.get("perceptions", [])]
+        
+        rets    = [p["aiPerception"]["retrievalScore"] for p in percep["perceptions"]]
+        avg_ret = round(sum(rets) / len(rets), 1) if rets else 0
+        percep["meta"]["avgRetrievalScore"] = avg_ret
+        percep["meta"]["storeVisibility"]   = "HIGH" if avg_ret >= 75 else "MEDIUM" if avg_ret >= 50 else "LOW"
+        percep["summary"]["ambiguousProducts"] = sum(1 for p in percep["perceptions"] if p["aiPerception"]["isAmbiguous"])
+        
+        # 4. Rebuild recommendations.json for the whole store
+        new_recs = recommend_for_store(report, percep)
+        
+        # Save all
+        save_data("report.json", report)
+        save_data("perception.json", percep)
+        save_data("recommendations.json", new_recs)
+
+        invalidate_cache()
+        return jsonify({
+            "success":    True,
+            "newScore":   new_report["score"],
+            "newGrade":   new_report["grade"],
+            "newIssues":  new_report["totalIssues"],
+        })
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 
@@ -262,11 +357,10 @@ def api_apply(handle):
 def api_upload_image(handle):
     product = get_product(handle)
     if not product:
-        return jsonify({"success": False, "error": f"Product '{handle}' not found"}), 404
+        return jsonify({"success": False, "error": "Product not found"}), 404
     if "image" not in request.files:
-        return jsonify({"success": False, "error": "No image file in request"}), 400
-    file   = request.files["image"]
-    result = None
+        return jsonify({"success": False, "error": "No image in request"}), 400
+    file = request.files["image"]
     try:
         from src.image_handler import handle_image_upload
         result = handle_image_upload(
@@ -275,9 +369,9 @@ def api_upload_image(handle):
             file_bytes=file.read(),
             filename=file.filename,
         )
+        return jsonify(result)
     except Exception as e:
-        result = {"success": False, "errors": [str(e)], "warnings": [], "info": {}}
-    return jsonify(result)
+        return jsonify({"success": False, "error": str(e)}), 500
 
 
 @app.route("/api/rerun-pipeline", methods=["POST"])
@@ -288,38 +382,44 @@ def api_rerun():
         from src.ai_perception import generate_perception
         from src.checks.faq_policy    import check_faq_and_policies
         from src.checks.trust_signals import check_store_trust
+        from src.checks.query_simulator    import simulate_queries
+        from src.checks.competitor_baseline import generate_competitive_context
+        from src.recommender   import recommend_for_store
         from datetime import datetime, timezone
 
-        products_data = fetch_products()
-        policy_report = check_faq_and_policies()
-        trust_report  = check_store_trust(products_data["products"])
-        perceptions   = [generate_perception(p) for p in products_data["products"]]
-        n             = len(perceptions)
-        avg_ret       = sum(p["aiPerception"]["retrievalScore"] for p in perceptions) / n if n else 0
-        perc_output   = {
+        products_data  = fetch_products()
+        policy_report  = check_faq_and_policies()
+        trust_report   = check_store_trust(products_data["products"])
+        query_sim      = simulate_queries(products_data["products"])
+        perceptions    = [generate_perception(p) for p in products_data["products"]]
+        n              = len(perceptions)
+        avg_ret        = sum(p["aiPerception"]["retrievalScore"] for p in perceptions) / n if n else 0
+        perc_out       = {
             "meta": {
                 "generatedAt":       datetime.now(timezone.utc).isoformat(),
                 "productsProcessed": n,
                 "avgRetrievalScore": round(avg_ret, 1),
                 "storeVisibility":   "HIGH" if avg_ret >= 75 else "MEDIUM" if avg_ret >= 50 else "LOW",
             },
-            "summary": {
-                "ambiguousProducts": sum(1 for p in perceptions if p["aiPerception"]["isAmbiguous"]),
-            },
+            "summary": {"ambiguousProducts": sum(1 for p in perceptions if p["aiPerception"]["isAmbiguous"])},
             "perceptions": perceptions,
         }
-        report = build_report(products_data, policy_report, trust_report, perc_output["meta"])
+        report = build_report(products_data, policy_report, trust_report, perc_out["meta"])
+        recs   = recommend_for_store(report, perc_out)
+        competitive = generate_competitive_context(
+            report["reportMeta"]["avgQualityScore"], avg_ret, products_data["products"]
+        )
 
         for fname, data in [
-            ("products.json",     products_data),
-            ("policy_report.json", policy_report),
-            ("trust_report.json",  trust_report),
-            ("report.json",        report),
-            ("perception.json",    perc_output),
+            ("products.json", products_data), ("policy_report.json", policy_report),
+            ("trust_report.json", trust_report), ("query_simulation.json", query_sim),
+            ("perception.json", perc_out), ("report.json", report),
+            ("recommendations.json", recs), ("competitive_context.json", competitive),
         ]:
-            save(fname, data)
+            save_data(fname, data)
 
-        return jsonify({"success": True, "message": "Full pipeline re-run complete."})
+        invalidate_cache()
+        return jsonify({"success": True, "message": "Full re-analysis complete."})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 
@@ -330,7 +430,6 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=int(os.getenv("FLASK_PORT", 5000)))
     a = ap.parse_args()
-    print(f"\n  AI Representation Optimizer Dashboard")
-    print(f"  Store: {STORE}.myshopify.com")
+    print(f"\n  AI Representation Optimizer — {STORE}.myshopify.com")
     print(f"  http://localhost:{a.port}\n")
     app.run(debug=True, port=a.port)

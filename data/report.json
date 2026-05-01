@@ -1,28 +1,28 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-05-01T16:01:00.727883+00:00",
+    "generatedAt": "2026-05-01T17:38:01.671799+00:00",
     "store": "together-stack",
-    "productsAnalyzed": 30,
+    "productsAnalyzed": 32,
     "rulesApplied": 23,
-    "avgQualityScore": 82.7,
+    "avgQualityScore": 84.3,
     "storeGrade": "A"
   },
   "summary": {
     "scoreDistribution": {
-      "excellent": 17,
-      "good": 13,
+      "excellent": 20,
+      "good": 12,
       "poor": 0,
       "critical": 0
     },
     "severityCounts": {
-      "LOW": 52,
+      "LOW": 49,
       "HIGH": 21,
-      "MEDIUM": 6
+      "MEDIUM": 5
     },
     "topIssues": [
       {
         "code": "SKU_MISSING",
-        "count": 30
+        "count": 32
       },
       {
         "code": "IMAGE_MISSING",
@@ -30,15 +30,19 @@
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
-        "count": 16
+        "count": 14
       },
       {
         "code": "SEO_TITLE_MISSING",
-        "count": 5
+        "count": 2
       },
       {
         "code": "SEO_DESC_MISSING",
-        "count": 5
+        "count": 2
+      },
+      {
+        "code": "PRODUCT_TYPE_MISSING",
+        "count": 2
       },
       {
         "code": "DESCRIPTION_NO_USE_CASE",
@@ -65,33 +69,33 @@
       {
         "code": "SKU_MISSING",
         "severity": "LOW",
-        "affectedProducts": 30,
-        "totalScoreLift": 90,
+        "affectedProducts": 32,
+        "totalScoreLift": 96,
         "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant.",
         "effort": "LOW"
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
         "severity": "LOW",
-        "affectedProducts": 16,
-        "totalScoreLift": 48,
+        "affectedProducts": 14,
+        "totalScoreLift": 42,
         "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
         "effort": "LOW"
       },
       {
         "code": "SEO_TITLE_MISSING",
         "severity": "MEDIUM",
-        "affectedProducts": 5,
-        "totalScoreLift": 40,
+        "affectedProducts": 2,
+        "totalScoreLift": 16,
         "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
         "effort": "LOW"
       },
       {
-        "code": "SEO_DESC_MISSING",
-        "severity": "LOW",
-        "affectedProducts": 5,
-        "totalScoreLift": 15,
-        "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+        "code": "PRODUCT_TYPE_MISSING",
+        "severity": "MEDIUM",
+        "affectedProducts": 2,
+        "totalScoreLift": 16,
+        "conversionImpact": "Missing product type weakens secondary classification signals.",
         "effort": "LOW"
       },
       {
@@ -111,6 +115,14 @@
         "effort": "LOW"
       },
       {
+        "code": "SEO_DESC_MISSING",
+        "severity": "LOW",
+        "affectedProducts": 2,
+        "totalScoreLift": 6,
+        "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
+        "effort": "LOW"
+      },
+      {
         "code": "DESCRIPTION_NO_USE_CASE",
         "severity": "LOW",
         "affectedProducts": 1,
@@ -120,8 +132,8 @@
       }
     ]
   },
-  "narrative": "This store scores 82.7/100 (Grade A) on AI representation quality across 30 products. AI agents are missing approximately 24% of potential search traffic due to weak metadata signals (retrieval score: 76.2/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
-  "compositeScore": 76.0,
+  "narrative": "This store scores 84.3/100 (Grade A) on AI representation quality across 32 products. AI agents are missing approximately 23% of potential search traffic due to weak metadata signals (retrieval score: 77.4/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 32/32 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
+  "compositeScore": 77.0,
   "compositeGrade": "B",
   "policyReport": {
     "policyScore": 40,
@@ -162,33 +174,34 @@
         "code": "TRUST_BRAND_INCONSISTENT",
         "severity": "MEDIUM",
         "field": "trust",
-        "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
+        "message": "Store has 13 different vendor names. AI agents prefer stores with consistent brand identity.",
         "evidence": [
-          "stepup",
+          "herbalroots",
           "shadeon",
-          "soundwave",
-          "glowup",
-          "brandless"
+          "techzone",
+          "bagstore",
+          "soundwave"
         ]
       }
     ],
     "details": {
       "vendorAnalysis": {
         "uniqueVendors": [
-          "stepup",
+          "herbalroots",
           "shadeon",
+          "techzone",
+          "bagstore",
           "soundwave",
-          "glowup",
+          "stepup",
+          "together_stack",
+          "beltcraft",
+          "technova",
           "brandless",
           "leatherlux",
-          "technova",
-          "beltcraft",
-          "bagstore",
-          "techzone",
-          "herbalroots",
+          "glowup",
           "fabricindia"
         ],
-        "vendorCount": 12,
+        "vendorCount": 13,
         "missingVendor": 0
       },
       "socialProof": {
@@ -196,7 +209,7 @@
         "coveragePercent": 3
       },
       "guarantees": {
-        "productsWithGuarantee": 6
+        "productsWithGuarantee": 7
       },
       "certifications": {
         "productsWithCertification": 5
@@ -205,7 +218,7 @@
         "found": true
       },
       "imageAltText": {
-        "totalImages": 13,
+        "totalImages": 15,
         "missingAlt": 0,
         "coveragePercent": 100
       }
@@ -214,7 +227,7 @@
   "competitiveContext": {
     "primaryCategory": "apparel",
     "categoryLabel": "Apparel & Accessories",
-    "storeScore": 82.7,
+    "storeScore": 84.3125,
     "scorePercentile": 90,
     "scorePercentileLabel": "Top 10% — excellent AI representation",
     "retrievalPercentile": 75,
@@ -225,7 +238,7 @@
     "gapsVsBestInClass": [
       {
         "metric": "Image coverage",
-        "store": "33% of products",
+        "store": "38% of products",
         "benchmark": "95%+ of products"
       }
     ],
@@ -270,25 +283,23 @@
     },
     {
       "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Neem Face Cream",
-      "score": 68,
+      "title": "Ayurvedic Face Cream with Neem & Turmeric",
+      "score": 79,
       "grade": "B",
-      "totalIssues": 5,
+      "totalIssues": 3,
       "issueSummary": {
-        "LOW": 3,
-        "HIGH": 1,
-        "MEDIUM": 1
+        "LOW": 2,
+        "HIGH": 1
       },
       "issues": [
         {
           "code": "TAGS_NOT_IN_DESCRIPTION",
           "severity": "LOW",
           "field": "tags",
-          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
           "evidence": [
-            "herbal",
             "moisturiser",
-            "skincare"
+            "paraben-free"
           ],
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
@@ -299,22 +310,6 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",
@@ -369,52 +364,14 @@
     },
     {
       "handle": "leather-handbag-women-tan",
-      "title": "Premium Leather Handbag - Tan",
-      "score": 68,
-      "grade": "B",
-      "totalIssues": 5,
+      "title": "Women's Tan Leather Handbag",
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
       "issueSummary": {
-        "LOW": 3,
-        "HIGH": 1,
-        "MEDIUM": 1
+        "LOW": 1
       },
       "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "premium",
-            "tan",
-            "women"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
-        },
         {
           "code": "SKU_MISSING",
           "severity": "LOW",
@@ -470,27 +427,15 @@
     },
     {
       "handle": "canvas-sneakers-white",
-      "title": "Canvas Sneakers - White",
-      "score": 68,
-      "grade": "B",
-      "totalIssues": 5,
+      "title": "Unisex White Canvas Sneakers",
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
-        "LOW": 3,
         "HIGH": 1,
-        "MEDIUM": 1
+        "LOW": 1
       },
       "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "shoes",
-            "white"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
@@ -498,22 +443,6 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",
@@ -689,7 +618,7 @@
     },
     {
       "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Heavy Padded Winter Jacket with Detachable Hood - Navy Blue",
+      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
       "score": 79,
       "grade": "B",
       "totalIssues": 3,
@@ -702,12 +631,11 @@
           "code": "TAGS_NOT_IN_DESCRIPTION",
           "severity": "LOW",
           "field": "tags",
-          "message": "4 tag(s) have no match in description — inconsistent metadata signal.",
+          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
           "evidence": [
-            "men",
+            "men's outerwear",
             "navy blue",
-            "outerwear",
-            "travel wear"
+            "winter wear"
           ],
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
@@ -1321,6 +1249,73 @@
           "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
           "evidence": null,
           "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "earrings-stainless-steel",
+      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
+      "score": 89,
+      "grade": "A",
+      "totalIssues": 2,
+      "issueSummary": {
+        "MEDIUM": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "PRODUCT_TYPE_MISSING",
+          "severity": "MEDIUM",
+          "field": "productType",
+          "message": "Product Type field is empty — weakens secondary classification signal.",
+          "evidence": null,
+          "conversionImpact": "Missing product type weakens secondary classification signals."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "shorts-blue-men-boxers",
+      "title": "Men's Blue Short Trousers - Comfortable Boxers",
+      "score": 74,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "MEDIUM": 1,
+        "HIGH": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "PRODUCT_TYPE_MISSING",
+          "severity": "MEDIUM",
+          "field": "productType",
+          "message": "Product Type field is empty — weakens secondary classification signal.",
+          "evidence": null,
+          "conversionImpact": "Missing product type weakens secondary classification signals."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SKU_MISSING",
