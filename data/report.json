@@ -1,23 +1,23 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-05-01T14:45:25.462922+00:00",
+    "generatedAt": "2026-05-01T16:01:00.727883+00:00",
     "store": "together-stack",
     "productsAnalyzed": 30,
     "rulesApplied": 23,
-    "avgQualityScore": 82.1,
+    "avgQualityScore": 82.7,
     "storeGrade": "A"
   },
   "summary": {
     "scoreDistribution": {
-      "excellent": 16,
-      "good": 14,
+      "excellent": 17,
+      "good": 13,
       "poor": 0,
       "critical": 0
     },
     "severityCounts": {
-      "LOW": 55,
+      "LOW": 52,
       "HIGH": 21,
-      "MEDIUM": 7
+      "MEDIUM": 6
     },
     "topIssues": [
       {
@@ -30,19 +30,19 @@
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
-        "count": 17
+        "count": 16
       },
       {
         "code": "SEO_TITLE_MISSING",
-        "count": 6
+        "count": 5
       },
       {
         "code": "SEO_DESC_MISSING",
-        "count": 6
+        "count": 5
       },
       {
         "code": "DESCRIPTION_NO_USE_CASE",
-        "count": 2
+        "count": 1
       },
       {
         "code": "CONTRADICTION_SEASON",
@@ -73,24 +73,24 @@
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
         "severity": "LOW",
-        "affectedProducts": 17,
-        "totalScoreLift": 51,
+        "affectedProducts": 16,
+        "totalScoreLift": 48,
         "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
         "effort": "LOW"
       },
       {
         "code": "SEO_TITLE_MISSING",
         "severity": "MEDIUM",
-        "affectedProducts": 6,
-        "totalScoreLift": 48,
+        "affectedProducts": 5,
+        "totalScoreLift": 40,
         "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
         "effort": "LOW"
       },
       {
         "code": "SEO_DESC_MISSING",
         "severity": "LOW",
-        "affectedProducts": 6,
-        "totalScoreLift": 18,
+        "affectedProducts": 5,
+        "totalScoreLift": 15,
         "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality.",
         "effort": "LOW"
       },
@@ -113,15 +113,15 @@
       {
         "code": "DESCRIPTION_NO_USE_CASE",
         "severity": "LOW",
-        "affectedProducts": 2,
-        "totalScoreLift": 6,
+        "affectedProducts": 1,
+        "totalScoreLift": 3,
         "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'.",
         "effort": "LOW"
       }
     ]
   },
-  "narrative": "This store scores 82.1/100 (Grade A) on AI representation quality across 30 products. AI agents are missing approximately 24% of potential search traffic due to weak metadata signals (retrieval score: 75.8/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
-  "compositeScore": 75.7,
+  "narrative": "This store scores 82.7/100 (Grade A) on AI representation quality across 30 products. AI agents are missing approximately 24% of potential search traffic due to weak metadata signals (retrieval score: 76.2/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 30/30 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
+  "compositeScore": 76.0,
   "compositeGrade": "B",
   "policyReport": {
     "policyScore": 40,
@@ -164,29 +164,29 @@
         "field": "trust",
         "message": "Store has 12 different vendor names. AI agents prefer stores with consistent brand identity.",
         "evidence": [
-          "glowup",
-          "brandless",
           "stepup",
-          "techzone",
-          "shadeon"
+          "shadeon",
+          "soundwave",
+          "glowup",
+          "brandless"
         ]
       }
     ],
     "details": {
       "vendorAnalysis": {
         "uniqueVendors": [
+          "stepup",
+          "shadeon",
+          "soundwave",
           "glowup",
           "brandless",
-          "stepup",
-          "techzone",
-          "shadeon",
-          "bagstore",
-          "herbalroots",
-          "beltcraft",
+          "leatherlux",
           "technova",
-          "fabricindia",
-          "soundwave",
-          "leatherlux"
+          "beltcraft",
+          "bagstore",
+          "techzone",
+          "herbalroots",
+          "fabricindia"
         ],
         "vendorCount": 12,
         "missingVendor": 0
@@ -214,7 +214,7 @@
   "competitiveContext": {
     "primaryCategory": "apparel",
     "categoryLabel": "Apparel & Accessories",
-    "storeScore": 82.13333333333334,
+    "storeScore": 82.7,
     "scorePercentile": 90,
     "scorePercentileLabel": "Top 10% — excellent AI representation",
     "retrievalPercentile": 75,
@@ -527,35 +527,15 @@
     },
     {
       "handle": "bluetooth-portable-speaker-mini",
-      "title": "Budget Bluetooth Mini Speaker",
-      "score": 65,
-      "grade": "B",
-      "totalIssues": 6,
+      "title": "Portable Bluetooth Speaker 10W",
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
       "issueSummary": {
-        "LOW": 4,
         "HIGH": 1,
-        "MEDIUM": 1
+        "LOW": 1
       },
       "issues": [
-        {
-          "code": "DESCRIPTION_NO_USE_CASE",
-          "severity": "LOW",
-          "field": "description",
-          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
-          "evidence": null,
-          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
-        },
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "budget",
-            "waterproof"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
         {
           "code": "IMAGE_MISSING",
           "severity": "HIGH",
@@ -563,22 +543,6 @@
           "message": "No product images — vision AI agents cannot verify this product.",
           "evidence": null,
           "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SEO_TITLE_MISSING",
-          "severity": "MEDIUM",
-          "field": "seo",
-          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
-          "evidence": null,
-          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
-        },
-        {
-          "code": "SEO_DESC_MISSING",
-          "severity": "LOW",
-          "field": "seo",
-          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
-          "evidence": null,
-          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",
