@@ -1,10 +1,10 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-05-01T23:07:59.846475",
+  "fetchedAt": "2026-05-02T02:02:37.858334",
   "apiVersion": "2026-04",
-  "productCount": 32,
+  "productCount": 33,
   "categoryStats": {
-    "usingTaxonomy": 24,
+    "usingTaxonomy": 25,
     "usingProductType": 8,
     "noCategory": 0
   },
@@ -64,11 +64,11 @@
     {
       "id": "gid://shopify/Product/9480666972408",
       "handle": "ayurvedic-face-cream-neem",
-      "title": "Ayurvedic Face Cream with Neem & Turmeric",
-      "descriptionHtml": "<p>This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. Free from parabens and harsh chemicals, it's suitable for all skin types. Dermatologist tested, this 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions.</p>",
-      "descriptionPlain": "This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. Free from parabens and harsh chemicals, it's suitable for all skin types. Dermatologist tested, this 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions.",
-      "descriptionWordCount": 61,
-      "productType": "Face Cream, Skincare",
+      "title": "Natural Face Cream with Neem & Turmeric",
+      "descriptionHtml": "<p>This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. It is free from parabens and harsh chemicals, making it suitable for all skin types. The 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions. Dermatologist tested, this cream provides long-lasting hydration and nourishment to the skin.</p>",
+      "descriptionPlain": "This Ayurvedic face cream is formulated with natural neem extract, turmeric, and aloe vera to deeply moisturize and heal skin. It is free from parabens and harsh chemicals, making it suitable for all skin types. The 50g jar of cream is perfect for daily use, applying twice for best results. Made with herbal ingredients, it's ideal for those seeking natural skincare solutions. Dermatologist tested, this cream provides long-lasting hydration and nourishment to the skin.",
+      "descriptionWordCount": 74,
+      "productType": "Face Cream",
       "vendor": "HerbalRoots",
       "status": "ACTIVE",
       "tags": [
@@ -83,8 +83,8 @@
         "turmeric"
       ],
       "category": {
-        "name": "Face Cream, Skincare",
-        "fullName": "Face Cream, Skincare",
+        "name": "Face Cream",
+        "fullName": "Face Cream",
         "source": "productType"
       },
       "price": 349.0,
@@ -103,11 +103,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Natural Ayurvedic Face Cream with Neem & Turmeric",
-        "description": "Discover our dermatologist-tested, paraben-free Ayurvedic face cream with neem, turmeric, and aloe vera for natural skincare"
+        "title": "Ayurvedic Face Cream with Neem & Turmeric - Natural Skincare",
+        "description": "Discover the power of Ayurvedic skincare with our natural face cream, featuring neem, turmeric, and aloe vera. Perfect for all skin types."
       },
       "createdAt": "2026-04-19T05:41:28Z",
-      "updatedAt": "2026-05-01T16:24:01Z"
+      "updatedAt": "2026-05-01T20:29:58Z"
     },
     {
       "id": "gid://shopify/Product/9480667005176",
@@ -116,7 +116,7 @@
       "descriptionHtml": "<p>The SoundWave ProSound X1 features 40mm dynamic drivers and active noise cancellation for an immersive audio experience. Designed with soft memory-foam ear cushions and a foldable frame, these headphones are perfect for long office hours or daily commutes on the Delhi Metro. The Bluetooth 5.0 connectivity ensures a stable link for students attending online classes or professionals in noisy environments. With a 30-hour battery life, it lasts through long travel days across India. To maintain, wipe the cushions with a dry microfiber cloth after use. Includes a 3.5mm aux cable and a protective carrying pouch for easy storage in your laptop bag.</p>",
       "descriptionPlain": "The SoundWave ProSound X1 features 40mm dynamic drivers and active noise cancellation for an immersive audio experience. Designed with soft memory-foam ear cushions and a foldable frame, these headphones are perfect for long office hours or daily commutes on the Delhi Metro. The Bluetooth 5.0 connectivity ensures a stable link for students attending online classes or professionals in noisy environments. With a 30-hour battery life, it lasts through long travel days across India. To maintain, wipe the cushions with a dry microfiber cloth after use. Includes a 3.5mm aux cable and a protective carrying pouch for easy storage in your laptop bag.",
       "descriptionWordCount": 102,
-      "productType": "Headphones, Wireless",
+      "productType": "Wireless Headphones",
       "vendor": "SoundWave",
       "status": "ACTIVE",
       "tags": [
@@ -136,9 +136,14 @@
       },
       "price": 2499.0,
       "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/case_b20e3268-48c7-41c0-8dfa-3e3d920b292f.webp?v=1777666315",
+          "altText": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
       "imagesMissingAlt": 0,
       "variants": [
         {
@@ -150,11 +155,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "SoundWave ProSound X1 ANC Wireless Headphones - 30hr Battery",
-        "description": "Experience immersive sound with SoundWave ProSound X1 ANC headphones. Features 30-hour battery, memory foam cushions, and foldable design. Perfect for office use."
+        "title": "SoundWave ProSound X1 Wireless Noise-Cancelling Headphones",
+        "description": "Experience immersive audio with the SoundWave ProSound X1 wireless noise-cancelling headphones, featuring 40mm drivers and 30-hour battery life."
       },
       "createdAt": "2026-04-19T05:41:29Z",
-      "updatedAt": "2026-05-01T13:14:44Z"
+      "updatedAt": "2026-05-01T20:12:26Z"
     },
     {
       "id": "gid://shopify/Product/9480667037944",
@@ -355,20 +360,23 @@
     {
       "id": "gid://shopify/Product/9480667169016",
       "handle": "mens-leather-belt-brown",
-      "title": "Men's Genuine Leather Belt - Brown",
-      "descriptionHtml": "<p>A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. Width: 35mm. Available in sizes 28-44 inches. Perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability.</p>",
-      "descriptionPlain": "A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. Width: 35mm. Available in sizes 28-44 inches. Perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability.",
-      "descriptionWordCount": 38,
-      "productType": "Belt, Leather, Men",
+      "title": "Men's Brown Leather Belt",
+      "descriptionHtml": "<p>A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. The belt is 35mm wide and available in sizes 28-44 inches, perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability, ensuring a long-lasting accessory. Made from high-quality materials, this belt is a great addition to any man's wardrobe.</p>",
+      "descriptionPlain": "A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. The belt is 35mm wide and available in sizes 28-44 inches, perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability, ensuring a long-lasting accessory. Made from high-quality materials, this belt is a great addition to any man's wardrobe.",
+      "descriptionWordCount": 60,
+      "productType": "Leather Belt",
       "vendor": "BeltCraft",
       "status": "ACTIVE",
       "tags": [
-        "belt",
-        "brown",
-        "formal",
+        "brown leather",
+        "cowhide leather",
+        "durable belt",
+        "formal accessory",
+        "full-grain leather",
         "genuine leather",
-        "leather",
-        "men"
+        "leather belt",
+        "men's belt",
+        "stainless steel buckle"
       ],
       "category": {
         "name": "Belts",
@@ -391,11 +399,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Men's Brown Leather Belt - Formal & Semi-Formal Accessory",
+        "description": "Discover our high-quality men's brown leather belt, made from full-grain cowhide leather with a polished stainless steel pin buckle. Perfect for formal and semi-formal occasions."
       },
       "createdAt": "2026-04-19T05:41:35Z",
-      "updatedAt": "2026-04-20T06:00:12Z"
+      "updatedAt": "2026-05-01T20:28:21Z"
     },
     {
       "id": "gid://shopify/Product/9480667201784",
@@ -1053,16 +1061,17 @@
     {
       "id": "gid://shopify/Product/9480667627768",
       "handle": "laptop-gaming-pro",
-      "title": "TechZone Pro Gaming Laptop - Intel i9, RTX 4060, 32GB RAM, 1TB SSD",
-      "descriptionHtml": "<p>This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor and 32GB RAM, engineered for Indian gamers and creative professionals. The 1TB SSD stores heavy titles like Valorant, while the RTX 4060 graphics card delivers high frame rates for seamless gameplay. Designed for university students in hostels and home offices, it includes a dual-fan cooling system built for tropical Indian summers. This portable computer handles intensive video editing and multitasking during long monsoon gaming sessions. To maintain peak performance, clean the vents monthly with compressed air and avoid using on soft surfaces like beds or cushions.</p>",
-      "descriptionPlain": "This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor and 32GB RAM, engineered for Indian gamers and creative professionals. The 1TB SSD stores heavy titles like Valorant, while the RTX 4060 graphics card delivers high frame rates for seamless gameplay. Designed for university students in hostels and home offices, it includes a dual-fan cooling system built for tropical Indian summers. This portable computer handles intensive video editing and multitasking during long monsoon gaming sessions. To maintain peak performance, clean the vents monthly with compressed air and avoid using on soft surfaces like beds or cushions.",
-      "descriptionWordCount": 98,
-      "productType": "Gaming, Laptop",
+      "title": "Gaming Laptop - Intel i9, RTX 4060",
+      "descriptionHtml": "<p>This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor, 32GB RAM, and 1TB SSD, engineered for Indian gamers and creative professionals. The RTX 4060 graphics card delivers high frame rates for seamless gameplay. Built with a durable aluminum body and dual-fan cooling system, it handles intensive video editing and multitasking. Suitable for university students in hostels and home offices, it's perfect for long monsoon gaming sessions. Technical specs include a 15.6-inch Full HD display, backlit keyboard, and Wi-Fi 6 connectivity.</p>",
+      "descriptionPlain": "This TechZone Pro Gaming Laptop features a powerful Intel Core i9 processor, 32GB RAM, and 1TB SSD, engineered for Indian gamers and creative professionals. The RTX 4060 graphics card delivers high frame rates for seamless gameplay. Built with a durable aluminum body and dual-fan cooling system, it handles intensive video editing and multitasking. Suitable for university students in hostels and home offices, it's perfect for long monsoon gaming sessions. Technical specs include a 15.6-inch Full HD display, backlit keyboard, and Wi-Fi 6 connectivity.",
+      "descriptionWordCount": 83,
+      "productType": "Gaming Laptop",
       "vendor": "TechZone",
       "status": "ACTIVE",
       "tags": [
-        "electronics",
         "gaming laptop",
+        "gaming pc",
+        "high performance laptop",
         "intel i9",
         "portable computer",
         "rtx 4060",
@@ -1096,11 +1105,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "TechZone i9 Gaming Laptop - RTX 4060, 32GB RAM, 1TB SSD",
-        "description": "Upgrade your gaming with the TechZone i9 laptop. Featuring RTX 4060 graphics and 32GB RAM, it is perfect for Indian students and editors. Shop now for high performance."
+        "title": "TechZone Pro Gaming Laptop - Intel i9, RTX 4060",
+        "description": "Discover the TechZone Pro Gaming Laptop, featuring Intel Core i9, 32GB RAM, 1TB SSD, and RTX 4060 graphics. Perfect for gamers and creative professionals."
       },
       "createdAt": "2026-04-19T05:41:51Z",
-      "updatedAt": "2026-05-01T14:02:09Z"
+      "updatedAt": "2026-05-01T19:53:15Z"
     },
     {
       "id": "gid://shopify/Product/9480667660536",
@@ -1198,16 +1207,17 @@
     {
       "id": "gid://shopify/Product/9480667726072",
       "handle": "wireless-mouse-ergonomic",
-      "title": "TechNova Wireless Ergonomic Mouse with 2.4GHz USB Receiver - Black",
-      "descriptionHtml": "<p>Upgrade your home office setup with the TechNova Wireless Ergonomic Mouse, designed for long hours of productivity. This lightweight plastic mouse features a 1600 DPI optical sensor for precision and a 2.4GHz USB dongle for a lag-free 10-meter range. Powered by a single AA battery, it offers up to 12 months of battery life, making it ideal for Indian professionals and students working from home. The contoured shape reduces wrist strain during long coding sessions or virtual meetings. To maintain, simply wipe with a dry microfiber cloth. Perfect for daily office use, university assignments, or casual browsing on Windows and macOS laptops.</p>",
-      "descriptionPlain": "Upgrade your home office setup with the TechNova Wireless Ergonomic Mouse, designed for long hours of productivity. This lightweight plastic mouse features a 1600 DPI optical sensor for precision and a 2.4GHz USB dongle for a lag-free 10-meter range. Powered by a single AA battery, it offers up to 12 months of battery life, making it ideal for Indian professionals and students working from home. The contoured shape reduces wrist strain during long coding sessions or virtual meetings. To maintain, simply wipe with a dry microfiber cloth. Perfect for daily office use, university assignments, or casual browsing on Windows and macOS laptops.",
-      "descriptionWordCount": 102,
-      "productType": "Accessories",
+      "title": "Ergonomic Wireless Computer Mouse 2.4GHz",
+      "descriptionHtml": "<p>Upgrade your home office with the TechNova Wireless Ergonomic Mouse, featuring a 1600 DPI optical sensor, 2.4GHz USB dongle for lag-free 10-meter range, and contoured shape for reduced wrist strain. Made from lightweight plastic, it's powered by a single AA battery, offering up to 12 months of battery life. Compatible with Windows and macOS laptops, ideal for professionals, students, and gamers. Technical specs include 1600 DPI resolution, 2.4GHz frequency, and 10-meter wireless range. Perfect for daily office use, university assignments, or casual browsing.</p>",
+      "descriptionPlain": "Upgrade your home office with the TechNova Wireless Ergonomic Mouse, featuring a 1600 DPI optical sensor, 2.4GHz USB dongle for lag-free 10-meter range, and contoured shape for reduced wrist strain. Made from lightweight plastic, it's powered by a single AA battery, offering up to 12 months of battery life. Compatible with Windows and macOS laptops, ideal for professionals, students, and gamers. Technical specs include 1600 DPI resolution, 2.4GHz frequency, and 10-meter wireless range. Perfect for daily office use, university assignments, or casual browsing.",
+      "descriptionWordCount": 83,
+      "productType": "Computer Mouse",
       "vendor": "TechNova",
       "status": "ACTIVE",
       "tags": [
         "computer hardware",
         "ergonomic accessories",
+        "gaming mouse",
         "laptop peripherals",
         "office electronics",
         "tech gadgets",
@@ -1222,9 +1232,14 @@
       },
       "price": 799.0,
       "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/case_dd28a4c8-5217-48e7-adcd-4372bbdf40f4.webp?v=1777667271",
+          "altText": "Ergonomic Wireless Computer Mouse 2.4GHz"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
       "imagesMissingAlt": 0,
       "variants": [
         {
@@ -1236,11 +1251,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "TechNova Wireless Ergonomic Mouse for Office & Home Use",
-        "description": "Boost productivity with the TechNova Wireless Ergonomic Mouse. Features 1600 DPI, 12-month battery life, and 2.4GHz lag-free connection. Perfect for Indian pros."
+        "title": "TechNova Ergonomic Wireless Mouse 2.4GHz - Long-Lasting Battery Life",
+        "description": "Discover the TechNova Wireless Ergonomic Mouse, designed for comfort and productivity. With 1600 DPI optical sensor and 2.4GHz wireless technology, it's perfect for home office, gaming, and more."
       },
       "createdAt": "2026-04-19T05:41:55Z",
-      "updatedAt": "2026-04-30T19:46:48Z"
+      "updatedAt": "2026-05-01T20:27:51Z"
     },
     {
       "id": "gid://shopify/Product/9480667758840",
@@ -1440,19 +1455,24 @@
     {
       "id": "gid://shopify/Product/9480667889912",
       "handle": "polarised-sunglasses-black",
-      "title": "Polarised Sunglasses - Black",
-      "descriptionHtml": "<p>Style meets function with our polarised black sunglasses. Reduces glare from reflective surfaces. UV400 protection. Lightweight TR90 frame. Includes hard case and cleaning cloth. Suitable for driving, fishing, and outdoor sports.</p>",
-      "descriptionPlain": "Style meets function with our polarised black sunglasses. Reduces glare from reflective surfaces. UV400 protection. Lightweight TR90 frame. Includes hard case and cleaning cloth. Suitable for driving, fishing, and outdoor sports.",
-      "descriptionWordCount": 31,
-      "productType": "Sunglasses, Polarised",
+      "title": "Polarised Black Sunglasses",
+      "descriptionHtml": "<p>Experience style and function with our polarised black sunglasses, featuring UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Ideal for driving, fishing, and outdoor sports, these sunglasses reduce glare from reflective surfaces. With a durable design and comfortable fit, they are perfect for everyday wear. The polarised lenses provide crystal-clear vision, while the TR90 frame ensures flexibility and resistance to stress. Whether you're hitting the road or the trails, our polarised black sunglasses have got you covered.</p>",
+      "descriptionPlain": "Experience style and function with our polarised black sunglasses, featuring UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Ideal for driving, fishing, and outdoor sports, these sunglasses reduce glare from reflective surfaces. With a durable design and comfortable fit, they are perfect for everyday wear. The polarised lenses provide crystal-clear vision, while the TR90 frame ensures flexibility and resistance to stress. Whether you're hitting the road or the trails, our polarised black sunglasses have got you covered.",
+      "descriptionWordCount": 81,
+      "productType": "Polarised Sunglasses",
       "vendor": "ShadeOn",
       "status": "ACTIVE",
       "tags": [
-        "black",
-        "outdoor",
-        "polarised",
-        "sunglasses",
-        "uv400"
+        "black sunglasses",
+        "driving sunglasses",
+        "fishing sunglasses",
+        "lightweight sunglasses",
+        "mens sunglasses",
+        "outdoor accessories",
+        "polarised sunglasses",
+        "sports sunglasses",
+        "uv400 protection",
+        "womens sunglasses"
       ],
       "category": {
         "name": "Sunglasses",
@@ -1475,32 +1495,32 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": null,
-        "description": null
+        "title": "Polarised Black Sunglasses | UV400 Protection | Lightweight Frames",
+        "description": "Discover our polarised black sunglasses with UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Perfect for driving, fishing, and outdoor sports."
       },
       "createdAt": "2026-04-19T05:42:00Z",
-      "updatedAt": "2026-04-20T06:00:13Z"
+      "updatedAt": "2026-05-01T20:23:30Z"
     },
     {
       "id": "gid://shopify/Product/9488641425656",
       "handle": "earrings-stainless-steel",
-      "title": "Stainless Steel Hypoallergenic Earrings for Women & Men",
-      "descriptionHtml": "<p>These high-quality stainless steel earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic materials, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.</p>",
-      "descriptionPlain": "These high-quality stainless steel earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic materials, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.",
-      "descriptionWordCount": 72,
-      "productType": "",
+      "title": "Stainless Steel Hypoallergenic Earrings",
+      "descriptionHtml": "<p>These high-quality earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic stainless steel, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.</p>",
+      "descriptionPlain": "These high-quality earrings are designed for everyday wear, formal events, or as a gift. Made from hypoallergenic stainless steel, they ensure durability and comfort. The stainless steel construction provides resistance to corrosion and tarnishing, making them suitable for those with sensitive skin. With a sleek design and secure closure mechanism, they can be dressed up or down to suit any occasion. Technical specs include a stainless steel base and polished finish.",
+      "descriptionWordCount": 71,
+      "productType": "Stainless Earrings",
       "vendor": "together_stack",
       "status": "ACTIVE",
       "tags": [
-        "Corrosion Resistant Earrings",
-        "Everyday Wear Earrings",
+        "Corrosion Resistant",
+        "Everyday Wear",
         "Formal Earrings",
-        "Gift Ideas for Her",
-        "Gift Ideas for Him",
+        "Gift Ideas",
         "Hypoallergenic Jewelry",
+        "Jewelry for Sensitive Ears",
         "Sensitive Skin Friendly",
         "Stainless Steel Earrings",
-        "Tarnish Free Earrings"
+        "Tarnish Free"
       ],
       "category": {
         "name": "Earrings",
@@ -1528,32 +1548,32 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Stainless Steel Earrings - Hypoallergenic & Durable Jewelry",
-        "description": "Discover high-quality stainless steel earrings for women and men, designed for everyday wear and formal events. Hypoallergenic and durable, these earrings are perfect for sensitive skin."
+        "title": "Hypoallergenic Stainless Steel Earrings for Sensitive Ears",
+        "description": "Discover durable and comfortable stainless steel earrings, perfect for everyday wear or formal events. Hypoallergenic and corrosion-resistant."
       },
       "createdAt": "2026-05-01T16:31:20Z",
-      "updatedAt": "2026-05-01T16:41:44Z"
+      "updatedAt": "2026-05-01T20:01:31Z"
     },
     {
       "id": "gid://shopify/Product/9488644702456",
       "handle": "shorts-blue-men-boxers",
-      "title": "Men's Blue Short Trousers - Comfortable Boxers",
-      "descriptionHtml": "<p>These men's blue short trousers are designed for comfort and style. Made from a blend of 80% cotton and 20% polyester, they feature an elastic waistband and a relaxed fit. Perfect for lounging around or as a base layer, these shorts are versatile and durable. With a length of 17 inches and a waist size range of 30-36 inches, they are suitable for a variety of body types. The breathable fabric and soft texture ensure a comfortable wear experience, making them ideal for daily use.</p>",
-      "descriptionPlain": "These men's blue short trousers are designed for comfort and style. Made from a blend of 80% cotton and 20% polyester, they feature an elastic waistband and a relaxed fit. Perfect for lounging around or as a base layer, these shorts are versatile and durable. With a length of 17 inches and a waist size range of 30-36 inches, they are suitable for a variety of body types. The breathable fabric and soft texture ensure a comfortable wear experience, making them ideal for daily use.",
-      "descriptionWordCount": 85,
-      "productType": "",
+      "title": "Men's Cotton Short Trousers",
+      "descriptionHtml": "<p>These men's blue short trousers are designed for comfort and style, made from a blend of 80% cotton and 20% polyester. They feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer. The breathable fabric and soft texture ensure a comfortable wear experience, ideal for daily use, outdoor activities, or athletic wear. With a length of 17 inches and a waist size range of 30-36 inches, they suit various body types. Technical specs include a cotton-rich fabric blend for durability and a versatile design for multiple use-cases, making them suitable for both casual and athletic wear.</p>",
+      "descriptionPlain": "These men's blue short trousers are designed for comfort and style, made from a blend of 80% cotton and 20% polyester. They feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer. The breathable fabric and soft texture ensure a comfortable wear experience, ideal for daily use, outdoor activities, or athletic wear. With a length of 17 inches and a waist size range of 30-36 inches, they suit various body types. Technical specs include a cotton-rich fabric blend for durability and a versatile design for multiple use-cases, making them suitable for both casual and athletic wear.",
+      "descriptionWordCount": 102,
+      "productType": "Short Trousers",
       "vendor": "together_stack",
       "status": "ACTIVE",
       "tags": [
-        "base layer",
-        "blue boxers",
-        "comfortable clothing",
-        "cotton blend",
-        "elastic waistband",
-        "loungewear",
-        "men's shorts",
-        "relaxed fit",
-        "short trousers"
+        "athletic wear shorts",
+        "breathable clothing",
+        "comfortable loungewear",
+        "cotton blend shorts",
+        "daily wear shorts",
+        "elastic waistband shorts",
+        "men's short trousers",
+        "relaxed fit trousers",
+        "soft texture shorts"
       ],
       "category": {
         "name": "Short Trousers",
@@ -1576,11 +1596,68 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Men's Blue Short Trousers - Comfortable Boxers for Daily Wear",
-        "description": "Discover our men's blue short trousers, designed for comfort and style. Made from a cotton blend, they feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer."
+        "title": "Men's Cotton Blend Short Trousers - Comfortable & Breathable",
+        "description": "Discover men's cotton blend short trousers designed for comfort and style. Featuring an elastic waistband, relaxed fit, and breathable fabric, perfect for lounging, outdoor activities, or athletic wear."
       },
       "createdAt": "2026-05-01T16:47:16Z",
-      "updatedAt": "2026-05-01T16:48:43Z"
+      "updatedAt": "2026-05-01T19:46:33Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488746709240",
+      "handle": "nothing-phone-1-case-black-silicone",
+      "title": "Nothing Phone 1 Black Silicone Case",
+      "descriptionHtml": "<p>Protect your Nothing Phone 1 with this high-quality black silicone case. Made from durable and flexible silicone, this case provides excellent shock absorption and scratch protection. It's designed to fit your phone perfectly, with precise cutouts for all buttons and ports. The case is also easy to install and remove, making it a great choice for anyone looking for a reliable and stylish phone accessory. With its sleek design and durable construction, this case is perfect for everyday use.</p>",
+      "descriptionPlain": "Protect your Nothing Phone 1 with this high-quality black silicone case. Made from durable and flexible silicone, this case provides excellent shock absorption and scratch protection. It's designed to fit your phone perfectly, with precise cutouts for all buttons and ports. The case is also easy to install and remove, making it a great choice for anyone looking for a reliable and stylish phone accessory. With its sleek design and durable construction, this case is perfect for everyday use.",
+      "descriptionWordCount": 79,
+      "productType": "Phone Case",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "Black Phone Case",
+        "Black Silicone Case",
+        "Mobile Phone Case",
+        "Nothing Phone 1 Case",
+        "Nothing Phone Accessory",
+        "Phone Accessories",
+        "Phone Protection",
+        "Silicone Accessory",
+        "Silicone Phone Case"
+      ],
+      "category": {
+        "name": "Mobile Phone Cases",
+        "fullName": "Electronics > Communications > Telephony > Mobile & Smart Phone Accessories > Mobile Phone Cases",
+        "source": "taxonomy"
+      },
+      "price": 120.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/case.webp?v=1777666036",
+          "altText": "Nothing Phone 1 Black Silicone Case"
+        },
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/case_e0f4175d-b9f3-44df-ac59-f680edc70d4c.webp?v=1777666090",
+          "altText": "Nothing Phone 1 Black Silicone Case"
+        }
+      ],
+      "imageCount": 2,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48306595234040",
+          "sku": "",
+          "price": 120.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Nothing Phone 1 Black Silicone Case - Protective Phone Accessory",
+        "description": "Get the best protection for your Nothing Phone 1 with our high-quality black silicone case. Durable, flexible, and easy to install, this case is perfect for everyday use."
+      },
+      "createdAt": "2026-05-01T20:05:27Z",
+      "updatedAt": "2026-05-01T20:08:10Z"
     }
   ]
 }

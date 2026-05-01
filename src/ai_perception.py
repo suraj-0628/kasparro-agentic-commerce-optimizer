@@ -5,7 +5,9 @@ from datetime import datetime
 # ── Type vocabulary ───────────────────────────────────────────────────────────
 
 TYPE_VOCABULARY = [
-    {"type": "T-Shirt / Top",         "keywords": ["tshirt", "t-shirt", "shirt", "top", "kurta", "blouse"]},
+    {"type": "Apparel / Top",          "keywords": ["tshirt", "t-shirt", "shirt", "top", "kurta", "blouse", "polo", "vest"]},
+    {"type": "Apparel / Bottom",       "keywords": ["trouser", "pant", "short", "shorts", "jeans", "denim", "legging", "pajama"]},
+    {"type": "Apparel / Underwear",    "keywords": ["boxer", "underwear", "brief", "trunk", "lingerie", "innerwear"]},
     {"type": "Jacket / Outerwear",    "keywords": ["jacket", "hoodie", "sweatshirt", "coat", "outerwear"]},
     {"type": "Footwear",              "keywords": ["shoe", "sneaker", "sandal", "boot", "slipper", "flip flop"]},
     {"type": "Skincare",              "keywords": ["cream", "serum", "moisturiser", "face wash", "sunscreen", "lotion"]},
@@ -66,9 +68,26 @@ def classify_type(p, signals):
         if matches:
             scores.append({"type": entry["type"], "matches": matches, "score": len(matches)})
 
+    # NEW: Tie-breaker logic using Product Type
+    pt = (p.get("productType") or "").lower()
+    if pt:
+        for s in scores:
+            if any(kw in pt for kw in s["matches"]):
+                s["score"] += 10 # Give a massive boost to the one that matches productType
+    
     scores.sort(key=lambda x: -x["score"])
 
     if not scores:
+        pt = (p.get("productType") or "").strip()
+        if pt:
+            # Fallback: if we have a product type but no keyword match, trust the type!
+            return {
+                "detected":          pt,
+                "confidence":        1.0,
+                "ambiguous":         False,
+                "alternatives":      [],
+                "matched_keywords":  []
+            }
         return {"detected": "Unknown", "confidence": 0, "ambiguous": False, "alternatives": [], "matched_keywords": []}
 
     top    = scores[0]
@@ -89,10 +108,19 @@ def classify_type(p, signals):
         base_conf += 0.10
 
     confidence = min(0.98, base_conf)
+    
+    # NEW: Massive boost if a clear Shopify Product Type is set
+    pt = (p.get("productType") or "").lower()
+    if pt and any(kw in pt for kw in top["matches"]):
+        confidence = 1.0
+    elif pt: # Even if keywords don't match, if PT is set, it's a strong signal
+        confidence = max(confidence, 0.90)
+        
     ambiguous  = bool(runner and runner["score"] >= top["score"])
+    if confidence >= 0.9: ambiguous = False
 
     return {
-        "detected":          top["type"],
+        "detected":          top["type"] if top["score"] > 0 else pt,
         "confidence":        round(confidence, 2),
         "ambiguous":         ambiguous,
         "alternatives":      [runner["type"]] if runner else [],
@@ -115,6 +143,10 @@ def score_retrieval(signals):
 # ── Ambiguity detector ────────────────────────────────────────────────────────
 
 def detect_ambiguity(p, type_result, signals):
+    # NEW: If we have very high confidence, suppress ambiguity warnings
+    if type_result["confidence"] >= 0.90:
+        return []
+
     flags = []
     text = (p.get("title", "") + " " + p.get("descriptionPlain", "")).lower()
 

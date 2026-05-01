@@ -263,6 +263,22 @@ def api_apply(handle):
                     p["tags"] = enhanced.get("tags", p["tags"])
                     if "seo" in enhanced:
                         p["seo"] = enhanced["seo"]
+                    if enhanced.get("product_type"):
+                        new_type = str(enhanced["product_type"]).strip()
+                        p["productType"] = new_type
+                        p["category"] = {
+                            "name":     new_type,
+                            "fullName": new_type,
+                            "source":   "productType"
+                        }
+                    
+                    # Update SKUs locally
+                    suggested_variants = enhanced.get("variants")
+                    if isinstance(suggested_variants, list):
+                        for ev in suggested_variants:
+                            for v in p.get("variants", []):
+                                if v.get("id") == ev.get("id"):
+                                    v["sku"] = ev.get("sku", "")
                     break
             save_data("products.json", products_data)
             
@@ -272,32 +288,6 @@ def api_apply(handle):
         return jsonify({"success": False, "error": str(e)}), 500
 
 
-@app.route("/api/undo/<handle>", methods=["POST"])
-def api_undo(handle):
-    """Revert the last applied change for this product."""
-    try:
-        from src.shopify_writer import undo_last_change
-        result = undo_last_change(handle)
-        
-        if result.get("success"):
-            # Update local products.json
-            products_data = load("products.json")
-            reverted = result["revertedTo"]
-            for p in products_data["products"]:
-                if p["handle"] == handle:
-                    p["title"] = reverted.get("title", p["title"])
-                    if "description" in reverted:
-                        p["descriptionPlain"] = reverted["description"]
-                        p["descriptionHtml"] = f"<p>{reverted['description']}</p>"
-                        p["descriptionWordCount"] = len(reverted["description"].split())
-                    p["tags"] = reverted.get("tags", p["tags"])
-                    break
-            save_data("products.json", products_data)
-
-        invalidate_cache()
-        return jsonify(result)
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
 
 
 @app.route("/api/rescore/<handle>", methods=["POST"])
@@ -342,6 +332,22 @@ def api_rescore(handle):
         save_data("perception.json", percep)
         save_data("recommendations.json", new_recs)
 
+        # Trigger Fast-Simulation for search visibility
+        from src.checks.query_simulator import simulate_queries
+        from src.analyzer import build_report
+        products_data = load("products.json")
+        policy_report = load("policy_report.json")
+        trust_report = load("trust_report.json")
+        perc_data = load("perception.json")
+        
+        # Rerun simulation
+        new_qsim = simulate_queries(products_data["products"])
+        save_data("query_simulation.json", new_qsim)
+        
+        # REBUILD REPORT so UI sees the new visibility %
+        new_report_full = build_report(products_data, policy_report, trust_report, perc_data["meta"])
+        save_data("report.json", new_report_full)
+
         invalidate_cache()
         return jsonify({
             "success":    True,
@@ -369,6 +375,21 @@ def api_upload_image(handle):
             file_bytes=file.read(),
             filename=file.filename,
         )
+        
+        if result.get("success"):
+            # Instant Sync: Update local products.json
+            products_data = load("products.json")
+            for p in products_data["products"]:
+                if p["handle"] == handle:
+                    p["imageCount"] = p.get("imageCount", 0) + 1
+                    p["hasImages"] = True
+                    # Add a placeholder image URL so UI doesn't look empty
+                    if not p.get("images"): p["images"] = []
+                    p["images"].append({"url": "https://cdn.shopify.com/s/files/placeholder.jpg", "altText": "Newly Uploaded"})
+                    break
+            save_data("products.json", products_data)
+            invalidate_cache()
+
         return jsonify(result)
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
@@ -420,6 +441,136 @@ def api_rerun():
 
         invalidate_cache()
         return jsonify({"success": True, "message": "Full re-analysis complete."})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/fix-sku/<handle>", methods=["POST"])
+def api_fix_sku(handle):
+    try:
+        from src.llm_enhancer import generate_sku
+        from src.shopify_writer import update_variant_sku
+        
+        products_data = load("products.json")
+        product = next((p for p in products_data["products"] if p["handle"] == handle), None)
+        if not product:
+            return jsonify({"success": False, "error": "Product not found"}), 404
+        
+        results = []
+        for variant in product.get("variants", []):
+            if not variant.get("sku"):
+                new_sku = generate_sku(product["title"], product.get("vendor", "GEN"), variant.get("title", ""))
+                res = update_variant_sku(variant["id"], new_sku)
+                if res.get("success"):
+                    variant["sku"] = new_sku
+                results.append(res)
+        
+        save_data("products.json", products_data)
+        return jsonify({"success": True, "results": results})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/fix-policy-health", methods=["POST"])
+def api_fix_policies():
+    try:
+        from src.llm_enhancer import generate_policy
+        from src.shopify_writer import update_shop_policy, create_page
+        
+        policy_report = load("policy_report.json")
+        issues = policy_report.get("issues", [])
+        
+        # Mapping UI issues to GQL types for legal policies
+        legal_map = {
+            "RETURN_POLICY":   "REFUND_POLICY",
+            "PRIVACY_POLICY":  "PRIVACY_POLICY",
+            "SHIPPING_POLICY": "SHIPPING_POLICY",
+            "TERMS_OF_SERVICE": "TERMS_OF_SERVICE"
+        }
+        
+        results = []
+        for issue in issues:
+            code = issue.get("code", "")
+            m_type = issue.get("type")
+            
+            # Fallback for older reports missing the 'type' field
+            if not m_type:
+                if "RETURN" in code: m_type = "RETURN_POLICY"
+                elif "SHIPPING" in code: m_type = "SHIPPING_POLICY"
+                elif "PRIVACY" in code: m_type = "PRIVACY_POLICY"
+                elif "FAQ" in code: m_type = "FAQ"
+            
+            if not m_type: continue
+            
+            # Handle Legal Policies
+            if m_type in legal_map:
+                gql_type = legal_map[m_type]
+                html = generate_policy(m_type, STORE)
+                res  = update_shop_policy(gql_type, html)
+                results.append({"type": m_type, "res": res})
+            
+            # Handle FAQ (Creating as a Page)
+            elif m_type == "FAQ":
+                from src.llm_enhancer import generate_policy # Reusing for FAQ
+                html = generate_policy("FAQ", STORE)
+                res  = create_page("Frequently Asked Questions", html)
+                results.append({"type": "FAQ", "res": res})
+        
+        return jsonify({"success": True, "results": results})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/fix-trust-gaps", methods=["POST"])
+def api_fix_trust():
+    try:
+        from src.llm_enhancer import generate_about_us
+        from src.shopify_writer import create_page
+        
+        # Find if 'About Us' is missing
+        trust_report = load("trust_report.json")
+        is_about_missing = any("About Us" in i["message"] for i in trust_report.get("issues", []))
+        
+        if is_about_missing:
+            html = generate_about_us(STORE, "General E-commerce")
+            res  = create_page("About Us", html)
+            return jsonify({"success": True, "result": res})
+        
+        return jsonify({"success": True, "message": "No major trust gaps found or already fixed."})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
+@app.route("/api/fix-store-wide", methods=["POST"])
+def api_fix_all():
+    """
+    MASTER FIX: Orchestrates Policies, Trust, and all SKUs in one go.
+    """
+    try:
+        results = {"policies": None, "trust": None, "skus": []}
+        
+        # 1. Fix Policies
+        results["policies"] = api_fix_policies().get_json()
+        
+        # 2. Fix Trust
+        results["trust"] = api_fix_trust().get_json()
+        
+        # 3. Fix ALL SKUs across entire catalog
+        from src.llm_enhancer import generate_sku
+        from src.shopify_writer import update_variant_sku
+        products_data = load("products.json")
+        
+        sku_count = 0
+        for product in products_data.get("products", []):
+            for variant in product.get("variants", []):
+                if not variant.get("sku"):
+                    new_sku = generate_sku(product["title"], product.get("vendor", "GEN"), variant.get("title", ""))
+                    update_variant_sku(variant["id"], new_sku)
+                    sku_count += 1
+        
+        results["sku_summary"] = f"Generated {sku_count} SKUs across store."
+        
+        return jsonify({"success": True, "results": results})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 

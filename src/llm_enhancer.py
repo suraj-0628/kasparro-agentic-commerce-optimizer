@@ -28,31 +28,33 @@ GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemin
 def build_prompt(product: dict, issues: list) -> str:
     issues_str = "\n".join([f"- {i['code']}: {i['message']}" for i in issues])
     
-    return f"""
-You are an expert e-commerce catalog optimizer for AI Shopping Agents.
-Your goal is to rewrite the product data to maximize discoverability and trust for LLMs.
-
-PRODUCT DATA:
-Title: {product['title']}
-Current Description: {product.get('descriptionPlain', 'Missing')}
-Category: {product.get('category', 'General')}
-Tags: {', '.join(product.get('tags', []))}
-
-IDENTIFIED ISSUES:
-{issues_str}
-
-TASK:
-1. Rewrite the Title to be descriptive (50-70 chars), including category and key attribute.
-2. Expand the Description to 100-150 words. Include technical specs, materials, and use-cases.
-3. Suggest 8-10 high-intent Tags.
-4. Provide an SEO Title and Meta Description.
-5. Provide a 1-sentence summary of what you improved.
-
-OUTPUT FORMAT:
-Return ONLY a valid JSON object with these keys: 
-"title", "description", "tags" (array), "seo_title", "seo_description", "changes_summary".
-Do NOT include markdown formatting or extra text.
-"""
+    prompt = "You are an expert e-commerce catalog optimizer for AI Shopping Agents.\n"
+    prompt += "Your goal is to rewrite the product data to maximize discoverability and trust for LLMs.\n\n"
+    prompt += "PRODUCT DATA:\n"
+    prompt += f"Title: {product.get('title', 'Unknown')}\n"
+    prompt += f"Current Description: {product.get('descriptionPlain', 'Missing')}\n"
+    prompt += f"Category: {str(product.get('category', 'General'))}\n"
+    prompt += f"Tags: {', '.join(product.get('tags', []))}\n"
+    prompt += "Variants: " + json.dumps([{'id': v['id'], 'title': v.get('title'), 'sku': v.get('sku')} for v in product.get('variants', [])]) + "\n\n"
+    
+    prompt += "IDENTIFIED ISSUES:\n"
+    prompt += issues_str + "\n\n"
+    
+    prompt += "TASK:\n"
+    prompt += "1. Rewrite the Title to be descriptive (50-70 chars), including category and key attribute.\n"
+    prompt += "2. Expand the Description to 100-150 words. Include technical specs, materials, and use-cases.\n"
+    prompt += "3. Suggest 8-10 high-intent Tags.\n"
+    prompt += "4. Suggest a standard Shopify Product Type (max 3 words).\n"
+    prompt += "5. Generate a unique, clean SKU for every variant (Format: BRAND-PART-ATTR).\n"
+    prompt += "6. Provide an SEO Title and Meta Description.\n"
+    prompt += "7. Provide a 1-sentence summary of how you resolved ALL identified issues.\n\n"
+    
+    prompt += "OUTPUT FORMAT:\n"
+    prompt += "Return ONLY a valid JSON object with these keys: \n"
+    prompt += '"title", "description", "tags" (array), "product_type", "variants" (array of {id: string, sku: string}), "seo_title", "seo_description", "changes_summary".\n'
+    prompt += "Do NOT include markdown formatting or extra text."
+    
+    return prompt
 
 # ── Gemini API caller ─────────────────────────────────────────────────────────
 
@@ -202,6 +204,8 @@ def enhance_product(product: dict, issues: list) -> dict:
         return {
             "handle":          product["handle"],
             "title":           improved.get("title", product["title"]),
+            "product_type":    improved.get("product_type", product.get("productType", "")),
+            "variants":        improved.get("variants", []),
             "descriptionHtml": desc_html,
             "tags":            improved.get("tags", product.get("tags", [])),
             "seo": {
@@ -213,10 +217,64 @@ def enhance_product(product: dict, issues: list) -> dict:
                 "title":       product["title"],
                 "description": product.get("descriptionPlain", ""),
                 "tags":        product.get("tags", []),
+                "product_type": product.get("productType", ""),
             },
         }
     except Exception as e:
         return {"handle": product["handle"], "error": str(e)}
+
+
+# ── Global Fixers (SKU, Policy, Trust) ────────────────────────────────────────
+
+def generate_sku(product_title: str, vendor: str, variant_title: str = "") -> str:
+    """Generates a structured SKU using LLM."""
+    prompt = f"""
+    Generate a unique, clean, 8-12 character SKU for this product:
+    Title: {product_title}
+    Vendor: {vendor}
+    Variant: {variant_title}
+
+    Format: [VNDR]-[PART]-[ATTR] (all caps)
+    Return ONLY a JSON object with key "sku".
+    """
+    try:
+        res = call_llm(prompt)
+        return res.get("sku", "SKU-GEN-ERR")
+    except:
+        return "SKU-GEN-ERR"
+
+
+def generate_policy(policy_type: str, store_name: str) -> str:
+    """Generates professional policy content (HTML)."""
+    prompt = f"""
+    Write a professional, modern {policy_type.replace('_',' ')} for a Shopify store named '{store_name}'.
+    Focus on AI Agent clarity and customer trust.
+    
+    OUTPUT: Valid HTML (using <h2>, <p>, <ul> tags).
+    Return ONLY a JSON object with key "html".
+    """
+    try:
+        res = call_llm(prompt)
+        return res.get("html", "<p>Policy content generation failed.</p>")
+    except:
+        return "<p>Policy content generation failed.</p>"
+
+
+def generate_about_us(store_name: str, niche: str) -> str:
+    """Generates an 'About Us' brand narrative."""
+    prompt = f"""
+    Write a compelling 'About Us' brand narrative for '{store_name}'.
+    Niche: {niche}
+    Goal: Maximize merchant provenance and trust score for AI shopping agents.
+    
+    OUTPUT: Valid HTML.
+    Return ONLY a JSON object with key "html".
+    """
+    try:
+        res = call_llm(prompt)
+        return res.get("html", "<p>About Us generation failed.</p>")
+    except:
+        return "<p>About Us generation failed.</p>"
 
 def enhance_all_products():
     from pathlib import Path

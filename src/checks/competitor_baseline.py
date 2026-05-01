@@ -107,20 +107,37 @@ def detect_primary_category(products: list) -> str:
 # ── Percentile calculator ─────────────────────────────────────────────────────
 
 def get_percentile(score: float, benchmark: dict) -> int:
-    """Returns estimated percentile (0-100) for a given score."""
-    if score >= benchmark.get("p90", 74): return 90
-    if score >= benchmark.get("p75", 64): return 75
-    if score >= benchmark.get("p50", 52): return 50
-    if score >= benchmark.get("p25", 38): return 25
-    return 10
+    """Returns a precise interpolated percentile (0-100) for a given score."""
+    # Data points for interpolation
+    points = [
+        (0, 0),
+        (benchmark.get("p25", 38), 25),
+        (benchmark.get("p50", 52), 50),
+        (benchmark.get("p75", 64), 75),
+        (benchmark.get("p90", 74), 90),
+        (95, 98),  # Elite tier
+        (100, 99)  # Absolute top
+    ]
+    
+    # Linear interpolation
+    for i in range(len(points) - 1):
+        x1, y1 = points[i]
+        x2, y2 = points[i+1]
+        if x1 <= score <= x2:
+            return int(y1 + (y2 - y1) * (score - x1) / (x2 - x1))
+    
+    if score > 100: return 99
+    return 0
 
 
 def get_percentile_label(percentile: int) -> str:
-    if percentile >= 90: return "Top 10% — excellent AI representation"
-    if percentile >= 75: return "Top 25% — above average"
-    if percentile >= 50: return "Average — significant room to improve"
-    if percentile >= 25: return "Below average — at risk of being skipped by AI agents"
-    return "Bottom 25% — critical gaps in AI representation"
+    if percentile >= 98: return "Top 1% — Global AI Leader"
+    if percentile >= 95: return "Top 5% — Elite AI Optimized Store"
+    if percentile >= 90: return "Top 10% — Excellent AI Representation"
+    if percentile >= 75: return "Top 25% — Above Average"
+    if percentile >= 50: return "Average — Significant room to improve"
+    if percentile >= 25: return "Below Average — Risk of being skipped by AI"
+    return "Bottom 25% — Critical gaps"
 
 
 # ── Main comparison function ─────────────────────────────────────────────────

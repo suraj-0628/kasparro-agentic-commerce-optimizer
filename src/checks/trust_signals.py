@@ -115,7 +115,15 @@ def check_store_trust(products: list) -> dict:
             "evidence": f"{missing_vendor} products",
         })
 
-    if len(unique_vendors) > 5:
+    if len(unique_vendors) > 10:
+        issues.append({
+            "code":     "TRUST_MARKETPLACE_SELECTION",
+            "severity": "LOW",
+            "field":    "trust",
+            "message":  f"Store features a diverse selection from {len(unique_vendors)} brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
+            "evidence": list(unique_vendors)[:5],
+        })
+    elif len(unique_vendors) > 5:
         issues.append({
             "code":     "TRUST_BRAND_INCONSISTENT",
             "severity": "MEDIUM",

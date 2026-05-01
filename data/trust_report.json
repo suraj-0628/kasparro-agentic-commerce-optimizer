@@ -1,38 +1,38 @@
 {
-  "trustScore": 92,
+  "trustScore": 97,
   "trustGrade": "A",
   "totalIssues": 1,
   "issues": [
     {
-      "code": "TRUST_BRAND_INCONSISTENT",
-      "severity": "MEDIUM",
+      "code": "TRUST_MARKETPLACE_SELECTION",
+      "severity": "LOW",
       "field": "trust",
-      "message": "Store has 13 different vendor names. AI agents prefer stores with consistent brand identity.",
+      "message": "Store features a diverse selection from 13 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
       "evidence": [
-        "herbalroots",
-        "shadeon",
+        "brandless",
+        "fabricindia",
         "techzone",
-        "bagstore",
-        "soundwave"
+        "shadeon",
+        "beltcraft"
       ]
     }
   ],
   "details": {
     "vendorAnalysis": {
       "uniqueVendors": [
-        "herbalroots",
-        "shadeon",
-        "techzone",
-        "bagstore",
-        "soundwave",
-        "stepup",
-        "together_stack",
-        "beltcraft",
-        "technova",
         "brandless",
-        "leatherlux",
+        "fabricindia",
+        "techzone",
+        "shadeon",
+        "beltcraft",
+        "together_stack",
+        "soundwave",
+        "herbalroots",
+        "bagstore",
         "glowup",
-        "fabricindia"
+        "leatherlux",
+        "technova",
+        "stepup"
       ],
       "vendorCount": 13,
       "missingVendor": 0
@@ -51,7 +51,7 @@
       "found": true
     },
     "imageAltText": {
-      "totalImages": 15,
+      "totalImages": 19,
       "missingAlt": 0,
       "coveragePercent": 100
     }

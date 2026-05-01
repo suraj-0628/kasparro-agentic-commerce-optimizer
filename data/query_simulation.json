@@ -222,7 +222,7 @@
       "topMatches": [
         {
           "handle": "mens-leather-belt-brown",
-          "title": "Men's Genuine Leather Belt - Brown",
+          "title": "Men's Brown Leather Belt",
           "matchScore": 1.0
         },
         {
@@ -246,7 +246,7 @@
         },
         {
           "handle": "polarised-sunglasses-black",
-          "title": "Polarised Sunglasses - Black",
+          "title": "Polarised Black Sunglasses",
           "matchScore": 1.0
         }
       ],
@@ -472,6 +472,11 @@
       "visibilityRate": 0
     },
     "shorts-blue-men-boxers": {
+      "queriesMatched": 0,
+      "queries": [],
+      "visibilityRate": 0
+    },
+    "nothing-phone-1-case-black-silicone": {
       "queriesMatched": 0,
       "queries": [],
       "visibilityRate": 0
