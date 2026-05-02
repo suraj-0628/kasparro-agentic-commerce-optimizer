@@ -1,43 +1,63 @@
 {
   "reportMeta": {
-    "generatedAt": "2026-05-01T20:32:39.632560+00:00",
+    "generatedAt": "2026-05-02T15:02:39.477514+00:00",
     "store": "together-stack",
-    "productsAnalyzed": 33,
+    "productsAnalyzed": 29,
     "rulesApplied": 23,
-    "avgQualityScore": 87.0,
+    "avgQualityScore": 89.5,
     "storeGrade": "A"
   },
   "summary": {
     "scoreDistribution": {
-      "excellent": 26,
-      "good": 7,
+      "excellent": 25,
+      "good": 3,
       "poor": 0,
-      "critical": 0
+      "critical": 1
     },
     "severityCounts": {
-      "LOW": 48,
-      "HIGH": 18,
-      "MEDIUM": 2
+      "LOW": 41,
+      "HIGH": 10,
+      "MEDIUM": 4
     },
     "topIssues": [
       {
         "code": "SKU_MISSING",
-        "count": 33
-      },
-      {
-        "code": "IMAGE_MISSING",
-        "count": 18
+        "count": 28
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
-        "count": 14
+        "count": 11
+      },
+      {
+        "code": "IMAGE_MISSING",
+        "count": 6
       },
       {
         "code": "DESCRIPTION_MISSING_SPECS",
         "count": 2
       },
       {
+        "code": "DESCRIPTION_VAGUE",
+        "count": 2
+      },
+      {
+        "code": "DESCRIPTION_TOO_SHORT",
+        "count": 1
+      },
+      {
         "code": "DESCRIPTION_NO_USE_CASE",
+        "count": 1
+      },
+      {
+        "code": "TAGS_MISSING",
+        "count": 1
+      },
+      {
+        "code": "PRODUCT_TYPE_MISSING",
+        "count": 1
+      },
+      {
+        "code": "SEO_TITLE_MISSING",
         "count": 1
       }
     ],
@@ -45,26 +65,34 @@
       {
         "code": "IMAGE_MISSING",
         "severity": "HIGH",
-        "affectedProducts": 18,
-        "totalScoreLift": 270,
+        "affectedProducts": 6,
+        "totalScoreLift": 90,
         "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products.",
         "effort": "MEDIUM"
       },
       {
         "code": "SKU_MISSING",
         "severity": "LOW",
-        "affectedProducts": 33,
-        "totalScoreLift": 99,
+        "affectedProducts": 28,
+        "totalScoreLift": 84,
         "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant.",
         "effort": "LOW"
       },
       {
         "code": "TAGS_NOT_IN_DESCRIPTION",
         "severity": "LOW",
-        "affectedProducts": 14,
-        "totalScoreLift": 42,
+        "affectedProducts": 11,
+        "totalScoreLift": 33,
         "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence.",
         "effort": "LOW"
+      },
+      {
+        "code": "DESCRIPTION_VAGUE",
+        "severity": "HIGH",
+        "affectedProducts": 2,
+        "totalScoreLift": 30,
+        "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product.",
+        "effort": "MEDIUM"
       },
       {
         "code": "DESCRIPTION_MISSING_SPECS",
@@ -75,6 +103,38 @@
         "effort": "LOW"
       },
       {
+        "code": "DESCRIPTION_TOO_SHORT",
+        "severity": "HIGH",
+        "affectedProducts": 1,
+        "totalScoreLift": 15,
+        "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion.",
+        "effort": "MEDIUM"
+      },
+      {
+        "code": "TAGS_MISSING",
+        "severity": "HIGH",
+        "affectedProducts": 1,
+        "totalScoreLift": 15,
+        "conversionImpact": "No tags = invisible to all keyword-based AI retrieval systems.",
+        "effort": "MEDIUM"
+      },
+      {
+        "code": "PRODUCT_TYPE_MISSING",
+        "severity": "MEDIUM",
+        "affectedProducts": 1,
+        "totalScoreLift": 8,
+        "conversionImpact": "Missing product type weakens secondary classification signals.",
+        "effort": "LOW"
+      },
+      {
+        "code": "SEO_TITLE_MISSING",
+        "severity": "MEDIUM",
+        "affectedProducts": 1,
+        "totalScoreLift": 8,
+        "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted.",
+        "effort": "LOW"
+      },
+      {
         "code": "DESCRIPTION_NO_USE_CASE",
         "severity": "LOW",
         "affectedProducts": 1,
@@ -82,10 +142,56 @@
         "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'.",
         "effort": "LOW"
       }
-    ]
+    ],
+    "allIssues": {
+      "TAGS_NOT_IN_DESCRIPTION": {
+        "count": 11,
+        "severity": "LOW"
+      },
+      "SKU_MISSING": {
+        "count": 28,
+        "severity": "LOW"
+      },
+      "IMAGE_MISSING": {
+        "count": 6,
+        "severity": "HIGH"
+      },
+      "DESCRIPTION_MISSING_SPECS": {
+        "count": 2,
+        "severity": "MEDIUM"
+      },
+      "DESCRIPTION_VAGUE": {
+        "count": 2,
+        "severity": "HIGH"
+      },
+      "DESCRIPTION_TOO_SHORT": {
+        "count": 1,
+        "severity": "HIGH"
+      },
+      "DESCRIPTION_NO_USE_CASE": {
+        "count": 1,
+        "severity": "LOW"
+      },
+      "TAGS_MISSING": {
+        "count": 1,
+        "severity": "HIGH"
+      },
+      "PRODUCT_TYPE_MISSING": {
+        "count": 1,
+        "severity": "MEDIUM"
+      },
+      "SEO_TITLE_MISSING": {
+        "count": 1,
+        "severity": "MEDIUM"
+      },
+      "SEO_DESC_MISSING": {
+        "count": 1,
+        "severity": "LOW"
+      }
+    }
   },
-  "narrative": "This store scores 87.0/100 (Grade A) on AI representation quality across 33 products. AI agents are missing approximately 21% of potential search traffic due to weak metadata signals (retrieval score: 78.5/100 — HIGH). The single highest-ROI fix is 'SKU_MISSING' — affects 33/33 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
-  "compositeScore": 91.6,
+  "narrative": "This store scores 89.5/100 (Grade A) on AI representation quality across 29 products. AI agents are missing approximately 20% of potential search traffic due to weak metadata signals (retrieval score: 80.1/100 — HIGH). The single highest-ROI fix is 'IMAGE_MISSING' — affects 6/29 products and is the most common reason AI agents skip this store's catalogue. Fixing the top 3 issues store-wide would significantly improve AI discoverability without requiring any new products or design changes.",
+  "compositeScore": 90.1,
   "compositeGrade": "A",
   "policyReport": {
     "policyScore": 100,
@@ -103,67 +209,73 @@
         "found": true
       },
       "faq": {
-        "wordCount": 575,
+        "wordCount": 254,
         "found": true,
-        "pageCount": 3
+        "pageCount": 1
       }
     },
-    "pagesChecked": 8
+    "pagesChecked": 3
   },
   "trustReport": {
-    "trustScore": 97,
+    "trustScore": 82,
     "trustGrade": "A",
-    "totalIssues": 1,
+    "totalIssues": 2,
     "issues": [
       {
         "code": "TRUST_MARKETPLACE_SELECTION",
         "severity": "LOW",
         "field": "trust",
-        "message": "Store features a diverse selection from 13 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
+        "message": "Store features a diverse selection from 12 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
         "evidence": [
-          "brandless",
+          "soundwave",
+          "glowup",
+          "bagstore",
           "fabricindia",
-          "techzone",
-          "shadeon",
-          "beltcraft"
+          "shadeon"
         ]
+      },
+      {
+        "code": "TRUST_NO_SOCIAL_PROOF",
+        "severity": "HIGH",
+        "field": "trust",
+        "message": "No product descriptions mention reviews, ratings, or customer testimonials. Social proof is a top-3 AI trust signal for e-commerce.",
+        "evidence": null
       }
     ],
     "details": {
       "vendorAnalysis": {
         "uniqueVendors": [
-          "brandless",
-          "fabricindia",
-          "techzone",
-          "shadeon",
-          "beltcraft",
-          "together_stack",
           "soundwave",
-          "herbalroots",
-          "bagstore",
           "glowup",
+          "bagstore",
+          "fabricindia",
+          "shadeon",
+          "brandless",
           "leatherlux",
+          "herbalroots",
+          "techzone",
           "technova",
-          "stepup"
+          "stepup",
+          "together_stack"
         ],
-        "vendorCount": 13,
+        "vendorCount": 12,
         "missingVendor": 0
       },
       "socialProof": {
-        "productsWithSocialProof": 1,
-        "coveragePercent": 3
+        "productsWithSocialProof": 0,
+        "coveragePercent": 0
       },
       "guarantees": {
-        "productsWithGuarantee": 7
+        "productsWithGuarantee": 4
       },
       "certifications": {
-        "productsWithCertification": 5
+        "productsWithCertification": 4
       },
       "indiaTrustSignals": {
-        "found": true
+        "found": false
       },
       "imageAltText": {
-        "totalImages": 19,
+        "totalImages": 26,
         "missingAlt": 0,
         "coveragePercent": 100
       }
@@ -172,10 +284,10 @@
   "competitiveContext": {
     "primaryCategory": "apparel",
     "categoryLabel": "Apparel & Accessories",
-    "storeScore": 86.96969696969697,
-    "scorePercentile": 94,
-    "scorePercentileLabel": "Top 10% — Excellent AI Representation",
-    "retrievalPercentile": 85,
+    "storeScore": 89.48275862068965,
+    "scorePercentile": 95,
+    "scorePercentileLabel": "Top 5% — Elite AI Optimized Store",
+    "retrievalPercentile": 87,
     "industryMedian": 52,
     "industryTop25": 64,
     "industryTop10": 74,
@@ -183,7 +295,7 @@
     "gapsVsBestInClass": [
       {
         "metric": "Image coverage",
-        "store": "45% of products",
+        "store": "79% of products",
         "benchmark": "95%+ of products"
       }
     ],
@@ -197,16 +309,16 @@
   "products": [
     {
       "handle": "cotton-kurta-shirt-blue",
-      "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
+      "title": "Men's Cotton Kurta Shirt",
       "tags": [
-        "casual",
         "cotton",
         "ethnic wear",
         "festive",
         "indian fashion",
         "indigo blue",
         "kurta shirt",
-        "men"
+        "men's apparel",
+        "traditional wear"
       ],
       "score": 94,
       "grade": "A",
@@ -222,7 +334,7 @@
           "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
           "evidence": [
             "ethnic wear",
-            "men"
+            "festive"
           ],
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
         },
@@ -361,179 +473,6 @@
       ]
     },
     {
-      "handle": "smart-fitness-watch-black",
-      "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
-      "tags": [
-        "gps",
-        "gym",
-        "office",
-        "silicone",
-        "smartwatch",
-        "tech-gadget",
-        "unisex",
-        "waterproof"
-      ],
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
-      "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
-      },
-      "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "5 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "gps",
-            "gym",
-            "tech-gadget",
-            "unisex",
-            "waterproof"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "canvas-sneakers-white",
-      "title": "Unisex White Canvas Sneakers",
-      "tags": [
-        "canvas sneakers",
-        "casual footwear",
-        "cushioned insole",
-        "daily wear",
-        "hand-washable",
-        "lightweight shoes",
-        "unisex shoes",
-        "vulcanised rubber sole",
-        "white sneakers"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "bluetooth-portable-speaker-mini",
-      "title": "Portable Bluetooth Speaker 10W",
-      "tags": [
-        "bluetooth speaker",
-        "budget speaker",
-        "compact speaker",
-        "gym speaker",
-        "outdoor speaker",
-        "portable speaker",
-        "travel speaker",
-        "waterproof speaker",
-        "wireless speaker"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "mens-leather-belt-brown",
-      "title": "Men's Brown Leather Belt",
-      "tags": [
-        "brown leather",
-        "cowhide leather",
-        "durable belt",
-        "formal accessory",
-        "full-grain leather",
-        "genuine leather",
-        "leather belt",
-        "men's belt",
-        "stainless steel buckle"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
       "handle": "cotton-tshirt-pack-3",
       "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
       "tags": [
@@ -650,58 +589,6 @@
       ]
     },
     {
-      "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
-      "tags": [
-        "detachable hood",
-        "men's outerwear",
-        "navy blue",
-        "padded jacket",
-        "polyester",
-        "thermal lining",
-        "travel jacket",
-        "water-resistant",
-        "winter wear"
-      ],
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
-      "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
-      },
-      "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "men's outerwear",
-            "navy blue",
-            "winter wear"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
       "handle": "sunglasses-uv400-unisex",
       "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
       "tags": [
@@ -732,56 +619,6 @@
             "unisex"
           ],
           "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "moisturiser-aloe-vera",
-      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
-      "tags": [
-        "aloe vera",
-        "daily wear",
-        "dry skin",
-        "face cream",
-        "herbal",
-        "moisturiser",
-        "skincare",
-        "unisex"
-      ],
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
-      "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
-      },
-      "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "skincare",
-            "unisex"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
         },
         {
           "code": "SKU_MISSING",
@@ -835,44 +672,6 @@
       ]
     },
     {
-      "handle": "formal-shirt-white-cotton",
-      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-      "tags": [
-        "fabricindia",
-        "formal shirt",
-        "mens fashion",
-        "office wear",
-        "professional attire",
-        "slim fit shirt",
-        "white cotton shirt"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
       "handle": "earphones-wired-budget",
       "title": "SoundWave Wired Earphones with Mic and 1.2m Tangle-Free Cable - Black",
       "tags": [
@@ -903,123 +702,26 @@
       ]
     },
     {
-      "handle": "smartwatch-round-dial",
-      "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
+      "handle": "tote-bag-canvas",
+      "title": "Cotton Canvas Tote Bag Large Off-White",
       "tags": [
-        "bluetooth calling",
-        "daily wear",
-        "fitness tracker",
-        "round dial",
-        "smartwatch",
-        "tech accessories",
-        "unisex",
-        "water resistant"
+        "college bag",
+        "cotton canvas bag",
+        "daily use bag",
+        "grocery shopping bag",
+        "large tote bag",
+        "off-white bag",
+        "office tote",
+        "sustainable bag",
+        "unisex tote"
       ],
-      "score": 82,
+      "score": 97,
       "grade": "A",
-      "totalIssues": 2,
+      "totalIssues": 1,
       "issueSummary": {
-        "HIGH": 1,
         "LOW": 1
       },
       "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "cotton-kurta-shirt-white",
-      "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
-      "tags": [
-        "casual",
-        "cotton",
-        "ethnic",
-        "festive",
-        "kurta",
-        "men",
-        "summer",
-        "white"
-      ],
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
-      "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
-      },
-      "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "ethnic",
-            "men",
-            "summer"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "tote-bag-canvas",
-      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
-      "tags": [
-        "college bag",
-        "cotton canvas",
-        "grocery shopping",
-        "off-white",
-        "office wear",
-        "sustainable",
-        "tote bag",
-        "unisex"
-      ],
-      "score": 94,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "LOW": 2
-      },
-      "issues": [
-        {
-          "code": "DESCRIPTION_NO_USE_CASE",
-          "severity": "LOW",
-          "field": "description",
-          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
-          "evidence": null,
-          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
-        },
         {
           "code": "SKU_MISSING",
           "severity": "LOW",
@@ -1274,174 +976,6 @@
       ]
     },
     {
-      "handle": "mens-wallet-black",
-      "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
-      "tags": [
-        "formal",
-        "men",
-        "office wear",
-        "slim wallet",
-        "vegan leather",
-        "wallet"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "party-wear-shirt-men",
-      "title": "Men's Premium Satin Silk Party Wear Shirt - Slim Fit Festive Edition",
-      "tags": [
-        "diwali",
-        "fabricindia",
-        "festive wear",
-        "men",
-        "satin silk",
-        "shirt",
-        "slim fit",
-        "wedding"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "bluetooth-headphones-budget",
-      "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
-      "tags": [
-        "bluetooth",
-        "commuting",
-        "electronics",
-        "headphones",
-        "office",
-        "students",
-        "unisex",
-        "wireless"
-      ],
-      "score": 79,
-      "grade": "B",
-      "totalIssues": 3,
-      "issueSummary": {
-        "LOW": 2,
-        "HIGH": 1
-      },
-      "issues": [
-        {
-          "code": "TAGS_NOT_IN_DESCRIPTION",
-          "severity": "LOW",
-          "field": "tags",
-          "message": "3 tag(s) have no match in description — inconsistent metadata signal.",
-          "evidence": [
-            "commuting",
-            "electronics",
-            "unisex"
-          ],
-          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
-        },
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "polarised-sunglasses-black",
-      "title": "Polarised Black Sunglasses",
-      "tags": [
-        "black sunglasses",
-        "driving sunglasses",
-        "fishing sunglasses",
-        "lightweight sunglasses",
-        "mens sunglasses",
-        "outdoor accessories",
-        "polarised sunglasses",
-        "sports sunglasses",
-        "uv400 protection",
-        "womens sunglasses"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
       "handle": "earrings-stainless-steel",
       "title": "Stainless Steel Hypoallergenic Earrings",
       "tags": [
@@ -1462,46 +996,6 @@
         "LOW": 1
       },
       "issues": [
-        {
-          "code": "SKU_MISSING",
-          "severity": "LOW",
-          "field": "variants",
-          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
-          "evidence": null,
-          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
-        }
-      ]
-    },
-    {
-      "handle": "shorts-blue-men-boxers",
-      "title": "Men's Cotton Short Trousers",
-      "tags": [
-        "athletic wear shorts",
-        "breathable clothing",
-        "comfortable loungewear",
-        "cotton blend shorts",
-        "daily wear shorts",
-        "elastic waistband shorts",
-        "men's short trousers",
-        "relaxed fit trousers",
-        "soft texture shorts"
-      ],
-      "score": 82,
-      "grade": "A",
-      "totalIssues": 2,
-      "issueSummary": {
-        "HIGH": 1,
-        "LOW": 1
-      },
-      "issues": [
-        {
-          "code": "IMAGE_MISSING",
-          "severity": "HIGH",
-          "field": "images",
-          "message": "No product images — vision AI agents cannot verify this product.",
-          "evidence": null,
-          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
-        },
         {
           "code": "SKU_MISSING",
           "severity": "LOW",
@@ -1541,6 +1035,409 @@
           "message": "Electronics product has no measurable specs (GB, W, mAh, etc). AI cannot rank in comparison queries.",
           "evidence": null,
           "conversionImpact": "Without specs, product cannot rank in 'best X under Y' queries — high commercial-intent traffic missed."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "kurta-bad-2",
+      "title": "Men's Cotton Kurta Shirt",
+      "tags": [
+        "Casual Kurta",
+        "Cotton Shirt",
+        "Formal Kurta",
+        "Long Sleeve Kurta",
+        "Men's Kurta",
+        "Premium Quality",
+        "Relaxed Fit",
+        "Round Neckline",
+        "Traditional Wear"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "hoodie-bad-1",
+      "title": "Winter Clothing Hoodie",
+      "tags": [
+        "Casual Clothing",
+        "Cold Weather Gear",
+        "Cotton Blend",
+        "Gift Ideas",
+        "Men's Clothing",
+        "Outdoor Wear",
+        "Premium Quality",
+        "Winter Hoodie",
+        "Women's Clothing"
+      ],
+      "score": 79,
+      "grade": "B",
+      "totalIssues": 3,
+      "issueSummary": {
+        "HIGH": 1,
+        "LOW": 2
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_VAGUE",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "1 vague phrase(s) detected — zero signal for AI ranking systems.",
+          "evidence": [
+            "premium quality"
+          ],
+          "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product."
+        },
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "Men's Clothing",
+            "Women's Clothing"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "oxford-bad-2",
+      "title": "Black Leather Shoes",
+      "tags": [
+        "Black Shoes",
+        "Casual Shoes",
+        "Formal Shoes",
+        "Leather Shoes",
+        "Men's Shoes",
+        "Night Out",
+        "Office Wear",
+        "Premium Shoes",
+        "Women's Shoes"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "sneaker-bad-1",
+      "title": "White Leather Sneakers Shoes",
+      "tags": [
+        "Casual Sneakers",
+        "Comfortable Fit",
+        "Daily Wear",
+        "Durable Outsole",
+        "Leather Shoes",
+        "Leather Sneakers",
+        "Running Shoes",
+        "Walking Shoes",
+        "White Sneakers"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "charger-bad-2",
+      "title": "Electronics 18W Fast Charger",
+      "tags": [
+        "18W Charger",
+        "Compact Charger",
+        "Durable Charger",
+        "Electronics Accessory",
+        "Fast Charger",
+        "Phone Charger",
+        "Portable Charger",
+        "Quick Charge",
+        "Tablet Charger"
+      ],
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
+      "issueSummary": {
+        "HIGH": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_VAGUE",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "1 vague phrase(s) detected — zero signal for AI ranking systems.",
+          "evidence": [
+            "premium quality"
+          ],
+          "conversionImpact": "Vague phrases signal low quality to AI rankers — filtered before customer sees product."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "wallet-bad-1",
+      "title": "Mens Slim Leather Wallet",
+      "tags": [
+        "Card Holder",
+        "Cash Wallet",
+        "Genuine Leather",
+        "Leather Goods",
+        "Leather Wallet",
+        "Mens Accessories",
+        "Mens Wallet",
+        "Slim Wallet",
+        "Travel Wallet"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "pen-drive-32-gb-usb-2-0",
+      "title": "32GB USB 2.0 Flash Drive",
+      "tags": [
+        "USB Flash Drive",
+        "32GB Storage",
+        "USB 2.0",
+        "Pen Drive",
+        "Portable Storage",
+        "Data Transfer",
+        "Computer Accessories",
+        "Electronic Storage",
+        "Flash Memory"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "TAGS_NOT_IN_DESCRIPTION",
+          "severity": "LOW",
+          "field": "tags",
+          "message": "2 tag(s) have no match in description — inconsistent metadata signal.",
+          "evidence": [
+            "USB 2.0",
+            "Flash Memory"
+          ],
+          "conversionImpact": "Tag-description mismatch signals inconsistent metadata — reduces AI confidence."
+        }
+      ]
+    },
+    {
+      "handle": "nail-polish-pink",
+      "title": "Pink Nail Polish Cosmetic",
+      "tags": [
+        "Chip-Resistant Nail Polish",
+        "Cosmetic Nail Care",
+        "Cruelty-Free Nail Polish",
+        "Long-Lasting Nail Polish",
+        "Nail Beauty",
+        "Nail Polish",
+        "Pink Cosmetic",
+        "Pink Nail Polish",
+        "Vegan Nail Polish"
+      ],
+      "score": 97,
+      "grade": "A",
+      "totalIssues": 1,
+      "issueSummary": {
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "hair-serum-vitamin-d-for-grey-hair",
+      "title": "Hair Loss Grey Hair Vitamin D Serum",
+      "tags": [
+        "Anti-Grey Hair",
+        "Daily Hair Serum",
+        "Grey Hair Care",
+        "Hair Growth",
+        "Hair Loss Treatment",
+        "Hair Nourishment",
+        "Hair Protection",
+        "Healthy Hair",
+        "Vitamin D Serum"
+      ],
+      "score": 82,
+      "grade": "A",
+      "totalIssues": 2,
+      "issueSummary": {
+        "HIGH": 1,
+        "LOW": 1
+      },
+      "issues": [
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
+        },
+        {
+          "code": "SKU_MISSING",
+          "severity": "LOW",
+          "field": "variants",
+          "message": "1 variant(s) missing SKU — inventory AI cannot track this product.",
+          "evidence": null,
+          "conversionImpact": "No SKU = inventory matching fails — fulfilment AI cannot track this variant."
+        }
+      ]
+    },
+    {
+      "handle": "socks-set-of-three-higly-durable-sweat-free",
+      "title": "socks - set of three - higly durable - sweat free",
+      "tags": [],
+      "score": 30,
+      "grade": "F",
+      "totalIssues": 8,
+      "issueSummary": {
+        "HIGH": 3,
+        "LOW": 3,
+        "MEDIUM": 2
+      },
+      "issues": [
+        {
+          "code": "DESCRIPTION_TOO_SHORT",
+          "severity": "HIGH",
+          "field": "description",
+          "message": "Only 11 words. Minimum 20 needed for AI context.",
+          "evidence": "socks - set of three - higly durable - sweat free",
+          "conversionImpact": "Thin descriptions lose to competitors with rich content — est. 25% lower conversion."
+        },
+        {
+          "code": "DESCRIPTION_NO_USE_CASE",
+          "severity": "LOW",
+          "field": "description",
+          "message": "No use-case context — cannot match intent queries like 'office wear' or 'gym bag'.",
+          "evidence": null,
+          "conversionImpact": "No use-case = cannot match intent queries like 'office shoes' or 'gym bag'."
+        },
+        {
+          "code": "TAGS_MISSING",
+          "severity": "HIGH",
+          "field": "tags",
+          "message": "No tags — product is invisible to keyword-based AI retrieval.",
+          "evidence": null,
+          "conversionImpact": "No tags = invisible to all keyword-based AI retrieval systems."
+        },
+        {
+          "code": "PRODUCT_TYPE_MISSING",
+          "severity": "MEDIUM",
+          "field": "productType",
+          "message": "Product Type field is empty — weakens secondary classification signal.",
+          "evidence": null,
+          "conversionImpact": "Missing product type weakens secondary classification signals."
+        },
+        {
+          "code": "IMAGE_MISSING",
+          "severity": "HIGH",
+          "field": "images",
+          "message": "No product images — vision AI agents cannot verify this product.",
+          "evidence": null,
+          "conversionImpact": "No images = 40-60% lower conversion rate — customers and AI agents skip imageless products."
+        },
+        {
+          "code": "SEO_TITLE_MISSING",
+          "severity": "MEDIUM",
+          "field": "seo",
+          "message": "No SEO title — AI search agents fall back to raw product title, often poorly formatted.",
+          "evidence": null,
+          "conversionImpact": "No SEO title = raw product title used in search snippets — often poorly formatted."
+        },
+        {
+          "code": "SEO_DESC_MISSING",
+          "severity": "LOW",
+          "field": "seo",
+          "message": "No SEO meta description — AI commerce agents generate lower-quality snippets.",
+          "evidence": null,
+          "conversionImpact": "No meta description = AI generates its own snippet — usually lower quality."
         },
         {
           "code": "SKU_MISSING",

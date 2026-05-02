@@ -1,36 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-05-01T20:32:39.624740+00:00",
-    "productsProcessed": 33,
-    "avgRetrievalScore": 78.5,
+    "generatedAt": "2026-05-02T14:54:10.009051+00:00",
+    "productsProcessed": 29,
+    "avgRetrievalScore": 80.1,
     "storeVisibility": "HIGH"
   },
   "summary": {
-    "typeDistribution": {
-      "Apparel / Top": 5,
-      "Skincare": 5,
-      "Headphones / Earphones": 3,
-      "Bag / Handbag": 2,
-      "Smartwatch / Wearable": 2,
-      "Footwear": 3,
-      "Speaker": 1,
-      "Belt": 1,
-      "Laptop / Computer": 3,
-      "Jacket / Outerwear": 2,
-      "Sunglasses": 2,
-      "Wallet": 1,
-      "Stainless Earrings": 1,
-      "Apparel / Bottom": 1,
-      "Phone Case": 1
-    },
-    "ambiguousProducts": 0,
-    "highRetrieval": 30,
-    "lowRetrieval": 0
+    "ambiguousProducts": 1
   },
   "perceptions": [
     {
       "handle": "cotton-kurta-shirt-blue",
-      "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
+      "title": "Men's Cotton Kurta Shirt",
       "aiPerception": {
         "perceivedType": "Apparel / Top",
         "typeConfidence": 100,
@@ -119,114 +100,6 @@
       }
     },
     {
-      "handle": "smart-fitness-watch-black",
-      "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
-      "aiPerception": {
-        "perceivedType": "Smartwatch / Wearable",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "canvas-sneakers-white",
-      "title": "Unisex White Canvas Sneakers",
-      "aiPerception": {
-        "perceivedType": "Footwear",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 80,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Footwear' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "bluetooth-portable-speaker-mini",
-      "title": "Portable Bluetooth Speaker 10W",
-      "aiPerception": {
-        "perceivedType": "Speaker",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Speaker' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "mens-leather-belt-brown",
-      "title": "Men's Brown Leather Belt",
-      "aiPerception": {
-        "perceivedType": "Belt",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 80,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Belt' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
       "handle": "cotton-tshirt-pack-3",
       "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
       "aiPerception": {
@@ -290,33 +163,6 @@
       }
     },
     {
-      "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
-      "aiPerception": {
-        "perceivedType": "Jacket / Outerwear",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 80,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
       "handle": "sunglasses-uv400-unisex",
       "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
       "aiPerception": {
@@ -333,33 +179,6 @@
           "description": "strong",
           "tags": "strong",
           "images": "strong",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "moisturiser-aloe-vera",
-      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
-      "aiPerception": {
-        "perceivedType": "Skincare",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 70,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Skincare' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
           "vendor": "present"
         }
       }
@@ -386,33 +205,6 @@
       }
     },
     {
-      "handle": "formal-shirt-white-cotton",
-      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-      "aiPerception": {
-        "perceivedType": "Apparel / Top",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Apparel / Top' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
       "handle": "earphones-wired-budget",
       "title": "SoundWave Wired Earphones with Mic and 1.2m Tangle-Free Cable - Black",
       "aiPerception": {
@@ -434,77 +226,17 @@
       }
     },
     {
-      "handle": "smartwatch-round-dial",
-      "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
-      "aiPerception": {
-        "perceivedType": "Smartwatch / Wearable",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Smartwatch / Wearable' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "cotton-kurta-shirt-white",
-      "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
-      "aiPerception": {
-        "perceivedType": "Apparel / Top",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Apparel / Top' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
       "handle": "tote-bag-canvas",
-      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
+      "title": "Cotton Canvas Tote Bag Large Off-White",
       "aiPerception": {
         "perceivedType": "Bag / Handbag",
         "typeConfidence": 100,
         "isAmbiguous": false,
-        "retrievalScore": 80,
+        "retrievalScore": 85,
         "retrievalGrade": "HIGH — Will appear in relevant AI searches",
         "interpretation": "AI classifies this as 'Bag / Handbag' with 100% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "use_case",
-            "impact": "LOW",
-            "reason": "No use-case context = cannot match intent queries like 'office wear'."
-          }
-        ],
+        "missingSignals": [],
         "signalStrengths": {
           "title": "strong",
           "description": "strong",
@@ -665,114 +397,6 @@
       }
     },
     {
-      "handle": "mens-wallet-black",
-      "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
-      "aiPerception": {
-        "perceivedType": "Wallet",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Wallet' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "party-wear-shirt-men",
-      "title": "Men's Premium Satin Silk Party Wear Shirt - Slim Fit Festive Edition",
-      "aiPerception": {
-        "perceivedType": "Apparel / Top",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Apparel / Top' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "bluetooth-headphones-budget",
-      "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
-      "aiPerception": {
-        "perceivedType": "Headphones / Earphones",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 75,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Headphones / Earphones' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
-      "handle": "polarised-sunglasses-black",
-      "title": "Polarised Black Sunglasses",
-      "aiPerception": {
-        "perceivedType": "Sunglasses",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 70,
-        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
-        "interpretation": "AI classifies this as 'Sunglasses' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [
-          {
-            "signal": "images",
-            "impact": "HIGH",
-            "reason": "No images = vision AI agents cannot verify product."
-          }
-        ],
-        "signalStrengths": {
-          "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "absent",
-          "vendor": "present"
-        }
-      }
-    },
-    {
       "handle": "earrings-stainless-steel",
       "title": "Stainless Steel Hypoallergenic Earrings",
       "aiPerception": {
@@ -794,15 +418,204 @@
       }
     },
     {
-      "handle": "shorts-blue-men-boxers",
-      "title": "Men's Cotton Short Trousers",
+      "handle": "nothing-phone-1-case-black-silicone",
+      "title": "Nothing Phone 1 Black Silicone Case",
       "aiPerception": {
-        "perceivedType": "Apparel / Bottom",
+        "perceivedType": "Phone Case",
         "typeConfidence": 100,
         "isAmbiguous": false,
-        "retrievalScore": 75,
+        "retrievalScore": 80,
         "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Apparel / Bottom' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "interpretation": "AI classifies this as 'Phone Case' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "strong",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "kurta-bad-2",
+      "title": "Men's Cotton Kurta Shirt",
+      "aiPerception": {
+        "perceivedType": "Apparel / Top",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Apparel / Top' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "hoodie-bad-1",
+      "title": "Winter Clothing Hoodie",
+      "aiPerception": {
+        "perceivedType": "Jacket / Outerwear",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 90,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Jacket / Outerwear' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "oxford-bad-2",
+      "title": "Black Leather Shoes",
+      "aiPerception": {
+        "perceivedType": "Footwear",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Footwear' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "sneaker-bad-1",
+      "title": "White Leather Sneakers Shoes",
+      "aiPerception": {
+        "perceivedType": "Footwear",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Footwear' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "charger-bad-2",
+      "title": "Electronics 18W Fast Charger",
+      "aiPerception": {
+        "perceivedType": "Electronics Charger",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Electronics Charger' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "wallet-bad-1",
+      "title": "Mens Slim Leather Wallet",
+      "aiPerception": {
+        "perceivedType": "Wallet",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Wallet' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "pen-drive-32-gb-usb-2-0",
+      "title": "32GB USB 2.0 Flash Drive",
+      "aiPerception": {
+        "perceivedType": "Laptop / Computer",
+        "typeConfidence": 98,
+        "isAmbiguous": false,
+        "retrievalScore": 85,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Laptop / Computer' with 98% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "nail-polish-pink",
+      "title": "Pink Nail Polish Cosmetic",
+      "aiPerception": {
+        "perceivedType": "Nail Polish",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 80,
+        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
+        "interpretation": "AI classifies this as 'Nail Polish' with 100% confidence. No conflicting signals. Description provides strong context.",
+        "ambiguityFlags": [],
+        "missingSignals": [],
+        "signalStrengths": {
+          "title": "strong",
+          "description": "strong",
+          "tags": "strong",
+          "images": "moderate",
+          "vendor": "present"
+        }
+      }
+    },
+    {
+      "handle": "hair-serum-vitamin-d-for-grey-hair",
+      "title": "Hair Loss Grey Hair Vitamin D Serum",
+      "aiPerception": {
+        "perceivedType": "Skincare",
+        "typeConfidence": 100,
+        "isAmbiguous": false,
+        "retrievalScore": 70,
+        "retrievalGrade": "MEDIUM — May appear depending on query phrasing",
+        "interpretation": "AI classifies this as 'Skincare' with 100% confidence. No conflicting signals. Description provides strong context.",
         "ambiguityFlags": [],
         "missingSignals": [
           {
@@ -821,22 +634,43 @@
       }
     },
     {
-      "handle": "nothing-phone-1-case-black-silicone",
-      "title": "Nothing Phone 1 Black Silicone Case",
+      "handle": "socks-set-of-three-higly-durable-sweat-free",
+      "title": "socks - set of three - higly durable - sweat free",
       "aiPerception": {
-        "perceivedType": "Phone Case",
-        "typeConfidence": 100,
-        "isAmbiguous": false,
-        "retrievalScore": 80,
-        "retrievalGrade": "HIGH — Will appear in relevant AI searches",
-        "interpretation": "AI classifies this as 'Phone Case' with 100% confidence. No conflicting signals. Description provides strong context.",
-        "ambiguityFlags": [],
-        "missingSignals": [],
+        "perceivedType": "Unknown",
+        "typeConfidence": 0,
+        "isAmbiguous": true,
+        "retrievalScore": 33,
+        "retrievalGrade": "LOW — Unlikely to surface in most AI searches",
+        "interpretation": "AI cannot determine product type from available signals. 1 ambiguity issue(s) detected. Description present but too thin for attribute extraction.",
+        "ambiguityFlags": [
+          {
+            "type": "LOW_CLASSIFICATION_CONFIDENCE",
+            "description": "Only 0% confidence in product type. Insufficient signals."
+          }
+        ],
+        "missingSignals": [
+          {
+            "signal": "tags",
+            "impact": "HIGH",
+            "reason": "No tags = invisible to keyword-based AI retrieval."
+          },
+          {
+            "signal": "images",
+            "impact": "HIGH",
+            "reason": "No images = vision AI agents cannot verify product."
+          },
+          {
+            "signal": "use_case",
+            "impact": "LOW",
+            "reason": "No use-case context = cannot match intent queries like 'office wear'."
+          }
+        ],
         "signalStrengths": {
           "title": "strong",
-          "description": "strong",
-          "tags": "strong",
-          "images": "strong",
+          "description": "weak",
+          "tags": "absent",
+          "images": "absent",
           "vendor": "present"
         }
       }

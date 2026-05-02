@@ -1,486 +1,930 @@
 {
-  "totalQueries": 15,
-  "coveredQueries": 14,
-  "coverageRate": 93,
-  "coverageLabel": "Excellent",
+  "totalQueries": 18,
+  "coverageRate": 94,
   "zeroMatchQueries": [
-    "ayurvedic face cream for dry skin India"
-  ],
-  "queryResults": [
-    {
-      "query": "best cotton kurta for office wear under 1000 rupees",
-      "category": "apparel",
-      "intent": "purchase",
-      "matchCount": 4,
-      "topMatches": [
-        {
-          "handle": "cotton-kurta-shirt-blue",
-          "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "cotton-kurta-shirt-white",
-          "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "formal-shirt-white-cotton",
-          "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-          "matchScore": 0.75
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "lightweight summer shirt for men India",
-      "category": "apparel",
-      "intent": "purchase",
-      "matchCount": 2,
-      "topMatches": [
-        {
-          "handle": "cotton-tshirt-pack-3",
-          "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "cotton-kurta-shirt-white",
-          "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "warm jacket for Delhi winter",
-      "category": "apparel",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "winter-jacket-heavy-mens",
-          "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "formal white shirt for interview",
-      "category": "apparel",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "formal-shirt-white-cotton",
-          "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "running shoes under 2000 for gym India",
-      "category": "footwear",
-      "intent": "purchase",
-      "matchCount": 2,
-      "topMatches": [
-        {
-          "handle": "canvas-sneakers-white",
-          "title": "Unisex White Canvas Sneakers",
-          "matchScore": 0.75
-        },
-        {
-          "handle": "running-shoes-mens-red",
-          "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red",
-          "matchScore": 0.75
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "comfortable canvas sneakers for daily use",
-      "category": "footwear",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "canvas-sneakers-white",
-          "title": "Unisex White Canvas Sneakers",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "ayurvedic face cream for dry skin India",
-      "category": "skincare",
-      "intent": "purchase",
-      "matchCount": 0,
-      "topMatches": [],
-      "hasCoverage": false
-    },
-    {
-      "query": "SPF 50 sunscreen for Indian summer",
-      "category": "skincare",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "sunscreen-spf50",
-          "title": "GlowUp SPF 50 PA+++ Sunscreen Lotion - Non-Greasy Daily Wear",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "vitamin C serum for brightening under 500",
-      "category": "skincare",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "vitamin-c-serum",
-          "title": "GlowUp Vitamin C Face Serum with Hyaluronic Acid - 30ml",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "wireless bluetooth headphones under 2500 for work from home",
-      "category": "electronics",
-      "intent": "purchase",
-      "matchCount": 3,
-      "topMatches": [
-        {
-          "handle": "wireless-bluetooth-headphones-pro",
-          "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "bluetooth-headphones-budget",
-          "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "bluetooth-portable-speaker-mini",
-          "title": "Portable Bluetooth Speaker 10W",
-          "matchScore": 0.75
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "budget laptop for students under 35000",
-      "category": "electronics",
-      "intent": "purchase",
-      "matchCount": 4,
-      "topMatches": [
-        {
-          "handle": "wireless-bluetooth-headphones-pro",
-          "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "laptop-budget-15inch",
-          "title": "TechZone 15.6-inch HD Laptop, 8GB RAM, 256GB SSD - Sleek Silver",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "earphones-wired-budget",
-          "title": "SoundWave Wired Earphones with Mic and 1.2m Tangle-Free Cable - Black",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "smartwatch with heart rate monitor India",
-      "category": "electronics",
-      "intent": "purchase",
-      "matchCount": 2,
-      "topMatches": [
-        {
-          "handle": "smart-fitness-watch-black",
-          "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "smartwatch-round-dial",
-          "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "genuine leather belt for men formal",
-      "category": "accessories",
-      "intent": "purchase",
-      "matchCount": 2,
-      "topMatches": [
-        {
-          "handle": "mens-leather-belt-brown",
-          "title": "Men's Brown Leather Belt",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "formal-shirt-white-cotton",
-          "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "UV protection sunglasses for driving India",
-      "category": "accessories",
-      "intent": "purchase",
-      "matchCount": 2,
-      "topMatches": [
-        {
-          "handle": "sunglasses-uv400-unisex",
-          "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
-          "matchScore": 1.0
-        },
-        {
-          "handle": "polarised-sunglasses-black",
-          "title": "Polarised Black Sunglasses",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    },
-    {
-      "query": "portable bluetooth speaker under 1500 waterproof",
-      "category": "electronics",
-      "intent": "purchase",
-      "matchCount": 1,
-      "topMatches": [
-        {
-          "handle": "bluetooth-portable-speaker-mini",
-          "title": "Portable Bluetooth Speaker 10W",
-          "matchScore": 1.0
-        }
-      ],
-      "hasCoverage": true
-    }
+    "smartwatch with heart rate monitor India"
   ],
   "productCoverage": {
     "cotton-kurta-shirt-blue": {
-      "queriesMatched": 1,
-      "queries": [
-        "best cotton kurta for office wear under 1000 rupees"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 3,
+      "visibilityRate": 17,
+      "matches": [
+        {
+          "query": "cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "cotton",
+            "kurta",
+            "office"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "shirt",
+            "men"
+          ],
+          "missingSignals": [
+            "summer"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "best cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "cotton",
+            "kurta"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "ayurvedic-face-cream-neem": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "queriesMatched": 1,
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "ayurvedic face cream for dry skin India",
+          "wouldSurface": true,
+          "matchScore": 0.53,
+          "matchedSignals": [
+            "ayurvedic",
+            "cream"
+          ],
+          "missingSignals": [
+            "dry"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "wireless-bluetooth-headphones-pro": {
-      "queriesMatched": 2,
-      "queries": [
-        "wireless bluetooth headphones under 2500 for work from home",
-        "budget laptop for students under 35000"
-      ],
-      "visibilityRate": 13
+      "queriesMatched": 1,
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "noise cancelling headphones for travel India",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "noise",
+            "cancelling",
+            "headphone"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "leather-handbag-women-tan": {
       "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
-    },
-    "smart-fitness-watch-black": {
-      "queriesMatched": 1,
-      "queries": [
-        "smartwatch with heart rate monitor India"
-      ],
-      "visibilityRate": 7
-    },
-    "canvas-sneakers-white": {
-      "queriesMatched": 2,
-      "queries": [
-        "running shoes under 2000 for gym India",
-        "comfortable canvas sneakers for daily use"
-      ],
-      "visibilityRate": 13
-    },
-    "bluetooth-portable-speaker-mini": {
-      "queriesMatched": 2,
-      "queries": [
-        "wireless bluetooth headphones under 2500 for work from home",
-        "portable bluetooth speaker under 1500 waterproof"
-      ],
-      "visibilityRate": 13
-    },
-    "mens-leather-belt-brown": {
-      "queriesMatched": 1,
-      "queries": [
-        "genuine leather belt for men formal"
-      ],
-      "visibilityRate": 7
+      "visibilityRate": 0,
+      "matches": []
     },
     "cotton-tshirt-pack-3": {
-      "queriesMatched": 1,
-      "queries": [
-        "lightweight summer shirt for men India"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 2,
+      "visibilityRate": 11,
+      "matches": [
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "summer",
+            "shirt",
+            "men"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "best cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 0.5,
+          "matchedSignals": [
+            "cotton"
+          ],
+          "missingSignals": [
+            "kurta"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "face-wash-charcoal": {
       "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "visibilityRate": 0,
+      "matches": []
     },
     "laptop-budget-15inch": {
-      "queriesMatched": 1,
-      "queries": [
-        "budget laptop for students under 35000"
-      ],
-      "visibilityRate": 7
-    },
-    "winter-jacket-heavy-mens": {
-      "queriesMatched": 1,
-      "queries": [
-        "warm jacket for Delhi winter"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
     },
     "sunglasses-uv400-unisex": {
       "queriesMatched": 1,
-      "queries": [
-        "UV protection sunglasses for driving India"
-      ],
-      "visibilityRate": 7
-    },
-    "moisturiser-aloe-vera": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "summer",
+            "men"
+          ],
+          "missingSignals": [
+            "shirt"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "running-shoes-mens-red": {
-      "queriesMatched": 1,
-      "queries": [
-        "running shoes under 2000 for gym India"
-      ],
-      "visibilityRate": 7
-    },
-    "formal-shirt-white-cotton": {
       "queriesMatched": 3,
-      "queries": [
-        "best cotton kurta for office wear under 1000 rupees",
-        "formal white shirt for interview",
-        "genuine leather belt for men formal"
-      ],
-      "visibilityRate": 20
+      "visibilityRate": 17,
+      "matches": [
+        {
+          "query": "running shoes under 2000 for gym India",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "running",
+            "shoe",
+            "gym"
+          ],
+          "missingSignals": [
+            "price > ₹2000"
+          ],
+          "priceCompatible": false,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "summer",
+            "men"
+          ],
+          "missingSignals": [
+            "shirt"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "premium leather shoes for men",
+          "wouldSurface": true,
+          "matchScore": 0.5,
+          "matchedSignals": [
+            "shoe"
+          ],
+          "missingSignals": [
+            "leather"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "earphones-wired-budget": {
-      "queriesMatched": 1,
-      "queries": [
-        "budget laptop for students under 35000"
-      ],
-      "visibilityRate": 7
-    },
-    "smartwatch-round-dial": {
-      "queriesMatched": 1,
-      "queries": [
-        "smartwatch with heart rate monitor India"
-      ],
-      "visibilityRate": 7
-    },
-    "cotton-kurta-shirt-white": {
-      "queriesMatched": 2,
-      "queries": [
-        "best cotton kurta for office wear under 1000 rupees",
-        "lightweight summer shirt for men India"
-      ],
-      "visibilityRate": 13
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
     },
     "tote-bag-canvas": {
-      "queriesMatched": 1,
-      "queries": [
-        "best cotton kurta for office wear under 1000 rupees"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
     },
     "sunscreen-spf50": {
       "queriesMatched": 1,
-      "queries": [
-        "SPF 50 sunscreen for Indian summer"
-      ],
-      "visibilityRate": 7
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "SPF 50 sunscreen for Indian summer",
+          "wouldSurface": true,
+          "matchScore": 0.8,
+          "matchedSignals": [
+            "spf",
+            "sunscreen"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "laptop-gaming-pro": {
       "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "visibilityRate": 0,
+      "matches": []
     },
     "flip-flops-rubber": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "queriesMatched": 1,
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.53,
+          "matchedSignals": [
+            "summer",
+            "men"
+          ],
+          "missingSignals": [
+            "shirt"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "hooded-sweatshirt-grey": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "queriesMatched": 4,
+      "visibilityRate": 22,
+      "matches": [
+        {
+          "query": "warm jacket for Delhi winter",
+          "wouldSurface": true,
+          "matchScore": 0.53,
+          "matchedSignals": [
+            "winter",
+            "warm"
+          ],
+          "missingSignals": [
+            "jacket"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 0.53,
+          "matchedSignals": [
+            "cotton",
+            "office"
+          ],
+          "missingSignals": [
+            "kurta",
+            "price > ₹1000"
+          ],
+          "priceCompatible": false,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.53,
+          "matchedSignals": [
+            "shirt",
+            "men"
+          ],
+          "missingSignals": [
+            "summer"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "winter hoodie with pockets warm",
+          "wouldSurface": true,
+          "matchScore": 0.8,
+          "matchedSignals": [
+            "hoodie",
+            "winter",
+            "warm"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "wireless-mouse-ergonomic": {
-      "queriesMatched": 1,
-      "queries": [
-        "budget laptop for students under 35000"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
     },
     "vitamin-c-serum": {
-      "queriesMatched": 1,
-      "queries": [
-        "vitamin C serum for brightening under 500"
-      ],
-      "visibilityRate": 7
-    },
-    "mens-wallet-black": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
-    },
-    "party-wear-shirt-men": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
-    },
-    "bluetooth-headphones-budget": {
-      "queriesMatched": 1,
-      "queries": [
-        "wireless bluetooth headphones under 2500 for work from home"
-      ],
-      "visibilityRate": 7
-    },
-    "polarised-sunglasses-black": {
-      "queriesMatched": 1,
-      "queries": [
-        "UV protection sunglasses for driving India"
-      ],
-      "visibilityRate": 7
+      "queriesMatched": 2,
+      "visibilityRate": 11,
+      "matches": [
+        {
+          "query": "SPF 50 sunscreen for Indian summer",
+          "wouldSurface": true,
+          "matchScore": 0.5,
+          "matchedSignals": [
+            "sunscreen"
+          ],
+          "missingSignals": [
+            "spf"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "vitamin C serum for brightening under 500",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "vitamin c",
+            "serum"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
     },
     "earrings-stainless-steel": {
       "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
-    },
-    "shorts-blue-men-boxers": {
-      "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "visibilityRate": 0,
+      "matches": []
     },
     "nothing-phone-1-case-black-silicone": {
       "queriesMatched": 0,
-      "queries": [],
-      "visibilityRate": 0
+      "visibilityRate": 0,
+      "matches": []
+    },
+    "kurta-bad-2": {
+      "queriesMatched": 3,
+      "visibilityRate": 17,
+      "matches": [
+        {
+          "query": "cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "cotton",
+            "kurta"
+          ],
+          "missingSignals": [
+            "office"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "lightweight summer shirt for men India",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "shirt",
+            "men"
+          ],
+          "missingSignals": [
+            "summer"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "best cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "cotton",
+            "kurta"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "hoodie-bad-1": {
+      "queriesMatched": 3,
+      "visibilityRate": 17,
+      "matches": [
+        {
+          "query": "warm jacket for Delhi winter",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "winter",
+            "warm"
+          ],
+          "missingSignals": [
+            "jacket"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "best cotton kurta for office wear under 1000 rupees",
+          "wouldSurface": true,
+          "matchScore": 0.5,
+          "matchedSignals": [
+            "cotton"
+          ],
+          "missingSignals": [
+            "kurta",
+            "price > ₹1000"
+          ],
+          "priceCompatible": false,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "winter hoodie with pockets warm",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "hoodie",
+            "winter",
+            "warm"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "oxford-bad-2": {
+      "queriesMatched": 2,
+      "visibilityRate": 11,
+      "matches": [
+        {
+          "query": "formal leather shoes for office wear men",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "formal",
+            "leather",
+            "shoe",
+            "office"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "premium leather shoes for men",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "leather",
+            "shoe"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "sneaker-bad-1": {
+      "queriesMatched": 5,
+      "visibilityRate": 28,
+      "matches": [
+        {
+          "query": "running shoes under 2000 for gym India",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "running",
+            "shoe"
+          ],
+          "missingSignals": [
+            "gym"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "comfortable canvas sneakers for daily use",
+          "wouldSurface": true,
+          "matchScore": 0.67,
+          "matchedSignals": [
+            "sneaker",
+            "daily"
+          ],
+          "missingSignals": [
+            "canvas"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "formal leather shoes for office wear men",
+          "wouldSurface": true,
+          "matchScore": 0.75,
+          "matchedSignals": [
+            "leather",
+            "shoe",
+            "office"
+          ],
+          "missingSignals": [
+            "formal"
+          ],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "white sneakers for daily use comfortable",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "white",
+            "sneaker",
+            "daily"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "premium leather shoes for men",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "leather",
+            "shoe"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "charger-bad-2": {
+      "queriesMatched": 1,
+      "visibilityRate": 6,
+      "matches": [
+        {
+          "query": "fast charger for Android phone 33W",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "fast",
+            "charger"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "wallet-bad-1": {
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
+    },
+    "pen-drive-32-gb-usb-2-0": {
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
+    },
+    "nail-polish-pink": {
+      "queriesMatched": 2,
+      "visibilityRate": 11,
+      "matches": [
+        {
+          "query": "long-lasting pink nail polish chip resistant",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "nail polish",
+            "pink"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        },
+        {
+          "query": "organic beauty products for daily makeup",
+          "wouldSurface": true,
+          "matchScore": 1.0,
+          "matchedSignals": [
+            "beauty",
+            "cosmetic"
+          ],
+          "missingSignals": [],
+          "priceCompatible": true,
+          "descriptionThin": false,
+          "intent": "purchase"
+        }
+      ]
+    },
+    "hair-serum-vitamin-d-for-grey-hair": {
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
+    },
+    "socks-set-of-three-higly-durable-sweat-free": {
+      "queriesMatched": 0,
+      "visibilityRate": 0,
+      "matches": []
     }
   },
-  "insight": "Your store appears in 14/15 high-intent AI search queries (93% coverage). 1 queries return zero products from your store."
+  "allResults": [
+    {
+      "query": "ayurvedic face cream for dry skin India",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "ayurvedic-face-cream-neem",
+          "title": "Natural Face Cream with Neem & Turmeric"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "SPF 50 sunscreen for Indian summer",
+      "count": 2,
+      "matches": [
+        {
+          "handle": "sunscreen-spf50",
+          "title": "GlowUp SPF 50 PA+++ Sunscreen Lotion - Non-Greasy Daily Wear"
+        },
+        {
+          "handle": "vitamin-c-serum",
+          "title": "GlowUp Vitamin C Face Serum with Hyaluronic Acid - 30ml"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "vitamin C serum for brightening under 500",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "vitamin-c-serum",
+          "title": "GlowUp Vitamin C Face Serum with Hyaluronic Acid - 30ml"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "running shoes under 2000 for gym India",
+      "count": 2,
+      "matches": [
+        {
+          "handle": "running-shoes-mens-red",
+          "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red"
+        },
+        {
+          "handle": "sneaker-bad-1",
+          "title": "White Leather Sneakers Shoes"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "comfortable canvas sneakers for daily use",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "sneaker-bad-1",
+          "title": "White Leather Sneakers Shoes"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "formal leather shoes for office wear men",
+      "count": 2,
+      "matches": [
+        {
+          "handle": "oxford-bad-2",
+          "title": "Black Leather Shoes"
+        },
+        {
+          "handle": "sneaker-bad-1",
+          "title": "White Leather Sneakers Shoes"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "warm jacket for Delhi winter",
+      "count": 2,
+      "matches": [
+        {
+          "handle": "hooded-sweatshirt-grey",
+          "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey"
+        },
+        {
+          "handle": "hoodie-bad-1",
+          "title": "Winter Clothing Hoodie"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "cotton kurta for office wear under 1000 rupees",
+      "count": 3,
+      "matches": [
+        {
+          "handle": "cotton-kurta-shirt-blue",
+          "title": "Men's Cotton Kurta Shirt"
+        },
+        {
+          "handle": "hooded-sweatshirt-grey",
+          "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey"
+        },
+        {
+          "handle": "kurta-bad-2",
+          "title": "Men's Cotton Kurta Shirt"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "lightweight summer shirt for men India",
+      "count": 7,
+      "matches": [
+        {
+          "handle": "cotton-kurta-shirt-blue",
+          "title": "Men's Cotton Kurta Shirt"
+        },
+        {
+          "handle": "cotton-tshirt-pack-3",
+          "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color"
+        },
+        {
+          "handle": "sunglasses-uv400-unisex",
+          "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame"
+        },
+        {
+          "handle": "running-shoes-mens-red",
+          "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red"
+        },
+        {
+          "handle": "flip-flops-rubber",
+          "title": "StepUp Waterproof Rubber Flip Flops for Men and Women - Blue"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "best cotton kurta for office wear under 1000 rupees",
+      "count": 4,
+      "matches": [
+        {
+          "handle": "cotton-kurta-shirt-blue",
+          "title": "Men's Cotton Kurta Shirt"
+        },
+        {
+          "handle": "cotton-tshirt-pack-3",
+          "title": "Men's Premium 100% Cotton Round Neck T-Shirt - Pack of 3 Multi-color"
+        },
+        {
+          "handle": "kurta-bad-2",
+          "title": "Men's Cotton Kurta Shirt"
+        },
+        {
+          "handle": "hoodie-bad-1",
+          "title": "Winter Clothing Hoodie"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "noise cancelling headphones for travel India",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "wireless-bluetooth-headphones-pro",
+          "title": "SoundWave ProSound X1 ANC Wireless Headphones with 30-Hour Battery"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "fast charger for Android phone 33W",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "charger-bad-2",
+          "title": "Electronics 18W Fast Charger"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "smartwatch with heart rate monitor India",
+      "count": 0,
+      "matches": [],
+      "intent": "purchase"
+    },
+    {
+      "query": "white sneakers for daily use comfortable",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "sneaker-bad-1",
+          "title": "White Leather Sneakers Shoes"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "premium leather shoes for men",
+      "count": 3,
+      "matches": [
+        {
+          "handle": "running-shoes-mens-red",
+          "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red"
+        },
+        {
+          "handle": "oxford-bad-2",
+          "title": "Black Leather Shoes"
+        },
+        {
+          "handle": "sneaker-bad-1",
+          "title": "White Leather Sneakers Shoes"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "winter hoodie with pockets warm",
+      "count": 2,
+      "matches": [
+        {
+          "handle": "hooded-sweatshirt-grey",
+          "title": "Men's Premium Cotton Fleece Hooded Sweatshirt - Charcoal Grey"
+        },
+        {
+          "handle": "hoodie-bad-1",
+          "title": "Winter Clothing Hoodie"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "long-lasting pink nail polish chip resistant",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "nail-polish-pink",
+          "title": "Pink Nail Polish Cosmetic"
+        }
+      ],
+      "intent": "purchase"
+    },
+    {
+      "query": "organic beauty products for daily makeup",
+      "count": 1,
+      "matches": [
+        {
+          "handle": "nail-polish-pink",
+          "title": "Pink Nail Polish Cosmetic"
+        }
+      ],
+      "intent": "purchase"
+    }
+  ]
 }

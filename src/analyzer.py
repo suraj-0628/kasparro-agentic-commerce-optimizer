@@ -373,10 +373,20 @@ def generate_narrative(meta, summary, perception_meta=None):
             f"AI agents are missing approximately {missed}% of potential search traffic "
             f"due to weak metadata signals (retrieval score: {retrieval}/100 — {visibility})."
         )
-    top = summary.get("topIssues", [])
-    if top:
+    # Calculate REAL ROI (Count * Severity Weight)
+    # Weights: CRITICAL=15, HIGH=15, MEDIUM=8, LOW=3
+    issue_list = []
+    for code, data in summary["allIssues"].items():
+        weight = 15 if data["severity"] in ["CRITICAL", "HIGH"] else 8 if data["severity"] == "MEDIUM" else 3
+        roi = data["count"] * weight
+        issue_list.append({"code": code, "roi": roi, "count": data["count"]})
+    
+    # Sort by total ROI
+    top_by_roi = sorted(issue_list, key=lambda x: -x["roi"])
+    
+    if top_by_roi:
         lines.append(
-            f"The single highest-ROI fix is '{top[0]['code']}' — affects {top[0]['count']}/{n} products "
+            f"The single highest-ROI fix is '{top_by_roi[0]['code']}' — affects {top_by_roi[0]['count']}/{n} products "
             f"and is the most common reason AI agents skip this store's catalogue."
         )
     lines.append(
@@ -413,11 +423,21 @@ def build_report(products_data, policy_report=None, trust_report=None, perceptio
 
     roi_ranking = calculate_roi(results, all_issues)
 
+    # Group all issues for ROI narrative
+    all_issues_map = {}
+    for r in results:
+        for i in r["issues"]:
+            code = i["code"]
+            if code not in all_issues_map:
+                all_issues_map[code] = {"count": 0, "severity": i["severity"]}
+            all_issues_map[code]["count"] += 1
+
     summary = {
         "scoreDistribution": score_dist,
         "severityCounts":    severity_counts,
         "topIssues":         [{"code": c, "count": n} for c, n in top_issues],
         "roiRanking":        roi_ranking[:10],
+        "allIssues":         all_issues_map,
     }
 
     meta = {

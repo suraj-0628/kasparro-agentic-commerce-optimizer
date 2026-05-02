@@ -781,30 +781,6 @@
       <div class="hero-main">
         <div class="product-name">{{ product.title }}</div>
         <div class="handle-tag">{{ product.handle }}</div>
-        <div class="meta-row">
-          <div>
-            <div class="meta-label">Vendor</div>
-            <div class="meta-value">{{ product.vendor or '—' }}</div>
-          </div>
-          <div>
-            <div class="meta-label">Type</div>
-            <div class="meta-value">{{ product.productType or '—' }}</div>
-          </div>
-          <div>
-            <div class="meta-label">Price</div>
-            <div class="meta-value">₹{{ product.price }}</div>
-          </div>
-          <div>
-            <div class="meta-label">Tags</div>
-            <div class="meta-value">{{ product.tags|length }}</div>
-          </div>
-          <div>
-            <div class="meta-label">Images</div>
-            <div class="meta-value"
-              style="color:{% if product.imageCount == 0 %}var(--rd){% else %}var(--gr){% endif %}">
-              {{ product.imageCount }}{% if product.imageCount == 0 %} ✗{% endif %}</div>
-          </div>
-        </div>
         <div class="meta-label">Description</div>
         <div class="desc-box {% if not product.descriptionPlain %}empty{% endif %}">
           {% if product.descriptionPlain %}{{ product.descriptionPlain[:400] }}{% if product.descriptionPlain|length >
@@ -832,18 +808,7 @@
           {% endif %}
         </div>
 
-        <!-- Query visibility -->
-        {% if query_coverage %}
-        <div class="signal-grid">
-          <div class="section-title">AI Search Visibility</div>
-          <div style="text-align:center;padding:8px 0">
-            <div class="visibility-pct">{{ query_coverage.visibilityRate or 0 }}%</div>
-            <div style="font-size:11px;color:var(--mu)">of high-intent queries</div>
-            <div style="font-size:11px;color:var(--mu);margin-top:2px">{{ query_coverage.queriesMatched or 0 }} / 15
-              queries matched</div>
-          </div>
-        </div>
-        {% endif %}
+        <!-- AI Search Visibility removed as requested -->
 
         {% if perception and perception.aiPerception %}
         <div class="signal-grid">
@@ -947,21 +912,7 @@
         </div>
         {% endif %}
 
-        <!-- Query coverage detail -->
-        {% if query_coverage and query_coverage.queries %}
-        <div class="query-panel" style="margin-top:16px">
-          <div class="section-title">Matched AI Queries</div>
-          {% for q in query_coverage.queries[:6] %}
-          <div class="query-row">
-            <span class="query-text">"{{ q }}"</span>
-            <span class="query-hit">✓ matches</span>
-          </div>
-          {% endfor %}
-          {% if query_coverage.queriesMatched == 0 %}
-          <div style="color:var(--rd);font-size:12px;padding:8px 0">This product matches zero high-intent queries.</div>
-          {% endif %}
-        </div>
-        {% endif %}
+        <!-- AI Query matching list removed -->
 
         {% if rec and rec.quickWins %}
         <div style="margin-top:16px">
@@ -973,11 +924,6 @@
               <span class="issue-code">{{ qw.issueCode }}</span>
             </div>
             <div class="issue-msg">{{ qw.fix }}</div>
-            {% if qw.issueCode == 'SKU_MISSING' %}
-              <button class="btn-sm" style="margin-top:10px; background:var(--gr); border:none" onclick="fixSku('{{ product.handle }}', this)">✦ Fix SKU with AI</button>
-            {% elif qw.canFixWithAI %}
-              <button class="btn-sm" style="margin-top:10px; background:var(--gr); border:none" onclick="applySingleFix('{{ product.handle }}', '{{ qw.issueCode }}', this)">✦ Apply Fix</button>
-            {% endif %}
           </div>
           {% endfor %}
         </div>

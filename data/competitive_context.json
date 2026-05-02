@@ -1,9 +1,9 @@
 {
   "primaryCategory": "apparel",
   "categoryLabel": "Apparel & Accessories",
-  "storeScore": 87.0,
-  "scorePercentile": 94,
-  "scorePercentileLabel": "Top 10% — Excellent AI Representation",
+  "storeScore": 87.3,
+  "scorePercentile": 95,
+  "scorePercentileLabel": "Top 5% — Elite AI Optimized Store",
   "retrievalPercentile": 85,
   "industryMedian": 52,
   "industryTop25": 64,
@@ -12,7 +12,7 @@
   "gapsVsBestInClass": [
     {
       "metric": "Image coverage",
-      "store": "45% of products",
+      "store": "76% of products",
       "benchmark": "95%+ of products"
     }
   ],

@@ -1,33 +1,33 @@
 {
   "store": "together-stack",
-  "fetchedAt": "2026-05-02T02:02:37.858334",
+  "fetchedAt": "2026-05-02T20:24:07.279464",
   "apiVersion": "2026-04",
-  "productCount": 33,
+  "productCount": 29,
   "categoryStats": {
-    "usingTaxonomy": 25,
-    "usingProductType": 8,
+    "usingTaxonomy": 22,
+    "usingProductType": 7,
     "noCategory": 0
   },
   "products": [
     {
       "id": "gid://shopify/Product/9480666939640",
       "handle": "cotton-kurta-shirt-blue",
-      "title": "Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue",
-      "descriptionHtml": "<p>Elevate your daily wardrobe with this Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue. Crafted from 100% premium breathable cotton, this shirt features a classic straight silhouette and subtle tonal embroidery on the mandarin collar for a refined look. Designed for the modern Indian man, it offers exceptional comfort for long office hours, casual weekend outings, or traditional festive gatherings like Diwali and family pujas. The lightweight fabric ensures you stay cool in the Indian heat. Pair it with denim or chinos for a contemporary fusion style. Machine wash cold with similar colors; iron on medium heat.</p>",
-      "descriptionPlain": "Elevate your daily wardrobe with this Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue. Crafted from 100% premium breathable cotton, this shirt features a classic straight silhouette and subtle tonal embroidery on the mandarin collar for a refined look. Designed for the modern Indian man, it offers exceptional comfort for long office hours, casual weekend outings, or traditional festive gatherings like Diwali and family pujas. The lightweight fabric ensures you stay cool in the Indian heat. Pair it with denim or chinos for a contemporary fusion style. Machine wash cold with similar colors; iron on medium heat.",
-      "descriptionWordCount": 99,
-      "productType": "Kurta, Ethnic",
+      "title": "Men's Cotton Kurta Shirt",
+      "descriptionHtml": "<p>Elevate your wardrobe with this Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue, crafted from 100% premium breathable cotton. It features a classic straight silhouette, subtle tonal embroidery, and a mandarin collar for a refined look. Designed for the modern Indian man, it offers exceptional comfort for office hours, casual outings, or traditional gatherings. The lightweight fabric ensures you stay cool, and it can be paired with denim or chinos for a fusion style. Made from 100% cotton, it is machine washable and iron-friendly.</p>",
+      "descriptionPlain": "Elevate your wardrobe with this Men's Pure Cotton Straight Cut Kurta Shirt in Indigo Blue, crafted from 100% premium breathable cotton. It features a classic straight silhouette, subtle tonal embroidery, and a mandarin collar for a refined look. Designed for the modern Indian man, it offers exceptional comfort for office hours, casual outings, or traditional gatherings. The lightweight fabric ensures you stay cool, and it can be paired with denim or chinos for a fusion style. Made from 100% cotton, it is machine washable and iron-friendly.",
+      "descriptionWordCount": 86,
+      "productType": "Kurta Shirt",
       "vendor": "FabricIndia",
       "status": "ACTIVE",
       "tags": [
-        "casual",
         "cotton",
         "ethnic wear",
         "festive",
         "indian fashion",
         "indigo blue",
         "kurta shirt",
-        "men"
+        "men's apparel",
+        "traditional wear"
       ],
       "category": {
         "name": "Shirts",
@@ -55,11 +55,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Men's Blue Cotton Kurta Shirt - Casual & Festive Wear",
-        "description": "Shop this 100% pure cotton blue kurta shirt for men. Breathable fabric with subtle embroidery, perfect for office wear, festivals, and casual Indian outings."
+        "title": "Men's Cotton Kurta Shirt in Indigo Blue",
+        "description": "Get the perfect blend of comfort and style with our Men's Cotton Kurta Shirt, designed for modern Indian men. Made from 100% cotton, it's ideal for office, casual, or traditional wear."
       },
       "createdAt": "2026-04-19T05:41:26Z",
-      "updatedAt": "2026-04-27T03:28:14Z"
+      "updatedAt": "2026-05-02T08:44:52Z"
     },
     {
       "id": "gid://shopify/Product/9480666972408",
@@ -107,7 +107,7 @@
         "description": "Discover the power of Ayurvedic skincare with our natural face cream, featuring neem, turmeric, and aloe vera. Perfect for all skin types."
       },
       "createdAt": "2026-04-19T05:41:28Z",
-      "updatedAt": "2026-05-01T20:29:58Z"
+      "updatedAt": "2026-05-02T04:23:29Z"
     },
     {
       "id": "gid://shopify/Product/9480667005176",
@@ -159,7 +159,7 @@
         "description": "Experience immersive audio with the SoundWave ProSound X1 wireless noise-cancelling headphones, featuring 40mm drivers and 30-hour battery life."
       },
       "createdAt": "2026-04-19T05:41:29Z",
-      "updatedAt": "2026-05-01T20:12:26Z"
+      "updatedAt": "2026-05-02T01:14:50Z"
     },
     {
       "id": "gid://shopify/Product/9480667037944",
@@ -212,198 +212,7 @@
         "description": "Discover our premium women's tan leather handbag, crafted from genuine full-grain leather with a spacious main compartment and adjustable shoulder strap. Perfect for office and weekend use."
       },
       "createdAt": "2026-04-19T05:41:30Z",
-      "updatedAt": "2026-05-01T16:26:59Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667070712",
-      "handle": "smart-fitness-watch-black",
-      "title": "SmartFit Pro Fitness Smartwatch with GPS & SpO2 - Midnight Black",
-      "descriptionHtml": "<p>The SmartFit Pro is a high-performance smartwatch designed for the active Indian lifestyle. It features a 1.69-inch HD display, 300mAh battery providing 7-day backup, and IP68 water resistance, making it perfect for intense gym sessions or monsoon commutes. Track your health with precision using the SpO2 sensor and 24/7 heart rate monitor. Ideal for office professionals and fitness enthusiasts, it pairs seamlessly with Android and iOS. The skin-friendly silicone band ensures comfort during long cricket matches or daily jogs. To maintain, wipe the sensors with a dry cloth after workouts. Includes a magnetic charger for quick power-ups.</p>",
-      "descriptionPlain": "The SmartFit Pro is a high-performance smartwatch designed for the active Indian lifestyle. It features a 1.69-inch HD display, 300mAh battery providing 7-day backup, and IP68 water resistance, making it perfect for intense gym sessions or monsoon commutes. Track your health with precision using the SpO2 sensor and 24/7 heart rate monitor. Ideal for office professionals and fitness enthusiasts, it pairs seamlessly with Android and iOS. The skin-friendly silicone band ensures comfort during long cricket matches or daily jogs. To maintain, wipe the sensors with a dry cloth after workouts. Includes a magnetic charger for quick power-ups.",
-      "descriptionWordCount": 97,
-      "productType": "Smartwatch, Fitness, GPS",
-      "vendor": "TechNova",
-      "status": "ACTIVE",
-      "tags": [
-        "gps",
-        "gym",
-        "office",
-        "silicone",
-        "smartwatch",
-        "tech-gadget",
-        "unisex",
-        "waterproof"
-      ],
-      "category": {
-        "name": "Smart Watches",
-        "fullName": "Apparel & Accessories > Jewelry > Smart Watches",
-        "source": "taxonomy"
-      },
-      "price": 4999.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257401749752",
-          "sku": "",
-          "price": 4999.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "SmartFit Pro GPS Smartwatch - 7-Day Battery & SpO2",
-        "description": "Track your health with the SmartFit Pro Fitness Watch. Features GPS, SpO2, and 7-day battery. Perfect for gym and office wear. Shop now for the best tech in India."
-      },
-      "createdAt": "2026-04-19T05:41:31Z",
-      "updatedAt": "2026-05-01T13:25:39Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667103480",
-      "handle": "canvas-sneakers-white",
-      "title": "Unisex White Canvas Sneakers",
-      "descriptionHtml": "<p>Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper made from high-quality canvas material. Ideal for casual daily wear, walking, or running errands. Available in sizes 6-11 (UK) and weighs just 280g per pair, making them a great choice for everyday activities.</p>",
-      "descriptionPlain": "Classic unisex canvas sneakers with vulcanised rubber sole for superior grip and durability. Features a cushioned insole for all-day comfort. Hand-washable upper made from high-quality canvas material. Ideal for casual daily wear, walking, or running errands. Available in sizes 6-11 (UK) and weighs just 280g per pair, making them a great choice for everyday activities.",
-      "descriptionWordCount": 55,
-      "productType": "Sneakers, Canvas, Unisex",
-      "vendor": "StepUp",
-      "status": "ACTIVE",
-      "tags": [
-        "canvas sneakers",
-        "casual footwear",
-        "cushioned insole",
-        "daily wear",
-        "hand-washable",
-        "lightweight shoes",
-        "unisex shoes",
-        "vulcanised rubber sole",
-        "white sneakers"
-      ],
-      "category": {
-        "name": "Sneakers",
-        "fullName": "Apparel & Accessories > Shoes > Sneakers",
-        "source": "taxonomy"
-      },
-      "price": 1299.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257401815288",
-          "sku": "",
-          "price": 1299.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Unisex White Canvas Sneakers - Comfortable & Durable",
-        "description": "Discover our classic unisex white canvas sneakers with vulcanised rubber sole and cushioned insole for all-day comfort. Hand-washable and lightweight, perfect for casual daily wear."
-      },
-      "createdAt": "2026-04-19T05:41:32Z",
-      "updatedAt": "2026-05-01T16:25:38Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667136248",
-      "handle": "bluetooth-portable-speaker-mini",
-      "title": "Portable Bluetooth Speaker 10W",
-      "descriptionHtml": "<p>This compact and powerful portable Bluetooth speaker delivers 360-degree sound with 10W output, featuring IPX5 water resistance and 8-hour playtime. Made from durable materials, it's perfect for outdoor activities, office use, or as a gym companion. With a built-in microphone for hands-free calls and micro-USB charging, it's compatible with all Bluetooth-enabled devices. Weighing only 250g, it's easy to take anywhere.</p>",
-      "descriptionPlain": "This compact and powerful portable Bluetooth speaker delivers 360-degree sound with 10W output, featuring IPX5 water resistance and 8-hour playtime. Made from durable materials, it's perfect for outdoor activities, office use, or as a gym companion. With a built-in microphone for hands-free calls and micro-USB charging, it's compatible with all Bluetooth-enabled devices. Weighing only 250g, it's easy to take anywhere.",
-      "descriptionWordCount": 60,
-      "productType": "Speaker, Bluetooth, Portable",
-      "vendor": "SoundWave",
-      "status": "ACTIVE",
-      "tags": [
-        "bluetooth speaker",
-        "budget speaker",
-        "compact speaker",
-        "gym speaker",
-        "outdoor speaker",
-        "portable speaker",
-        "travel speaker",
-        "waterproof speaker",
-        "wireless speaker"
-      ],
-      "category": {
-        "name": "Speakers",
-        "fullName": "Electronics > Audio > Audio Components > Speakers",
-        "source": "taxonomy"
-      },
-      "price": 1199.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257401848056",
-          "sku": "",
-          "price": 1199.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Portable Bluetooth Speaker | Waterproof 10W Compact Speaker",
-        "description": "Discover our portable Bluetooth speaker, featuring 10W output, IPX5 water resistance, and 8-hour playtime. Perfect for outdoor use, office, or gym."
-      },
-      "createdAt": "2026-04-19T05:41:34Z",
-      "updatedAt": "2026-05-01T16:01:02Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667169016",
-      "handle": "mens-leather-belt-brown",
-      "title": "Men's Brown Leather Belt",
-      "descriptionHtml": "<p>A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. The belt is 35mm wide and available in sizes 28-44 inches, perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability, ensuring a long-lasting accessory. Made from high-quality materials, this belt is a great addition to any man's wardrobe.</p>",
-      "descriptionPlain": "A classic brown leather belt made from full-grain cowhide leather with a polished stainless steel pin buckle. The belt is 35mm wide and available in sizes 28-44 inches, perfect for both formal and semi-formal occasions. Each belt is individually stitched for durability, ensuring a long-lasting accessory. Made from high-quality materials, this belt is a great addition to any man's wardrobe.",
-      "descriptionWordCount": 60,
-      "productType": "Leather Belt",
-      "vendor": "BeltCraft",
-      "status": "ACTIVE",
-      "tags": [
-        "brown leather",
-        "cowhide leather",
-        "durable belt",
-        "formal accessory",
-        "full-grain leather",
-        "genuine leather",
-        "leather belt",
-        "men's belt",
-        "stainless steel buckle"
-      ],
-      "category": {
-        "name": "Belts",
-        "fullName": "Apparel & Accessories > Clothing Accessories > Belts",
-        "source": "taxonomy"
-      },
-      "price": 699.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257401913592",
-          "sku": "",
-          "price": 699.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Men's Brown Leather Belt - Formal & Semi-Formal Accessory",
-        "description": "Discover our high-quality men's brown leather belt, made from full-grain cowhide leather with a polished stainless steel pin buckle. Perfect for formal and semi-formal occasions."
-      },
-      "createdAt": "2026-04-19T05:41:35Z",
-      "updatedAt": "2026-05-01T20:28:21Z"
+      "updatedAt": "2026-05-02T04:26:38Z"
     },
     {
       "id": "gid://shopify/Product/9480667201784",
@@ -565,54 +374,6 @@
       "updatedAt": "2026-04-26T05:40:42Z"
     },
     {
-      "id": "gid://shopify/Product/9480667300088",
-      "handle": "winter-jacket-heavy-mens",
-      "title": "Men's Navy Blue Padded Winter Outerwear Jacket",
-      "descriptionHtml": "<p>Stay warm with this heavy-duty padded jacket from FabricIndia, crafted from premium water-resistant polyester with a thick thermal lining. Designed for temperatures down to 5 degrees Celsius, it features a high-neck collar, two zippered side pockets, and a detachable hood. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. Made from 100% polyester, it has a fill power of 600 and weighs 1.2 kg. Ideal for layering over sweaters or sweatshirts, this jacket is a must-have essential for the modern Indian man seeking style and functionality in extreme cold. Dry clean only or gentle hand wash to maintain insulation.</p>",
-      "descriptionPlain": "Stay warm with this heavy-duty padded jacket from FabricIndia, crafted from premium water-resistant polyester with a thick thermal lining. Designed for temperatures down to 5 degrees Celsius, it features a high-neck collar, two zippered side pockets, and a detachable hood. Perfect for morning commutes, bike rides, or trips to Manali and Shimla. Made from 100% polyester, it has a fill power of 600 and weighs 1.2 kg. Ideal for layering over sweaters or sweatshirts, this jacket is a must-have essential for the modern Indian man seeking style and functionality in extreme cold. Dry clean only or gentle hand wash to maintain insulation.",
-      "descriptionWordCount": 102,
-      "productType": "Jacket",
-      "vendor": "FabricIndia",
-      "status": "ACTIVE",
-      "tags": [
-        "detachable hood",
-        "men's outerwear",
-        "navy blue",
-        "padded jacket",
-        "polyester",
-        "thermal lining",
-        "travel jacket",
-        "water-resistant",
-        "winter wear"
-      ],
-      "category": {
-        "name": "Outerwear",
-        "fullName": "Apparel & Accessories > Clothing > Outerwear",
-        "source": "taxonomy"
-      },
-      "price": 1599.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402110200",
-          "sku": "",
-          "price": 1599.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Men's Navy Blue Padded Winter Jacket - Water-Resistant Outerwear",
-        "description": "Stay warm and stylish with our men's navy blue padded winter jacket, featuring a detachable hood and water-resistant polyester construction. Perfect for extreme cold weather."
-      },
-      "createdAt": "2026-04-19T05:41:39Z",
-      "updatedAt": "2026-05-01T17:23:13Z"
-    },
-    {
       "id": "gid://shopify/Product/9480667332856",
       "handle": "sunglasses-uv400-unisex",
       "title": "UV400 Protection Wayfarer Sunglasses - Matte Black Unisex Frame",
@@ -669,53 +430,6 @@
       "updatedAt": "2026-04-26T03:47:30Z"
     },
     {
-      "id": "gid://shopify/Product/9480667365624",
-      "handle": "moisturiser-aloe-vera",
-      "title": "HerbalRoots Pure Aloe Vera Face Moisturiser for Dry Skin - 100ml",
-      "descriptionHtml": "<p>This HerbalRoots Aloe Vera Moisturiser features 99% pure aloe vera extract enriched with vitamin E to provide deep hydration for dry skin. Ideal for daily use before heading to the office or as a soothing night cream after exposure to Indian humidity and dust. This lightweight formula absorbs quickly without greasiness, making it perfect for all Indian seasons. Suitable for both men and women, it helps maintain a natural glow. For best results, apply a pea-sized amount on a cleansed face twice daily. Store in a cool, dry place away from direct sunlight to maintain its natural potency.</p>",
-      "descriptionPlain": "This HerbalRoots Aloe Vera Moisturiser features 99% pure aloe vera extract enriched with vitamin E to provide deep hydration for dry skin. Ideal for daily use before heading to the office or as a soothing night cream after exposure to Indian humidity and dust. This lightweight formula absorbs quickly without greasiness, making it perfect for all Indian seasons. Suitable for both men and women, it helps maintain a natural glow. For best results, apply a pea-sized amount on a cleansed face twice daily. Store in a cool, dry place away from direct sunlight to maintain its natural potency.",
-      "descriptionWordCount": 98,
-      "productType": "Moisturiser",
-      "vendor": "HerbalRoots",
-      "status": "ACTIVE",
-      "tags": [
-        "aloe vera",
-        "daily wear",
-        "dry skin",
-        "face cream",
-        "herbal",
-        "moisturiser",
-        "skincare",
-        "unisex"
-      ],
-      "category": {
-        "name": "Moisturiser",
-        "fullName": "Moisturiser",
-        "source": "productType"
-      },
-      "price": 299.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402208504",
-          "sku": "",
-          "price": 299.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Aloe Vera Moisturiser for Dry Skin - 100ml | HerbalRoots",
-        "description": "Hydrate your skin with HerbalRoots Aloe Vera Moisturiser. Perfect for Indian weather, this 100ml face cream treats dryness and adds a natural glow daily."
-      },
-      "createdAt": "2026-04-19T05:41:42Z",
-      "updatedAt": "2026-04-30T20:58:44Z"
-    },
-    {
       "id": "gid://shopify/Product/9480667398392",
       "handle": "running-shoes-mens-red",
       "title": "StepUp Men's Breathable Mesh Running Shoes - Crimson Red",
@@ -766,52 +480,6 @@
       },
       "createdAt": "2026-04-19T05:41:43Z",
       "updatedAt": "2026-04-30T20:40:13Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667431160",
-      "handle": "formal-shirt-white-cotton",
-      "title": "FabricIndia Men's Pure Cotton Slim Fit White Formal Shirt",
-      "descriptionHtml": "<p>This FabricIndia men's white formal shirt is crafted from 100% premium breathable cotton, making it ideal for the humid Indian climate. Designed for the modern professional, it features a crisp spread collar and a tailored slim fit that stays sharp from morning meetings to evening corporate events. The easy-iron fabric ensures a wrinkle-free look with minimal effort, perfect for daily office wear or formal interviews. Pair it with dark trousers and a leather belt for a classic professional aesthetic. Machine wash cold with similar colors to maintain the bright white finish and fabric integrity.</p>",
-      "descriptionPlain": "This FabricIndia men's white formal shirt is crafted from 100% premium breathable cotton, making it ideal for the humid Indian climate. Designed for the modern professional, it features a crisp spread collar and a tailored slim fit that stays sharp from morning meetings to evening corporate events. The easy-iron fabric ensures a wrinkle-free look with minimal effort, perfect for daily office wear or formal interviews. Pair it with dark trousers and a leather belt for a classic professional aesthetic. Machine wash cold with similar colors to maintain the bright white finish and fabric integrity.",
-      "descriptionWordCount": 94,
-      "productType": "Formal Shirt",
-      "vendor": "FabricIndia",
-      "status": "ACTIVE",
-      "tags": [
-        "fabricindia",
-        "formal shirt",
-        "mens fashion",
-        "office wear",
-        "professional attire",
-        "slim fit shirt",
-        "white cotton shirt"
-      ],
-      "category": {
-        "name": "Shirts",
-        "fullName": "Apparel & Accessories > Clothing > Clothing Tops > Shirts",
-        "source": "taxonomy"
-      },
-      "price": 899.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402306808",
-          "sku": "",
-          "price": 899.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "White Pure Cotton Formal Shirt for Men - FabricIndia",
-        "description": "Shop the FabricIndia white cotton formal shirt for men. Breathable, easy-iron fabric perfect for Indian office wear and professional meetings. Order now."
-      },
-      "createdAt": "2026-04-19T05:41:44Z",
-      "updatedAt": "2026-04-30T20:58:45Z"
     },
     {
       "id": "gid://shopify/Product/9480667463928",
@@ -866,118 +534,25 @@
       "updatedAt": "2026-04-26T05:59:21Z"
     },
     {
-      "id": "gid://shopify/Product/9480667496696",
-      "handle": "smartwatch-round-dial",
-      "title": "TechNova Round Dial Smartwatch with 1.39-inch HD Display - Black",
-      "descriptionHtml": "<p>The TechNova Round Dial Smartwatch features a vibrant 1.39-inch HD touchscreen display housed in a durable zinc alloy frame. Designed for the modern Indian lifestyle, it offers seamless Bluetooth calling and real-time notifications for WhatsApp and SMS. With an IP68 water resistance rating, it is perfect for dusty daily commutes and intense gym sessions. The 250mAh battery provides up to 7 days of usage on a single charge. Ideal for professionals and fitness enthusiasts, this watch tracks heart rate and SpO2 levels. To maintain, wipe the silicone strap with a damp cloth and avoid high-pressure water.</p>",
-      "descriptionPlain": "The TechNova Round Dial Smartwatch features a vibrant 1.39-inch HD touchscreen display housed in a durable zinc alloy frame. Designed for the modern Indian lifestyle, it offers seamless Bluetooth calling and real-time notifications for WhatsApp and SMS. With an IP68 water resistance rating, it is perfect for dusty daily commutes and intense gym sessions. The 250mAh battery provides up to 7 days of usage on a single charge. Ideal for professionals and fitness enthusiasts, this watch tracks heart rate and SpO2 levels. To maintain, wipe the silicone strap with a damp cloth and avoid high-pressure water.",
-      "descriptionWordCount": 96,
-      "productType": "Smartwatch",
-      "vendor": "TechNova",
-      "status": "ACTIVE",
-      "tags": [
-        "bluetooth calling",
-        "daily wear",
-        "fitness tracker",
-        "round dial",
-        "smartwatch",
-        "tech accessories",
-        "unisex",
-        "water resistant"
-      ],
-      "category": {
-        "name": "Smart Watches",
-        "fullName": "Apparel & Accessories > Jewelry > Smart Watches",
-        "source": "taxonomy"
-      },
-      "price": 1999.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402405112",
-          "sku": "",
-          "price": 1999.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "TechNova Round Dial Smartwatch with Bluetooth Calling",
-        "description": "Shop the TechNova Round Dial Smartwatch featuring a 1.39-inch HD display, SpO2 tracking, and 7-day battery life. Perfect for fitness and daily notifications."
-      },
-      "createdAt": "2026-04-19T05:41:47Z",
-      "updatedAt": "2026-04-27T03:33:10Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667529464",
-      "handle": "cotton-kurta-shirt-white",
-      "title": "Men's Pure Cotton Short Kurta Shirt in Crisp White",
-      "descriptionHtml": "<p>This premium men's short kurta shirt is crafted from 100% breathable cotton, making it an ideal choice for the Indian climate. Featuring a classic mandarin collar and a half-button placket, it offers a versatile look that transitions seamlessly from casual office wear to festive family gatherings. The crisp white fabric provides a clean, sophisticated aesthetic for everyday comfort. Designed for a regular fit, it pairs perfectly with denim or chinos. To maintain the fabric's integrity, hand wash or machine wash cold with similar colors and iron while slightly damp for a sharp finish.</p>",
-      "descriptionPlain": "This premium men's short kurta shirt is crafted from 100% breathable cotton, making it an ideal choice for the Indian climate. Featuring a classic mandarin collar and a half-button placket, it offers a versatile look that transitions seamlessly from casual office wear to festive family gatherings. The crisp white fabric provides a clean, sophisticated aesthetic for everyday comfort. Designed for a regular fit, it pairs perfectly with denim or chinos. To maintain the fabric's integrity, hand wash or machine wash cold with similar colors and iron while slightly damp for a sharp finish.",
-      "descriptionWordCount": 93,
-      "productType": "Kurta, Ethnic",
-      "vendor": "FabricIndia",
-      "status": "ACTIVE",
-      "tags": [
-        "casual",
-        "cotton",
-        "ethnic",
-        "festive",
-        "kurta",
-        "men",
-        "summer",
-        "white"
-      ],
-      "category": {
-        "name": "Shirts",
-        "fullName": "Apparel & Accessories > Clothing > Clothing Tops > Shirts",
-        "source": "taxonomy"
-      },
-      "price": 799.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402437880",
-          "sku": "",
-          "price": 799.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Men's White Cotton Kurta Shirt - Casual Ethnic Wear",
-        "description": "Shop our breathable white cotton kurta shirt for men. Perfect for daily wear or festive occasions, this ethnic shirt offers comfort and style in the Indian heat."
-      },
-      "createdAt": "2026-04-19T05:41:48Z",
-      "updatedAt": "2026-05-01T13:00:53Z"
-    },
-    {
       "id": "gid://shopify/Product/9480667562232",
       "handle": "tote-bag-canvas",
-      "title": "Heavy-Duty Cotton Canvas Tote Bag - Off-White Large",
-      "descriptionHtml": "<p>Crafted from 100% heavy-duty cotton canvas, this spacious off-white tote bag is built for the versatile Indian lifestyle. From carrying groceries at the local mandi to packing textbooks for college or essentials for the office, its reinforced stitching handles heavy loads with ease. The minimalist design complements ethnic kurtis and western wear alike, making it a stylish choice for urban commuters. Featuring long, ergonomic shoulder straps, it ensures comfort during long commutes or shopping trips. To preserve the fabric, hand wash in cold water and air dry. This sustainable accessory is the perfect plastic-free companion for daily errands and travel.</p>",
-      "descriptionPlain": "Crafted from 100% heavy-duty cotton canvas, this spacious off-white tote bag is built for the versatile Indian lifestyle. From carrying groceries at the local mandi to packing textbooks for college or essentials for the office, its reinforced stitching handles heavy loads with ease. The minimalist design complements ethnic kurtis and western wear alike, making it a stylish choice for urban commuters. Featuring long, ergonomic shoulder straps, it ensures comfort during long commutes or shopping trips. To preserve the fabric, hand wash in cold water and air dry. This sustainable accessory is the perfect plastic-free companion for daily errands and travel.",
-      "descriptionWordCount": 100,
+      "title": "Cotton Canvas Tote Bag Large Off-White",
+      "descriptionHtml": "<p>This 100% cotton canvas tote bag is designed for daily use, featuring reinforced stitching and long ergonomic shoulder straps for comfort. Ideal for office wear, college, grocery shopping, and travel, it's a versatile and sustainable accessory. Made from heavy-duty cotton canvas, it's built to last and can be easily hand washed in cold water and air dried. With its minimalist design, it complements both ethnic and western wear, making it a stylish choice for urban commuters.</p>",
+      "descriptionPlain": "This 100% cotton canvas tote bag is designed for daily use, featuring reinforced stitching and long ergonomic shoulder straps for comfort. Ideal for office wear, college, grocery shopping, and travel, it's a versatile and sustainable accessory. Made from heavy-duty cotton canvas, it's built to last and can be easily hand washed in cold water and air dried. With its minimalist design, it complements both ethnic and western wear, making it a stylish choice for urban commuters.",
+      "descriptionWordCount": 76,
       "productType": "Tote Bag",
       "vendor": "BagStore",
       "status": "ACTIVE",
       "tags": [
         "college bag",
-        "cotton canvas",
-        "grocery shopping",
-        "off-white",
-        "office wear",
-        "sustainable",
-        "tote bag",
-        "unisex"
+        "cotton canvas bag",
+        "daily use bag",
+        "grocery shopping bag",
+        "large tote bag",
+        "off-white bag",
+        "office tote",
+        "sustainable bag",
+        "unisex tote"
       ],
       "category": {
         "name": "Tote Bag",
@@ -1005,11 +580,11 @@
       ],
       "variantCount": 1,
       "seo": {
-        "title": "Cotton Canvas Tote Bag - Eco-Friendly Off-White Handbag",
-        "description": "Durable 100% cotton canvas tote bag for daily Indian use. Perfect for college, office, or grocery shopping. Sustainable, spacious, and stylish off-white design."
+        "title": "Large Off-White Cotton Canvas Tote Bag for Daily Use",
+        "description": "Durable and sustainable cotton canvas tote bag for office, college, grocery shopping, and travel. Hand washable and comfortable to carry."
       },
       "createdAt": "2026-04-19T05:41:49Z",
-      "updatedAt": "2026-04-25T15:21:14Z"
+      "updatedAt": "2026-05-02T05:59:05Z"
     },
     {
       "id": "gid://shopify/Product/9480667595000",
@@ -1109,7 +684,7 @@
         "description": "Discover the TechZone Pro Gaming Laptop, featuring Intel Core i9, 32GB RAM, 1TB SSD, and RTX 4060 graphics. Perfect for gamers and creative professionals."
       },
       "createdAt": "2026-04-19T05:41:51Z",
-      "updatedAt": "2026-05-01T19:53:15Z"
+      "updatedAt": "2026-05-02T01:34:26Z"
     },
     {
       "id": "gid://shopify/Product/9480667660536",
@@ -1202,7 +777,7 @@
         "description": "Stay warm with our premium cotton fleece grey hoodie for men. Perfect for Indian winters, college, or casual outings. Shop durable winter essentials now."
       },
       "createdAt": "2026-04-19T05:41:54Z",
-      "updatedAt": "2026-05-01T13:01:53Z"
+      "updatedAt": "2026-05-02T00:07:25Z"
     },
     {
       "id": "gid://shopify/Product/9480667726072",
@@ -1255,7 +830,7 @@
         "description": "Discover the TechNova Wireless Ergonomic Mouse, designed for comfort and productivity. With 1600 DPI optical sensor and 2.4GHz wireless technology, it's perfect for home office, gaming, and more."
       },
       "createdAt": "2026-04-19T05:41:55Z",
-      "updatedAt": "2026-05-01T20:27:51Z"
+      "updatedAt": "2026-05-02T08:26:57Z"
     },
     {
       "id": "gid://shopify/Product/9480667758840",
@@ -1314,194 +889,6 @@
       "updatedAt": "2026-04-29T21:00:39Z"
     },
     {
-      "id": "gid://shopify/Product/9480667791608",
-      "handle": "mens-wallet-black",
-      "title": "Men's Slim Bi-fold Wallet - Black Vegan Leather for Indian Notes",
-      "descriptionHtml": "<p>This slim bi-fold wallet is designed for the modern Indian professional. Crafted from durable black vegan leather, it features a sleek profile that fits comfortably in front pockets. The interior includes four card slots and a dedicated compartment sized specifically for Indian currency notes. Perfect for daily office wear or formal events like weddings, this lightweight accessory keeps essentials organized without adding bulk. To maintain the finish, wipe with a soft damp cloth and store away from direct heat. Ideal for men seeking a minimalist yet functional design for their daily commute or formal gatherings.</p>",
-      "descriptionPlain": "This slim bi-fold wallet is designed for the modern Indian professional. Crafted from durable black vegan leather, it features a sleek profile that fits comfortably in front pockets. The interior includes four card slots and a dedicated compartment sized specifically for Indian currency notes. Perfect for daily office wear or formal events like weddings, this lightweight accessory keeps essentials organized without adding bulk. To maintain the finish, wipe with a soft damp cloth and store away from direct heat. Ideal for men seeking a minimalist yet functional design for their daily commute or formal gatherings.",
-      "descriptionWordCount": 95,
-      "productType": "Wallet",
-      "vendor": "BagStore",
-      "status": "ACTIVE",
-      "tags": [
-        "formal",
-        "men",
-        "office wear",
-        "slim wallet",
-        "vegan leather",
-        "wallet"
-      ],
-      "category": {
-        "name": "Wallet",
-        "fullName": "Wallet",
-        "source": "productType"
-      },
-      "price": 399.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402831096",
-          "sku": "",
-          "price": 399.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Slim Black Vegan Leather Wallet for Men | Indian Currency Size",
-        "description": "Upgrade your style with this slim black vegan leather bi-fold wallet. Designed for Indian currency, it features 4 card slots and a sleek profile for daily use."
-      },
-      "createdAt": "2026-04-19T05:41:57Z",
-      "updatedAt": "2026-05-01T13:31:37Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667824376",
-      "handle": "party-wear-shirt-men",
-      "title": "Men's Premium Satin Silk Party Wear Shirt - Slim Fit Festive Edition",
-      "descriptionHtml": "<p>Elevate your festive wardrobe with this premium satin silk blend party wear shirt from FabricIndia. Designed specifically for the modern Indian man, this slim-fit shirt features a subtle metallic sheen perfect for Diwali celebrations, wedding receptions, and evening galas. The breathable fabric ensures comfort during long events while maintaining a crisp, wrinkle-resistant look. Pair it with dark trousers or chinos for a sophisticated ensemble. To maintain the fabric's luster, we recommend a gentle cold water wash or dry cleaning. This versatile piece is an essential addition for any celebratory occasion in the Indian social calendar.</p>",
-      "descriptionPlain": "Elevate your festive wardrobe with this premium satin silk blend party wear shirt from FabricIndia. Designed specifically for the modern Indian man, this slim-fit shirt features a subtle metallic sheen perfect for Diwali celebrations, wedding receptions, and evening galas. The breathable fabric ensures comfort during long events while maintaining a crisp, wrinkle-resistant look. Pair it with dark trousers or chinos for a sophisticated ensemble. To maintain the fabric's luster, we recommend a gentle cold water wash or dry cleaning. This versatile piece is an essential addition for any celebratory occasion in the Indian social calendar.",
-      "descriptionWordCount": 95,
-      "productType": "Shirt, Party",
-      "vendor": "FabricIndia",
-      "status": "ACTIVE",
-      "tags": [
-        "diwali",
-        "fabricindia",
-        "festive wear",
-        "men",
-        "satin silk",
-        "shirt",
-        "slim fit",
-        "wedding"
-      ],
-      "category": {
-        "name": "Shirts",
-        "fullName": "Apparel & Accessories > Clothing > Clothing Tops > Shirts",
-        "source": "taxonomy"
-      },
-      "price": 1199.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402896632",
-          "sku": "",
-          "price": 1199.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Men's Satin Silk Party Wear Shirt for Diwali & Weddings",
-        "description": "Shop premium satin silk party wear shirts for men. Perfect for Diwali, weddings, and festive occasions. Slim fit, breathable fabric, and elegant metallic finish."
-      },
-      "createdAt": "2026-04-19T05:41:58Z",
-      "updatedAt": "2026-04-30T20:43:42Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667857144",
-      "handle": "bluetooth-headphones-budget",
-      "title": "SoundWave Wireless Bluetooth Headphones with 20-Hour Playtime - Matte Black",
-      "descriptionHtml": "<p>These SoundWave wireless headphones are designed for the modern Indian lifestyle, offering a 400mAh battery for 20 hours of playback. Perfect for daily commutes on the Delhi Metro or long study sessions, these lightweight ABS plastic headphones feature soft ear cushions for all-day comfort. The 40mm drivers deliver deep bass, ideal for Bollywood hits and podcasts. Designed for students and office goers, they connect seamlessly via Bluetooth 5.0. To maintain, wipe with a dry microfiber cloth and avoid exposure to extreme humidity. These affordable headphones ensure you stay connected during calls with the built-in microphone.</p>",
-      "descriptionPlain": "These SoundWave wireless headphones are designed for the modern Indian lifestyle, offering a 400mAh battery for 20 hours of playback. Perfect for daily commutes on the Delhi Metro or long study sessions, these lightweight ABS plastic headphones feature soft ear cushions for all-day comfort. The 40mm drivers deliver deep bass, ideal for Bollywood hits and podcasts. Designed for students and office goers, they connect seamlessly via Bluetooth 5.0. To maintain, wipe with a dry microfiber cloth and avoid exposure to extreme humidity. These affordable headphones ensure you stay connected during calls with the built-in microphone.",
-      "descriptionWordCount": 95,
-      "productType": "Headphones, Wireless",
-      "vendor": "SoundWave",
-      "status": "ACTIVE",
-      "tags": [
-        "bluetooth",
-        "commuting",
-        "electronics",
-        "headphones",
-        "office",
-        "students",
-        "unisex",
-        "wireless"
-      ],
-      "category": {
-        "name": "Headphones & Headsets",
-        "fullName": "Electronics > Audio > Audio Components > Headphones & Headsets",
-        "source": "taxonomy"
-      },
-      "price": 999.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402929400",
-          "sku": "",
-          "price": 999.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "SoundWave Wireless Bluetooth Headphones - 20Hr Battery Life",
-        "description": "Upgrade your audio with SoundWave wireless headphones. Enjoy 20 hours of battery, deep bass, and a comfortable fit for daily Indian commutes and office calls."
-      },
-      "createdAt": "2026-04-19T05:41:59Z",
-      "updatedAt": "2026-04-30T20:32:28Z"
-    },
-    {
-      "id": "gid://shopify/Product/9480667889912",
-      "handle": "polarised-sunglasses-black",
-      "title": "Polarised Black Sunglasses",
-      "descriptionHtml": "<p>Experience style and function with our polarised black sunglasses, featuring UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Ideal for driving, fishing, and outdoor sports, these sunglasses reduce glare from reflective surfaces. With a durable design and comfortable fit, they are perfect for everyday wear. The polarised lenses provide crystal-clear vision, while the TR90 frame ensures flexibility and resistance to stress. Whether you're hitting the road or the trails, our polarised black sunglasses have got you covered.</p>",
-      "descriptionPlain": "Experience style and function with our polarised black sunglasses, featuring UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Ideal for driving, fishing, and outdoor sports, these sunglasses reduce glare from reflective surfaces. With a durable design and comfortable fit, they are perfect for everyday wear. The polarised lenses provide crystal-clear vision, while the TR90 frame ensures flexibility and resistance to stress. Whether you're hitting the road or the trails, our polarised black sunglasses have got you covered.",
-      "descriptionWordCount": 81,
-      "productType": "Polarised Sunglasses",
-      "vendor": "ShadeOn",
-      "status": "ACTIVE",
-      "tags": [
-        "black sunglasses",
-        "driving sunglasses",
-        "fishing sunglasses",
-        "lightweight sunglasses",
-        "mens sunglasses",
-        "outdoor accessories",
-        "polarised sunglasses",
-        "sports sunglasses",
-        "uv400 protection",
-        "womens sunglasses"
-      ],
-      "category": {
-        "name": "Sunglasses",
-        "fullName": "Apparel & Accessories > Clothing Accessories > Sunglasses",
-        "source": "taxonomy"
-      },
-      "price": 849.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48257402994936",
-          "sku": "",
-          "price": 849.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Polarised Black Sunglasses | UV400 Protection | Lightweight Frames",
-        "description": "Discover our polarised black sunglasses with UV400 protection, lightweight TR90 frames, and a hard case with cleaning cloth. Perfect for driving, fishing, and outdoor sports."
-      },
-      "createdAt": "2026-04-19T05:42:00Z",
-      "updatedAt": "2026-05-01T20:23:30Z"
-    },
-    {
       "id": "gid://shopify/Product/9488641425656",
       "handle": "earrings-stainless-steel",
       "title": "Stainless Steel Hypoallergenic Earrings",
@@ -1552,55 +939,7 @@
         "description": "Discover durable and comfortable stainless steel earrings, perfect for everyday wear or formal events. Hypoallergenic and corrosion-resistant."
       },
       "createdAt": "2026-05-01T16:31:20Z",
-      "updatedAt": "2026-05-01T20:01:31Z"
-    },
-    {
-      "id": "gid://shopify/Product/9488644702456",
-      "handle": "shorts-blue-men-boxers",
-      "title": "Men's Cotton Short Trousers",
-      "descriptionHtml": "<p>These men's blue short trousers are designed for comfort and style, made from a blend of 80% cotton and 20% polyester. They feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer. The breathable fabric and soft texture ensure a comfortable wear experience, ideal for daily use, outdoor activities, or athletic wear. With a length of 17 inches and a waist size range of 30-36 inches, they suit various body types. Technical specs include a cotton-rich fabric blend for durability and a versatile design for multiple use-cases, making them suitable for both casual and athletic wear.</p>",
-      "descriptionPlain": "These men's blue short trousers are designed for comfort and style, made from a blend of 80% cotton and 20% polyester. They feature an elastic waistband and a relaxed fit, perfect for lounging or as a base layer. The breathable fabric and soft texture ensure a comfortable wear experience, ideal for daily use, outdoor activities, or athletic wear. With a length of 17 inches and a waist size range of 30-36 inches, they suit various body types. Technical specs include a cotton-rich fabric blend for durability and a versatile design for multiple use-cases, making them suitable for both casual and athletic wear.",
-      "descriptionWordCount": 102,
-      "productType": "Short Trousers",
-      "vendor": "together_stack",
-      "status": "ACTIVE",
-      "tags": [
-        "athletic wear shorts",
-        "breathable clothing",
-        "comfortable loungewear",
-        "cotton blend shorts",
-        "daily wear shorts",
-        "elastic waistband shorts",
-        "men's short trousers",
-        "relaxed fit trousers",
-        "soft texture shorts"
-      ],
-      "category": {
-        "name": "Short Trousers",
-        "fullName": "Apparel & Accessories > Clothing > Shorts > Short Trousers",
-        "source": "taxonomy"
-      },
-      "price": 245.0,
-      "currency": "USD",
-      "images": [],
-      "imageCount": 0,
-      "hasImages": false,
-      "imagesMissingAlt": 0,
-      "variants": [
-        {
-          "id": "gid://shopify/ProductVariant/48306091000056",
-          "sku": "",
-          "price": 245.0,
-          "inventory": 0
-        }
-      ],
-      "variantCount": 1,
-      "seo": {
-        "title": "Men's Cotton Blend Short Trousers - Comfortable & Breathable",
-        "description": "Discover men's cotton blend short trousers designed for comfort and style. Featuring an elastic waistband, relaxed fit, and breathable fabric, perfect for lounging, outdoor activities, or athletic wear."
-      },
-      "createdAt": "2026-05-01T16:47:16Z",
-      "updatedAt": "2026-05-01T19:46:33Z"
+      "updatedAt": "2026-05-02T04:36:14Z"
     },
     {
       "id": "gid://shopify/Product/9488746709240",
@@ -1657,7 +996,517 @@
         "description": "Get the best protection for your Nothing Phone 1 with our high-quality black silicone case. Durable, flexible, and easy to install, this case is perfect for everyday use."
       },
       "createdAt": "2026-05-01T20:05:27Z",
-      "updatedAt": "2026-05-01T20:08:10Z"
+      "updatedAt": "2026-05-02T08:07:01Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488934469880",
+      "handle": "kurta-bad-2",
+      "title": "Men's Cotton Kurta Shirt",
+      "descriptionHtml": "<p>This premium men's kurta shirt is made from high-quality cotton, providing comfort and style. The kurta features a classic design with a round neckline and long sleeves, perfect for formal and casual occasions. The product is designed to provide a relaxed fit, with a length of 32 inches and a chest size of 40 inches. The material is breathable, soft, and durable, making it suitable for everyday wear. The kurta is ideal for men who want to make a statement with their clothing, and it can be paired with jeans, trousers, or traditional attire.</p>",
+      "descriptionPlain": "This premium men's kurta shirt is made from high-quality cotton, providing comfort and style. The kurta features a classic design with a round neckline and long sleeves, perfect for formal and casual occasions. The product is designed to provide a relaxed fit, with a length of 32 inches and a chest size of 40 inches. The material is breathable, soft, and durable, making it suitable for everyday wear. The kurta is ideal for men who want to make a statement with their clothing, and it can be paired with jeans, trousers, or traditional attire.",
+      "descriptionWordCount": 94,
+      "productType": "Kurta Shirt",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "Casual Kurta",
+        "Cotton Shirt",
+        "Formal Kurta",
+        "Long Sleeve Kurta",
+        "Men's Kurta",
+        "Premium Quality",
+        "Relaxed Fit",
+        "Round Neckline",
+        "Traditional Wear"
+      ],
+      "category": {
+        "name": "Clothing",
+        "fullName": "Apparel & Accessories > Clothing",
+        "source": "taxonomy"
+      },
+      "price": 799.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/lavender-hoodie-flatlay_1200x1200_crop_center_0311e3bb-e8ed-4a44-80c3-3123b9dd0483.webp?v=1777691606",
+          "altText": "Kurta Shirt"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307822625016",
+          "sku": "",
+          "price": 799.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Men's Cotton Kurta Shirt - Premium Quality Traditional Wear",
+        "description": "Get the best men's cotton kurta shirt with premium quality and traditional design. Perfect for formal and casual occasions, this kurta features a classic round neckline and long sleeves."
+      },
+      "createdAt": "2026-05-02T02:30:13Z",
+      "updatedAt": "2026-05-02T03:13:47Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488934830328",
+      "handle": "hoodie-bad-1",
+      "title": "Winter Clothing Hoodie",
+      "descriptionHtml": "<p>Stay warm and cozy with our premium quality winter hoodie, made from soft and durable cotton-poly blend material. Perfect for outdoor activities, casual wear, or as a gift. Features a comfortable fit, adjustable hood, and spacious pockets. Technical specs: 60% cotton, 40% polyester, weight: 350g. Suitable for both men and women, ideal for cold weather conditions.</p>",
+      "descriptionPlain": "Stay warm and cozy with our premium quality winter hoodie, made from soft and durable cotton-poly blend material. Perfect for outdoor activities, casual wear, or as a gift. Features a comfortable fit, adjustable hood, and spacious pockets. Technical specs: 60% cotton, 40% polyester, weight: 350g. Suitable for both men and women, ideal for cold weather conditions.",
+      "descriptionWordCount": 56,
+      "productType": "Winter Hoodie",
+      "vendor": "FabricIndia",
+      "status": "ACTIVE",
+      "tags": [
+        "Casual Clothing",
+        "Cold Weather Gear",
+        "Cotton Blend",
+        "Gift Ideas",
+        "Men's Clothing",
+        "Outdoor Wear",
+        "Premium Quality",
+        "Winter Hoodie",
+        "Women's Clothing"
+      ],
+      "category": {
+        "name": "Clothing",
+        "fullName": "Apparel & Accessories > Clothing",
+        "source": "taxonomy"
+      },
+      "price": 1299.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/lavender-hoodie-flatlay_1200x1200_crop_center_95427390-b873-47f8-bb16-5d664ce53024.webp?v=1777691498",
+          "altText": "Winter Clothing Hoodie"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307822985464",
+          "sku": "",
+          "price": 1299.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Winter Hoodie - Premium Cotton Blend Outdoor Wear",
+        "description": "Discover our premium quality winter hoodie, made from soft cotton-poly blend material. Perfect for outdoor activities, casual wear, or as a gift. Shop now!"
+      },
+      "createdAt": "2026-05-02T02:30:25Z",
+      "updatedAt": "2026-05-02T14:42:01Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488935026936",
+      "handle": "oxford-bad-2",
+      "title": "Black Leather Shoes",
+      "descriptionHtml": "<p>Experience the best in footwear with our premium black leather shoes. Made from high-quality leather, these shoes are designed for comfort and durability. With a sleek and stylish design, they are perfect for formal and casual occasions. The shoes feature a rubber sole for traction and a cushioned insole for added comfort. Whether you're heading to the office or a night out with friends, these shoes are sure to impress. Technical specs include a 1-inch heel and a breathable lining. Our black leather shoes are a must-have for anyone looking to elevate their shoe game.</p>",
+      "descriptionPlain": "Experience the best in footwear with our premium black leather shoes. Made from high-quality leather, these shoes are designed for comfort and durability. With a sleek and stylish design, they are perfect for formal and casual occasions. The shoes feature a rubber sole for traction and a cushioned insole for added comfort. Whether you're heading to the office or a night out with friends, these shoes are sure to impress. Technical specs include a 1-inch heel and a breathable lining. Our black leather shoes are a must-have for anyone looking to elevate their shoe game.",
+      "descriptionWordCount": 95,
+      "productType": "Leather Shoes",
+      "vendor": "StepUp",
+      "status": "ACTIVE",
+      "tags": [
+        "Black Shoes",
+        "Casual Shoes",
+        "Formal Shoes",
+        "Leather Shoes",
+        "Men's Shoes",
+        "Night Out",
+        "Office Wear",
+        "Premium Shoes",
+        "Women's Shoes"
+      ],
+      "category": {
+        "name": "Shoes",
+        "fullName": "Apparel & Accessories > Shoes",
+        "source": "taxonomy"
+      },
+      "price": 2499.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/black-shoes.jpg?v=1777694401",
+          "altText": "Black Shoes"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307823182072",
+          "sku": "",
+          "price": 2499.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Premium Black Leather Shoes for Men and Women",
+        "description": "Discover our high-quality black leather shoes, perfect for formal and casual occasions. Shop now for premium comfort and style."
+      },
+      "createdAt": "2026-05-02T02:30:30Z",
+      "updatedAt": "2026-05-02T04:00:20Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488935059704",
+      "handle": "sneaker-bad-1",
+      "title": "White Leather Sneakers Shoes",
+      "descriptionHtml": "<p>These white sneakers are made from high-quality leather and are designed for daily use. With a comfortable fit and durable outsole, they are perfect for walking, running, or just lounging around. The leather upper provides a stylish and sophisticated look, while the cushioned insole ensures all-day comfort. Technical specs include a 1-inch heel and a rubber outsole for traction. Whether you're heading to the office or a casual outing, these sneakers are a great choice.</p>",
+      "descriptionPlain": "These white sneakers are made from high-quality leather and are designed for daily use. With a comfortable fit and durable outsole, they are perfect for walking, running, or just lounging around. The leather upper provides a stylish and sophisticated look, while the cushioned insole ensures all-day comfort. Technical specs include a 1-inch heel and a rubber outsole for traction. Whether you're heading to the office or a casual outing, these sneakers are a great choice.",
+      "descriptionWordCount": 75,
+      "productType": "Sneaker Shoes",
+      "vendor": "StepUp",
+      "status": "ACTIVE",
+      "tags": [
+        "Casual Sneakers",
+        "Comfortable Fit",
+        "Daily Wear",
+        "Durable Outsole",
+        "Leather Shoes",
+        "Leather Sneakers",
+        "Running Shoes",
+        "Walking Shoes",
+        "White Sneakers"
+      ],
+      "category": {
+        "name": "Shoes",
+        "fullName": "Apparel & Accessories > Shoes",
+        "source": "taxonomy"
+      },
+      "price": 999.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/whitesneakers-2048px-4197.jpg?v=1777692922",
+          "altText": "White Sneakers"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307823214840",
+          "sku": "",
+          "price": 999.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "White Leather Sneakers | Comfortable Daily Wear Shoes",
+        "description": "Discover our high-quality white leather sneakers, perfect for daily wear. With a comfortable fit and durable outsole, these shoes are great for walking, running, or lounging around."
+      },
+      "createdAt": "2026-05-02T02:30:32Z",
+      "updatedAt": "2026-05-02T03:35:38Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488936108280",
+      "handle": "charger-bad-2",
+      "title": "Electronics 18W Fast Charger",
+      "descriptionHtml": "<p>This premium quality fast charger features 18W output, compact design, and durable materials. Compatible with a wide range of devices, it's perfect for daily use at home, in the office, or on-the-go. The charger is made with high-quality components, including copper wiring and a durable ABS plastic casing, ensuring safe and reliable charging. With its advanced technology, it can charge your devices up to 50% faster than standard chargers, supporting Quick Charge and USB-C protocols. The charger also comes with overcharge protection, keeping your devices safe from damage.</p>",
+      "descriptionPlain": "This premium quality fast charger features 18W output, compact design, and durable materials. Compatible with a wide range of devices, it's perfect for daily use at home, in the office, or on-the-go. The charger is made with high-quality components, including copper wiring and a durable ABS plastic casing, ensuring safe and reliable charging. With its advanced technology, it can charge your devices up to 50% faster than standard chargers, supporting Quick Charge and USB-C protocols. The charger also comes with overcharge protection, keeping your devices safe from damage.",
+      "descriptionWordCount": 88,
+      "productType": "Electronics Charger",
+      "vendor": "TechNova",
+      "status": "ACTIVE",
+      "tags": [
+        "18W Charger",
+        "Compact Charger",
+        "Durable Charger",
+        "Electronics Accessory",
+        "Fast Charger",
+        "Phone Charger",
+        "Portable Charger",
+        "Quick Charge",
+        "Tablet Charger"
+      ],
+      "category": {
+        "name": "Electronics",
+        "fullName": "Electronics",
+        "source": "taxonomy"
+      },
+      "price": 1299.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/fc.jpg?v=1777692756",
+          "altText": "Electronics 18W Fast Charger"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307824427256",
+          "sku": "",
+          "price": 1299.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "18W Fast Charger for Electronics - Quick Charge and Portable",
+        "description": "Get the fastest charging experience with our 18W fast charger, featuring compact design, durable materials, and advanced Quick Charge technology."
+      },
+      "createdAt": "2026-05-02T02:31:06Z",
+      "updatedAt": "2026-05-02T03:32:36Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488936206584",
+      "handle": "wallet-bad-1",
+      "title": "Mens Slim Leather Wallet",
+      "descriptionHtml": "<p>This high-quality mens wallet is made from genuine leather and features a slim design, perfect for everyday carry. With multiple card slots and a cash compartment, it can hold all your essentials. The wallet is 4.5 inches long and 3.5 inches wide, making it easy to fit in your pocket. The leather material ensures durability and a stylish look. Whether you're heading to work or a night out, this wallet is a great accessory to have.</p>",
+      "descriptionPlain": "This high-quality mens wallet is made from genuine leather and features a slim design, perfect for everyday carry. With multiple card slots and a cash compartment, it can hold all your essentials. The wallet is 4.5 inches long and 3.5 inches wide, making it easy to fit in your pocket. The leather material ensures durability and a stylish look. Whether you're heading to work or a night out, this wallet is a great accessory to have.",
+      "descriptionWordCount": 76,
+      "productType": "Mens Wallet",
+      "vendor": "BagStore",
+      "status": "ACTIVE",
+      "tags": [
+        "Card Holder",
+        "Cash Wallet",
+        "Genuine Leather",
+        "Leather Goods",
+        "Leather Wallet",
+        "Mens Accessories",
+        "Mens Wallet",
+        "Slim Wallet",
+        "Travel Wallet"
+      ],
+      "category": {
+        "name": "Mens Wallet",
+        "fullName": "Mens Wallet",
+        "source": "productType"
+      },
+      "price": 299.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/Valink-2019-Hot-Sale-Men-s-Wallet.jpg?v=1777693467",
+          "altText": "Mens Wallet"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48307825082616",
+          "sku": "",
+          "price": 299.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Mens Slim Leather Wallet - Genuine Leather Card Holder",
+        "description": "Discover our high-quality mens slim leather wallet, perfect for everyday carry. Made from genuine leather, it features multiple card slots and a cash compartment."
+      },
+      "createdAt": "2026-05-02T02:31:10Z",
+      "updatedAt": "2026-05-02T03:44:44Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488972808440",
+      "handle": "pen-drive-32-gb-usb-2-0",
+      "title": "32GB USB 2.0 Flash Drive",
+      "descriptionHtml": "<p>This 32GB USB 2.0 pen drive is made of durable plastic and features a compact design, making it easy to carry and store. With a storage capacity of 32GB, it can hold a large number of files, including documents, photos, and videos. The USB 2.0 interface ensures fast data transfer speeds, and it is compatible with most devices, including computers, laptops, and tablets. The drive is also plug-and-play, requiring no installation or setup. It is ideal for storing and transferring files, backing up data, and sharing files with others.</p>",
+      "descriptionPlain": "This 32GB USB 2.0 pen drive is made of durable plastic and features a compact design, making it easy to carry and store. With a storage capacity of 32GB, it can hold a large number of files, including documents, photos, and videos. The USB 2.0 interface ensures fast data transfer speeds, and it is compatible with most devices, including computers, laptops, and tablets. The drive is also plug-and-play, requiring no installation or setup. It is ideal for storing and transferring files, backing up data, and sharing files with others.",
+      "descriptionWordCount": 89,
+      "productType": "USB Drive",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "USB Flash Drive",
+        "32GB Storage",
+        "USB 2.0",
+        "Pen Drive",
+        "Portable Storage",
+        "Data Transfer",
+        "Computer Accessories",
+        "Electronic Storage",
+        "Flash Memory"
+      ],
+      "category": {
+        "name": "USB Drive",
+        "fullName": "USB Drive",
+        "source": "productType"
+      },
+      "price": 1200.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/placeholder.jpg",
+          "altText": "Newly Uploaded"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48308085391608",
+          "sku": "TECH-USB-32GB",
+          "price": 1200.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "description": "Get a reliable and portable storage solution with our 32GB USB 2.0 flash drive, featuring fast data transfer speeds and a compact design.",
+        "title": "32GB USB 2.0 Flash Drive - Portable Storage Solution"
+      },
+      "createdAt": "2026-05-02T05:55:16Z",
+      "updatedAt": "2026-05-02T05:55:27Z"
+    },
+    {
+      "id": "gid://shopify/Product/9488975692024",
+      "handle": "nail-polish-pink",
+      "title": "Pink Nail Polish Cosmetic",
+      "descriptionHtml": "<p>This high-quality pink nail polish is made from long-lasting, chip-resistant formula and is free from harsh chemicals. It is suitable for everyday use and is a great addition to any nail care routine. The polish is easy to apply and dries quickly, leaving a smooth and glossy finish. It is also cruelty-free and vegan-friendly, making it a great choice for those who care about animal welfare and the environment.</p>",
+      "descriptionPlain": "This high-quality pink nail polish is made from long-lasting, chip-resistant formula and is free from harsh chemicals. It is suitable for everyday use and is a great addition to any nail care routine. The polish is easy to apply and dries quickly, leaving a smooth and glossy finish. It is also cruelty-free and vegan-friendly, making it a great choice for those who care about animal welfare and the environment.",
+      "descriptionWordCount": 69,
+      "productType": "Nail Polish",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "Chip-Resistant Nail Polish",
+        "Cosmetic Nail Care",
+        "Cruelty-Free Nail Polish",
+        "Long-Lasting Nail Polish",
+        "Nail Beauty",
+        "Nail Polish",
+        "Pink Cosmetic",
+        "Pink Nail Polish",
+        "Vegan Nail Polish"
+      ],
+      "category": {
+        "name": "Nail Polishes",
+        "fullName": "Health & Beauty > Personal Care > Cosmetics > Nail Care > Nail Polishes",
+        "source": "taxonomy"
+      },
+      "price": 140.0,
+      "currency": "USD",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/0822/8765/7208/files/nailpolish-pink.png?v=1777702378",
+          "altText": "Pink Nail Polish Cosmetic"
+        }
+      ],
+      "imageCount": 1,
+      "hasImages": true,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48308104429816",
+          "sku": "",
+          "price": 140.0,
+          "inventory": 5
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Pink Nail Polish - Long-Lasting, Chip-Resistant Cosmetic",
+        "description": "Get long-lasting, chip-resistant pink nail polish that is cruelty-free and vegan-friendly. Perfect for everyday use, this high-quality polish is easy to apply and dries quickly."
+      },
+      "createdAt": "2026-05-02T05:57:07Z",
+      "updatedAt": "2026-05-02T06:12:58Z"
+    },
+    {
+      "id": "gid://shopify/Product/9489345577208",
+      "handle": "hair-serum-vitamin-d-for-grey-hair",
+      "title": "Hair Loss Grey Hair Vitamin D Serum",
+      "descriptionHtml": "<p>Our hair serum is specifically designed for grey hair, with a unique blend of vitamin D (1000 IU) and other essential nutrients (biotin, keratin) to nourish and protect your hair. Made with high-quality, gentle ingredients (coconut oil, argan oil), this serum is perfect for daily use to promote healthy hair growth and reduce the appearance of grey hair. Suitable for all hair types, it's easy to apply and absorb, leaving your hair feeling soft and looking vibrant. Key specs: 1000 IU vitamin D, biotin, keratin, coconut oil, argan oil. Use for daily hair care and hair loss treatment.</p>",
+      "descriptionPlain": "Our hair serum is specifically designed for grey hair, with a unique blend of vitamin D (1000 IU) and other essential nutrients (biotin, keratin) to nourish and protect your hair. Made with high-quality, gentle ingredients (coconut oil, argan oil), this serum is perfect for daily use to promote healthy hair growth and reduce the appearance of grey hair. Suitable for all hair types, it's easy to apply and absorb, leaving your hair feeling soft and looking vibrant. Key specs: 1000 IU vitamin D, biotin, keratin, coconut oil, argan oil. Use for daily hair care and hair loss treatment.",
+      "descriptionWordCount": 98,
+      "productType": "Hair Serum",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [
+        "Anti-Grey Hair",
+        "Daily Hair Serum",
+        "Grey Hair Care",
+        "Hair Growth",
+        "Hair Loss Treatment",
+        "Hair Nourishment",
+        "Hair Protection",
+        "Healthy Hair",
+        "Vitamin D Serum"
+      ],
+      "category": {
+        "name": "Hair Loss Treatments",
+        "fullName": "Health & Beauty > Personal Care > Hair Care > Hair Loss Treatments",
+        "source": "taxonomy"
+      },
+      "price": 200.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48312339300600",
+          "sku": "",
+          "price": 200.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": "Grey Hair Vitamin D Serum for Hair Loss Treatment",
+        "description": "Nourish and protect your grey hair with our unique vitamin D serum, promoting healthy hair growth and reducing hair loss."
+      },
+      "createdAt": "2026-05-02T13:57:41Z",
+      "updatedAt": "2026-05-02T14:41:37Z"
+    },
+    {
+      "id": "gid://shopify/Product/9489345642744",
+      "handle": "socks-set-of-three-higly-durable-sweat-free",
+      "title": "socks - set of three - higly durable - sweat free",
+      "descriptionHtml": "<p>socks - set of three - higly durable - sweat free</p>",
+      "descriptionPlain": "socks - set of three - higly durable - sweat free",
+      "descriptionWordCount": 11,
+      "productType": "",
+      "vendor": "together_stack",
+      "status": "ACTIVE",
+      "tags": [],
+      "category": {
+        "name": "Uncategorized",
+        "fullName": "Uncategorized",
+        "source": "taxonomy"
+      },
+      "price": 0.0,
+      "currency": "USD",
+      "images": [],
+      "imageCount": 0,
+      "hasImages": false,
+      "imagesMissingAlt": 0,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/48312339562744",
+          "sku": "",
+          "price": 0.0,
+          "inventory": 0
+        }
+      ],
+      "variantCount": 1,
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "createdAt": "2026-05-02T13:59:47Z",
+      "updatedAt": "2026-05-02T13:59:58Z"
     }
   ]
 }

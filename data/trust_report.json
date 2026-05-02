@@ -1,57 +1,63 @@
 {
-  "trustScore": 97,
+  "trustScore": 82,
   "trustGrade": "A",
-  "totalIssues": 1,
+  "totalIssues": 2,
   "issues": [
     {
       "code": "TRUST_MARKETPLACE_SELECTION",
       "severity": "LOW",
       "field": "trust",
-      "message": "Store features a diverse selection from 13 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
+      "message": "Store features a diverse selection from 12 brands. AI agents value curated marketplaces—ensure your 'About Us' tells your curator story.",
       "evidence": [
-        "brandless",
+        "soundwave",
+        "glowup",
+        "bagstore",
         "fabricindia",
-        "techzone",
-        "shadeon",
-        "beltcraft"
+        "shadeon"
       ]
+    },
+    {
+      "code": "TRUST_NO_SOCIAL_PROOF",
+      "severity": "HIGH",
+      "field": "trust",
+      "message": "No product descriptions mention reviews, ratings, or customer testimonials. Social proof is a top-3 AI trust signal for e-commerce.",
+      "evidence": null
     }
   ],
   "details": {
     "vendorAnalysis": {
       "uniqueVendors": [
-        "brandless",
-        "fabricindia",
-        "techzone",
-        "shadeon",
-        "beltcraft",
-        "together_stack",
         "soundwave",
-        "herbalroots",
-        "bagstore",
         "glowup",
+        "bagstore",
+        "fabricindia",
+        "shadeon",
+        "brandless",
         "leatherlux",
+        "herbalroots",
+        "techzone",
         "technova",
-        "stepup"
+        "stepup",
+        "together_stack"
       ],
-      "vendorCount": 13,
+      "vendorCount": 12,
       "missingVendor": 0
     },
     "socialProof": {
-      "productsWithSocialProof": 1,
-      "coveragePercent": 3
+      "productsWithSocialProof": 0,
+      "coveragePercent": 0
     },
     "guarantees": {
-      "productsWithGuarantee": 7
+      "productsWithGuarantee": 4
     },
     "certifications": {
-      "productsWithCertification": 5
+      "productsWithCertification": 4
     },
     "indiaTrustSignals": {
-      "found": true
+      "found": false
     },
     "imageAltText": {
-      "totalImages": 19,
+      "totalImages": 26,
       "missingAlt": 0,
       "coveragePercent": 100
     }
