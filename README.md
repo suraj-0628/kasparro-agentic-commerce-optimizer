@@ -6,54 +6,38 @@ Unlike traditional SEO tools which focus on Google keyword ranking, this optimiz
 
 ---
 
+## 📺 Demo Video
+[Watch Walkthrough ](YOUR_YOUTUBE_LINK_HERE)
+
+---
+
 ## 🚀 Features
 
+### ✦ One-Click Full AI Repair (Remediation)
+Moving beyond analysis into instant action.
+- **Atomic Optimization**: Automatically generates Grade A Titles, Descriptions, and Tags using high-reasoning LLMs.
+- **Direct Shopify Sync**: Pushes improvements to the live store via GraphQL API with a single click.
+- **Instant Rescore**: Fast-track re-analysis to show immediate score improvement.
+
+### AI Search Visibility (Simulation)
+- **Dynamic Market Queries**: Simulates real-world shopper queries (e.g., "warm hoodie for winter").
+- **Intent Matching**: Category-aware engine that evaluates how well your product surfaces for AI agents like Perplexity or ChatGPT.
+
 ### Product Quality Analysis
-Checks for 20+ signals including:
-- Missing images
-- Vague descriptions
-- Missing categories
-- Short titles
-- Product contradictions
+Checks for 23+ signals including:
+- Missing images & ALT text
+- Vague descriptions (semantic thinness)
+- Missing categories & SKUs
+- Product-metadata contradictions
+...and more.
 
-### Store-Level Trust Signals
-Automatically checks for:
-- Branding consistency
-- Social proof
-- Secure checkout guarantees
-- Industry certifications
+### Store-Level Trust & Policy Audit
+- **Policy Health**: Scans for Shipping, Returns, and Privacy compliance.
+- **Trust Signals**: Evaluates social proof, branding consistency, and industry certifications.
 
-### Automated Policy & FAQ Audit
-Scans your store to verify:
-- Return/Refund policies
-- Shipping policies
-- Privacy policies
-- FAQ pages
-
-### AI Perception Simulation
-Uses Gemini to simulate how an AI shopping agent perceives a product by:
-- Scoring retrieval likelihood
-- Detecting semantic ambiguity
-- Identifying missing trust/context signals
-
-### Composite Store Scoring
-Generates a unified Store Health Score based on:
-- Product Quality → 60%
-- Policy Health → 20%
-- Trust Signals → 20%
-
-### High-ROI Action Plan
-Ranks all detected issues by:
-- Estimated fix impact
-- Score improvement potential
-- Number of affected products
-
-### Modern Dashboard UI
-Provides:
-- Executive summaries
-- Health metrics
-- Dynamic fix recommendations
-- Product-level insights
+### Composite Store Scoring & ROI
+- **Industry Benchmarking**: Compare your store against the 95th percentile of AI-optimized stores.
+- **ROI-First Priority**: Ranks fixes by **Total Point Lift**, showing you exactly what to fix to see the biggest jump in store health.
 
 ---
 <img width="1876" height="868" alt="image" src="https://github.com/user-attachments/assets/fd1bf747-776c-4e74-8083-57665c37156e" />
