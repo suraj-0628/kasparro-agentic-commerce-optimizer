@@ -34,13 +34,24 @@ The entire system is glued together by `src/main.py`, utilizing local JSON file 
 - **Inference:** Calls Gemini to ask for a JSON response containing an inferred product type, a confidence percentage, an ambiguity boolean, and an estimated retrieval score.
 - **Caching:** Saves perception data so it does not need to be re-run unnecessarily, reducing API costs.
 
-### 3.5 `src/reporter/app.py` (Flask Dashboard)
+### 3.5 `src/llm_enhancer.py` (The Remediation Engine)
+- **Mechanism:** Acts as the "Writer" for the system. When a fix is requested, it constructs a complex prompt including current product data + 23 rule violations.
+- **Inference:** Uses high-reasoning models (Llama-3-70B via Groq or GPT-4o) to generate a "Perfect AI Representation."
+- **Shopify Sync:** Directly interfaces with the Shopify GraphQL API to update the live product record, including variant-level SKU generation.
+
+### 3.6 `src/checks/query_simulator.py` (AI Search Benchmarking)
+- **Mechanism:** Simulates how an AI agent (like Perplexity) retrieves products.
+- **Dynamic Loader:** Loads a store-specific "Market Simulation" from `data/auto_queries.json`.
+- **Match Logic:** Implements a "Category-Aware Match Engine" that evaluates Category Gatekeeping, Required Keyword Signals, and Synonym mapping.
+- **Output:** Returns a "Match Count" (e.g., 3/15 queries) providing a tangible discoverability metric.
+
+### 3.7 `src/reporter/app.py` (Fast-Sync Architecture)
 - **Mechanism:** Serves an HTML dashboard (`templates/index.html`).
-- **Endpoints:** 
-  - `/api/stats`: Serves aggregated health data, scores, and the executive summary.
-  - `/api/issues/top`: Serves the ranked ROI Fix list.
-  - `/api/products`: Serves the filterable product grid.
-  - `/api/rescore/<handle>`: Allows real-time re-triggering of the pipeline for a single product to reflect live updates.
+- **Real-Time Pipeline:** Implements a cache-busting logic in the `/product/<handle>` route that forces a live re-analysis and query simulation every time the page is loaded, ensuring the dashboard reflects the very latest Shopify data.
+- **API Endpoints:** 
+  - `/api/apply/<handle>`: Triggers the LLM Enhancer and Shopify Sync.
+  - `/api/rescore/<handle>`: Forces a fast-track analysis and simulation run.
+  - `/api/stats`: Aggregates store-wide ROI and health data.
 
 ## 4. Configuration (`rules_config.json`)
 The `rules_config.json` file is central to the application's flexibility. It dictates:

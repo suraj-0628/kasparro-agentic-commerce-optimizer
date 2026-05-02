@@ -33,8 +33,19 @@ Instead of just relying on rules, the optimizer utilizes Google's Gemini LLM to 
 - **Ambiguity Detection:** Flags if a product is confusing (e.g., an "Apple" could be fruit or tech).
 - **Retrieval Score:** A 0-100 score predicting how likely the AI is to recommend this product for relevant queries.
 
-### D. Actionable Intelligence (The ROI Dashboard)
+### D. Automated Remediation (The One-Click Fix)
+Unlike tools that only point out problems, the optimizer actually solves them.
+- **✦ One-Click Full AI Repair:** An atomic transaction that uses high-reasoning LLMs to generate optimized Titles, Descriptions, and Tags simultaneously.
+- **Direct Shopify Sync:** Seamlessly pushes all AI improvements to the live store via the Admin API, including missing SKUs and metadata.
+- **Instant Fast-Sim Rescore:** Immediately recalculates the product's AI Discoverability the second a fix is applied, providing instant positive reinforcement.
+
+### E. Industry Benchmarking
+Provides merchants with context on where they stand in the global AI commerce landscape.
+- **Percentile Ranking:** Compares the store's composite score against industry medians (e.g., "Top 5% — Elite AI Optimized Store").
+- **Dynamic Competitive Tiers:** Automatically adjusts benchmarking based on product categories (Apparel, Electronics, Skincare).
+
+## 4. Actionable Intelligence (The ROI Dashboard)
 Merchants don't just want data; they want to know what to fix first.
 - **Composite Score:** A single letter grade (A-F) indicating the overall AI health of the store.
-- **High-ROI Fix Planner:** Ranks issues by how much score improvement they offer across the entire catalog relative to the effort required.
-- **Executive Summaries:** Auto-generated narratives explaining *why* the store is losing AI traffic and exactly what to do about it.
+- **ROI-First Priority Planner:** Ranks issues by **Total Point Lift** (ROI) across the entire catalog, ensuring merchants focus on high-impact fixes like "Missing Images" before low-impact tweaks.
+- **Executive Summaries:** Auto-generated narratives explaining *why* the store is losing AI traffic and exactly which specific fix will provide the highest return on investment.
