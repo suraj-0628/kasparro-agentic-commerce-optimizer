@@ -7,7 +7,7 @@ Unlike traditional SEO tools which focus on Google keyword ranking, this optimiz
 ---
 
 ## 📺 Demo Video
-[Watch Walkthrough ](YOUR_YOUTUBE_LINK_HERE)
+[Watch Walkthrough ](https://youtu.be/sufPSO2g1s4?si=dnnUwylWIb--MT3V)
 
 ---
 
